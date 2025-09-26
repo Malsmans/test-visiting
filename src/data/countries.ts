@@ -6852,7 +6852,7 @@ export const allCountries: Country[] = [
       {
         name: 'The Boma - Place of Eating',
         cuisine: 'Interactive cultural dining experience with traditional Zimbabwean cuisine, dancing, and drumming.',
-        image: 'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/9e/77/8d.jpg',
         rating: 4,
         priceRange: '$40-60',
         location: 'Victoria Falls',
@@ -6861,88 +6861,88 @@ export const allCountries: Country[] = [
       {
         name: 'Coimbra Restaurant',
         cuisine: 'Portuguese and Mediterranean cuisine with fresh seafood and traditional dishes.',
-        image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4np9GtDOlzDoMVMuKK7lEfEP9WjY2GWrvSw4E2UVQOPNlZRGpCW2eZL9heV2NSrFacv2edV4MyK6AmwOUj7m3cK7ty0fC7EJ8LjZ3feEfTWjQP7ie8U1Nu7PsbJNUQOd8uSIJcr6=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$20-40',
         location: 'Harare',
-        link: 'https://www.coimbra.co.zw/'
+        link: 'https://share.google/7Bg6T0DBXHLtH0SrZ'
       },
       {
         name: 'Lookout Café',
         cuisine: 'Spectacular cliff-top restaurant overlooking the Batoka Gorge with international menu.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/p/AF1QipP0SvO8_DIyFYAoL7mW1fMpn2Vdlcbr6Xvkt5x3=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$15-35',
         location: 'Victoria Falls',
-        link: 'https://www.wildhorizons.co.za/the-lookout-cafe/'
+        link: 'https://share.google/5krz7XZx4RMunGjkv'
       },
       {
         name: 'La Fontaine',
         cuisine: 'Fine dining restaurant at Meikles Hotel with international cuisine and elegant atmosphere.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqmxQNRenTlPGTuceBXjqmijsgHbGAGqEQe8HULUrKCp2g4c_tl5XEvSEbKe6r_bF3faxDYLUWg_wP4Dbf1pmw7M0-xISUrIqDCgmEVBeF9ZdUiGPGe5Nq92XMYjFVIVHwyF66O5g=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$25-50',
         location: 'Harare',
-        link: 'https://www.meikles.com/dining/la-fontaine/'
+        link: 'https://share.google/hx80upWIPadtudfj0'
       },
       {
-        name: 'Mama Africa',
+        name: 'Mozambik Honeybear Greystone Park',
         cuisine: 'Traditional African cuisine with cultural performances and authentic atmosphere.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4np4EKLguscL656PlcSQwKQh_PRFqZ4OTauwN-mXRpQAd_nhrYDxrHL3x41N0771x29asweUiYCE_88Y7zEmHZ1x26o21ubtFg0ev1bjqKFyqpYIUXiEsPV_yDoBqsbsU5xka6at=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$15-30',
-        location: 'Victoria Falls',
-        link: 'https://www.mamaafrica.co.zw/'
+        location: 'Harare',
+        link: 'https://www.mozambik.co.za/zimbabwe/'
       },
       {
         name: 'Victoria 22',
         cuisine: 'Contemporary restaurant with international menu, cocktails, and elegant atmosphere.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqSPBpvs1cPbgwJzUAfy3rIh9DuaC1FA_gjeSmRZQZDt5HwIqlRZpU2nAzfIETff2yO7N4lvaCZkfvVS5zAJN-ihdWwyP17eZz97Htj_NXGS1ql4dbIeI4iCa8rKaVjA-_h78jE1Q=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$20-40',
         location: 'Harare',
-        link: 'https://www.victoria22.co.zw/'
+        link: 'https://www.victoria22.com/'
       },
       {
         name: 'Rainforest Café',
         cuisine: 'Casual dining with international menu and views of the rainforest near Victoria Falls.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nonq1UzKum1VujzAk4Jf5GCuMznINIj4RQtRcWs81yEaznXV8RWlrbDAREwbYnpLM0SlOsF40G-7VzOW8dj6JhM-RLv_hhtiDR_IsmWeSpdQGuZ67zxDIwujSv41iujDYWHjLGHIA=s680-w680-h510-rw',
+        rating: 4,
         priceRange: '$10-25',
         location: 'Victoria Falls',
-        link: 'https://www.rainforestcafe.co.zw/'
+        link: 'https://victoriafalls-rainforest.cafe/'
       },
       {
-        name: 'Cecil\'s Restaurant',
+        name: 'Queen of Hearts',
         cuisine: 'Upscale restaurant with game meats, international cuisine, and colonial atmosphere.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4np6UoOy-wIXe4GaZwVGA8tXW70frdPUqW1q23jateolxXiF24XmbvNGRv0pqZBGm_paub0tzR0FHHjR3VVoeuigSYB6PZcdlnL8JCwI_iWVixH4c08SbMRJMXbvw241lYAK7eRCNQ=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$20-45',
-        location: 'Bulawayo',
-        link: 'https://www.cecilsrestaurant.co.zw/'
+        location: 'Harare',
+        link: 'https://queenofhearts.co.zw/'
       },
       {
         name: 'Amanzi Restaurant',
         cuisine: 'Garden restaurant with international cuisine, water features, and relaxed atmosphere.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqZ7TVkRgQchG-MkHkPFUn3nibc85cbRo6qNggEdkunNAszCeSjpIH-hNiZBBWVwiPX7q3xC4diZ57etE46CKMvNyWWQ1FIIUa0FsOC5KOncbqWv4omahznXZyhYHVURjwooBIO=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$20-40',
         location: 'Harare',
         link: 'https://www.amanzi.co.zw/'
       },
       {
-        name: 'The Palm Restaurant',
-        cuisine: 'Fine dining at Victoria Falls Hotel with international cuisine and colonial elegance.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        name: 'Gavas Restaurant',
+        cuisine: '⁦Gava\'s serves traditional ⁩⁦Zimbabwean⁩⁦ cuisine (Sadza and Stew), and also has an extensive grill menu. We source our ingredients from local, independent farmers.',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq_LXoVK0hXFCfoqBi4Rdg8DrUbX0uTsn5dAVFQnyQa67-eWHOSxdJcQiY3amiCfB9AuyYCUc0l0SjUYbqbY5elP8ywOCkG2CMkKStkWMKlJSYk693zst8hYlDir8aYDkG6GWBK=s680-w680-h510-rw',
         rating: 5,
         priceRange: '$30-60',
-        location: 'Victoria Falls',
-        link: 'https://www.victoriafallshotel.com/dining/palm-restaurant/'
+        location: 'Harare',
+        link: 'https://www.gavasrestaurant.com/'
       },
       {
         name: 'Garwe Restaurant',
         cuisine: 'Traditional Zimbabwean cuisine with cultural performances and authentic atmosphere.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4npIj6yeTljYNyEIJ9pQ9TBVXVIpOUaA1XrAxbhrFiwtr_UPO9vNdF_3HfH-cDCJ0LIzKPN2iiQKJqsR9gdxvTIogUEjk6N0hda0BnFHcwwQ771Wywzd5Oo4RnHOal3rpuv6_UPkXQ=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$15-30',
         location: 'Harare',
@@ -6951,83 +6951,83 @@ export const allCountries: Country[] = [
       {
         name: 'Alo Alo Restaurant',
         cuisine: 'International cuisine with African influences and elegant atmosphere.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/p/AF1QipPQ44aqe8PhTFsRs6n7nMmoCXGm71DRFf_Kym8c=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$20-40',
         location: 'Harare',
-        link: 'https://www.aloalo.co.zw/'
+        link: 'https://share.google/c9ZGAsp7UCVofTP1x'
       },
       {
         name: 'Three Monkeys Café',
         cuisine: 'Casual café with international menu, coffee, and relaxed atmosphere.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4noIA3TeSmg7MgNlh8K6JV4UrLBDdo0EZTvspXjq-1V6QTH0GwZnZatIM9VezTNxI0bP0lgek13g7xpf8Wkz0BrpT5FwwT368s-3rx6LZniYdPLyVH4sftr5e6xQ11YcN2VX-hWg82f68Vr3=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$10-25',
         location: 'Harare',
         link: 'https://www.threemonkeys.co.zw/'
       },
       {
-        name: 'Bulawayo Club Restaurant',
-        cuisine: 'Historic club restaurant with colonial atmosphere and traditional British and African cuisine.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        name: 'Paula\'s Place',
+        cuisine: '⁦Paula\'s Place⁩⁦ is an authentic Portuguese charcoal grill restaurant. All staff have been trained in house and are friendly and attentive.⁩',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrwtAQ3f-sTGRSwXpU8Qw2ddY2PQcl4emWrlS77DZeaU-ChSgr9NH_smtzwFcTJvHYfs4fLPvdnz20yBE4gEB6MyGANMkStbqmPvoKTfFTMARqeYD6rqZ-k_bNQUe1hnI4Ayhg4lA=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$15-35',
-        location: 'Bulawayo',
-        link: 'https://www.bulawayoclub.com/restaurant'
+        location: 'Harare',
+        link: 'https://www.paulasplacezw.com/'
       },
       {
-        name: 'In Da Belly',
-        cuisine: 'Casual dining with international menu, burgers, and relaxed atmosphere.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
+        name: 'The Kitchen',
+        cuisine: 'A LA CARTE ALL DAY DINING INTERNATIONAL CUISINE RESTAURANT. Nestled at the vibrant intersection of 3rd Street and Jason Moyo Avenue, The Kitchen welcomes you to an intimate dining experience where culinary mastery meets comforting familiarity.',
+        image: 'https://lh3.googleusercontent.com/p/AF1QipPF9f5aFkWrflHYR34R2i1lz9SSJYQYML_gSx8R=s680-w680-h510-rw',
+        rating: 4,
         priceRange: '$10-25',
-        location: 'Victoria Falls',
-        link: 'https://www.indabelly.co.zw/'
+        location: 'Harare',
+        link: 'https://www.hyattrestaurants.com/en/harare/restaurant/the-kitchen-hyatt-regency-harare-the-meikles'
       },
       {
-        name: 'Sabona Restaurant',
+        name: 'Chop Chop Grill House',
         cuisine: 'African fusion cuisine with modern presentation and traditional flavors.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqCEs3AW2uPtc88iNukwE-CETVlcdqAjR2Sef9UCHmwEwgMKDEUmC_HsV7bdsr7Oz2RSfkNbbuxgXUf9fQkg0PkYbOJxsuFtyZVXewM3YivKV-AdQTdgCYJMvria-J82ATkOpSJ=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$15-35',
-        location: 'Bulawayo',
-        link: 'https://www.sabona.co.zw/'
+        location: 'Harare',
+        link: 'https://www.chopchop.co.zw/'
       },
       {
         name: 'The River Brewing Co',
         cuisine: 'Craft brewery with pub food, local beers, and riverside atmosphere.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr8Ru_oRm3VGTIB-i5ym4Qrg6ROi1MAVWNy7P9jH0qMjV54w435-175e-mMp_4TB8RP5DX-AoO9Tr2N1IyrAEJyiEuQErm07LudT73Ck9D8Z-rHFbotZzbM08hyK_R48eLSTmcpqSR2KlY=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$10-25',
         location: 'Victoria Falls',
-        link: 'https://www.riverbrewing.co.zw/'
+        link: 'https://www.riverbrewco.com/'
       },
       {
         name: 'Pariah State',
         cuisine: 'Trendy restaurant and bar with international menu, craft beer, and vibrant atmosphere.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4npQ3h3cEgm87Hwthy7tjO2s4YlSQnMpdPMaVngiOgcoJu3ogk3DHN0BxAFCT0El7Npv6ECWcshx3ovjobv1hKs553dMTvb9BDM85gH1za67T-C8eYFxFWvHQNbFmMFeDyemikHwBSdou15o=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$15-30',
         location: 'Harare',
-        link: 'https://www.pariahstate.co.zw/'
+        link: 'https://share.google/ySNAv36MAPyenbTh7'
       },
       {
         name: 'The Stanley & Livingstone Restaurant',
         cuisine: 'Fine dining restaurant at boutique hotel with international cuisine and elegant atmosphere.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq4h0Lo9wcQuP-9yA6dukB5jMT68QeeJvQtArOKowNLgM5D5pUlmXduTN6hTtWGdJVAOpUKt0T--qgGtgAvb9zooXYgGqQJZKZ0c2J7BbkQrUmbK4nncaPUAUEnue86Md0H5SHD=s680-w680-h510-rw',
         rating: 5,
         priceRange: '$30-60',
         location: 'Victoria Falls',
-        link: 'https://www.stanleyandlivingstone.com/dining/'
+        link: 'https://www.anantara.com/en/stanley-and-livingstone-victoria-falls/restaurants/1871-restaurant'
       },
       {
-        name: 'Maasdorp Market Café',
-        cuisine: 'Farm-to-table café with organic ingredients, fresh baked goods, and relaxed atmosphere.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        name: 'St Elmo\'s',
+        cuisine: '⁦Authentic Italian woodfired pizzas, best steak and seafood, pasta, salad. Child friendly restaurant with kids playcentre, video games etc.',
+        image: 'https://lh3.googleusercontent.com/p/AF1QipNtaw9hkDciUFbXbeumjSx8juhDC2CnkicHQ_z9=s680-w680-h510-rw',
         rating: 4,
         priceRange: '$10-25',
         location: 'Harare',
-        link: 'https://www.maasdorpmarket.co.zw/'
+        link: 'https://stelmosrestaurant.com/'
       }
     ]
   },
