@@ -6670,16 +6670,16 @@ export const allCountries: Country[] = [
       {
         name: 'Victoria Falls Hotel',
         description: 'Historic colonial-era hotel with stunning views of Victoria Falls Bridge and the gorges, offering luxury accommodations since 1904.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://images.trvl-media.com/lodging/1000000/30000/25000/24943/d2301ae4.jpg?impolicy=resizecrop&rw=1200&ra=fit',
         rating: 5,
-        price: '$300-600',
+        price: '$760-900',
         location: 'Victoria Falls',
-        bookingLink: 'https://www.victoriafallshotel.com/'
+        bookingLink: 'https://expedia.com/affiliate/eA2c0fP'
       },
       {
         name: 'Singita Pamushana Lodge',
         description: 'Ultra-luxury safari lodge in the private Malilangwe Wildlife Reserve with stunning architecture and exceptional wildlife.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/p/AF1QipPcssjC5uH_Q0XPIzXoe1hZ65eVyjRH58xJx9qu=s680-w680-h510-rw',
         rating: 5,
         price: '$1500-3000',
         location: 'Malilangwe Wildlife Reserve',
@@ -6688,16 +6688,16 @@ export const allCountries: Country[] = [
       {
         name: 'The Elephant Camp',
         description: 'Luxury tented camp with private plunge pools and views of the Victoria Falls spray from each suite.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://images.trvl-media.com/lodging/18000000/17710000/17709200/17709163/ccb4572a.jpg?impolicy=resizecrop&rw=1200&ra=fit',
         rating: 5,
         price: '$600-1200',
         location: 'Victoria Falls',
-        bookingLink: 'https://www.theelephantcamp.com/'
+        bookingLink: 'https://expedia.com/affiliate/t3Fe5CG'
       },
       {
         name: 'Linkwasha Camp',
         description: 'Contemporary luxury safari camp in a private concession in Hwange National Park.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4npNSk23Q0nKcovHGuzy6QXn5as9VRVnWMuOpo0voihJW3aKeYlp5AXL2JD-XuSHLMsWzB2NEcveEaiwYJqShkR3kCgRiTyyLdFzs0GkSugLnO0LTBd41JhFtgfbyNwuMyS3Zw4qkA=s680-w680-h510-rw',
         rating: 5,
         price: '$800-1600',
         location: 'Hwange National Park',
@@ -6706,16 +6706,16 @@ export const allCountries: Country[] = [
       {
         name: 'Bumi Hills Safari Lodge',
         description: 'Luxury lodge perched on a hill overlooking Lake Kariba with infinity pool and spectacular sunsets.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://images.trvl-media.com/lodging/65000000/64640000/64635100/64635057/2eda11de.jpg?impolicy=resizecrop&rw=1200&ra=fit',
         rating: 5,
-        price: '$500-1000',
+        price: '$800-1200',
         location: 'Lake Kariba',
-        bookingLink: 'https://www.africanbushcamps.com/camps/bumi-hills-safari-lodge/'
+        bookingLink: 'https://expedia.com/affiliate/GwmrdkJ'
       },
       {
         name: 'Matetsi Victoria Falls',
         description: 'Luxury lodge on a private game reserve along the Zambezi River combining safari experiences with Victoria Falls.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nofPO8HX1I_MV-pcpp1C1IroWDqraSvKg7d6uuaCOJVXJysFYXkFUo4HHmKu_fCrVdaNXRFyjeJuUuy_N1MdSwWMlPTgdFP89Tm76DtqnfVe0Wcu-ddTpjPqt3wThnDGv31wX-3=s680-w680-h510-rw',
         rating: 5,
         price: '$1000-2000',
         location: 'Victoria Falls',
@@ -6724,7 +6724,7 @@ export const allCountries: Country[] = [
       {
         name: 'Ruckomechi Camp',
         description: 'Premier tented camp in Mana Pools National Park with views of the Zambezi River and Rift Valley escarpment.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrHyeWr7Iv3hO04tlxu7HFGGlC0uxOWN4A7vm3TY1VeUPn_We63V2fMg5fNz4hQikSsEEhSNhHipLD04aAvPTKwnMqoz5ZVMbW5hVQslcHQtbK5SoUPXNaAOZBR49AdvNOcI7c=s680-w680-h510-rw',
         rating: 5,
         price: '$800-1600',
         location: 'Mana Pools National Park',
@@ -6733,43 +6733,43 @@ export const allCountries: Country[] = [
       {
         name: 'Ilala Lodge',
         description: 'Boutique hotel within walking distance of Victoria Falls with colonial charm and excellent dining.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://images.trvl-media.com/lodging/7000000/6990000/6981300/6981220/bf0cbbd0.jpg?impolicy=resizecrop&rw=1200&ra=fit',
         rating: 4,
-        price: '$200-400',
+        price: '$200-500',
         location: 'Victoria Falls',
-        bookingLink: 'https://www.ilalalodge.com/'
+        bookingLink: 'https://expedia.com/affiliate/ow0UxNe'
       },
       {
         name: 'Camp Amalinda',
         description: 'Unique lodge built into ancient granite boulders in the Matobo Hills with rock art and rhino tracking.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://images.trvl-media.com/lodging/13000000/12780000/12776800/12776704/1164fd36.jpg?impolicy=resizecrop&rw=1200&ra=fit',
         rating: 4,
         price: '$300-600',
         location: 'Matobo National Park',
-        bookingLink: 'https://www.amalindacollection.co.zw/camp-amalinda/'
+        bookingLink: 'https://expedia.com/affiliate/iogcbEz'
       },
       {
         name: 'Meikles Hotel',
         description: 'Historic five-star hotel in the heart of Harare with luxury amenities and colonial elegance.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://images.trvl-media.com/lodging/1000000/10000/7700/7612/927fd78c.jpg?impolicy=resizecrop&rw=1200&ra=fit',
         rating: 4,
         price: '$150-300',
         location: 'Harare',
-        bookingLink: 'https://www.meikles.com/'
+        bookingLink: 'https://expedia.com/affiliate/NVNOg1u'
       },
       {
         name: 'Chilo Gorge Safari Lodge',
         description: 'Luxury lodge overlooking the Save River and Gonarezhou National Park with stunning views.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqofH4gNSu2qV1F1-9tXr3tqDAjdrFv3F4RVtkJdKHx9wfs3EPtBdStuxeJhFZxHJPeysVpmluk0YLHuVZ53ztnBaF2_-8547PYJ1NiIfPVif3rS_QxCxaZpOX09xbkv1vQqBFClA=s680-w680-h510-rw',
         rating: 4,
-        price: '$400-800',
+        price: '$400-100',
         location: 'Gonarezhou National Park',
-        bookingLink: 'https://www.chilogorge.com/'
+        bookingLink: 'https://chilogorge.com/'
       },
       {
         name: 'The Hide Safari Camp',
         description: 'Award-winning safari camp in Hwange National Park with underground hide for close wildlife viewing.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://www.africastay.com/media/website/6412-extra-image_1.jpg',
         rating: 4,
         price: '$500-1000',
         location: 'Hwange National Park',
@@ -6778,74 +6778,74 @@ export const allCountries: Country[] = [
       {
         name: 'Amanzi Lodge',
         description: 'Boutique lodge in Harare with individually designed rooms, beautiful gardens, and excellent dining.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://images.trvl-media.com/lodging/14000000/13170000/13161500/13161477/0a9ebf0b.jpg?impolicy=resizecrop&rw=1200&ra=fit',
         rating: 4,
         price: '$150-300',
         location: 'Harare',
-        bookingLink: 'https://www.amanzilodge.com/'
+        bookingLink: 'https://expedia.com/affiliate/G2xa6fS'
       },
       {
         name: 'Musango Safari Camp',
         description: 'Private island camp in Lake Kariba offering diverse activities and intimate safari experiences.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/p/AF1QipOsbEpq-VBk2jZ0tfu9on1EJpwNDI7a2ifU0Fxs=s680-w680-h510-rw',
         rating: 4,
-        price: '$400-800',
+        price: '$400-2000',
         location: 'Lake Kariba',
         bookingLink: 'https://www.musangosafaricamp.com/'
       },
       {
         name: 'Khayelitshe House',
         description: 'Exclusive-use luxury villa in Matobo Hills with unique architecture and private safari experiences.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/p/AF1QipM89A02SnbRFoaIJbBHDh_WFKBMklIvInfcujtN=s680-w680-h510-rw',
         rating: 5,
         price: '$800-1600',
         location: 'Matobo Hills',
-        bookingLink: 'https://www.amalindacollection.co.zw/khayelitshe-house/'
+        bookingLink: 'https://africanbushcamps.com/experiences/khayelitshe-house/'
       },
       {
         name: 'Norma Jeane\'s Lakeview Resort',
         description: 'Lakeside resort on Lake Kariba with comfortable accommodations and water activities.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$100-200',
+        image: 'https://lh3.googleusercontent.com/p/AF1QipPKydt1DgdYccHrltodDabPte3OLVMxiVZhylDE=s680-w680-h510-rw',
+        rating: 5,
+        price: '$100-400',
         location: 'Kariba',
-        bookingLink: 'https://www.normajeaneslakeview.com/'
+        bookingLink: 'https://clevershotelsandresorts.com/clevers-lakeview-resort/'
       },
       {
         name: 'Inn on Rupurara',
         description: 'Country inn in the Eastern Highlands with trout fishing, horse riding, and mountain activities.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nouVvp320il9H4Z4CjoHpiOi-paY5WRawW2OFkS7hcoKzA6-6_CtaS-9mAWxSWKTAb1IE9RIUgfnuQM3b7-8DW8cczLF65GOzh0nk3XvB07-zSuafwfYmu793Fhdi8I37XZjAkP=s680-w680-h510-rw',
         rating: 4,
         price: '$150-300',
         location: 'Nyanga',
-        bookingLink: 'https://www.innonrupurara.com/'
+        bookingLink: 'https://www.google.com/search?sca_esv=a0d1b552b0cbf3bf&sxsrf=AE3TifO4lzKy4JyErTkxrC1Ym-xUgFhzHg:1758916331811&uds=AOm0WdE2fekQnsyfYEw8JPYozOKz8ApIadQLmEGoRDEJ92CwHAqq0HUL0F_phihEzfgSf-NSzWpqPkod1OLXOWV4S9KbtDJtGmZEs2qmIGHXNX-XUPQoU9m6g7OAudTtpGlfpu0GkUfX01BSpR_ew5uP5_HRpgbTOw&q=Inn+On+Rupurara+Prices&si=AMgyJEuRD3GDqxU_L8_PeeEjTvjV-qP0VAp8vNvPrAbc6ek8QOEwm9iR8fkhx7n1K-4BcYKiGBxMXPsKT70fLInpjMd6Fg6KmU1MIbSkjU6KTqD8F2uD45ffLiYaoxssup93dgbt7Oo1qnbPeLEoxOFjUwB87A_zYg%3D%3D&sa=X&ved=2ahUKEwjbwpb5mfePAxX8gP0HHRvnHbkQrK0LegQIKhAG&biw=1821&bih=798&dpr=0.75'
       },
       {
         name: 'Bulawayo Club',
         description: 'Historic gentlemen\'s club converted to a boutique hotel with colonial architecture and memorabilia.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://images.trvl-media.com/lodging/7000000/6130000/6120200/6120159/ee61498c.jpg?impolicy=resizecrop&rw=1200&ra=fit',
         rating: 4,
-        price: '$100-200',
+        price: '$48-200',
         location: 'Bulawayo',
-        bookingLink: 'https://www.bulawayoclub.com/'
+        bookingLink: 'https://expedia.com/affiliate/JxllnJ1'
       },
       {
         name: 'Zambezi Sands River Camp',
         description: 'Luxury tented camp on the banks of the Zambezi River within Zambezi National Park.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4npnDsWKkftxUo8IYXKoMhyx536ZSHyjoHrXPY5UR5g3R1mJmq0Ban02RCcSjyJELGKdNktCZln0qlRALM2mzW10eXwPe8UWtd9TgH08kGFiXvFO5OgsRJC7TbohCwfBhW-7IGRBPQ=s680-w680-h510-rw',
         rating: 4,
         price: '$500-1000',
         location: 'Victoria Falls',
-        bookingLink: 'https://www.imvelosafarilodges.com/zambezi-sands/'
+        bookingLink: 'https://batokaafrica.com/properties/zambezi-sands/'
       },
       {
         name: 'Troutbeck Resort',
         description: 'Historic resort in the Eastern Highlands with trout fishing, golf course, and mountain views.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        image: 'https://images.trvl-media.com/lodging/1000000/120000/113600/113536/2a688694.jpg?impolicy=resizecrop&rw=1200&ra=fit',
         rating: 4,
         price: '$150-300',
         location: 'Nyanga',
-        bookingLink: 'https://www.troutbeck.co.zw/'
+        bookingLink: 'https://expedia.com/affiliate/57E7iRB'
       }
     ],
     restaurants: [
