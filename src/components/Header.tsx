@@ -124,6 +124,64 @@ const Header = () => {
     }
   ];
 
+  const africanTourAgencies = [
+    {
+      continent: 'Europe',
+      agencies: [
+        { name: 'Exodus Travels', url: 'https://www.exodus.co.uk', country: 'UK' },
+        { name: 'Intrepid Travel', url: 'https://www.intrepidtravel.com', country: 'UK' },
+        { name: 'G Adventures', url: 'https://www.gadventures.com', country: 'UK' },
+        { name: 'On The Go Tours', url: 'https://www.onthegotours.com', country: 'UK' },
+        { name: 'Explore Worldwide', url: 'https://www.explore.co.uk', country: 'UK' },
+        { name: 'African Pride', url: 'https://www.africanpride.co.uk', country: 'UK' }
+      ]
+    },
+    {
+      continent: 'North America',
+      agencies: [
+        { name: 'African Travel Inc', url: 'https://www.africantravelinc.com', country: 'USA' },
+        { name: 'Micato Safaris', url: 'https://www.micato.com', country: 'USA' },
+        { name: 'Ker & Downey', url: 'https://www.kerdowney.com', country: 'USA' },
+        { name: 'Natural Habitat Adventures', url: 'https://www.nathab.com', country: 'USA' },
+        { name: 'African Budget Safaris', url: 'https://www.africanbudgetsafaris.com', country: 'USA' },
+        { name: 'Zicasso', url: 'https://www.zicasso.com', country: 'USA' }
+      ]
+    },
+    {
+      continent: 'South America',
+      agencies: [
+        { name: 'Azul Viagens', url: 'https://www.azulviagens.com.br', country: 'Brazil' },
+        { name: 'CVC África', url: 'https://www.cvc.com.br', country: 'Brazil' },
+        { name: 'Tam Viagens', url: 'https://www.tamviagens.com.br', country: 'Brazil' },
+        { name: 'Flot Viajes', url: 'https://www.flotviajes.com', country: 'Argentina' },
+        { name: 'Despegar África', url: 'https://www.despegar.com', country: 'Argentina' },
+        { name: 'Almundo Safaris', url: 'https://www.almundo.com', country: 'Argentina' }
+      ]
+    },
+    {
+      continent: 'Africa',
+      agencies: [
+        { name: 'Wilderness Safaris', url: 'https://www.wilderness-safaris.com', country: 'Botswana' },
+        { name: 'Singita', url: 'https://www.singita.com', country: 'South Africa' },
+        { name: 'Governors Camp', url: 'https://www.governorscamp.com', country: 'Kenya' },
+        { name: 'Elewana Collection', url: 'https://www.elewanacollection.com', country: 'Tanzania' },
+        { name: 'Sanctuary Retreats', url: 'https://www.sanctuaryretreats.com', country: 'South Africa' },
+        { name: 'Mahlatini', url: 'https://www.mahlatini.com', country: 'South Africa' }
+      ]
+    },
+    {
+      continent: 'Asia',
+      agencies: [
+        { name: 'Cox & Kings', url: 'https://www.coxandkings.com', country: 'India' },
+        { name: 'Kuoni Asia', url: 'https://www.kuoni.com', country: 'Singapore' },
+        { name: 'Abercrombie & Kent Asia', url: 'https://www.abercrombiekent.com.sg', country: 'Singapore' },
+        { name: 'Enchanting Travels', url: 'https://www.enchantingtravels.com', country: 'India' },
+        { name: 'Asian Trails', url: 'https://www.asiantrails.travel', country: 'Thailand' },
+        { name: 'Diethelm Travel', url: 'https://www.diethelmtravel.com', country: 'Thailand' }
+      ]
+    }
+  ];
+
   return (
     <header className="safari-nav sticky top-0 z-50 border-b border-amber-500/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -275,6 +333,56 @@ const Header = () => {
               )}
             </div>
             
+            {/* African Tour Agencies Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsAfricanToursOpen(!isAfricanToursOpen)}
+                className="flex items-center space-x-1 text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+              >
+                <span>African Tours</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAfricanToursOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
+              </button>
+              
+              {isAfricanToursOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 safari-glass border border-amber-500/30 rounded-2xl shadow-2xl overflow-hidden z-50">
+                  <div className="max-h-96 overflow-y-auto">
+                    {africanTourAgencies.map((continent, continentIndex) => (
+                      <div key={continentIndex} className="border-b border-amber-500/20 last:border-b-0">
+                        <div className="px-4 py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20">
+                          <h4 className="font-bold text-green-300 text-sm tracking-wider uppercase">
+                            {continent.continent}
+                          </h4>
+                        </div>
+                        <div className="py-2">
+                          {continent.agencies.map((agency, agencyIndex) => (
+                            <a
+                              key={agencyIndex}
+                              href={agency.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-between px-4 py-3 hover:bg-green-500/10 transition-colors group"
+                              onClick={() => setIsAfricanToursOpen(false)}
+                            >
+                              <div>
+                                <div className="text-white font-medium group-hover:text-green-400 transition-colors">
+                                  {agency.name}
+                                </div>
+                                <div className="text-gray-400 text-xs">
+                                  {agency.country}
+                                </div>
+                              </div>
+                              <ExternalLink className="h-4 w-4 text-green-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            
             <Link 
               to="/search" 
               className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
@@ -409,6 +517,50 @@ const Header = () => {
                               <div>
                                 <div className="font-medium">{airline.name}</div>
                                 <div className="text-gray-400 text-xs">{airline.country}</div>
+                              </div>
+                              <ExternalLink className="h-3 w-3" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
+              {/* Mobile African Tour Agencies */}
+              <div className="px-6 py-4">
+                <button
+                  onClick={() => setIsAfricanToursOpen(!isAfricanToursOpen)}
+                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-lg"
+                >
+                  <span>African Tours</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAfricanToursOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isAfricanToursOpen && (
+                  <div className="mt-4 space-y-4 max-h-64 overflow-y-auto">
+                    {africanTourAgencies.map((continent, continentIndex) => (
+                      <div key={continentIndex}>
+                        <h4 className="font-bold text-green-300 text-sm tracking-wider uppercase mb-2">
+                          {continent.continent}
+                        </h4>
+                        <div className="space-y-2 ml-4">
+                          {continent.agencies.map((agency, agencyIndex) => (
+                            <a
+                              key={agencyIndex}
+                              href={agency.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-between text-white/80 hover:text-green-400 transition-colors text-sm"
+                              onClick={() => {
+                                setIsAfricanToursOpen(false);
+                                setIsMenuOpen(false);
+                              }}
+                            >
+                              <div>
+                                <div className="font-medium">{agency.name}</div>
+                                <div className="text-gray-400 text-xs">{agency.country}</div>
                               </div>
                               <ExternalLink className="h-3 w-3" />
                             </a>
