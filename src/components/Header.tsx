@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Search, MapPin, Menu, X, Crown, Variable as Safari } from 'lucide-react';
+import { Search, MapPin, Menu, X, Crown, Variable as Safari, ExternalLink, ChevronDown } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAgenciesOpen, setIsAgenciesOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
 
@@ -15,6 +16,53 @@ const Header = () => {
     }
   };
 
+  const travelAgencies = [
+    {
+      continent: 'Europe',
+      agencies: [
+        { name: 'TUI Group', url: 'https://www.tui.com', country: 'Germany' },
+        { name: 'Thomas Cook', url: 'https://www.thomascook.com', country: 'UK' },
+        { name: 'Kuoni', url: 'https://www.kuoni.co.uk', country: 'Switzerland' },
+        { name: 'Jet2holidays', url: 'https://www.jet2holidays.com', country: 'UK' }
+      ]
+    },
+    {
+      continent: 'North America',
+      agencies: [
+        { name: 'Expedia', url: 'https://www.expedia.com', country: 'USA' },
+        { name: 'Priceline', url: 'https://www.priceline.com', country: 'USA' },
+        { name: 'AAA Travel', url: 'https://www.aaa.com/travel', country: 'USA' },
+        { name: 'Flight Centre', url: 'https://www.flightcentre.ca', country: 'Canada' }
+      ]
+    },
+    {
+      continent: 'South America',
+      agencies: [
+        { name: 'CVC Corp', url: 'https://www.cvc.com.br', country: 'Brazil' },
+        { name: 'Despegar', url: 'https://www.despegar.com', country: 'Argentina' },
+        { name: 'Decolar', url: 'https://www.decolar.com', country: 'Brazil' },
+        { name: 'Almundo', url: 'https://www.almundo.com', country: 'Argentina' }
+      ]
+    },
+    {
+      continent: 'Africa',
+      agencies: [
+        { name: 'African Budget Safaris', url: 'https://www.africanbudgetsafaris.com', country: 'Tanzania' },
+        { name: 'Thompsons Africa', url: 'https://www.thompsonsafrica.com', country: 'South Africa' },
+        { name: 'Wild Frontiers', url: 'https://www.wildfrontiers.com', country: 'South Africa' },
+        { name: 'Abercrombie & Kent', url: 'https://www.abercrombiekent.com', country: 'Kenya' }
+      ]
+    },
+    {
+      continent: 'Asia',
+      agencies: [
+        { name: 'Ctrip', url: 'https://www.trip.com', country: 'China' },
+        { name: 'MakeMyTrip', url: 'https://www.makemytrip.com', country: 'India' },
+        { name: 'Rakuten Travel', url: 'https://travel.rakuten.com', country: 'Japan' },
+        { name: 'Agoda', url: 'https://www.agoda.com', country: 'Singapore' }
+      ]
+    }
+  ];
   return (
     <header className="safari-nav sticky top-0 z-50 border-b border-amber-500/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,6 +113,57 @@ const Header = () => {
               Home
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
             </Link>
+            
+            {/* Travel Agencies Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsAgenciesOpen(!isAgenciesOpen)}
+                className="flex items-center space-x-1 text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+              >
+                <span>Travel Agencies</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAgenciesOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
+              </button>
+              
+              {isAgenciesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 safari-glass border border-amber-500/30 rounded-2xl shadow-2xl overflow-hidden z-50">
+                  <div className="max-h-96 overflow-y-auto">
+                    {travelAgencies.map((continent, continentIndex) => (
+                      <div key={continentIndex} className="border-b border-amber-500/20 last:border-b-0">
+                        <div className="px-4 py-3 bg-gradient-to-r from-amber-500/20 to-orange-500/20">
+                          <h4 className="font-bold text-amber-300 text-sm tracking-wider uppercase">
+                            {continent.continent}
+                          </h4>
+                        </div>
+                        <div className="py-2">
+                          {continent.agencies.map((agency, agencyIndex) => (
+                            <a
+                              key={agencyIndex}
+                              href={agency.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-between px-4 py-3 hover:bg-amber-500/10 transition-colors group"
+                              onClick={() => setIsAgenciesOpen(false)}
+                            >
+                              <div>
+                                <div className="text-white font-medium group-hover:text-amber-400 transition-colors">
+                                  {agency.name}
+                                </div>
+                                <div className="text-gray-400 text-xs">
+                                  {agency.country}
+                                </div>
+                              </div>
+                              <ExternalLink className="h-4 w-4 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            
             <Link 
               to="/search" 
               className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
@@ -121,6 +220,51 @@ const Header = () => {
               >
                 Home
               </Link>
+              
+              {/* Mobile Travel Agencies */}
+              <div className="px-6 py-4">
+                <button
+                  onClick={() => setIsAgenciesOpen(!isAgenciesOpen)}
+                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-lg"
+                >
+                  <span>Travel Agencies</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAgenciesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isAgenciesOpen && (
+                  <div className="mt-4 space-y-4 max-h-64 overflow-y-auto">
+                    {travelAgencies.map((continent, continentIndex) => (
+                      <div key={continentIndex}>
+                        <h4 className="font-bold text-amber-300 text-sm tracking-wider uppercase mb-2">
+                          {continent.continent}
+                        </h4>
+                        <div className="space-y-2 ml-4">
+                          {continent.agencies.map((agency, agencyIndex) => (
+                            <a
+                              key={agencyIndex}
+                              href={agency.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-between text-white/80 hover:text-amber-400 transition-colors text-sm"
+                              onClick={() => {
+                                setIsAgenciesOpen(false);
+                                setIsMenuOpen(false);
+                              }}
+                            >
+                              <div>
+                                <div className="font-medium">{agency.name}</div>
+                                <div className="text-gray-400 text-xs">{agency.country}</div>
+                              </div>
+                              <ExternalLink className="h-3 w-3" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
               <Link
                 to="/search"
                 className="block px-6 py-4 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-lg"
@@ -135,6 +279,14 @@ const Header = () => {
           </div>
         )}
       </div>
+      
+      {/* Close dropdown when clicking outside */}
+      {isAgenciesOpen && (
+        <div 
+          className="fixed inset-0 z-40" 
+          onClick={() => setIsAgenciesOpen(false)}
+        />
+      )}
     </header>
   );
 };
