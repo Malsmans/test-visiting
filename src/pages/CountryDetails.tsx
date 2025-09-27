@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { MapPin, Star, DollarSign, Car, Hotel, UtensilsCrossed, Cloud, ArrowLeft, Navigation, ExternalLink, Crown, Sparkles, Award, Calendar } from 'lucide-react';
+import { MapPin, Star, DollarSign, Car, Hotel, UtensilsCrossed, Cloud, ArrowLeft, Navigation, ExternalLink, Crown, Sparkles, Award, Calendar, Thermometer } from 'lucide-react';
 import { allCountries } from '../data/countries';
 import WeatherWidget from '../components/WeatherWidget';
 import MapEmbed from '../components/MapEmbed';
