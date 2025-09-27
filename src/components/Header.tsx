@@ -69,7 +69,7 @@ const Header = () => {
               to="/search" 
               className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
             >
-              Safari
+              Countries
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
             </Link>
             <Link 
