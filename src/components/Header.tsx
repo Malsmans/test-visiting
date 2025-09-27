@@ -137,10 +137,10 @@ const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-3xl font-black safari-gradient-text">
-                WILD AFRICA
+                MOTHER AFRICA
               </span>
               <span className="text-xs text-amber-300/90 font-semibold tracking-[0.25em] uppercase">
-                Premium Safari Adventures
+                Premium African Experiences
               </span>
             </div>
           </Link>

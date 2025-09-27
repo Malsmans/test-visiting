@@ -39,7 +39,7 @@ const Home = () => {
                 DISCOVER
               </span>
               <span className="block text-white drop-shadow-2xl mb-4">
-                THE WILD
+                THE MOTHER
               </span>
               <span className="block safari-gradient-text drop-shadow-2xl">
                 AFRICA
@@ -47,9 +47,9 @@ const Home = () => {
             </h1>
             
             <p className="text-2xl md:text-3xl mb-16 text-gray-100 max-w-5xl mx-auto leading-relaxed font-light">
-              Embark on the ultimate luxury safari adventure through Africa's most pristine wilderness. 
+              Experience the ultimate luxury journey through Africa's diverse landscapes, rich cultures, and breathtaking destinations. 
               <span className="block mt-4 safari-gradient-text font-semibold text-xl md:text-2xl">
-                Where untamed nature meets unparalleled luxury.
+                Where authentic African heritage meets unparalleled luxury.
               </span>
             </p>
 
