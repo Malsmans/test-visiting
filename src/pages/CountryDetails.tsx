@@ -127,6 +127,112 @@ const CountryDetails = () => {
           </div>
         </div>
 
+        {/* Quick Access Navigation */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+          <div className="bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-amber-500/20 p-6">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-2 rounded-xl">
+                <MapPin className="h-5 w-5 text-white" />
+              </div>
+              <h2 className="text-xl font-bold text-white">Essential Travel Tools</h2>
+              <div className="flex items-center space-x-1 text-amber-400">
+                <Crown className="h-4 w-4" />
+                <span className="text-xs font-medium tracking-wider uppercase">Quick Access</span>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+              <button
+                onClick={() => document.getElementById('currency-converter')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex flex-col items-center p-4 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl border border-emerald-500/30 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <DollarSign className="h-6 w-6 text-emerald-400 mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-emerald-300 text-sm font-medium text-center">Currency Converter</span>
+              </button>
+              
+              <button
+                onClick={() => document.getElementById('visa-info')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex flex-col items-center p-4 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <ExternalLink className="h-6 w-6 text-blue-400 mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-blue-300 text-sm font-medium text-center">Visa Information</span>
+              </button>
+              
+              <button
+                onClick={() => document.getElementById('best-time-to-visit')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex flex-col items-center p-4 bg-gradient-to-br from-orange-500/20 to-amber-500/20 rounded-xl border border-orange-500/30 hover:border-orange-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <Calendar className="h-6 w-6 text-orange-400 mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-orange-300 text-sm font-medium text-center">Best Time to Visit</span>
+              </button>
+              
+              <button
+                onClick={() => document.getElementById('travel-tips')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex flex-col items-center p-4 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-xl border border-amber-500/30 hover:border-amber-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <Sparkles className="h-6 w-6 text-amber-400 mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-amber-300 text-sm font-medium text-center">Travel Tips</span>
+              </button>
+              
+              <button
+                onClick={() => document.getElementById('language-guide')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex flex-col items-center p-4 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <Star className="h-6 w-6 text-indigo-400 mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-indigo-300 text-sm font-medium text-center">Language Guide</span>
+              </button>
+              
+              <button
+                onClick={() => document.getElementById('packing-checklist')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex flex-col items-center p-4 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-xl border border-amber-500/30 hover:border-amber-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <Award className="h-6 w-6 text-amber-400 mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-amber-300 text-sm font-medium text-center">Packing Checklist</span>
+              </button>
+              
+              <button
+                onClick={() => document.getElementById('safety-alerts')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex flex-col items-center p-4 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl border border-red-500/30 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <ArrowLeft className="h-6 w-6 text-red-400 mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-red-300 text-sm font-medium text-center">Safety Alerts</span>
+              </button>
+              
+              <button
+                onClick={() => document.getElementById('local-events')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex flex-col items-center p-4 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-xl border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <Navigation className="h-6 w-6 text-purple-400 mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-purple-300 text-sm font-medium text-center">Local Events</span>
+              </button>
+              
+              <button
+                onClick={() => document.getElementById('travel-budget')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex flex-col items-center p-4 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl border border-emerald-500/30 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <Thermometer className="h-6 w-6 text-emerald-400 mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-emerald-300 text-sm font-medium text-center">Travel Budget</span>
+              </button>
+              
+              <button
+                onClick={() => document.getElementById('transportation-guide')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex flex-col items-center p-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <Car className="h-6 w-6 text-blue-400 mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-blue-300 text-sm font-medium text-center">Transportation</span>
+              </button>
+              
+              <button
+                onClick={() => document.getElementById('emergency-contacts')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group flex flex-col items-center p-4 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl border border-red-500/30 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <UtensilsCrossed className="h-6 w-6 text-red-400 mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-red-300 text-sm font-medium text-center">Emergency Contacts</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Weather and Map Row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -145,14 +251,14 @@ const CountryDetails = () => {
           </div>
 
           {/* Travel Information Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12" id="currency-converter">
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-2xl blur"></div>
               <div className="relative">
                 <CurrencyConverter country={country.name} />
               </div>
             </div>
-            <div className="relative">
+            <div className="relative" id="visa-info">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-2xl blur"></div>
               <div className="relative">
                 <VisaInfo country={country.name} />
@@ -161,7 +267,7 @@ const CountryDetails = () => {
           </div>
 
           {/* Best Time to Visit */}
-          <div className="mb-12">
+          <div className="mb-12" id="best-time-to-visit">
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/20 to-amber-500/20 rounded-2xl blur"></div>
               <div className="relative">
@@ -171,14 +277,14 @@ const CountryDetails = () => {
           </div>
 
           {/* Travel Tips and Language Guide */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div className="relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12" id="travel-tips">
+            <div className="relative" id="travel-tips-section">
               <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 rounded-2xl blur"></div>
               <div className="relative">
                 <TravelTips country={country.name} />
               </div>
             </div>
-            <div className="relative">
+            <div className="relative" id="language-guide">
               <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl blur"></div>
               <div className="relative">
                 <LanguageGuide country={country.name} />
@@ -187,14 +293,14 @@ const CountryDetails = () => {
           </div>
 
           {/* Packing Checklist and Safety Alerts */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div className="relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12" id="packing-checklist">
+            <div className="relative" id="packing-checklist-section">
               <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 rounded-2xl blur"></div>
               <div className="relative">
                 <PackingChecklist country={country.name} />
               </div>
             </div>
-            <div className="relative">
+            <div className="relative" id="safety-alerts">
               <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-2xl blur"></div>
               <div className="relative">
                 <SafetyAlerts country={country.name} />
@@ -203,14 +309,14 @@ const CountryDetails = () => {
           </div>
 
           {/* Local Events and Travel Budget */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div className="relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12" id="local-events">
+            <div className="relative" id="local-events-section">
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-2xl blur"></div>
               <div className="relative">
                 <LocalEvents country={country.name} />
               </div>
             </div>
-            <div className="relative">
+            <div className="relative" id="travel-budget">
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-2xl blur"></div>
               <div className="relative">
                 <TravelBudget country={country.name} />
@@ -219,7 +325,7 @@ const CountryDetails = () => {
           </div>
 
           {/* Transportation Guide */}
-          <div className="mb-12">
+          <div className="mb-12" id="transportation-guide">
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl blur"></div>
               <div className="relative">
@@ -229,7 +335,7 @@ const CountryDetails = () => {
           </div>
 
           {/* Emergency Contacts */}
-          <div className="mb-12">
+          <div className="mb-12" id="emergency-contacts">
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-2xl blur"></div>
               <div className="relative">
