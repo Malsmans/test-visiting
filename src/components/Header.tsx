@@ -274,6 +274,56 @@ const Header = () => {
               )}
             </div>
             
+            {/* African Tour Agencies Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsAfricanToursOpen(!isAfricanToursOpen)}
+                className="flex items-center space-x-1 text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+              >
+                <span>African Tours</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAfricanToursOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
+              </button>
+              
+              {isAfricanToursOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 safari-glass border border-amber-500/30 rounded-2xl shadow-2xl overflow-hidden z-50">
+                  <div className="max-h-96 overflow-y-auto">
+                    {africanTourAgencies.map((continent, continentIndex) => (
+                      <div key={continentIndex} className="border-b border-amber-500/20 last:border-b-0">
+                        <div className="px-4 py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20">
+                          <h4 className="font-bold text-green-300 text-sm tracking-wider uppercase">
+                            {continent.continent}
+                          </h4>
+                        </div>
+                        <div className="py-2">
+                          {continent.agencies.map((agency, agencyIndex) => (
+                            <a
+                              key={agencyIndex}
+                              href={agency.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-between px-4 py-3 hover:bg-green-500/10 transition-colors group"
+                              onClick={() => setIsAfricanToursOpen(false)}
+                            >
+                              <div>
+                                <div className="text-white font-medium group-hover:text-green-400 transition-colors">
+                                  {agency.name}
+                                </div>
+                                <div className="text-gray-400 text-xs">
+                                  {agency.country}
+                                </div>
+                              </div>
+                              <ExternalLink className="h-4 w-4 text-green-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            
             <Link 
               to="/search" 
               className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
