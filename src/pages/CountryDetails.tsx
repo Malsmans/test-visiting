@@ -277,57 +277,80 @@ const CountryDetails = () => {
             <div className="p-8">
               {/* Attractions Tab */}
               {activeTab === 'attractions' && (
-                <div className="space-y-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {country.attractions.map((attraction, index) => (
                     <div key={index} className="group bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-2xl overflow-hidden shadow-xl border border-amber-500/10 hover:border-amber-500/30 transition-all duration-500">
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {/* Attraction Info */}
-                        <div className="p-8">
-                          <div className="relative h-64 rounded-xl overflow-hidden mb-6">
-                            <img
-                              src={attraction.image}
-                              alt={attraction.name}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                            <div className="absolute top-4 left-4 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                              <span className="text-white text-xs font-semibold tracking-wider uppercase">Premium</span>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start justify-between mb-4">
-                            <h3 className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">
-                              {attraction.name}
-                            </h3>
-                            {attraction.link && (
-                              <a
-                                href={attraction.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-amber-400 hover:text-amber-300 transition-colors bg-amber-500/20 p-2 rounded-full hover:bg-amber-500/30"
-                                title="Learn more"
-                              >
-                                <ExternalLink className="h-5 w-5" />
-                              </a>
-                            )}
-                          </div>
-                          <p className="text-gray-300 mb-6 leading-relaxed">{attraction.description}</p>
-                          <div className="flex items-center text-amber-400">
-                            <MapPin className="h-5 w-5 mr-2" />
-                            <span className="font-medium">{attraction.location}</span>
-                          </div>
+                      <div className="relative h-48 overflow-hidden">
+                        <img
+                          src={attraction.image}
+                          alt={attraction.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div className="absolute top-4 left-4 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                          <span className="text-white text-xs font-semibold tracking-wider uppercase">Premium</span>
+                        </div>
+                      </div>
+                      
+                      <div className="p-6">
+                        <div className="flex items-start justify-between mb-3">
+                          <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors line-clamp-2">
+                            {attraction.name}
+                          </h3>
+                          {attraction.link && (
+                            <a
+                              href={attraction.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-amber-400 hover:text-amber-300 transition-colors bg-amber-500/20 p-2 rounded-full hover:bg-amber-500/30 flex-shrink-0"
+                              title="Learn more"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                            </a>
+                          )}
+                        </div>
+                        <p className="text-gray-300 mb-4 leading-relaxed text-sm line-clamp-3">{attraction.description}</p>
+                        <div className="flex items-center text-amber-400">
+                          <MapPin className="h-4 w-4 mr-2 flex-shrink-0" />
+                          <span className="font-medium text-sm truncate">{attraction.location}</span>
                         </div>
                         
-                        {/* Interactive Map */}
-                        <div className="p-8">
-                          <LocationMap
-                            name={attraction.name}
-                            location={attraction.location}
-                            type="attraction"
-                            country={country.name}
-                            description={attraction.description}
-                          />
-                        </div>
+                        <button
+                          onClick={() => {
+                            const mapSection = document.createElement('div');
+                            mapSection.innerHTML = `
+                              <div class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                                <div class="bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-auto border border-amber-500/20">
+                                  <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-xl font-bold text-white">${attraction.name}</h3>
+                                    <button onclick="this.closest('.fixed').remove()" class="text-gray-400 hover:text-white p-2 rounded-full hover:bg-white/10">
+                                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                      </svg>
+                                    </button>
+                          </div>
+                                  <div class="h-96">
+                                    <iframe
+                                      src="https://maps.google.com/maps?q=${encodeURIComponent(attraction.name + ', ' + attraction.location + ', ' + country.name)}&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                      width="100%"
+                                      height="100%"
+                                      style="border: 0; border-radius: 12px;"
+                                      allowfullscreen
+                                      loading="lazy"
+                                      referrerpolicy="no-referrer-when-downgrade"
+                                      title="Map of ${attraction.name}"
+                                    ></iframe>
+                                  </div>
+                                </div>
+                              </div>
+                            `;
+                            document.body.appendChild(mapSection);
+                          }}
+                          className="mt-4 w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+                        >
+                          <MapPin className="h-4 w-4" />
+                          <span>View on Map</span>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -336,46 +359,30 @@ const CountryDetails = () => {
 
               {/* Transportation Tab */}
               {activeTab === 'transport' && (
-                <div className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {country.transportation.map((transport, index) => (
-                    <div key={index} className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-2xl shadow-xl border border-amber-500/10 hover:border-amber-500/30 transition-all duration-500">
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {/* Transport Info */}
-                        <div className="p-8">
-                          <div className="flex items-center space-x-3 mb-4">
-                            <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-3 rounded-xl">
-                              <Car className="h-6 w-6 text-white" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-white">{transport.type}</h3>
-                          </div>
-                          <p className="text-gray-300 mb-6 leading-relaxed">{transport.description}</p>
-                          <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-emerald-500/20 rounded-xl p-4 border border-emerald-500/30">
-                              <div className="flex items-center text-emerald-400 font-bold text-lg">
-                                <DollarSign className="h-5 w-5 mr-1" />
-                                {transport.price}
-                              </div>
-                              <div className="text-emerald-300 text-sm mt-1">Premium Rate</div>
-                            </div>
-                            <div className="bg-blue-500/20 rounded-xl p-4 border border-blue-500/30">
-                              <div className="flex items-center text-blue-400 font-medium">
-                                <Navigation className="h-4 w-4 mr-2" />
-                                {transport.route}
-                              </div>
-                              <div className="text-blue-300 text-sm mt-1">Route</div>
-                            </div>
-                          </div>
+                    <div key={index} className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-2xl shadow-xl border border-amber-500/10 hover:border-amber-500/30 transition-all duration-500 p-6">
+                      <div className="flex items-center space-x-3 mb-4">
+                        <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-3 rounded-xl">
+                          <Car className="h-5 w-5 text-white" />
                         </div>
-                        
-                        {/* Transport Map */}
-                        <div className="p-8">
-                          <LocationMap
-                            name={transport.type}
-                            location={transport.route}
-                            type="transport"
-                            country={country.name}
-                            description={`${transport.description} - ${transport.price}`}
-                          />
+                        <h3 className="text-xl font-bold text-white line-clamp-1">{transport.type}</h3>
+                      </div>
+                      <p className="text-gray-300 mb-4 leading-relaxed text-sm line-clamp-3">{transport.description}</p>
+                      <div className="grid grid-cols-1 gap-3">
+                        <div className="bg-emerald-500/20 rounded-xl p-3 border border-emerald-500/30">
+                          <div className="flex items-center text-emerald-400 font-bold">
+                            <DollarSign className="h-4 w-4 mr-1" />
+                            <span className="text-sm">{transport.price}</span>
+                          </div>
+                          <div className="text-emerald-300 text-xs mt-1">Premium Rate</div>
+                        </div>
+                        <div className="bg-blue-500/20 rounded-xl p-3 border border-blue-500/30">
+                          <div className="flex items-center text-blue-400 font-medium">
+                            <Navigation className="h-3 w-3 mr-2" />
+                            <span className="text-sm truncate">{transport.route}</span>
+                          </div>
+                          <div className="text-blue-300 text-xs mt-1">Route</div>
                         </div>
                       </div>
                     </div>
@@ -385,85 +392,108 @@ const CountryDetails = () => {
 
               {/* Hotels Tab */}
               {activeTab === 'hotels' && (
-                <div className="space-y-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {country.hotels.map((hotel, index) => (
                     <div key={index} className="group bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-2xl overflow-hidden shadow-xl border border-amber-500/10 hover:border-amber-500/30 transition-all duration-500">
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {/* Hotel Info */}
-                        <div className="p-8">
-                          <div className="relative h-64 rounded-xl overflow-hidden mb-6">
-                            <img
-                              src={hotel.image}
-                              alt={hotel.name}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      <div className="relative h-48 overflow-hidden">
+                        <img
+                          src={hotel.image}
+                          alt={hotel.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div className="absolute top-4 left-4 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1">
+                          <Crown className="h-3 w-3 text-white" />
+                          <span className="text-white text-xs font-semibold tracking-wider uppercase">Luxury</span>
+                        </div>
+                      </div>
+                      
+                      <div className="p-6">
+                        <div className="flex items-start justify-between mb-3">
+                          <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors line-clamp-2">
+                            {hotel.name}
+                          </h3>
+                          {hotel.bookingLink && (
+                            <a
+                              href={hotel.bookingLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white px-3 py-1 rounded-full text-xs font-semibold transition-all duration-300 flex items-center space-x-1 flex-shrink-0"
+                              title="Book this hotel"
+                            >
+                              <span>Book</span>
+                              <ExternalLink className="h-3 w-3" />
+                            </a>
+                          )}
+                        </div>
+                        
+                        <div className="flex items-center mb-3">
+                          {[...Array(5)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className={`h-4 w-4 ${
+                                i < hotel.rating ? 'text-amber-400 fill-current' : 'text-gray-600'
+                              }`}
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                            <div className="absolute top-4 left-4 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1">
-                              <Crown className="h-3 w-3 text-white" />
-                              <span className="text-white text-xs font-semibold tracking-wider uppercase">Luxury</span>
+                          ))}
+                          <span className="ml-2 text-amber-400 font-semibold text-sm">({hotel.rating}/5)</span>
+                        </div>
+                        
+                        <p className="text-gray-300 mb-4 leading-relaxed text-sm line-clamp-3">{hotel.description}</p>
+                        
+                        <div className="grid grid-cols-1 gap-3">
+                          <div className="bg-emerald-500/20 rounded-xl p-3 border border-emerald-500/30">
+                            <div className="flex items-center text-emerald-400 font-bold">
+                              <DollarSign className="h-4 w-4 mr-1" />
+                              <span className="text-sm">{hotel.price}/night</span>
                             </div>
+                            <div className="text-emerald-300 text-xs mt-1">Premium Rate</div>
                           </div>
-                          
-                          <div className="flex items-start justify-between mb-4">
-                            <h3 className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">
-                              {hotel.name}
-                            </h3>
-                            {hotel.bookingLink && (
-                              <a
-                                href={hotel.bookingLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center space-x-2"
-                                title="Book this hotel"
-                              >
-                                <span>Book Now</span>
-                                <ExternalLink className="h-4 w-4" />
-                              </a>
-                            )}
-                          </div>
-                          
-                          <div className="flex items-center mb-4">
-                            {[...Array(5)].map((_, i) => (
-                              <Star
-                                key={i}
-                                className={`h-5 w-5 ${
-                                  i < hotel.rating ? 'text-amber-400 fill-current' : 'text-gray-600'
-                                }`}
-                              />
-                            ))}
-                            <span className="ml-3 text-amber-400 font-semibold">({hotel.rating}/5)</span>
-                          </div>
-                          
-                          <p className="text-gray-300 mb-6 leading-relaxed">{hotel.description}</p>
-                          
-                          <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-emerald-500/20 rounded-xl p-4 border border-emerald-500/30">
-                              <div className="flex items-center text-emerald-400 font-bold text-lg">
-                                <DollarSign className="h-5 w-5 mr-1" />
-                                {hotel.price}/night
-                              </div>
-                              <div className="text-emerald-300 text-sm mt-1">Premium Rate</div>
+                          <div className="bg-blue-500/20 rounded-xl p-3 border border-blue-500/30">
+                            <div className="flex items-center text-blue-400 font-medium">
+                              <MapPin className="h-3 w-3 mr-2" />
+                              <span className="text-sm truncate">{hotel.location}</span>
                             </div>
-                            <div className="bg-blue-500/20 rounded-xl p-4 border border-blue-500/30">
-                              <div className="flex items-center text-blue-400 font-medium">
-                                <MapPin className="h-4 w-4 mr-2" />
-                                {hotel.location}
-                              </div>
-                              <div className="text-blue-300 text-sm mt-1">Location</div>
-                            </div>
+                            <div className="text-blue-300 text-xs mt-1">Location</div>
                           </div>
                         </div>
                         
-                        {/* Hotel Map */}
-                        <div className="p-8">
-                          <LocationMap
-                            name={hotel.name}
-                            location={hotel.location}
-                            type="hotel"
-                            country={country.name}
-                            description={`${hotel.description} - ${hotel.price}/night`}
-                          />
-                        </div>
+                        <button
+                          onClick={() => {
+                            const mapSection = document.createElement('div');
+                            mapSection.innerHTML = `
+                              <div class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                                <div class="bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-auto border border-amber-500/20">
+                                  <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-xl font-bold text-white">${hotel.name}</h3>
+                                    <button onclick="this.closest('.fixed').remove()" class="text-gray-400 hover:text-white p-2 rounded-full hover:bg-white/10">
+                                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                  <div class="h-96">
+                                    <iframe
+                                      src="https://maps.google.com/maps?q=${encodeURIComponent(hotel.name + ', ' + hotel.location + ', ' + country.name)}&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                      width="100%"
+                                      height="100%"
+                                      style="border: 0; border-radius: 12px;"
+                                      allowfullscreen
+                                      loading="lazy"
+                                      referrerpolicy="no-referrer-when-downgrade"
+                                      title="Map of ${hotel.name}"
+                                    ></iframe>
+                                  </div>
+                                </div>
+                              </div>
+                            `;
+                            document.body.appendChild(mapSection);
+                          }}
+                          className="mt-4 w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+                        >
+                          <MapPin className="h-4 w-4" />
+                          <span>View on Map</span>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -472,84 +502,107 @@ const CountryDetails = () => {
 
               {/* Restaurants Tab */}
               {activeTab === 'restaurants' && (
-                <div className="space-y-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {country.restaurants.map((restaurant, index) => (
                     <div key={index} className="group bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-2xl overflow-hidden shadow-xl border border-amber-500/10 hover:border-amber-500/30 transition-all duration-500">
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {/* Restaurant Info */}
-                        <div className="p-8">
-                          <div className="relative h-64 rounded-xl overflow-hidden mb-6">
-                            <img
-                              src={restaurant.image}
-                              alt={restaurant.name}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      <div className="relative h-48 overflow-hidden">
+                        <img
+                          src={restaurant.image}
+                          alt={restaurant.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div className="absolute top-4 left-4 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1">
+                          <UtensilsCrossed className="h-3 w-3 text-white" />
+                          <span className="text-white text-xs font-semibold tracking-wider uppercase">Fine Dining</span>
+                        </div>
+                      </div>
+                      
+                      <div className="p-6">
+                        <div className="flex items-start justify-between mb-3">
+                          <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors line-clamp-2">
+                            {restaurant.name}
+                          </h3>
+                          {restaurant.link && (
+                            <a
+                              href={restaurant.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-amber-400 hover:text-amber-300 transition-colors bg-amber-500/20 p-2 rounded-full hover:bg-amber-500/30 flex-shrink-0"
+                              title="Visit restaurant"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                            </a>
+                          )}
+                        </div>
+                        
+                        <div className="flex items-center mb-3">
+                          {[...Array(5)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className={`h-4 w-4 ${
+                                i < restaurant.rating ? 'text-amber-400 fill-current' : 'text-gray-600'
+                              }`}
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                            <div className="absolute top-4 left-4 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1">
-                              <UtensilsCrossed className="h-3 w-3 text-white" />
-                              <span className="text-white text-xs font-semibold tracking-wider uppercase">Fine Dining</span>
+                          ))}
+                          <span className="ml-2 text-amber-400 font-semibold text-sm">({restaurant.rating}/5)</span>
+                        </div>
+                        
+                        <p className="text-gray-300 mb-4 leading-relaxed font-medium text-sm line-clamp-2">{restaurant.cuisine}</p>
+                        
+                        <div className="grid grid-cols-1 gap-3">
+                          <div className="bg-emerald-500/20 rounded-xl p-3 border border-emerald-500/30">
+                            <div className="flex items-center text-emerald-400 font-bold">
+                              <DollarSign className="h-4 w-4 mr-1" />
+                              <span className="text-sm">{restaurant.priceRange}</span>
                             </div>
+                            <div className="text-emerald-300 text-xs mt-1">Price Range</div>
                           </div>
-                          
-                          <div className="flex items-start justify-between mb-4">
-                            <h3 className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">
-                              {restaurant.name}
-                            </h3>
-                            {restaurant.link && (
-                              <a
-                                href={restaurant.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-amber-400 hover:text-amber-300 transition-colors bg-amber-500/20 p-2 rounded-full hover:bg-amber-500/30"
-                                title="Visit restaurant"
-                              >
-                                <ExternalLink className="h-5 w-5" />
-                              </a>
-                            )}
-                          </div>
-                          
-                          <div className="flex items-center mb-4">
-                            {[...Array(5)].map((_, i) => (
-                              <Star
-                                key={i}
-                                className={`h-5 w-5 ${
-                                  i < restaurant.rating ? 'text-amber-400 fill-current' : 'text-gray-600'
-                                }`}
-                              />
-                            ))}
-                            <span className="ml-3 text-amber-400 font-semibold">({restaurant.rating}/5)</span>
-                          </div>
-                          
-                          <p className="text-gray-300 mb-6 leading-relaxed font-medium">{restaurant.cuisine}</p>
-                          
-                          <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-emerald-500/20 rounded-xl p-4 border border-emerald-500/30">
-                              <div className="flex items-center text-emerald-400 font-bold text-lg">
-                                <DollarSign className="h-5 w-5 mr-1" />
-                                {restaurant.priceRange}
-                              </div>
-                              <div className="text-emerald-300 text-sm mt-1">Price Range</div>
+                          <div className="bg-blue-500/20 rounded-xl p-3 border border-blue-500/30">
+                            <div className="flex items-center text-blue-400 font-medium">
+                              <MapPin className="h-3 w-3 mr-2" />
+                              <span className="text-sm truncate">{restaurant.location}</span>
                             </div>
-                            <div className="bg-blue-500/20 rounded-xl p-4 border border-blue-500/30">
-                              <div className="flex items-center text-blue-400 font-medium">
-                                <MapPin className="h-4 w-4 mr-2" />
-                                {restaurant.location}
-                              </div>
-                              <div className="text-blue-300 text-sm mt-1">Location</div>
-                            </div>
+                            <div className="text-blue-300 text-xs mt-1">Location</div>
                           </div>
                         </div>
                         
-                        {/* Restaurant Map */}
-                        <div className="p-8">
-                          <LocationMap
-                            name={restaurant.name}
-                            location={restaurant.location}
-                            type="restaurant"
-                            country={country.name}
-                            description={`${restaurant.cuisine} - ${restaurant.priceRange}`}
-                          />
-                        </div>
+                        <button
+                          onClick={() => {
+                            const mapSection = document.createElement('div');
+                            mapSection.innerHTML = `
+                              <div class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                                <div class="bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-auto border border-amber-500/20">
+                                  <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-xl font-bold text-white">${restaurant.name}</h3>
+                                    <button onclick="this.closest('.fixed').remove()" class="text-gray-400 hover:text-white p-2 rounded-full hover:bg-white/10">
+                                      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                  <div class="h-96">
+                                    <iframe
+                                      src="https://maps.google.com/maps?q=${encodeURIComponent(restaurant.name + ', ' + restaurant.location + ', ' + country.name)}&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                      width="100%"
+                                      height="100%"
+                                      style="border: 0; border-radius: 12px;"
+                                      allowfullscreen
+                                      loading="lazy"
+                                      referrerpolicy="no-referrer-when-downgrade"
+                                      title="Map of ${restaurant.name}"
+                                    ></iframe>
+                                  </div>
+                                </div>
+                              </div>
+                            `;
+                            document.body.appendChild(mapSection);
+                          }}
+                          className="mt-4 w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+                        >
+                          <MapPin className="h-4 w-4" />
+                          <span>View on Map</span>
+                        </button>
                       </div>
                     </div>
                   ))}
