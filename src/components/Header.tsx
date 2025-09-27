@@ -5,6 +5,7 @@ import { Search, MapPin, Menu, X, Crown, Variable as Safari, ExternalLink, Chevr
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAgenciesOpen, setIsAgenciesOpen] = useState(false);
+  const [isAirlinesOpen, setIsAirlinesOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
 
@@ -63,6 +64,65 @@ const Header = () => {
       ]
     }
   ];
+
+  const airlines = [
+    {
+      continent: 'Europe',
+      airlines: [
+        { name: 'Lufthansa', url: 'https://www.lufthansa.com', country: 'Germany' },
+        { name: 'Air France', url: 'https://www.airfrance.com', country: 'France' },
+        { name: 'British Airways', url: 'https://www.britishairways.com', country: 'UK' },
+        { name: 'KLM Royal Dutch Airlines', url: 'https://www.klm.com', country: 'Netherlands' },
+        { name: 'Swiss International Air Lines', url: 'https://www.swiss.com', country: 'Switzerland' },
+        { name: 'Turkish Airlines', url: 'https://www.turkishairlines.com', country: 'Turkey' }
+      ]
+    },
+    {
+      continent: 'North America',
+      airlines: [
+        { name: 'American Airlines', url: 'https://www.aa.com', country: 'USA' },
+        { name: 'Delta Air Lines', url: 'https://www.delta.com', country: 'USA' },
+        { name: 'United Airlines', url: 'https://www.united.com', country: 'USA' },
+        { name: 'Air Canada', url: 'https://www.aircanada.com', country: 'Canada' },
+        { name: 'JetBlue Airways', url: 'https://www.jetblue.com', country: 'USA' },
+        { name: 'Southwest Airlines', url: 'https://www.southwest.com', country: 'USA' }
+      ]
+    },
+    {
+      continent: 'South America',
+      airlines: [
+        { name: 'LATAM Airlines', url: 'https://www.latam.com', country: 'Chile/Brazil' },
+        { name: 'Avianca', url: 'https://www.avianca.com', country: 'Colombia' },
+        { name: 'GOL Linhas Aéreas', url: 'https://www.voegol.com.br', country: 'Brazil' },
+        { name: 'Azul Brazilian Airlines', url: 'https://www.azul.com.br', country: 'Brazil' },
+        { name: 'Copa Airlines', url: 'https://www.copaair.com', country: 'Panama' },
+        { name: 'Aerolíneas Argentinas', url: 'https://www.aerolineas.com.ar', country: 'Argentina' }
+      ]
+    },
+    {
+      continent: 'Africa',
+      airlines: [
+        { name: 'South African Airways', url: 'https://www.flysaa.com', country: 'South Africa' },
+        { name: 'Ethiopian Airlines', url: 'https://www.ethiopianairlines.com', country: 'Ethiopia' },
+        { name: 'Kenya Airways', url: 'https://www.kenya-airways.com', country: 'Kenya' },
+        { name: 'EgyptAir', url: 'https://www.egyptair.com', country: 'Egypt' },
+        { name: 'Royal Air Maroc', url: 'https://www.royalairmaroc.com', country: 'Morocco' },
+        { name: 'Air Mauritius', url: 'https://www.airmauritius.com', country: 'Mauritius' }
+      ]
+    },
+    {
+      continent: 'Asia',
+      airlines: [
+        { name: 'Singapore Airlines', url: 'https://www.singaporeair.com', country: 'Singapore' },
+        { name: 'Emirates', url: 'https://www.emirates.com', country: 'UAE' },
+        { name: 'Qatar Airways', url: 'https://www.qatarairways.com', country: 'Qatar' },
+        { name: 'Cathay Pacific', url: 'https://www.cathaypacific.com', country: 'Hong Kong' },
+        { name: 'Japan Airlines (JAL)', url: 'https://www.jal.com', country: 'Japan' },
+        { name: 'All Nippon Airways (ANA)', url: 'https://www.ana.co.jp', country: 'Japan' }
+      ]
+    }
+  ];
+
   return (
     <header className="safari-nav sticky top-0 z-50 border-b border-amber-500/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,6 +214,56 @@ const Header = () => {
                                 </div>
                               </div>
                               <ExternalLink className="h-4 w-4 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            
+            {/* Airlines Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsAirlinesOpen(!isAirlinesOpen)}
+                className="flex items-center space-x-1 text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+              >
+                <span>Airlines</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAirlinesOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
+              </button>
+              
+              {isAirlinesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 safari-glass border border-amber-500/30 rounded-2xl shadow-2xl overflow-hidden z-50">
+                  <div className="max-h-96 overflow-y-auto">
+                    {airlines.map((continent, continentIndex) => (
+                      <div key={continentIndex} className="border-b border-amber-500/20 last:border-b-0">
+                        <div className="px-4 py-3 bg-gradient-to-r from-blue-500/20 to-cyan-500/20">
+                          <h4 className="font-bold text-blue-300 text-sm tracking-wider uppercase">
+                            {continent.continent}
+                          </h4>
+                        </div>
+                        <div className="py-2">
+                          {continent.airlines.map((airline, airlineIndex) => (
+                            <a
+                              key={airlineIndex}
+                              href={airline.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-between px-4 py-3 hover:bg-blue-500/10 transition-colors group"
+                              onClick={() => setIsAirlinesOpen(false)}
+                            >
+                              <div>
+                                <div className="text-white font-medium group-hover:text-blue-400 transition-colors">
+                                  {airline.name}
+                                </div>
+                                <div className="text-gray-400 text-xs">
+                                  {airline.country}
+                                </div>
+                              </div>
+                              <ExternalLink className="h-4 w-4 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </a>
                           ))}
                         </div>
@@ -265,6 +375,50 @@ const Header = () => {
                 )}
               </div>
               
+              {/* Mobile Airlines */}
+              <div className="px-6 py-4">
+                <button
+                  onClick={() => setIsAirlinesOpen(!isAirlinesOpen)}
+                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-lg"
+                >
+                  <span>Airlines</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAirlinesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isAirlinesOpen && (
+                  <div className="mt-4 space-y-4 max-h-64 overflow-y-auto">
+                    {airlines.map((continent, continentIndex) => (
+                      <div key={continentIndex}>
+                        <h4 className="font-bold text-blue-300 text-sm tracking-wider uppercase mb-2">
+                          {continent.continent}
+                        </h4>
+                        <div className="space-y-2 ml-4">
+                          {continent.airlines.map((airline, airlineIndex) => (
+                            <a
+                              key={airlineIndex}
+                              href={airline.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-between text-white/80 hover:text-blue-400 transition-colors text-sm"
+                              onClick={() => {
+                                setIsAirlinesOpen(false);
+                                setIsMenuOpen(false);
+                              }}
+                            >
+                              <div>
+                                <div className="font-medium">{airline.name}</div>
+                                <div className="text-gray-400 text-xs">{airline.country}</div>
+                              </div>
+                              <ExternalLink className="h-3 w-3" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
               <Link
                 to="/search"
                 className="block px-6 py-4 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-lg"
@@ -281,10 +435,13 @@ const Header = () => {
       </div>
       
       {/* Close dropdown when clicking outside */}
-      {isAgenciesOpen && (
+      {(isAgenciesOpen || isAirlinesOpen) && (
         <div 
           className="fixed inset-0 z-40" 
-          onClick={() => setIsAgenciesOpen(false)}
+          onClick={() => {
+            setIsAgenciesOpen(false);
+            setIsAirlinesOpen(false);
+          }}
         />
       )}
     </header>
