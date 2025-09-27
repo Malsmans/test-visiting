@@ -6,6 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAgenciesOpen, setIsAgenciesOpen] = useState(false);
   const [isAirlinesOpen, setIsAirlinesOpen] = useState(false);
+  const [isAfricanToursOpen, setIsAfricanToursOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
 
