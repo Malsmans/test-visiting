@@ -47,13 +47,9 @@ const SearchPage = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* Fixed Video Background Container */}
-      <div className="fixed inset-0 z-0 overflow-hidden">
-        <VideoBackground type="wildlife" className="absolute inset-0 w-full h-full" />
-        <VideoBackground type="animals" className="absolute inset-0 w-full h-full opacity-50" />
-        {/* Fallback gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900" />
-      </div>
+      {/* 8K HD African Animal Background Videos */}
+      <VideoBackground type="wildlife" className="fixed top-0 left-0 w-1/2 h-full z-0" />
+      <VideoBackground type="animals" className="fixed top-0 right-0 w-1/2 h-full z-0" />
       
       {/* Content Overlay */}
       <div className="relative z-10 py-12">
