@@ -5,37 +5,6 @@
 /* Modern Luxury Safari Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Luxury African Safari Color Palette */
-:root {
-  --safari-gold: #D4AF37;
-  --safari-bronze: #CD7F32;
-  --safari-copper: #B87333;
-  --safari-earth: #8B4513;
-  --safari-green: #228B22;
-  --safari-black: #1C1C1C;
-  --safari-cream: #F5F5DC;
-  --safari-orange: #FF8C00;
-  --safari-red: #DC143C;
-  --luxury-gradient: linear-gradient(135deg, #D4AF37 0%, #CD7F32 25%, #B87333 50%, #8B4513 75%, #D4AF37 100%);
-  --african-sunset: linear-gradient(135deg, #FF6B35 0%, #F7931E 25%, #FFD700 50%, #FF8C00 75%, #DC143C 100%);
-  --savanna-gradient: linear-gradient(180deg, #8B4513 0%, #CD853F 25%, #DEB887 50%, #F4A460 75%, #D2691E 100%);
-  --luxury-african: linear-gradient(45deg, #1C1C1C 0%, #2F1B14 25%, #8B4513 50%, #CD7F32 75%, #D4AF37 100%);
-}
-
-/* Ensure all pages have proper background */
-#root {
-  min-height: 100vh;
-  background: var(--luxury-african);
-}
-
-/* Main luxury African background class */
-.luxury-african-bg {
-  background: linear-gradient(135deg, #1C1C1C 0%, #2F1B14 25%, #8B4513 50%, #CD7F32 75%, #D4AF37 100%);
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-}
-
 /* Base Styles with Safari Theme */
 * {
   margin: 0;
@@ -45,14 +14,19 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #1C1C1C 0%, #2F1B14 25%, #8B4513 50%, #CD7F32 75%, #D4AF37 100%);
+  background: linear-gradient(135deg, #92400e 0%, #ea580c 25%, #dc2626 50%, #b91c1c 75%, #92400e 100%);
   min-height: 100vh;
-  color: #F5F5DC;
+  color: #f5f5dc;
   line-height: 1.7;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #92400e 0%, #ea580c 25%, #dc2626 50%, #b91c1c 75%, #92400e 100%);
 }
 
 /* Safari Typography */
@@ -70,512 +44,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, #1C1C1C, #2C1810);
+  background: linear-gradient(180deg, #1c1c1c, #2c1810);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--luxury-gradient);
+  background: linear-gradient(135deg, #d4af37, #cd7f32);
   border-radius: 6px;
-  border: 2px solid #1C1C1C;
+  border: 2px solid #1c1c1c;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #FFD700, #FFA500);
+  background: linear-gradient(135deg, #ffd700, #ffa500);
 }
 
-/* Modern Safari Animations */
-@keyframes safariFloat {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
+/* Selection Styles */
+::selection {
+  background: rgba(212, 175, 55, 0.4);
+  color: #f5f5dc;
 }
 
-@keyframes safariShimmer {
-  0% {
-  }
-  0%, 100% {
-    opacity: 0.8;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.01);
-  }
+::-moz-selection {
+  background: rgba(212, 175, 55, 0.4);
+  color: #f5f5dc;
 }
 
-@keyframes safariPulse {
-  0%, 100% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-/* Safari Utility Classes */
-
-.safari-float {
-  animation: safariFloat 8s ease-in-out infinite;
+/* Focus Styles for Accessibility */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #d4af37;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-
-.safari-pulse {
-  animation: safariPulse 4s ease-in-out infinite;
-}
-
-/* Safari Gradient Text */
-.safari-gradient-text {
-  background: linear-gradient(135deg, #FFD700 0%, #FF8C00 25%, #DC143C 50%, #8B0000 75%, #FFD700 100%);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 800;
-  text-shadow: none;
-  animation: africanGlow 4s ease-in-out infinite;
-}
-
-/* African Title Glow Animation */
-@keyframes africanGlow {
-  0%, 100% {
-    background-position: 0% 50%;
-    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
-  }
-  25% {
-    background-position: 25% 25%;
-    filter: drop-shadow(0 0 30px rgba(255, 140, 0, 0.8));
-  }
-  50% {
-    background-position: 100% 50%;
-    filter: drop-shadow(0 0 40px rgba(220, 20, 60, 0.7));
-  }
-  75% {
-    background-position: 75% 75%;
-    filter: drop-shadow(0 0 35px rgba(139, 0, 0, 0.6));
-  }
-}
-
-/* Enhanced African Title Styles */
-.african-title-enhanced {
-  background: linear-gradient(45deg, 
-    #FFD700 0%,   /* Gold */
-    #FF6B35 15%,  /* Sunset Orange */
-    #F7931E 30%,  /* African Orange */
-    #DC143C 45%,  /* Deep Red */
-    #8B4513 60%,  /* Saddle Brown */
-    #CD7F32 75%,  /* Bronze */
-    #FFD700 100%  /* Gold */
-  );
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: africanSunset 6s ease-in-out infinite;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  text-shadow: none;
-}
-
-@keyframes africanSunset {
-  0% {
-    background-position: 0% 50%;
-    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.8)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  }
-  33% {
-    background-position: 50% 0%;
-    filter: drop-shadow(0 0 35px rgba(255, 107, 53, 0.9)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  }
-  66% {
-    background-position: 100% 50%;
-    filter: drop-shadow(0 0 30px rgba(220, 20, 60, 0.8)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  }
-  100% {
-    background-position: 0% 50%;
-    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.8)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  }
-}
-
-/* Country Name Animations */
-.country-name-glow {
-  background: linear-gradient(45deg, 
-    #FFD700 0%,   /* Gold */
-    #FF8C00 25%,  /* Dark Orange */
-    #FFD700 50%,  /* Gold */
-    #FFA500 75%,  /* Orange */
-    #FFD700 100%  /* Gold */
-  );
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: countryNameShine 3s ease-in-out infinite;
-  transition: all 0.3s ease;
-}
-
-.country-name-glow:hover {
-  animation: countryNameShine 1.5s ease-in-out infinite;
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
-}
-
-@keyframes countryNameShine {
-  0%, 100% {
-    background-position: 0% 50%;
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
-  }
-  50% {
-    background-position: 100% 50%;
-    filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.8));
-  }
-}
-
-/* Country Card Entrance Animation */
-.country-card-entrance {
-  animation: countryCardSlideIn 0.8s ease-out forwards;
-  opacity: 0;
-  transform: translateY(30px) scale(0.95);
-}
-
-@keyframes countryCardSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* Staggered animation delays for cards */
-.country-card-entrance:nth-child(1) { animation-delay: 0.1s; }
-.country-card-entrance:nth-child(2) { animation-delay: 0.2s; }
-.country-card-entrance:nth-child(3) { animation-delay: 0.3s; }
-.country-card-entrance:nth-child(4) { animation-delay: 0.4s; }
-.country-card-entrance:nth-child(5) { animation-delay: 0.5s; }
-.country-card-entrance:nth-child(6) { animation-delay: 0.6s; }
-/* Safari Card Effects */
-/* Animated Banner Edges */
-.banner-edge-glow {
-  position: relative;
-  overflow: hidden;
-}
-
-.banner-edge-glow::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, 
-    #FFD700 0%,   /* Gold */
-    #FF6B35 25%,  /* Sunset Orange */
-    #F7931E 50%,  /* African Orange */
-    #DC143C 75%,  /* Deep Red */
-    #FFD700 100%  /* Gold */
-  );
-  background-size: 400% 400%;
-  border-radius: inherit;
-  z-index: -1;
-  opacity: 0;
-  animation: bannerEdgeFlow 4s ease-in-out infinite;
-  transition: opacity 0.3s ease;
-}
-
-.banner-edge-glow:hover::before {
-  opacity: 1;
-  animation: bannerEdgeFlow 2s ease-in-out infinite;
-}
-
-@keyframes bannerEdgeFlow {
-  0%, 100% {
-    background-position: 0% 50%;
-    filter: blur(0px);
-  }
-  25% {
-    background-position: 100% 0%;
-    filter: blur(1px);
-  }
-  50% {
-    background-position: 100% 100%;
-    filter: blur(0px);
-  }
-  75% {
-    background-position: 0% 100%;
-    filter: blur(1px);
-  }
-}
-
-/* Pulsing Border Animation */
-.banner-pulse-border {
-  position: relative;
-  border: 2px solid transparent;
-  background: linear-gradient(var(--bg-color, #1e293b), var(--bg-color, #1e293b)) padding-box,
-              linear-gradient(45deg, #FFD700, #FF6B35, #F7931E, #DC143C, #FFD700) border-box;
-  animation: bannerBorderPulse 3s ease-in-out infinite;
-}
-
-@keyframes bannerBorderPulse {
-  0%, 100% {
-    box-shadow: 0 0 0 rgba(255, 215, 0, 0);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6),
-                0 0 40px rgba(255, 107, 53, 0.4),
-                0 0 60px rgba(220, 20, 60, 0.2);
-  }
-}
-
-/* Corner Sparkle Animation */
-.banner-corner-sparkles {
-  position: relative;
-}
-
-.banner-corner-sparkles::after {
-  content: '';
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 8px;
-  height: 8px;
-  background: radial-gradient(circle, #FFD700 0%, transparent 70%);
-  border-radius: 50%;
-  animation: cornerSparkle 2s ease-in-out infinite;
-  opacity: 0;
-}
-
-.banner-corner-sparkles:hover::after {
-  animation: cornerSparkle 1s ease-in-out infinite;
-}
-
-@keyframes cornerSparkle {
-  0%, 100% {
-    opacity: 0;
-    transform: scale(0.5) rotate(0deg);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2) rotate(180deg);
-  }
-}
-
-/* Flowing Edge Light */
-.banner-flowing-edge {
-  position: relative;
-  overflow: hidden;
-}
-
-.banner-flowing-edge::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    #FFD700 50%, 
-    transparent 100%
-  );
-  animation: flowingEdgeTop 3s linear infinite;
-}
-
-.banner-flowing-edge::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    #FF6B35 50%, 
-    transparent 100%
-  );
-  animation: flowingEdgeBottom 3s linear infinite 1.5s;
-}
-
-@keyframes flowingEdgeTop {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes flowingEdgeBottom {
-  0% {
-    right: -100%;
-  }
-  100% {
-    right: 100%;
-  }
-}
-.safari-card {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, rgba(28, 28, 28, 0.9), rgba(44, 24, 16, 0.9));
-  backdrop-filter: blur(20px);
-  border: 2px solid transparent;
-  border-radius: 24px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-
-.safari-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
-}
-
-
-/* Safari Button Styles */
-.safari-button {
-  position: relative;
-  overflow: hidden;
-  background: var(--luxury-gradient);
-  border: none;
-  border-radius: 50px;
-  padding: 16px 40px;
-  color: white;
-  font-weight: 700;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-  font-family: 'Montserrat', sans-serif;
-}
-
-
-.safari-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
-}
-
-
-/* Safari Glass Effect */
-.safari-glass {
-  background: rgba(28, 28, 28, 0.85);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-}
-
-/* Safari Video Background */
-.safari-video-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-  background: linear-gradient(135deg, #1C1C1C 0%, #2C1810 25%, #3C2415 50%, #2C1810 75%, #1C1C1C 100%);
-}
-
-.safari-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.4) contrast(1.2) saturate(1.3);
-}
-
-.safari-video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(28, 28, 28, 0.7) 0%,
-    rgba(44, 24, 16, 0.6) 25%,
-    rgba(60, 36, 21, 0.5) 50%,
-    rgba(44, 24, 16, 0.6) 75%,
-    rgba(28, 28, 28, 0.7) 100%
-  );
-}
-
-/* Animal-Themed Particles */
-.safari-particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
-  overflow: hidden;
-}
-
-.safari-particle {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.4;
-  box-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
-}
-
-/* Safari Navigation */
-.safari-nav {
-  background: rgba(28, 28, 28, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Safari Hero Section */
-.safari-hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    135deg,
-    rgba(28, 28, 28, 0.3) 0%,
-    rgba(44, 24, 16, 0.2) 50%,
-    rgba(28, 28, 28, 0.3) 100%
-  );
-}
-
-/* Safari Content Sections */
-.safari-section {
-  background: linear-gradient(
-    135deg,
-    rgba(28, 28, 28, 0.9) 0%,
-    rgba(44, 24, 16, 0.8) 50%,
-    rgba(28, 28, 28, 0.9) 100%
-  );
-  backdrop-filter: blur(5px);
-  border-top: 1px solid rgba(212, 175, 55, 0.1);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-}
-
-/* Glow Effect */
-.luxury-glow {
-  position: relative;
-}
-
-.luxury-glow::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.1), transparent);
-  border-radius: inherit;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.luxury-glow:hover::before {
-  opacity: 1;
-}
 /* Responsive Design */
 @media (max-width: 768px) {
   body {
@@ -593,32 +97,13 @@ h1, h2, h3, h4, h5, h6 {
   h3 {
     font-size: 1.5rem;
   }
-  
-  .safari-button {
-    padding: 12px 24px;
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-  
-  .safari-glass {
-    backdrop-filter: blur(5px);
-  }
-  
-  .safari-nav {
-    backdrop-filter: blur(5px);
-  }
-  
-  .safari-section {
-    backdrop-filter: blur(3px);
-  }
 }
 
 /* High Contrast Mode Support */
 @media (prefers-contrast: high) {
-  :root {
-    --safari-gold: #FFD700;
-    --safari-black: #000000;
-    --safari-cream: #FFFFFF;
+  body {
+    background: #000000;
+    color: #ffffff;
   }
 }
 
@@ -631,158 +116,4 @@ h1, h2, h3, h4, h5, h6 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
-  .safari-float,
-  .safari-shimmer,
-  .safari-pulse {
-    animation: none !important;
-  }
-}
-
-/* Mobile-Specific Flash Prevention */
-@media (max-width: 768px) {
-  /* Reduce animation intensity on mobile */
-  body {
-    animation-duration: 40s;
-  }
-  
-  .luxury-african-bg {
-    animation-duration: 60s;
-  }
-  
-  .safari-hero {
-    animation-duration: 45s;
-  }
-  
-  .luxury-african-bg::before,
-  .safari-section::before,
-  .safari-hero::before {
-    animation-duration: 35s;
-  }
-  
-  /* Reduce pattern complexity on mobile */
-  .safari-glass::before {
-    opacity: 0.5;
-    animation-duration: 20s;
-  }
-  
-  .safari-card::before {
-    opacity: 0.3;
-  }
-}
-
-/* Touch device optimizations */
-@media (hover: none) and (pointer: coarse) {
-  /* Optimize for touch devices */
-  .safari-card:hover,
-  .safari-button:hover,
-  .safari-glow:hover {
-    transform: none;
-    box-shadow: inherit;
-  }
-  
-  /* Reduce animation intensity */
-  .safari-float {
-    animation-duration: 8s;
-  }
-  
-  .safari-pulse {
-    animation-duration: 6s;
-  }
-}
-
-/* Focus Styles for Accessibility */
-button:focus,
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 3px solid #D4AF37;
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* Selection Styles */
-::selection {
-  background: rgba(212, 175, 55, 0.4);
-  color: #F5F5DC;
-}
-
-/* Enhanced Animations */
-@keyframes countUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6), 0 0 30px rgba(212, 175, 55, 0.4);
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.counter-animation {
-  animation: countUp 1s ease-out;
-}
-
-.pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-.slide-in-up {
-  animation: slideInUp 0.6s ease-out;
-}
-
-/* Interactive Elements */
-.interactive-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.interactive-hover:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Smooth Transitions */
-.smooth-transition {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Loading States */
-.loading-shimmer {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-::-moz-selection {
-  background: rgba(212, 175, 55, 0.4);
-  color: #F5F5DC;
 }
