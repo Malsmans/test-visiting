@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Compass, Hotel, Car, Star, Crown, Sparkles, Award, Variable as Safari, Mountain, Waves } from 'lucide-react';
 import CountryCard from '../components/CountryCard';
-import VideoBackground from '../components/VideoBackground';
 import { featuredCountries } from '../data/countries';
 import { useAnalytics } from '../hooks/useAnalytics';
 
@@ -15,9 +14,6 @@ const Home = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Modern 8K HD African Animal Background */}
-      <VideoBackground type="animals" className="fixed inset-0 z-0" />
-      
       {/* Content Overlay */}
       <div className="relative z-20">
         {/* Hero Section */}
@@ -96,11 +92,6 @@ const Home = () => {
 
         {/* Modern Safari Features Section */}
         <section className="safari-section py-32 relative">
-          {/* Additional Wildlife Video Layer */}
-          <div className="absolute inset-0 opacity-30">
-            <VideoBackground type="wildlife" className="w-full h-full" />
-          </div>
-          
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width=%2260%22%20height=%2260%22%20viewBox=%220%200%2060%2060%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill=%22none%22%20fill-rule=%22evenodd%22%3E%3Cg%20fill=%22%23D4AF37%22%20fill-opacity=%220.05%22%3E%3Ccircle%20cx=%2230%22%20cy=%2230%22%20r=%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-60"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -167,11 +158,6 @@ const Home = () => {
 
         {/* Featured Destinations */}
         <section className="safari-section py-32 relative">
-          {/* Luxury Safari Video Layer */}
-          <div className="absolute inset-0 opacity-20">
-            <VideoBackground type="luxury" className="w-full h-full" />
-          </div>
-          
           <div className="absolute inset-0 bg-gradient-to-r from-amber-900/10 via-transparent to-orange-900/10"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
