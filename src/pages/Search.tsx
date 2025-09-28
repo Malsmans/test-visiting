@@ -50,7 +50,7 @@ const SearchPage = () => {
       <div className="relative z-10 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Luxury Header */}
-          <div className="text-center mb-16 bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-amber-500/20">
+          <div className="text-center mb-16 bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-amber-500/20 universal-edge-glow card-container-glow breathing-edge">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 backdrop-blur-sm border border-amber-400/30 rounded-full px-6 py-2 mb-6">
               <Crown className="h-5 w-5 text-amber-400" />
               <span className="text-amber-300 font-medium tracking-wider text-sm uppercase">Exclusive Collection</span>
@@ -70,7 +70,7 @@ const SearchPage = () => {
           {/* Interactive Map Section */}
           {showMap && (
             <div className="mb-12">
-              <div className="flex items-center justify-between mb-6 bg-gradient-to-r from-slate-900/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-amber-500/20">
+              <div className="flex items-center justify-between mb-6 bg-gradient-to-r from-slate-900/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-amber-500/20 universal-edge-glow section-edge-glow">
                 <div className="flex items-center space-x-3">
                   <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-2 rounded-xl">
                     <MapPin className="h-6 w-6 text-white" />
@@ -88,7 +88,7 @@ const SearchPage = () => {
                 </button>
               </div>
               <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 via-yellow-500/20 to-amber-500/20 rounded-2xl blur"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 via-yellow-500/20 to-amber-500/20 rounded-2xl blur universal-edge-glow"></div>
                 <div className="relative">
                   <InteractiveMap
                     countries={countriesForMap}
@@ -104,9 +104,9 @@ const SearchPage = () => {
             <div className="mb-12 text-center">
               <button
                 onClick={() => setShowMap(true)}
-                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-600 hover:from-amber-500 hover:via-yellow-500 hover:to-amber-500 text-white font-semibold rounded-full transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-amber-500/25"
+                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-600 hover:from-amber-500 hover:via-yellow-500 hover:to-amber-500 text-white font-semibold rounded-full transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-amber-500/25 button-edge-glow universal-edge-glow"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full blur opacity-75 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full blur opacity-75 group-hover:opacity-100 transition-opacity universal-edge-glow"></div>
                 <div className="relative flex items-center space-x-2">
                   <MapPin className="h-5 w-5" />
                   <span>Show Interactive Map</span>
@@ -116,7 +116,7 @@ const SearchPage = () => {
           )}
 
           {/* Luxury Search and Filter Controls */}
-          <div className="bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-2xl shadow-2xl p-8 mb-12 border border-amber-500/20">
+          <div className="bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-2xl shadow-2xl p-8 mb-12 border border-amber-500/20 universal-edge-glow card-container-glow section-edge-glow">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Search Input */}
               <div className="relative">
@@ -158,7 +158,7 @@ const SearchPage = () => {
           </div>
 
           {/* Results */}
-          <div className="mb-8 bg-gradient-to-r from-slate-900/90 to-gray-900/90 backdrop-blur-xl rounded-xl p-6 shadow-xl border border-amber-500/20">
+          <div className="mb-8 bg-gradient-to-r from-slate-900/90 to-gray-900/90 backdrop-blur-xl rounded-xl p-6 shadow-xl border border-amber-500/20 universal-edge-glow breathing-edge">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="flex items-center space-x-1">
@@ -183,9 +183,9 @@ const SearchPage = () => {
           {filteredAndSortedCountries.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {filteredAndSortedCountries.map((country, index) => (
-                <div key={country.name} className="group transform hover:scale-105 transition-all duration-500 country-card-entrance" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div key={country.name} className="group transform hover:scale-105 transition-all duration-500 country-card-entrance card-container-glow" style={{ animationDelay: `${index * 0.1}s` }}>
                   <div className="relative">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 via-yellow-500/20 to-amber-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 via-yellow-500/20 to-amber-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 universal-edge-glow"></div>
                     <div className="relative">
                       <CountryCard country={country} />
                     </div>
@@ -194,9 +194,9 @@ const SearchPage = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-20 bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-amber-500/20">
+            <div className="text-center py-20 bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-amber-500/20 universal-edge-glow breathing-edge">
               <div className="mb-6">
-                <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-4 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-4 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-4 universal-edge-glow rotating-border">
                   <Filter className="h-10 w-10 text-white" />
                 </div>
               </div>

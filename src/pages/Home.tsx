@@ -113,7 +113,7 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-              <div className="luxury-card p-8 text-center group luxury-glow">
+              <div className="luxury-card p-8 text-center group luxury-glow universal-edge-glow button-edge-glow breathing-edge">
                 <div className="relative mb-6">
                   <div className="relative bg-gradient-to-br from-amber-500 via-orange-600 to-amber-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl">
                     <Safari className="h-12 w-12 text-white" />
@@ -123,7 +123,7 @@ const Home = () => {
                 <p className="text-gray-300 leading-relaxed">Exclusive access to Africa's most pristine game reserves and private conservancies for authentic wildlife encounters.</p>
               </div>
 
-              <div className="safari-card p-8 text-center group safari-glow">
+              <div className="safari-card p-8 text-center group safari-glow universal-edge-glow button-edge-glow breathing-edge">
                 <div className="relative mb-6">
                   <div className="relative bg-gradient-to-br from-emerald-500 via-teal-600 to-emerald-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl safari-float">
                     <Car className="h-12 w-12 text-white" />
@@ -133,7 +133,7 @@ const Home = () => {
                 <p className="text-gray-300 leading-relaxed">Custom 4WD safari vehicles, private aircraft, and helicopter transfers for the ultimate bush experience.</p>
               </div>
 
-              <div className="safari-card p-8 text-center group safari-glow">
+              <div className="safari-card p-8 text-center group safari-glow universal-edge-glow button-edge-glow breathing-edge">
                 <div className="relative mb-6">
                   <div className="relative bg-gradient-to-br from-blue-500 via-indigo-600 to-blue-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl safari-float">
                     <Hotel className="h-12 w-12 text-white" />
@@ -143,7 +143,7 @@ const Home = () => {
                 <p className="text-gray-300 leading-relaxed">Exclusive safari lodges, luxury tented camps, and private conservancy accommodations in pristine wilderness.</p>
               </div>
 
-              <div className="safari-card p-8 text-center group safari-glow">
+              <div className="safari-card p-8 text-center group safari-glow universal-edge-glow button-edge-glow breathing-edge">
                 <div className="relative mb-6">
                   <div className="relative bg-gradient-to-br from-purple-500 via-pink-600 to-purple-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl safari-float">
                     <Crown className="h-12 w-12 text-white" />
@@ -157,7 +157,7 @@ const Home = () => {
         </section>
 
         {/* Featured Destinations */}
-        <section className="safari-section py-32 relative">
+        <section className="safari-section py-32 relative section-edge-glow">
           <div className="absolute inset-0 bg-gradient-to-r from-amber-900/10 via-transparent to-orange-900/10"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -180,9 +180,9 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
               {featuredCountries.slice(0, 6).map((country) => (
-                <div key={country.name} className="group safari-card country-card-entrance">
+                <div key={country.name} className="group safari-card country-card-entrance card-container-glow">
                   <div className="relative">
-                    <div className="absolute -inset-2 bg-gradient-to-r from-amber-500 via-orange-600 to-amber-500 rounded-3xl blur-lg opacity-30 group-hover:opacity-80 transition-opacity safari-glow"></div>
+                    <div className="absolute -inset-2 bg-gradient-to-r from-amber-500 via-orange-600 to-amber-500 rounded-3xl blur-lg opacity-30 group-hover:opacity-80 transition-opacity safari-glow universal-edge-glow"></div>
                     <div className="relative">
                       <CountryCard country={country} />
                     </div>
@@ -194,7 +194,7 @@ const Home = () => {
             <div className="text-center mt-20">
               <Link
                 to="/search"
-                className="safari-button group safari-glow"
+                className="safari-button group safari-glow button-edge-glow universal-edge-glow"
               >
                 <div className="relative flex items-center space-x-3">
                   <span className="tracking-wide text-xl">EXPLORE ALL SAFARI DESTINATIONS</span>
@@ -206,9 +206,9 @@ const Home = () => {
         </section>
 
         {/* Safari Testimonial Section */}
-        <section className="safari-section py-32 relative overflow-hidden">
+        <section className="safari-section py-32 relative overflow-hidden section-edge-glow">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
-            <div className="safari-glass p-16 rounded-3xl safari-glow">
+            <div className="safari-glass p-16 rounded-3xl safari-glow universal-edge-glow card-container-glow breathing-edge">
               <div className="flex justify-center mb-8">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-10 w-10 text-amber-400 fill-current safari-pulse" style={{ animationDelay: `${i * 0.2}s` }} />
@@ -222,7 +222,7 @@ const Home = () => {
                 </span>
               </blockquote>
               <div className="flex items-center justify-center space-x-6">
-                <div className="w-20 h-20 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full flex items-center justify-center safari-glow">
+                <div className="w-20 h-20 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full flex items-center justify-center safari-glow universal-edge-glow rotating-border">
                   <Safari className="h-10 w-10 text-white" />
                 </div>
                 <div className="text-left">

@@ -13,7 +13,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
   return (
     <Link
       to={`/country/${countrySlug}`}
-      className="group relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-amber-500/20 hover:border-amber-400/40 banner-edge-glow banner-corner-sparkles"
+      className="group relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-amber-500/20 hover:border-amber-400/40 banner-edge-glow banner-corner-sparkles banner-flowing-edge universal-edge-glow rotating-border breathing-edge"
     >
       {/* Luxury Badge */}
       <div className="absolute top-4 left-4 z-20 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1">
