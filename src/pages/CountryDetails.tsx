@@ -4,7 +4,6 @@ import { MapPin, Star, DollarSign, Car, Hotel, UtensilsCrossed, Cloud, ArrowLeft
 import { allCountries } from '../data/countries';
 import WeatherWidget from '../components/WeatherWidget';
 import MapEmbed from '../components/MapEmbed';
-import VideoBackground from '../components/VideoBackground';
 import LocationMap from '../components/LocationMap';
 import CurrencyConverter from '../components/CurrencyConverter';
 import TravelTips from '../components/TravelTips';
@@ -37,8 +36,6 @@ const CountryDetails = () => {
   if (!country) {
     return (
       <div className="min-h-screen flex items-center justify-center relative">
-        <VideoBackground type="wildlife" className="fixed top-0 left-0 w-1/2 h-full z-0" />
-        <VideoBackground type="safari" className="fixed top-0 right-0 w-1/2 h-full z-0" />
         <div className="text-center relative z-10 bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-amber-500/20">
           <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-4 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6">
             <Crown className="h-10 w-10 text-white" />
