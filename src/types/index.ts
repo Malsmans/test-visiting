@@ -36,8 +36,30 @@ export interface Country {
   image: string;
   region: string;
   population: string;
+  wildlife: Wildlife[];
+  culturalInsights: CulturalInsight[];
+  activities: string[];
+  travelStyle: string[];
+  budgetRange: 'budget' | 'mid-range' | 'luxury';
+  bestMonths: string[];
   attractions: Attraction[];
   transportation: Transportation[];
   hotels: Hotel[];
   restaurants: Restaurant[];
+}
+
+export interface Wildlife {
+  name: string;
+  description: string;
+  image: string;
+  bestSpottingTime: string;
+  habitat: string;
+  conservationStatus: string;
+}
+
+export interface CulturalInsight {
+  title: string;
+  description: string;
+  image: string;
+  category: 'tradition' | 'music' | 'art' | 'festival' | 'cuisine';
 }
