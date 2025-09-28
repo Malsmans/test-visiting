@@ -27,7 +27,20 @@ const SearchPage = () => {
       
       const matchesRegion = selectedRegion === 'all' || country.region === selectedRegion;
       
-      return matchesSearch && matchesRegion;
+      const matchesActivity = selectedActivity === 'all' || 
+        (country.activities && country.activities.some(activity => 
+          activity.toLowerCase().includes(selectedActivity.toLowerCase())
+        ));
+      
+      const matchesTravelStyle = selectedTravelStyle === 'all' || 
+        (country.travelStyle && country.travelStyle.some(style => 
+          style.toLowerCase().includes(selectedTravelStyle.toLowerCase())
+        ));
+      
+      const matchesBudgetRange = selectedBudgetRange === 'all' || 
+        (country.budgetRange && country.budgetRange === selectedBudgetRange);
+      
+      return matchesSearch && matchesRegion && matchesActivity && matchesTravelStyle && matchesBudgetRange;
     });
 
     filtered.sort((a, b) => {
@@ -35,12 +48,17 @@ const SearchPage = () => {
         return a.name.localeCompare(b.name);
       } else if (sortBy === 'attractions') {
         return b.attractions.length - a.attractions.length;
+      } else if (sortBy === 'budget') {
+        const budgetOrder = { 'budget': 1, 'mid-range': 2, 'luxury': 3 };
+        const aOrder = budgetOrder[a.budgetRange as keyof typeof budgetOrder] || 2;
+        const bOrder = budgetOrder[b.budgetRange as keyof typeof budgetOrder] || 2;
+        return aOrder - bOrder;
       }
       return 0;
     });
 
     return filtered;
-  }, [searchQuery, selectedRegion, sortBy]);
+  }, [searchQuery, selectedRegion, sortBy, selectedActivity, selectedTravelStyle, selectedBudgetRange]);
 
   const countriesForMap = allCountries.map(country => ({
     name: country.name,
