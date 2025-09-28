@@ -5,6 +5,14 @@ interface WeatherWidgetProps {
   country: string;
 }
 
+// Helper function to convert temperature between Celsius and Fahrenheit
+const convertTemperature = (temp: number, unit: string): number => {
+  if (unit === 'F') {
+    return Math.round((temp * 9/5) + 32);
+  }
+  return temp; // Return as Celsius
+};
+
 // Mock weather data - in a real app, you'd fetch from a weather API
 const mockWeatherData = {
   temperature: Math.floor(Math.random() * 15) + 20, // 20-35°C
@@ -16,6 +24,7 @@ const mockWeatherData = {
 const WeatherWidget: React.FC<WeatherWidgetProps> = ({ country }) => {
   const [weather, setWeather] = useState(mockWeatherData);
   const [loading, setLoading] = useState(true);
+  const [unit, setUnit] = useState<'C' | 'F'>('C');
 
   useEffect(() => {
     // Simulate API call
