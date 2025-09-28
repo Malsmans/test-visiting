@@ -579,7 +579,7 @@ const Header = () => {
               >
                 Safari
               </Link>
-              <div className="px-6 py-4 safari-button rounded-xl">
+              <div className="px-6 py-4 luxury-button rounded-xl">
                 <span className="text-white font-bold tracking-wider">PREMIUM SAFARI</span>
               </div>
             </div>

@@ -113,13 +113,13 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-              <div className="safari-card p-8 text-center group safari-glow">
+              <div className="luxury-card p-8 text-center group luxury-glow">
                 <div className="relative mb-6">
-                  <div className="relative bg-gradient-to-br from-amber-500 via-orange-600 to-amber-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl safari-float">
+                  <div className="relative bg-gradient-to-br from-amber-500 via-orange-600 to-amber-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl">
                     <Safari className="h-12 w-12 text-white" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 safari-gradient-text">Wild Safari Adventures</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 gradient-text">Wild Safari Adventures</h3>
                 <p className="text-gray-300 leading-relaxed">Exclusive access to Africa's most pristine game reserves and private conservancies for authentic wildlife encounters.</p>
               </div>
 
