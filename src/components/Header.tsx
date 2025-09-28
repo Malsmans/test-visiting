@@ -205,20 +205,20 @@ const Header = () => {
           </Link>
 
           {/* Modern Desktop Search */}
-          <form onSubmit={handleSearch} className="hidden md:flex flex-1 max-w-lg mx-8">
+          <form onSubmit={handleSearch} className="hidden lg:flex flex-1 max-w-md xl:max-w-lg mx-4 xl:mx-8">
             <div className="relative w-full">
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search safari destinations..."
-                className="w-full pl-6 pr-12 py-4 safari-glass border border-amber-500/30 rounded-full focus:ring-2 focus:ring-amber-500/70 focus:border-amber-400 text-white placeholder-white/70 transition-all duration-300 hover:bg-white/20 font-medium"
+                className="w-full pl-4 pr-12 py-3 lg:pl-6 lg:pr-12 lg:py-4 safari-glass border border-amber-500/30 rounded-full focus:ring-2 focus:ring-amber-500/70 focus:border-amber-400 text-white placeholder-white/70 transition-all duration-300 hover:bg-white/20 font-medium text-sm lg:text-base"
               />
               <button
                 type="submit"
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-amber-400 hover:text-amber-300 transition-colors safari-pulse"
+                className="absolute right-3 lg:right-4 top-1/2 transform -translate-y-1/2 text-amber-400 hover:text-amber-300 transition-colors safari-pulse"
               >
-                <Search className="h-6 w-6" />
+                <Search className="h-5 w-5 lg:h-6 lg:w-6" />
               </button>
             </div>
           </form>
@@ -405,9 +405,9 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-3 rounded-full text-white/80 hover:text-amber-400 safari-glass hover:bg-white/20 transition-all duration-300"
+            className="xl:hidden p-2 lg:p-3 rounded-full text-white/80 hover:text-amber-400 safari-glass hover:bg-white/20 transition-all duration-300"
           >
-            {isMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+            {isMenuOpen ? <X className="h-6 w-6 lg:h-7 lg:w-7" /> : <Menu className="h-6 w-6 lg:h-7 lg:w-7" />}
           </button>
         </div>
 
