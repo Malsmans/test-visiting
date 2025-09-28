@@ -13,11 +13,11 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden luxury-african-bg">
       {/* Content Overlay */}
       <div className="relative z-20">
         {/* Hero Section */}
-        <section className="safari-hero">
+        <section className="luxury-hero min-h-screen flex items-center justify-center relative">
           {/* Modern Safari Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
           <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 via-transparent to-orange-900/20" />

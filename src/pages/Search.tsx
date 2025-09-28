@@ -45,12 +45,7 @@ const SearchPage = () => {
   }));
 
   return (
-    <div className="min-h-screen relative">
-      {/* Luxury African Background */}
-      <div className="luxury-african-bg">
-        <div className="luxury-african-overlay"></div>
-      </div>
-      
+    <div className="min-h-screen relative luxury-african-bg">
       {/* Content Overlay */}
       <div className="relative z-10 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
