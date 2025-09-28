@@ -17,6 +17,7 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
 }) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [mapStyle, setMapStyle] = useState<'roadmap' | 'satellite' | 'terrain'>('roadmap');
 
   // Default to Africa view
   const africaMapSrc = `https://maps.google.com/maps?q=Africa&t=&z=4&ie=UTF8&iwloc=&output=embed`;
