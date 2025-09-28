@@ -170,6 +170,9 @@ const SearchPage = () => {
                   {filteredAndSortedCountries.length} premium destinations
                   {searchQuery && ` matching "${searchQuery}"`}
                   {selectedRegion !== 'all' && ` in ${selectedRegion}`}
+                  {selectedActivity !== 'all' && ` for ${selectedActivity}`}
+                  {selectedTravelStyle !== 'all' && ` (${selectedTravelStyle})`}
+                  {selectedBudgetRange !== 'all' && ` - ${selectedBudgetRange} range`}
                 </p>
               </div>
               <div className="flex items-center space-x-2 text-amber-400">
@@ -177,6 +180,46 @@ const SearchPage = () => {
                 <span className="text-sm font-medium tracking-wider uppercase">Luxury Collection</span>
               </div>
             </div>
+            
+            {/* Active Filters Display */}
+            {(selectedRegion !== 'all' || selectedActivity !== 'all' || selectedTravelStyle !== 'all' || selectedBudgetRange !== 'all') && (
+              <div className="mt-4 pt-4 border-t border-amber-500/20">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-amber-300 text-sm font-medium">Active Filters:</span>
+                  {selectedRegion !== 'all' && (
+                    <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs border border-blue-500/30">
+                      {selectedRegion}
+                    </span>
+                  )}
+                  {selectedActivity !== 'all' && (
+                    <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs border border-green-500/30">
+                      {selectedActivity}
+                    </span>
+                  )}
+                  {selectedTravelStyle !== 'all' && (
+                    <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs border border-purple-500/30">
+                      {selectedTravelStyle}
+                    </span>
+                  )}
+                  {selectedBudgetRange !== 'all' && (
+                    <span className="bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-xs border border-emerald-500/30">
+                      {selectedBudgetRange.charAt(0).toUpperCase() + selectedBudgetRange.slice(1).replace('-', ' ')}
+                    </span>
+                  )}
+                  <button
+                    onClick={() => {
+                      setSelectedRegion('all');
+                      setSelectedActivity('all');
+                      setSelectedTravelStyle('all');
+                      setSelectedBudgetRange('all');
+                    }}
+                    className="text-amber-400 hover:text-amber-300 text-xs underline ml-2"
+                  >
+                    Clear All Filters
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Countries Grid */}
