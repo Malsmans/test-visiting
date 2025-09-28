@@ -405,9 +405,9 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="xl:hidden p-2 lg:p-3 rounded-full text-white/80 hover:text-amber-400 safari-glass hover:bg-white/20 transition-all duration-300"
+            className="md:hidden p-3 rounded-full text-white/80 hover:text-amber-400 safari-glass hover:bg-white/20 transition-all duration-300"
           >
-            {isMenuOpen ? <X className="h-6 w-6 lg:h-7 lg:w-7" /> : <Menu className="h-6 w-6 lg:h-7 lg:w-7" />}
+            {isMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
           </button>
         </div>
 
@@ -434,17 +434,17 @@ const Header = () => {
               </form>
               <Link
                 to="/"
-                className="block px-6 py-4 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-lg"
+                className="block px-4 py-3 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-base"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               
               {/* Mobile Travel Agencies */}
-              <div className="px-6 py-4">
+              <div className="px-4 py-3">
                 <button
                   onClick={() => setIsAgenciesOpen(!isAgenciesOpen)}
-                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-lg"
+                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-base"
                 >
                   <span>Travel Agencies</span>
                   <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAgenciesOpen ? 'rotate-180' : ''}`} />
@@ -485,10 +485,10 @@ const Header = () => {
               </div>
               
               {/* Mobile Airlines */}
-              <div className="px-6 py-4">
+              <div className="px-4 py-3">
                 <button
                   onClick={() => setIsAirlinesOpen(!isAirlinesOpen)}
-                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-lg"
+                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-base"
                 >
                   <span>Airlines</span>
                   <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAirlinesOpen ? 'rotate-180' : ''}`} />
@@ -529,10 +529,10 @@ const Header = () => {
               </div>
               
               {/* Mobile African Tour Agencies */}
-              <div className="px-6 py-4">
+              <div className="px-4 py-3">
                 <button
                   onClick={() => setIsAfricanToursOpen(!isAfricanToursOpen)}
-                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-lg"
+                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-base"
                 >
                   <span>African Tours</span>
                   <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAfricanToursOpen ? 'rotate-180' : ''}`} />
@@ -574,12 +574,12 @@ const Header = () => {
               
               <Link
                 to="/search"
-                className="block px-6 py-4 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-lg"
+                className="block px-4 py-3 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-base"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Safari
               </Link>
-              <div className="px-6 py-4 luxury-button rounded-xl">
+              <div className="px-4 py-3 safari-button rounded-xl text-center">
                 <span className="text-white font-bold tracking-wider">PREMIUM SAFARI</span>
               </div>
             </div>
