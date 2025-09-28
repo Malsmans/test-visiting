@@ -31,13 +31,13 @@ const Home = () => {
             </div>
 
             <h1 className="text-7xl md:text-9xl font-black mb-12 leading-none safari-float">
-              <span className="block safari-gradient-text drop-shadow-2xl mb-4">
+              <span className="block african-title-enhanced drop-shadow-2xl mb-4">
                 DISCOVER
               </span>
               <span className="block text-white drop-shadow-2xl mb-4">
                 THE MOTHER
               </span>
-              <span className="block safari-gradient-text drop-shadow-2xl">
+              <span className="block african-title-enhanced drop-shadow-2xl">
                 AFRICA
               </span>
             </h1>

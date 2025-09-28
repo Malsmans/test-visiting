@@ -138,12 +138,73 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Safari Gradient Text */
 .safari-gradient-text {
-  background: var(--luxury-gradient);
+  background: linear-gradient(135deg, #FFD700 0%, #FF8C00 25%, #DC143C 50%, #8B0000 75%, #FFD700 100%);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 800;
   text-shadow: none;
+  animation: africanGlow 4s ease-in-out infinite;
+}
+
+/* African Title Glow Animation */
+@keyframes africanGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
+  }
+  25% {
+    background-position: 25% 25%;
+    filter: drop-shadow(0 0 30px rgba(255, 140, 0, 0.8));
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 40px rgba(220, 20, 60, 0.7));
+  }
+  75% {
+    background-position: 75% 75%;
+    filter: drop-shadow(0 0 35px rgba(139, 0, 0, 0.6));
+  }
+}
+
+/* Enhanced African Title Styles */
+.african-title-enhanced {
+  background: linear-gradient(45deg, 
+    #FFD700 0%,   /* Gold */
+    #FF6B35 15%,  /* Sunset Orange */
+    #F7931E 30%,  /* African Orange */
+    #DC143C 45%,  /* Deep Red */
+    #8B4513 60%,  /* Saddle Brown */
+    #CD7F32 75%,  /* Bronze */
+    #FFD700 100%  /* Gold */
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: africanSunset 6s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  text-shadow: none;
+}
+
+@keyframes africanSunset {
+  0% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.8)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  }
+  33% {
+    background-position: 50% 0%;
+    filter: drop-shadow(0 0 35px rgba(255, 107, 53, 0.9)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  }
+  66% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 30px rgba(220, 20, 60, 0.8)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.8)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  }
 }
 
 /* Safari Card Effects */
