@@ -13,9 +13,6 @@ const SearchPage = () => {
   const [sortBy, setSortBy] = useState('name');
   const [selectedCountryOnMap, setSelectedCountryOnMap] = useState<string>('');
   const [showMap, setShowMap] = useState(true);
-  const [selectedActivity, setSelectedActivity] = useState('all');
-  const [selectedTravelStyle, setSelectedTravelStyle] = useState('all');
-  const [selectedBudgetRange, setSelectedBudgetRange] = useState('all');
 
   const regions = ['all', 'North Africa', 'West Africa', 'East Africa', 'Central Africa', 'Southern Africa'];
 
