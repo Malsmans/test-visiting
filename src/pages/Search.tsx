@@ -3,7 +3,6 @@ import { useSearchParams } from 'react-router-dom';
 import { Search, Filter, Crown, Sparkles, Star, MapPin } from 'lucide-react';
 import CountryCard from '../components/CountryCard';
 import InteractiveMap from '../components/InteractiveMap';
-import VideoBackground from '../components/VideoBackground';
 import { allCountries } from '../data/countries';
 
 const SearchPage = () => {
@@ -47,9 +46,10 @@ const SearchPage = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* African Safari Background Videos */}
-      <VideoBackground type="landscape" className="fixed top-0 left-0 w-1/2 h-full z-0" />
-      <VideoBackground type="safari" className="fixed top-0 right-0 w-1/2 h-full z-0" />
+      {/* Luxury African Background */}
+      <div className="luxury-african-bg">
+        <div className="luxury-african-overlay"></div>
+      </div>
       
       {/* Content Overlay */}
       <div className="relative z-10 py-12">

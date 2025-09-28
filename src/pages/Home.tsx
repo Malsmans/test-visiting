@@ -221,13 +221,6 @@ const Home = () => {
 
         {/* Safari Testimonial Section */}
         <section className="safari-section py-32 relative overflow-hidden">
-          {/* African Culture Video Layer */}
-          <div className="absolute inset-0 opacity-25">
-            <VideoBackground type="culture" className="w-full h-full" />
-          </div>
-          
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width=%22100%22%20height=%22100%22%20viewBox=%220%200%20100%20100%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d=%22M50%2050L60%2040L70%2050L60%2060z%22%20fill=%22%23D4AF37%22%20fill-opacity=%220.04%22/%3E%3C/svg%3E')] opacity-40"></div>
-          
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
             <div className="safari-glass p-16 rounded-3xl safari-glow">
               <div className="flex justify-center mb-8">

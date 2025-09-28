@@ -5,7 +5,7 @@
 /* Modern Luxury Safari Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Modern Safari Color Palette */
+/* Luxury African Safari Color Palette */
 :root {
   --safari-gold: #D4AF37;
   --safari-bronze: #CD7F32;
@@ -17,6 +17,9 @@
   --safari-orange: #FF8C00;
   --safari-red: #DC143C;
   --luxury-gradient: linear-gradient(135deg, #D4AF37 0%, #CD7F32 25%, #B87333 50%, #8B4513 75%, #D4AF37 100%);
+  --african-sunset: linear-gradient(135deg, #FF6B35 0%, #F7931E 25%, #FFD700 50%, #FF8C00 75%, #DC143C 100%);
+  --savanna-gradient: linear-gradient(180deg, #8B4513 0%, #CD853F 25%, #DEB887 50%, #F4A460 75%, #D2691E 100%);
+  --luxury-african: linear-gradient(45deg, #1C1C1C 0%, #2F1B14 25%, #8B4513 50%, #CD7F32 75%, #D4AF37 100%);
 }
 
 /* Base Styles with Safari Theme */
@@ -28,7 +31,10 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #1C1C1C 0%, #2C1810 25%, #3C2415 50%, #2C1810 75%, #1C1C1C 100%);
+  background: var(--luxury-african);
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: luxuryAfricanShift 20s ease-in-out infinite;
   color: #F5F5DC;
   line-height: 1.7;
   font-weight: 400;
@@ -349,71 +355,33 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile-Specific Flash Prevention */
 @media (max-width: 768px) {
-  /* Disable all animations on mobile */
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
+  /* Reduce animation intensity on mobile */
+  body {
+    animation-duration: 40s;
   }
   
-  /* Remove all backdrop filters on mobile */
-  .safari-glass,
-  .safari-nav,
-  .safari-section,
-  .safari-card {
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+  .luxury-african-bg {
+    animation-duration: 60s;
   }
   
-  /* Disable hover effects on mobile */
-  .safari-card:hover,
-  .safari-button:hover,
-  .safari-glow:hover {
-    transform: none !important;
-    box-shadow: none !important;
+  .safari-hero {
+    animation-duration: 45s;
   }
   
-  /* Remove all pseudo-element effects on mobile */
-  .safari-glow::before,
-  .safari-card::before,
-  .safari-button::before {
-    display: none !important;
+  .luxury-african-bg::before,
+  .safari-section::before,
+  .safari-hero::before {
+    animation-duration: 35s;
   }
   
-  /* Simplify backgrounds on mobile */
-  .safari-gradient-text {
-    background: #D4AF37 !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
+  /* Reduce pattern complexity on mobile */
+  .safari-glass::before {
+    opacity: 0.5;
+    animation-duration: 20s;
   }
   
-  /* Remove particles on mobile */
-  .safari-particles {
-    display: none !important;
-  }
-  
-  /* Disable video effects on mobile */
-  .safari-video {
-    filter: brightness(0.6) !important;
-  }
-  
-  /* Force hardware acceleration off on mobile */
-  * {
-    transform: none !important;
-    will-change: auto !important;
-  }
-  
-  /* Remove all box-shadows that might cause repaints */
-  * {
-    box-shadow: none !important;
-  }
-  
-  /* Disable all gradient animations */
-  .safari-button,
-  .safari-card {
-    background: rgba(28, 28, 28, 0.9) !important;
+  .safari-card::before {
+    opacity: 0.3;
   }
 }
 
