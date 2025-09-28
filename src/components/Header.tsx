@@ -204,24 +204,6 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Modern Desktop Search */}
-          <form onSubmit={handleSearch} className="hidden lg:flex flex-1 max-w-md xl:max-w-lg mx-4 xl:mx-8">
-            <div className="relative w-full">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search safari destinations..."
-                className="w-full pl-4 pr-12 py-3 lg:pl-6 lg:pr-12 lg:py-4 bg-white/10 backdrop-blur-sm border border-amber-500/30 rounded-full focus:ring-2 focus:ring-amber-500/70 focus:border-amber-400 text-white placeholder-white/70 transition-all duration-300 hover:bg-white/20 font-medium text-sm lg:text-base focus:bg-white/15"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 lg:right-4 top-1/2 transform -translate-y-1/2 text-amber-400 hover:text-amber-300 transition-colors safari-pulse"
-              >
-                <Search className="h-5 w-5 lg:h-6 lg:w-6" />
-              </button>
-            </div>
-          </form>
 
           {/* Modern Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
