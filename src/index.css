@@ -343,6 +343,97 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Mobile-Specific Flash Prevention */
+@media (max-width: 768px) {
+  /* Disable all animations on mobile */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* Remove all backdrop filters on mobile */
+  .safari-glass,
+  .safari-nav,
+  .safari-section,
+  .safari-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  /* Disable hover effects on mobile */
+  .safari-card:hover,
+  .safari-button:hover,
+  .safari-glow:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Remove all pseudo-element effects on mobile */
+  .safari-glow::before,
+  .safari-card::before,
+  .safari-button::before {
+    display: none !important;
+  }
+  
+  /* Simplify backgrounds on mobile */
+  .safari-gradient-text {
+    background: #D4AF37 !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+  }
+  
+  /* Remove particles on mobile */
+  .safari-particles {
+    display: none !important;
+  }
+  
+  /* Disable video effects on mobile */
+  .safari-video {
+    filter: brightness(0.6) !important;
+  }
+  
+  /* Force hardware acceleration off on mobile */
+  * {
+    transform: none !important;
+    will-change: auto !important;
+  }
+  
+  /* Remove all box-shadows that might cause repaints */
+  * {
+    box-shadow: none !important;
+  }
+  
+  /* Disable all gradient animations */
+  .safari-button,
+  .safari-card {
+    background: rgba(28, 28, 28, 0.9) !important;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* This targets touch devices specifically */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .safari-float,
+  .safari-pulse {
+    animation: none !important;
+  }
+  
+  /* Remove all hover states on touch devices */
+  *:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    background: inherit !important;
+  }
+}
+
 /* Focus Styles for Accessibility */
 button:focus,
 a:focus,
