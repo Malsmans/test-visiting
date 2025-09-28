@@ -13,38 +13,37 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden luxury-african-bg">
+    <div className="min-h-screen relative luxury-african-bg">
       {/* Content Overlay */}
-      <div className="relative z-20">
+      <div className="relative z-10 min-h-screen">
         {/* Hero Section */}
-        <section className="luxury-hero min-h-screen flex items-center justify-center relative">
+        <section className="min-h-screen flex items-center justify-center relative py-20">
           {/* Modern Safari Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 via-transparent to-orange-900/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50 z-0" />
           
-          <div className="relative z-30 text-center max-w-7xl mx-auto px-4">
+          <div className="relative z-10 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Modern Safari Badge */}
-            <div className="inline-flex items-center space-x-3 safari-glass px-8 py-3 mb-12 safari-glow">
+            <div className="inline-flex items-center space-x-3 bg-black/40 backdrop-blur-sm border border-amber-500/30 px-8 py-3 mb-12 rounded-full">
               <Safari className="h-6 w-6 text-amber-400 safari-pulse" />
-              <span className="safari-gradient-text font-bold tracking-wider text-lg uppercase font-montserrat">Premium African Safari</span>
+              <span className="text-amber-300 font-bold tracking-wider text-lg uppercase">Premium African Safari</span>
               <Crown className="h-6 w-6 text-amber-400 safari-pulse" />
             </div>
 
             <h1 className="text-7xl md:text-9xl font-black mb-12 leading-none safari-float">
-              <span className="block african-title-enhanced drop-shadow-2xl mb-4">
+              <span className="block text-transparent bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 bg-clip-text drop-shadow-2xl mb-4">
                 DISCOVER
               </span>
               <span className="block text-white drop-shadow-2xl mb-4">
                 THE MOTHER
               </span>
-              <span className="block african-title-enhanced drop-shadow-2xl">
+              <span className="block text-transparent bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 bg-clip-text drop-shadow-2xl">
                 AFRICA
               </span>
             </h1>
             
             <p className="text-2xl md:text-3xl mb-16 text-gray-100 max-w-5xl mx-auto leading-relaxed font-light">
               Experience the ultimate luxury journey through Africa's diverse landscapes, rich cultures, and breathtaking destinations. 
-              <span className="block mt-4 safari-gradient-text font-semibold text-xl md:text-2xl">
+              <span className="block mt-4 text-amber-300 font-semibold text-xl md:text-2xl">
                 Where authentic African heritage meets unparalleled luxury.
               </span>
             </p>
@@ -53,15 +52,15 @@ const Home = () => {
               <Link
                 to="/search"
                 onClick={handleSafariClick}
-                className="safari-button group safari-glow"
+                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-600 hover:from-amber-500 hover:via-yellow-500 hover:to-amber-500 text-white font-semibold rounded-full transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-amber-500/25"
               >
-                <div className="relative flex items-center space-x-3">
+                <div className="flex items-center space-x-3">
                   <Safari className="h-7 w-7" />
-                  <span className="tracking-wide text-lg">BEGIN SAFARI ADVENTURE</span>
+                  <span className="tracking-wide text-lg font-bold">BEGIN SAFARI ADVENTURE</span>
                 </div>
               </Link>
               
-              <div className="flex items-center space-x-3 safari-glass px-6 py-3 rounded-full">
+              <div className="flex items-center space-x-3 bg-black/40 backdrop-blur-sm border border-amber-500/30 px-6 py-3 rounded-full">
                 <Award className="h-6 w-6 text-amber-400" />
                 <span className="text-amber-300 font-semibold tracking-wider uppercase">World-Class Safari</span>
               </div>
@@ -69,25 +68,21 @@ const Home = () => {
 
             {/* Modern Safari Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="safari-glass p-8 rounded-2xl text-center safari-card">
-                <div className="text-4xl font-black safari-gradient-text mb-3">50+</div>
+              <div className="bg-black/40 backdrop-blur-sm border border-amber-500/30 p-8 rounded-2xl text-center">
+                <div className="text-4xl font-black text-amber-400 mb-3">50+</div>
                 <div className="text-amber-300 font-semibold uppercase tracking-wider">Safari Destinations</div>
               </div>
-              <div className="safari-glass p-8 rounded-2xl text-center safari-card">
-                <div className="text-4xl font-black safari-gradient-text mb-3">5★</div>
+              <div className="bg-black/40 backdrop-blur-sm border border-amber-500/30 p-8 rounded-2xl text-center">
+                <div className="text-4xl font-black text-amber-400 mb-3">5★</div>
                 <div className="text-amber-300 font-semibold uppercase tracking-wider">Luxury Safari Lodges</div>
               </div>
-              <div className="safari-glass p-8 rounded-2xl text-center safari-card">
-                <div className="text-4xl font-black safari-gradient-text mb-3">24/7</div>
+              <div className="bg-black/40 backdrop-blur-sm border border-amber-500/30 p-8 rounded-2xl text-center">
+                <div className="text-4xl font-black text-amber-400 mb-3">24/7</div>
                 <div className="text-amber-300 font-semibold uppercase tracking-wider">Safari Concierge</div>
               </div>
             </div>
           </div>
 
-          {/* Floating safari elements */}
-          <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-amber-400/50 rounded-full safari-pulse" />
-          <div className="absolute top-1/3 right-1/4 w-5 h-5 bg-orange-400/40 rounded-full safari-float" style={{ animationDelay: '1s' }} />
-          <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-yellow-500/60 rounded-full safari-wave" style={{ animationDelay: '2s' }} />
         </section>
 
         {/* Modern Safari Features Section */}
