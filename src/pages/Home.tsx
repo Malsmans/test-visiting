@@ -180,7 +180,7 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
               {featuredCountries.slice(0, 6).map((country) => (
-                <div key={country.name} className="group safari-card">
+                <div key={country.name} className="group">
                   <div className="relative">
                     <div className="absolute -inset-2 bg-gradient-to-r from-amber-500 via-orange-600 to-amber-500 rounded-3xl blur-lg opacity-30 group-hover:opacity-80 transition-opacity safari-glow"></div>
                     <div className="relative">

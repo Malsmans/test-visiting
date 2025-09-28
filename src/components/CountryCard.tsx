@@ -13,16 +13,16 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
   return (
     <Link
       to={`/country/${countrySlug}`}
-      className="group relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-amber-500/20 hover:border-amber-400/40"
+      className="group relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-amber-500/20 hover:border-amber-400/40 country-card-animated country-border-animated"
     >
       {/* Luxury Badge */}
-      <div className="absolute top-4 left-4 z-20 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1">
+      <div className="absolute top-4 left-4 z-20 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1 country-badge-animated">
         <Crown className="h-3 w-3 text-white" />
         <span className="text-white text-xs font-semibold tracking-wider uppercase">Premium</span>
       </div>
 
       {/* Region Badge */}
-      <div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
+      <div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20 country-badge-animated" style={{ animationDelay: '0.5s' }}>
         <span className="text-amber-300 text-xs font-medium tracking-wide">{country.region}</span>
       </div>
 
@@ -32,7 +32,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
         <img
           src={country.image}
           alt={country.name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 country-image-animated"
         />
         
         {/* Luxury Overlay Pattern */}
@@ -43,7 +43,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
       <div className="relative p-6 bg-gradient-to-b from-slate-900/95 to-gray-900/95 backdrop-blur-sm">
         {/* Title */}
         <div className="flex items-center justify-between mb-3">
-          <h3 className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors duration-300">
+          <h3 className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors duration-300 country-name-animated">
             {country.name}
           </h3>
           <div className="flex items-center space-x-1">
