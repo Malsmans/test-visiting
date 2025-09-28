@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Users, ExternalLink, Star, Crown, Sparkles } from 'lucide-react';
+import { MapPin, Users, ExternalLink, Star, Crown, Sparkles, Share2, Heart, Bookmark } from 'lucide-react';
 import { Country } from '../types';
 
 interface CountryCardProps {
@@ -8,6 +8,29 @@ interface CountryCardProps {
 }
 
 const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
+  const [isFavorite, setIsFavorite] = React.useState(false);
+  const [isBookmarked, setIsBookmarked] = React.useState(false);
+
+  const handleShare = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Sharing country:', country.name);
+  };
+
+  const toggleFavorite = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsFavorite(!isFavorite);
+    console.log('Toggled favorite for:', country.name);
+  };
+
+  const toggleBookmark = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsBookmarked(!isBookmarked);
+    console.log('Toggled bookmark for:', country.name);
+  };
+
   const countrySlug = country.name.toLowerCase().replace(/\s+/g, '-');
 
   return (
