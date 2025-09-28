@@ -120,7 +120,7 @@ const SearchPage = () => {
 
           {/* Luxury Search and Filter Controls */}
           <div className="bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-2xl shadow-2xl p-8 mb-12 border border-amber-500/20 universal-edge-glow card-container-glow section-edge-glow">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
               {/* Search Input */}
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -156,6 +156,47 @@ const SearchPage = () => {
               >
                 <option value="name" className="bg-gray-900 text-white">Sort by Name</option>
                 <option value="attractions" className="bg-gray-900 text-white">Sort by Attractions</option>
+                <option value="budget" className="bg-gray-900 text-white">Sort by Budget</option>
+              </select>
+
+              {/* Activity Filter */}
+              <select
+                value={selectedActivity}
+                onChange={(e) => setSelectedActivity(e.target.value)}
+                className="w-full px-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-white transition-all duration-300 hover:bg-white/15"
+              >
+                <option value="all" className="bg-gray-900 text-white">All Activities</option>
+                <option value="Safari" className="bg-gray-900 text-white">Safari</option>
+                <option value="Cultural Tours" className="bg-gray-900 text-white">Cultural Tours</option>
+                <option value="Beach Relaxation" className="bg-gray-900 text-white">Beach Relaxation</option>
+                <option value="Mountain Trekking" className="bg-gray-900 text-white">Mountain Trekking</option>
+                <option value="Photography" className="bg-gray-900 text-white">Photography</option>
+              </select>
+
+              {/* Travel Style Filter */}
+              <select
+                value={selectedTravelStyle}
+                onChange={(e) => setSelectedTravelStyle(e.target.value)}
+                className="w-full px-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-white transition-all duration-300 hover:bg-white/15"
+              >
+                <option value="all" className="bg-gray-900 text-white">All Travel Styles</option>
+                <option value="Family Safari" className="bg-gray-900 text-white">Family Safari</option>
+                <option value="Luxury Travel" className="bg-gray-900 text-white">Luxury Travel</option>
+                <option value="Adventure" className="bg-gray-900 text-white">Adventure</option>
+                <option value="Honeymoon" className="bg-gray-900 text-white">Honeymoon</option>
+                <option value="Solo Travel" className="bg-gray-900 text-white">Solo Travel</option>
+              </select>
+
+              {/* Budget Range Filter */}
+              <select
+                value={selectedBudgetRange}
+                onChange={(e) => setSelectedBudgetRange(e.target.value)}
+                className="w-full px-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-white transition-all duration-300 hover:bg-white/15"
+              >
+                <option value="all" className="bg-gray-900 text-white">All Budgets</option>
+                <option value="budget" className="bg-gray-900 text-white">Budget</option>
+                <option value="mid-range" className="bg-gray-900 text-white">Mid-range</option>
+                <option value="luxury" className="bg-gray-900 text-white">Luxury</option>
               </select>
             </div>
           </div>
