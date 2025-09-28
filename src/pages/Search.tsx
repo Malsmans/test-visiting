@@ -47,9 +47,9 @@ const SearchPage = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* 8K HD African Animal Background Videos */}
-      <VideoBackground type="wildlife" className="fixed top-0 left-0 w-1/2 h-full z-0" />
-      <VideoBackground type="animals" className="fixed top-0 right-0 w-1/2 h-full z-0" />
+      {/* African Safari Background Videos */}
+      <VideoBackground type="landscape" className="fixed top-0 left-0 w-1/2 h-full z-0" />
+      <VideoBackground type="safari" className="fixed top-0 right-0 w-1/2 h-full z-0" />
       
       {/* Content Overlay */}
       <div className="relative z-10 py-12">

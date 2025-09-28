@@ -66,7 +66,7 @@ const CountryDetails = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* 8K HD African Animal Background Videos */}
+      {/* African Safari Background Videos */}
       <VideoBackground type="luxury" className="fixed top-0 left-0 w-1/2 h-full z-0" />
       <VideoBackground type="wildlife" className="fixed top-0 right-0 w-1/2 h-full z-0" />
       

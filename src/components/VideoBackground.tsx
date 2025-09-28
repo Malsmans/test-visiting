@@ -1,61 +1,81 @@
 import React from 'react';
 
 interface VideoBackgroundProps {
-  type: 'safari' | 'wildlife' | 'luxury' | 'animals';
+  type: 'safari' | 'wildlife' | 'luxury' | 'animals' | 'landscape' | 'culture';
   className?: string;
 }
 
 const VideoBackground: React.FC<VideoBackgroundProps> = ({ type, className = '' }) => {
-  // Optimized HD African Wildlife and Animal Videos Collection (reduced for performance)
-  const animalVideos = {
+  // High-Quality African Safari and Wildlife Videos Collection
+  const africanVideos = {
     safari: [
-      // Optimized African Elephants in HD (faster loading)
+      // African Safari Landscapes
       'https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4', // Elephants walking
-      'https://videos.pexels.com/video-files/5752729/5752729-hd_1920_1080_25fps.mp4', // African landscape
-      'https://videos.pexels.com/video-files/4825173/4825173-hd_1920_1080_25fps.mp4', // Aerial wildlife
+      'https://videos.pexels.com/video-files/5752729/5752729-hd_1920_1080_25fps.mp4', // African savanna landscape
+      'https://videos.pexels.com/video-files/4825173/4825173-hd_1920_1080_25fps.mp4', // Aerial African wildlife
+      'https://videos.pexels.com/video-files/6985466/6985466-hd_1920_1080_25fps.mp4', // African sunset landscape
     ],
     wildlife: [
-      // Optimized African Big Five Animals in HD
-      'https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4', // Elephants herd
+      // African Big Five and Wildlife
+      'https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4', // Elephant herd
       'https://videos.pexels.com/video-files/8159200/8159200-hd_1920_1080_25fps.mp4', // Lions in savanna
       'https://videos.pexels.com/video-files/9917946/9917946-hd_1920_1080_30fps.mp4', // Wildlife migration
+      'https://videos.pexels.com/video-files/7991158/7991158-hd_1920_1080_25fps.mp4', // African animals grazing
     ],
     luxury: [
-      // Optimized Luxury Safari with Animals in HD
+      // Luxury African Safari Experience
       'https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4', // Premium elephant footage
-      'https://videos.pexels.com/video-files/4825173/4825173-hd_1920_1080_25fps.mp4', // Luxury wildlife aerial
-      'https://videos.pexels.com/video-files/8159200/8159200-hd_1920_1080_25fps.mp4', // Luxury safari sunset
+      'https://videos.pexels.com/video-files/4825173/4825173-hd_1920_1080_25fps.mp4', // Luxury safari aerial view
+      'https://videos.pexels.com/video-files/6985466/6985466-hd_1920_1080_25fps.mp4', // Golden hour safari
+      'https://videos.pexels.com/video-files/5752729/5752729-hd_1920_1080_25fps.mp4', // Luxury landscape
     ],
     animals: [
-      // Optimized Specific African Animals in HD
+      // Specific African Animals
       'https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4', // African elephants
       'https://videos.pexels.com/video-files/8159200/8159200-hd_1920_1080_25fps.mp4', // African lions
       'https://videos.pexels.com/video-files/9917946/9917946-hd_1920_1080_30fps.mp4', // Wildebeest migration
+      'https://videos.pexels.com/video-files/7991158/7991158-hd_1920_1080_25fps.mp4', // Zebras and gazelles
+    ],
+    landscape: [
+      // African Landscapes and Scenery
+      'https://videos.pexels.com/video-files/5752729/5752729-hd_1920_1080_25fps.mp4', // African savanna
+      'https://videos.pexels.com/video-files/6985466/6985466-hd_1920_1080_25fps.mp4', // African sunset
+      'https://videos.pexels.com/video-files/4825173/4825173-hd_1920_1080_25fps.mp4', // Aerial landscape
+      'https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4', // Landscape with animals
+    ],
+    culture: [
+      // African Culture and Villages
+      'https://videos.pexels.com/video-files/5752729/5752729-hd_1920_1080_25fps.mp4', // African landscape
+      'https://videos.pexels.com/video-files/6985466/6985466-hd_1920_1080_25fps.mp4', // Cultural landscape
+      'https://videos.pexels.com/video-files/4825173/4825173-hd_1920_1080_25fps.mp4', // Aerial cultural view
+      'https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4', // Traditional landscape
     ]
   };
 
-  // Additional Optimized HD African Animal Videos
-  const premiumAnimalVideos = [
-    // Optimized Collection
+  // Premium African Safari Videos Collection
+  const premiumAfricanVideos = [
     'https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4', // Elephant herd
     'https://videos.pexels.com/video-files/8159200/8159200-hd_1920_1080_25fps.mp4', // Lions
     'https://videos.pexels.com/video-files/9917946/9917946-hd_1920_1080_30fps.mp4', // Migration
-    'https://videos.pexels.com/video-files/4825173/4825173-hd_1920_1080_25fps.mp4', // Zebra herds
+    'https://videos.pexels.com/video-files/5752729/5752729-hd_1920_1080_25fps.mp4', // Savanna
+    'https://videos.pexels.com/video-files/6985466/6985466-hd_1920_1080_25fps.mp4', // Sunset
+    'https://videos.pexels.com/video-files/4825173/4825173-hd_1920_1080_25fps.mp4', // Aerial
+    'https://videos.pexels.com/video-files/7991158/7991158-hd_1920_1080_25fps.mp4', // Animals
   ];
 
-  // Select random optimized animal video for variety
-  const getRandomAnimalVideo = (videos: string[]) => {
+  // Select random African video for variety
+  const getRandomAfricanVideo = (videos: string[]) => {
     return videos[Math.floor(Math.random() * videos.length)];
   };
 
-  // Get video based on type or random from optimized collection
-  const selectedVideo = animalVideos[type] 
-    ? getRandomAnimalVideo(animalVideos[type])
-    : getRandomAnimalVideo(premiumAnimalVideos);
+  // Get video based on type or random from premium collection
+  const selectedVideo = africanVideos[type] 
+    ? getRandomAfricanVideo(africanVideos[type])
+    : getRandomAfricanVideo(premiumAfricanVideos);
 
   return (
     <div className={`safari-video-container ${className}`}>
-      {/* Primary Optimized HD Animal Video */}
+      {/* Primary African Safari Video */}
       <video
         autoPlay
         muted
@@ -71,20 +91,21 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ type, className = '' 
           zIndex: 1
         }}
         onError={(e) => {
-          // Quick fallback to next video if current fails
+          // Quick fallback to next African video if current fails
           const target = e.target as HTMLVideoElement;
-          const fallbackVideo = getRandomAnimalVideo(premiumAnimalVideos);
+          const fallbackVideo = getRandomAfricanVideo(premiumAfricanVideos);
           target.src = fallbackVideo;
         }}
       >
         <source src={selectedVideo} type="video/mp4" />
-        {/* Multiple fallback sources for reliability */}
+        {/* Multiple African fallback sources for reliability */}
         <source src="https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4" type="video/mp4" />
         <source src="https://videos.pexels.com/video-files/8159200/8159200-hd_1920_1080_25fps.mp4" type="video/mp4" />
         <source src="https://videos.pexels.com/video-files/9917946/9917946-hd_1920_1080_30fps.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/5752729/5752729-hd_1920_1080_25fps.mp4" type="video/mp4" />
       </video>
       
-      {/* Optimized Safari Overlay with Animal Theme */}
+      {/* African Safari Overlay */}
       <div className="safari-video-overlay" style={{
         background: `linear-gradient(
           135deg,
@@ -97,7 +118,7 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ type, className = '' 
         backdropFilter: 'blur(1px)'
       }} />
       
-      {/* Reduced Animal-Themed Particles for Performance */}
+      {/* African Safari Particles */}
       <div className="safari-particles" style={{ zIndex: 10 }}>
         <div className="safari-particle" style={{
           background: 'radial-gradient(circle, #D4AF37, transparent)',
@@ -115,31 +136,47 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ type, className = '' 
           right: '20%',
           animation: 'safariFloat 15s ease-in-out infinite 2s'
         }} />
+        <div className="safari-particle" style={{
+          background: 'radial-gradient(circle, #B87333, transparent)',
+          width: '5px',
+          height: '5px',
+          top: '40%',
+          left: '70%',
+          animation: 'safariFloat 18s ease-in-out infinite 4s'
+        }} />
       </div>
       
-      {/* Simplified atmospheric overlays for animal theme */}
+      {/* African-themed atmospheric overlays */}
       <div className={`absolute inset-0 ${
         type === 'animals' 
           ? 'bg-gradient-to-r from-amber-900/20 via-orange-800/15 to-red-900/15' 
           : type === 'wildlife'
           ? 'bg-gradient-to-l from-green-900/15 via-amber-800/10 to-orange-900/15'
           : type === 'luxury'
-          ? 'bg-gradient-to-r from-amber-900/20 via-gold-800/15 to-bronze-900/15'
+          ? 'bg-gradient-to-r from-amber-900/20 via-yellow-800/15 to-orange-900/15'
+          : type === 'landscape'
+          ? 'bg-gradient-to-b from-blue-900/10 via-amber-800/8 to-orange-900/12'
+          : type === 'culture'
+          ? 'bg-gradient-to-r from-red-900/15 via-amber-800/10 to-yellow-900/15'
           : 'bg-gradient-to-l from-amber-900/15 via-orange-800/10 to-red-900/15'
       }`} style={{ zIndex: 5 }} />
       
-      {/* Simplified safari animal-themed gradient overlay */}
+      {/* African safari-themed gradient overlay */}
       <div className={`absolute inset-0 ${
         type === 'animals'
           ? 'bg-gradient-to-t from-amber-600/15 via-orange-500/8 to-transparent'
           : type === 'wildlife'
           ? 'bg-gradient-to-t from-green-600/10 via-amber-500/6 to-transparent'
           : type === 'luxury'
-          ? 'bg-gradient-to-t from-gold-600/12 via-amber-500/8 to-transparent'
+          ? 'bg-gradient-to-t from-yellow-600/12 via-amber-500/8 to-transparent'
+          : type === 'landscape'
+          ? 'bg-gradient-to-t from-blue-600/8 via-amber-500/5 to-transparent'
+          : type === 'culture'
+          ? 'bg-gradient-to-t from-red-600/10 via-amber-500/6 to-transparent'
           : 'bg-gradient-to-t from-amber-600/10 via-orange-500/6 to-transparent'
       }`} style={{ zIndex: 6 }} />
       
-      {/* Simplified fallback luxury safari gradient background */}
+      {/* African safari gradient background fallback */}
       <div 
         className={`absolute inset-0 ${
           type === 'animals'
@@ -147,15 +184,20 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ type, className = '' 
             : type === 'wildlife'
             ? 'bg-gradient-to-br from-green-600 via-amber-500 to-orange-500'
             : type === 'luxury'
-            ? 'bg-gradient-to-bl from-gold-600 via-amber-500 to-bronze-500'
+            ? 'bg-gradient-to-bl from-yellow-600 via-amber-500 to-orange-500'
+            : type === 'landscape'
+            ? 'bg-gradient-to-br from-blue-600 via-amber-500 to-orange-500'
+            : type === 'culture'
+            ? 'bg-gradient-to-bl from-red-600 via-amber-500 to-yellow-500'
             : 'bg-gradient-to-bl from-amber-600 via-orange-500 to-red-400'
         }`}
         style={{ zIndex: -1 }}
       />
 
-      {/* Minimal animated safari animal elements for performance */}
+      {/* African safari animated elements */}
       <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-amber-400/40 rounded-full safari-pulse" style={{ zIndex: 8 }} />
       <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-orange-400/30 rounded-full safari-float" style={{ animationDelay: '2s', zIndex: 8 }} />
+      <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-yellow-500/50 rounded-full safari-pulse" style={{ animationDelay: '4s', zIndex: 8 }} />
     </div>
   );
 };
