@@ -182,8 +182,8 @@ const SearchPage = () => {
           {/* Countries Grid */}
           {filteredAndSortedCountries.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {filteredAndSortedCountries.map((country) => (
-                <div key={country.name} className="group transform hover:scale-105 transition-all duration-500">
+              {filteredAndSortedCountries.map((country, index) => (
+                <div key={country.name} className="group transform hover:scale-105 transition-all duration-500 country-card-entrance" style={{ animationDelay: `${index * 0.1}s` }}>
                   <div className="relative">
                     <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 via-yellow-500/20 to-amber-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative">

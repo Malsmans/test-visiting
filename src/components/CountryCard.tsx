@@ -43,7 +43,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
       <div className="relative p-6 bg-gradient-to-b from-slate-900/95 to-gray-900/95 backdrop-blur-sm">
         {/* Title */}
         <div className="flex items-center justify-between mb-3">
-          <h3 className="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors duration-300">
+          <h3 className="text-2xl font-bold country-name-glow transition-all duration-300">
             {country.name}
           </h3>
           <div className="flex items-center space-x-1">
