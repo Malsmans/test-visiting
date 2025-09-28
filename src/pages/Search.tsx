@@ -46,18 +46,17 @@ const SearchPage = () => {
   }));
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* 8K HD African Animal Background Videos */}
-      <div className="fixed inset-0 z-0">
-        <VideoBackground type="wildlife" className="absolute top-0 left-0 w-1/2 h-full" />
-        <VideoBackground type="animals" className="absolute top-0 right-0 w-1/2 h-full" />
+    <div className="min-h-screen relative">
+      {/* Fixed Video Background Container */}
+      <div className="fixed inset-0 z-0 overflow-hidden">
+        <VideoBackground type="wildlife" className="absolute inset-0 w-full h-full" />
+        <VideoBackground type="animals" className="absolute inset-0 w-full h-full opacity-50" />
+        {/* Fallback gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900" />
       </div>
       
-      {/* Fallback gradient background */}
-      <div className="fixed inset-0 z-0 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900" />
-      
       {/* Content Overlay */}
-      <div className="relative z-20 py-12">
+      <div className="relative z-10 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Luxury Header */}
           <div className="text-center mb-16 bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-amber-500/20">
