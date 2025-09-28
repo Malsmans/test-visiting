@@ -212,7 +212,7 @@ const Header = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search safari destinations..."
-                className="w-full pl-4 pr-12 py-3 lg:pl-6 lg:pr-12 lg:py-4 safari-glass border border-amber-500/30 rounded-full focus:ring-2 focus:ring-amber-500/70 focus:border-amber-400 text-white placeholder-white/70 transition-all duration-300 hover:bg-white/20 font-medium text-sm lg:text-base"
+                className="w-full pl-4 pr-12 py-3 lg:pl-6 lg:pr-12 lg:py-4 bg-white/10 backdrop-blur-sm border border-amber-500/30 rounded-full focus:ring-2 focus:ring-amber-500/70 focus:border-amber-400 text-white placeholder-white/70 transition-all duration-300 hover:bg-white/20 font-medium text-sm lg:text-base focus:bg-white/15"
               />
               <button
                 type="submit"
