@@ -267,6 +267,164 @@ h1, h2, h3, h4, h5, h6 {
 .country-card-entrance:nth-child(5) { animation-delay: 0.5s; }
 .country-card-entrance:nth-child(6) { animation-delay: 0.6s; }
 /* Safari Card Effects */
+/* Animated Banner Edges */
+.banner-edge-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-edge-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    #FFD700 0%,   /* Gold */
+    #FF6B35 25%,  /* Sunset Orange */
+    #F7931E 50%,  /* African Orange */
+    #DC143C 75%,  /* Deep Red */
+    #FFD700 100%  /* Gold */
+  );
+  background-size: 400% 400%;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  animation: bannerEdgeFlow 4s ease-in-out infinite;
+  transition: opacity 0.3s ease;
+}
+
+.banner-edge-glow:hover::before {
+  opacity: 1;
+  animation: bannerEdgeFlow 2s ease-in-out infinite;
+}
+
+@keyframes bannerEdgeFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    filter: blur(0px);
+  }
+  25% {
+    background-position: 100% 0%;
+    filter: blur(1px);
+  }
+  50% {
+    background-position: 100% 100%;
+    filter: blur(0px);
+  }
+  75% {
+    background-position: 0% 100%;
+    filter: blur(1px);
+  }
+}
+
+/* Pulsing Border Animation */
+.banner-pulse-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--bg-color, #1e293b), var(--bg-color, #1e293b)) padding-box,
+              linear-gradient(45deg, #FFD700, #FF6B35, #F7931E, #DC143C, #FFD700) border-box;
+  animation: bannerBorderPulse 3s ease-in-out infinite;
+}
+
+@keyframes bannerBorderPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(255, 215, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6),
+                0 0 40px rgba(255, 107, 53, 0.4),
+                0 0 60px rgba(220, 20, 60, 0.2);
+  }
+}
+
+/* Corner Sparkle Animation */
+.banner-corner-sparkles {
+  position: relative;
+}
+
+.banner-corner-sparkles::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #FFD700 0%, transparent 70%);
+  border-radius: 50%;
+  animation: cornerSparkle 2s ease-in-out infinite;
+  opacity: 0;
+}
+
+.banner-corner-sparkles:hover::after {
+  animation: cornerSparkle 1s ease-in-out infinite;
+}
+
+@keyframes cornerSparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
+  }
+}
+
+/* Flowing Edge Light */
+.banner-flowing-edge {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-flowing-edge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #FFD700 50%, 
+    transparent 100%
+  );
+  animation: flowingEdgeTop 3s linear infinite;
+}
+
+.banner-flowing-edge::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #FF6B35 50%, 
+    transparent 100%
+  );
+  animation: flowingEdgeBottom 3s linear infinite 1.5s;
+}
+
+@keyframes flowingEdgeTop {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes flowingEdgeBottom {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
 .safari-card {
   position: relative;
   overflow: hidden;
