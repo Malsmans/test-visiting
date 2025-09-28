@@ -78,14 +78,6 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes safariShimmer {
   0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-@keyframes safariPulse {
   0%, 100% {
     opacity: 0.8;
     transform: scale(1);
@@ -102,11 +94,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: safariFloat 6s ease-in-out infinite;
 }
 
-.safari-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
-  background-size: 200% 100%;
-  animation: safariShimmer 2s infinite;
-}
 
 .safari-pulse {
   animation: safariPulse 3s ease-in-out infinite;
@@ -115,11 +102,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Safari Gradient Text */
 .safari-gradient-text {
   background: var(--luxury-gradient);
-  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: safariShimmer 3s ease-in-out infinite;
   font-weight: 800;
   text-shadow: none;
 }
@@ -135,16 +120,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.safari-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
-  transition: left 0.5s ease;
-}
 
 .safari-card:hover {
   transform: translateY(-5px);
@@ -152,9 +127,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
 }
 
-.safari-card:hover::before {
-  left: 100%;
-}
 
 /* Safari Button Styles */
 .safari-button {
@@ -175,25 +147,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
-.safari-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.5s ease;
-}
 
 .safari-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
 }
 
-.safari-button:hover::before {
-  left: 100%;
-}
 
 /* Safari Glass Effect */
 .safari-glass {
