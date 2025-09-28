@@ -10,17 +10,15 @@ import Admin from './pages/Admin';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-amber-900 via-orange-800 to-red-900">
+      <div className="min-h-screen luxury-african-bg">
         <Header />
         <ScrollToTop />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/country/:countryName" element={<CountryDetails />} />
-            <Route path="/admin" element={<Admin />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/country/:countryName" element={<CountryDetails />} />
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
       </div>
     </Router>
   );

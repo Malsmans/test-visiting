@@ -72,32 +72,6 @@ const WildlifeSpotlight: React.FC<WildlifeSpotlightProps> = ({ country, wildlife
               <h4 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors mb-2">
                 {animal.name}
               </h4>
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      toggleFavorite(animal.name);
-                    }}
-                    className={`p-2 rounded-full transition-all duration-300 ${
-                      favorites.has(animal.name)
-                        ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30'
-                        : 'bg-white/10 text-gray-400 hover:bg-white/20 hover:text-red-400'
-                    }`}
-                  >
-                    <Heart className={`h-4 w-4 ${favorites.has(animal.name) ? 'fill-current' : ''}`} />
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      shareAnimal(animal);
-                    }}
-                    className="p-2 rounded-full bg-white/10 text-gray-400 hover:bg-white/20 hover:text-blue-400 transition-all duration-300"
-                  >
-                    <Share2 className="h-4 w-4" />
-                  </button>
-                </div>
-              </div>
               <p className="text-gray-300 text-sm mb-4 line-clamp-3 leading-relaxed">
                 {animal.description}
               </p>

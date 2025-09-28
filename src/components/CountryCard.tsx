@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Users, ExternalLink, Star, Crown, Sparkles, Share2, Heart, Bookmark } from 'lucide-react';
+import { MapPin, Users, ExternalLink, Star, Crown, Sparkles } from 'lucide-react';
 import { Country } from '../types';
 
 interface CountryCardProps {
@@ -8,29 +8,6 @@ interface CountryCardProps {
 }
 
 const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
-  const [isFavorite, setIsFavorite] = React.useState(false);
-  const [isBookmarked, setIsBookmarked] = React.useState(false);
-
-  const handleShare = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    console.log('Sharing country:', country.name);
-  };
-
-  const toggleFavorite = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsFavorite(!isFavorite);
-    console.log('Toggled favorite for:', country.name);
-  };
-
-  const toggleBookmark = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsBookmarked(!isBookmarked);
-    console.log('Toggled bookmark for:', country.name);
-  };
-
   const countrySlug = country.name.toLowerCase().replace(/\s+/g, '-');
 
   return (
@@ -47,32 +24,6 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
       {/* Region Badge */}
       <div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
         <span className="text-amber-300 text-xs font-medium tracking-wide">{country.region}</span>
-      </div>
-
-      {/* Interactive Action Buttons */}
-      <div className="absolute top-4 right-20 z-20 flex space-x-2">
-        <button
-          onClick={handleShare}
-          className="p-2 bg-black/60 backdrop-blur-sm rounded-full border border-white/20 hover:bg-black/80 transition-all duration-300 group"
-        >
-          <Share2 className="h-4 w-4 text-white group-hover:text-blue-400" />
-        </button>
-        <button
-          onClick={toggleFavorite}
-          className={`p-2 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-300 ${
-            isFavorite ? 'bg-red-500/80 text-white' : 'bg-black/60 text-white hover:bg-red-500/60'
-          }`}
-        >
-          <Heart className={`h-4 w-4 ${isFavorite ? 'fill-current' : ''}`} />
-        </button>
-        <button
-          onClick={toggleBookmark}
-          className={`p-2 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-300 ${
-            isBookmarked ? 'bg-amber-500/80 text-white' : 'bg-black/60 text-white hover:bg-amber-500/60'
-          }`}
-        >
-          <Bookmark className={`h-4 w-4 ${isBookmarked ? 'fill-current' : ''}`} />
-        </button>
       </div>
 
       {/* Image Container */}
