@@ -207,6 +207,35 @@ const Home = () => {
 
         {/* Safari Testimonial Section */}
         <section className="safari-section py-32 relative overflow-hidden section-edge-glow">
+          {/* Live Stats Banner */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-2xl p-6 border border-emerald-500/30">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div className="flex items-center justify-center space-x-3">
+                  <TrendingUp className="h-8 w-8 text-emerald-400" />
+                  <div>
+                    <div className="text-2xl font-bold text-white counter-animation">2,847</div>
+                    <div className="text-emerald-300 text-sm">Happy Travelers This Month</div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <Users className="h-8 w-8 text-blue-400" />
+                  <div>
+                    <div className="text-2xl font-bold text-white counter-animation">156</div>
+                    <div className="text-blue-300 text-sm">Active Safari Tours</div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <Globe className="h-8 w-8 text-purple-400" />
+                  <div>
+                    <div className="text-2xl font-bold text-white counter-animation">89</div>
+                    <div className="text-purple-300 text-sm">Countries Served</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
             <div className="safari-glass p-16 rounded-3xl safari-glow universal-edge-glow card-container-glow breathing-edge">
               <div className="flex justify-center mb-8">

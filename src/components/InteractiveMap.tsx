@@ -76,18 +76,29 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
               className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm"
             />
           </div>
-          <select
-            value={selectedCountry || ''}
-            onChange={(e) => onCountrySelect?.(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm min-w-[200px]"
-          >
-            <option value="">View All Africa</option>
-            {filteredCountries.map((country) => (
-              <option key={country.name} value={country.name}>
-                {country.name}
-              </option>
-            ))}
-          </select>
+          <div className="flex gap-2">
+            <select
+              value={selectedCountry || ''}
+              onChange={(e) => onCountrySelect?.(e.target.value)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm min-w-[200px]"
+            >
+              <option value="">View All Africa</option>
+              {filteredCountries.map((country) => (
+                <option key={country.name} value={country.name}>
+                  {country.name}
+                </option>
+              ))}
+            </select>
+            <select
+              value={mapStyle}
+              onChange={(e) => setMapStyle(e.target.value as 'roadmap' | 'satellite' | 'terrain')}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm"
+            >
+              <option value="roadmap">Road Map</option>
+              <option value="satellite">Satellite</option>
+              <option value="terrain">Terrain</option>
+            </select>
+          </div>
         </div>
       </div>
 

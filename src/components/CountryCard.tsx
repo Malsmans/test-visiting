@@ -26,6 +26,32 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
         <span className="text-amber-300 text-xs font-medium tracking-wide">{country.region}</span>
       </div>
 
+      {/* Interactive Action Buttons */}
+      <div className="absolute top-4 right-20 z-20 flex space-x-2">
+        <button
+          onClick={handleShare}
+          className="p-2 bg-black/60 backdrop-blur-sm rounded-full border border-white/20 hover:bg-black/80 transition-all duration-300 group"
+        >
+          <Share2 className="h-4 w-4 text-white group-hover:text-blue-400" />
+        </button>
+        <button
+          onClick={toggleFavorite}
+          className={`p-2 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-300 ${
+            isFavorite ? 'bg-red-500/80 text-white' : 'bg-black/60 text-white hover:bg-red-500/60'
+          }`}
+        >
+          <Heart className={`h-4 w-4 ${isFavorite ? 'fill-current' : ''}`} />
+        </button>
+        <button
+          onClick={toggleBookmark}
+          className={`p-2 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-300 ${
+            isBookmarked ? 'bg-amber-500/80 text-white' : 'bg-black/60 text-white hover:bg-amber-500/60'
+          }`}
+        >
+          <Bookmark className={`h-4 w-4 ${isBookmarked ? 'fill-current' : ''}`} />
+        </button>
+      </div>
+
       {/* Image Container */}
       <div className="relative h-64 overflow-hidden banner-flowing-edge">
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>

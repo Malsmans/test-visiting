@@ -87,7 +87,9 @@ const WeatherWidget: React.FC<WeatherWidgetProps> = ({ country }) => {
             {getWeatherIcon(weather.condition)}
           </div>
           <div>
-            <div className="text-4xl font-bold text-white mb-1">{weather.temperature}°C</div>
+            <div className="text-4xl font-bold text-white mb-1">
+              {convertTemperature(weather.temperature, unit)}°{unit}
+            </div>
             <div className="text-amber-300 font-medium capitalize">{weather.description}</div>
           </div>
         </div>
