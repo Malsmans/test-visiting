@@ -31,20 +31,14 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  background: var(--luxury-african);
-  background-attachment: fixed;
-  background-size: 400% 400%;
-  animation: luxuryAfricanShift 20s ease-in-out infinite;
+  background: linear-gradient(135deg, #1C1C1C 0%, #2F1B14 25%, #8B4513 50%, #CD7F32 75%, #D4AF37 100%);
+  min-height: 100vh;
   color: #F5F5DC;
   line-height: 1.7;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
 /* Safari Typography */
@@ -128,19 +122,17 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: none;
 }
 
-/* Safari Card Effects */
-.safari-card {
+/* Card Effects */
+.luxury-card {
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, rgba(28, 28, 28, 0.9), rgba(44, 24, 16, 0.9));
-  backdrop-filter: blur(20px);
   border: 2px solid transparent;
   border-radius: 24px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-
-.safari-card:hover {
+.luxury-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
 }
