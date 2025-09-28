@@ -58,14 +58,75 @@ class AnalyticsTracker {
 
     // Track scroll depth
     let maxScroll = 0;
+    let ticking = false;
     window.addEventListener('scroll', () => {
-      const scrollPercent = Math.round(
-        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-      );
-      if (scrollPercent > maxScroll) {
-        maxScroll = scrollPercent;
-        if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%
-          this.trackEvent('scroll', { depth: maxScroll });
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollPercent = Math.round(
+            (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+          );
+          if (scrollPercent > maxScroll) {
+            maxScroll = scrollPercent;
+            if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%
+              this.trackEvent('scroll', { depth: maxScroll });
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Optimize resize events
+    let resizeTicking = false;
+    window.addEventListener('resize', () => {
+      if (!resizeTicking) {
+        window.requestAnimationFrame(() => {
+          // Handle resize logic here if needed
+          resizeTicking = false;
+        });
+        resizeTicking = true;
+      }
+    }, { passive: true });
+
+    // Track clicks with throttling
+    let clickTicking = false;
+    document.addEventListener('click', (event) => {
+      if (!clickTicking) {
+        window.requestAnimationFrame(() => {
+          const target = event.target as HTMLElement;
+          const link = target.closest('a');
+          if (link) {
+            this.trackEvent('click', {
+              element: link.tagName,
+              href: link.href,
+              text: link.textContent?.slice(0, 100) || '',
+              x: event.clientX,
+              y: event.clientY
+            });
+          }
+          clickTicking = false;
+        });
+        clickTicking = true;
+      }
+    }, { passive: true });
+
+    // Remove the original click listener since we replaced it above
+    /*
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      const link = target.closest('a');
+      if (link) {
+        this.trackEvent('click', {
+          element: link.tagName,
+          href: link.href,
+          text: link.textContent?.slice(0, 100) || '',
+          x: event.clientX,
+          y: event.clientY
+        });
+      }
+    });
+    */
         }
       }
     });

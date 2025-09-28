@@ -35,6 +35,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Safari Typography */
@@ -415,22 +419,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
-  /* This targets touch devices specifically */
-  * {
-    animation: none !important;
-    transition: none !important;
+  /* Optimize for touch devices */
+  .safari-card:hover,
+  .safari-button:hover,
+  .safari-glow:hover {
+    transform: none;
+    box-shadow: inherit;
   }
   
-  .safari-float,
+  /* Reduce animation intensity */
+  .safari-float {
+    animation-duration: 8s;
+  }
+  
   .safari-pulse {
-    animation: none !important;
-  }
-  
-  /* Remove all hover states on touch devices */
-  *:hover {
-    transform: none !important;
-    box-shadow: none !important;
-    background: inherit !important;
+    animation-duration: 6s;
   }
 }
 
