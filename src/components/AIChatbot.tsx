@@ -1,26 +1,48 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, Send, X, Bot, User, Sparkles, Crown, Globe, History, TrendingUp } from 'lucide-react';
+import { MessageCircle, Send, X, Bot, User, Sparkles, Crown, Globe, History, TrendingUp, Settings, Key, AlertCircle, CheckCircle } from 'lucide-react';
+import { aiService, AIResponse } from '../services/aiService';
 
 interface Message {
   id: string;
   text: string;
   isUser: boolean;
   timestamp: Date;
+  provider?: string;
+  error?: boolean;
 }
 
 const AIChatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [openaiKey, setOpenaiKey] = useState('');
+  const [deepseekKey, setDeepseekKey] = useState('');
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hello! I'm your AI guide to Africa. I can answer questions about African history, current events, culture, wildlife, travel, and future predictions. What would you like to know about the beautiful continent of Africa?",
+      text: "Hello! I'm your AI guide to Africa, powered by ChatGPT and DeepSeek. I can answer questions about African history, current events, culture, wildlife, travel, and future predictions. What would you like to know about the beautiful continent of Africa?",
       isUser: false,
-      timestamp: new Date()
+      timestamp: new Date(),
+      provider: 'AI System'
     }
   ]);
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Check API key status on component mount
+  useEffect(() => {
+    const keys = aiService.hasApiKeys();
+    if (!keys.openai && !keys.deepseek) {
+      setMessages(prev => [...prev, {
+        id: Date.now().toString(),
+        text: "⚠️ No API keys detected. I'll use my built-in knowledge about Africa, but for the best experience, please add your OpenAI or DeepSeek API keys in settings.",
+        isUser: false,
+        timestamp: new Date(),
+        provider: 'System',
+        error: true
+      }]);
+    }
+  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -30,54 +52,25 @@ const AIChatbot: React.FC = () => {
     scrollToBottom();
   }, [messages]);
 
-  // Simulate AI responses about Africa
-  const generateAIResponse = (userMessage: string): string => {
-    const lowerMessage = userMessage.toLowerCase();
-    
-    // Historical questions
-    if (lowerMessage.includes('history') || lowerMessage.includes('past') || lowerMessage.includes('ancient')) {
-      return "Africa has a rich and diverse history spanning millions of years. From the cradle of humanity in East Africa to the great kingdoms of Mali, Ghana, and Zimbabwe, Africa has been home to advanced civilizations. The ancient Kingdom of Kush ruled over Egypt, while Timbuktu was a center of learning and trade. Would you like to know about a specific historical period or civilization?";
+  const saveApiKeys = () => {
+    if (openaiKey.trim()) {
+      aiService.setApiKey('OpenAI', openaiKey.trim());
     }
-    
-    // Wildlife questions
-    if (lowerMessage.includes('wildlife') || lowerMessage.includes('animals') || lowerMessage.includes('safari')) {
-      return "Africa is home to incredible wildlife! The 'Big Five' - lions, elephants, buffalo, leopards, and rhinos - roam the savannas. The Great Migration in Kenya and Tanzania sees over 2 million wildebeest and zebras move annually. Africa has over 1,100 bird species and unique animals like giraffes, hippos, and cheetahs. Which African animals would you like to learn more about?";
+    if (deepseekKey.trim()) {
+      aiService.setApiKey('DeepSeek', deepseekKey.trim());
     }
+    setShowSettings(false);
+    setOpenaiKey('');
+    setDeepseekKey('');
     
-    // Culture questions
-    if (lowerMessage.includes('culture') || lowerMessage.includes('tradition') || lowerMessage.includes('music')) {
-      return "African culture is incredibly diverse with over 3,000 ethnic groups and 2,000+ languages! From the vibrant Maasai traditions in East Africa to the rich musical heritage that gave birth to jazz and blues, Africa's cultural influence is global. Traditional art, dance, storytelling, and festivals vary beautifully across regions. What aspect of African culture interests you most?";
-    }
-    
-    // Geography questions
-    if (lowerMessage.includes('geography') || lowerMessage.includes('countries') || lowerMessage.includes('continent')) {
-      return "Africa is the world's second-largest continent with 54 countries! It spans all four hemispheres and includes the Sahara Desert, Congo Rainforest, Nile River, and Rift Valley. From Morocco's Atlas Mountains to South Africa's Cape of Good Hope, the geography is incredibly diverse. Which African region or country would you like to explore?";
-    }
-    
-    // Future predictions
-    if (lowerMessage.includes('future') || lowerMessage.includes('prediction') || lowerMessage.includes('2030') || lowerMessage.includes('2050')) {
-      return "Africa's future looks incredibly promising! By 2050, Africa will have the world's largest workforce with over 1 billion people under 35. The continent is leading in mobile banking innovation, renewable energy adoption, and has the fastest-growing economies globally. Tech hubs in Lagos, Nairobi, and Cape Town are driving innovation. What aspect of Africa's future interests you most?";
-    }
-    
-    // Travel questions
-    if (lowerMessage.includes('travel') || lowerMessage.includes('visit') || lowerMessage.includes('tourism')) {
-      return "Africa offers incredible travel experiences! From luxury safaris in Kenya and Tanzania to cultural tours in Morocco and Egypt, beach relaxation in Seychelles and Mauritius, to adventure trekking in Rwanda and Ethiopia. The best time to visit varies by region - East Africa is great year-round, while Southern Africa is best April-October. Where in Africa are you thinking of visiting?";
-    }
-    
-    // Economy questions
-    if (lowerMessage.includes('economy') || lowerMessage.includes('business') || lowerMessage.includes('trade')) {
-      return "Africa's economy is rapidly growing! The African Continental Free Trade Area (AfCFTA) is boosting intra-African trade. Key sectors include agriculture, mining, technology, and renewable energy. Countries like Nigeria, South Africa, and Egypt lead economically, while Rwanda and Ghana show impressive growth rates. The continent is rich in natural resources and has a young, dynamic population driving innovation.";
-    }
-    
-    // Default responses for general questions
-    const defaultResponses = [
-      "That's a fascinating question about Africa! The continent is incredibly diverse with 54 countries, each with unique characteristics. Could you be more specific about which aspect of Africa you'd like to explore?",
-      "Africa is a continent of endless wonders! From the pyramids of Egypt to the wildlife of the Serengeti, from the music of West Africa to the innovations of South Africa. What particular topic about Africa interests you most?",
-      "Great question! Africa has so much to offer - rich history, diverse cultures, incredible wildlife, stunning landscapes, and a bright future ahead. Which area would you like me to focus on in my response?",
-      "Africa is truly the cradle of humanity and continues to shape our world today! Whether you're interested in history, culture, wildlife, travel, or future developments, I'm here to help. What specific aspect can I tell you about?"
-    ];
-    
-    return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+    // Add confirmation message
+    setMessages(prev => [...prev, {
+      id: Date.now().toString(),
+      text: "✅ API keys saved successfully! I can now provide enhanced responses using ChatGPT and DeepSeek.",
+      isUser: false,
+      timestamp: new Date(),
+      provider: 'System'
+    }]);
   };
 
   const handleSendMessage = async () => {
@@ -94,18 +87,39 @@ const AIChatbot: React.FC = () => {
     setInputText('');
     setIsTyping(true);
 
-    // Simulate AI thinking time
-    setTimeout(() => {
-      const aiResponse: Message = {
+    try {
+      // Get AI response
+      const aiResponse: AIResponse = await aiService.generateResponse(inputText);
+      
+      const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: generateAIResponse(inputText),
+        text: aiResponse.message,
         isUser: false,
-        timestamp: new Date()
+        timestamp: new Date(),
+        provider: aiResponse.provider,
+        error: !aiResponse.success
       };
 
-      setMessages(prev => [...prev, aiResponse]);
+      setMessages(prev => [...prev, aiMessage]);
       setIsTyping(false);
-    }, 1500 + Math.random() * 1000); // Random delay between 1.5-2.5 seconds
+      
+      // Log any errors to console for debugging
+      if (aiResponse.error) {
+        console.warn('AI Service Warning:', aiResponse.error);
+      }
+    } catch (error) {
+      console.error('Chat error:', error);
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: "I apologize, but I'm having trouble connecting to the AI services right now. Please try again in a moment, or check your API key settings.",
+        isUser: false,
+        timestamp: new Date(),
+        provider: 'Error Handler',
+        error: true
+      };
+      setMessages(prev => [...prev, errorMessage]);
+      setIsTyping(false);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -122,6 +136,8 @@ const AIChatbot: React.FC = () => {
     "African culture and traditions",
     "Africa's future predictions"
   ];
+
+  const apiKeyStatus = aiService.hasApiKeys();
 
   return (
     <>
@@ -158,8 +174,17 @@ const AIChatbot: React.FC = () => {
               <div className="flex items-center space-x-2">
                 <div className="flex items-center space-x-1 text-amber-400">
                   <Crown className="h-4 w-4" />
-                  <span className="text-xs font-medium tracking-wider uppercase">AI Powered</span>
+                  <span className="text-xs font-medium tracking-wider uppercase">
+                    {apiKeyStatus.openai || apiKeyStatus.deepseek ? 'Live AI' : 'Offline AI'}
+                  </span>
                 </div>
+                <button
+                  onClick={() => setShowSettings(true)}
+                  className="text-gray-400 hover:text-amber-400 p-1 rounded-full hover:bg-white/10 transition-colors"
+                  title="AI Settings"
+                >
+                  <Settings className="h-4 w-4" />
+                </button>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="text-gray-400 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
@@ -183,12 +208,22 @@ const AIChatbot: React.FC = () => {
                     <div className={`p-3 rounded-2xl ${
                       message.isUser 
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white' 
+                        : message.error
+                        ? 'bg-gradient-to-br from-red-800/50 to-red-900/50 text-white border border-red-500/20'
                         : 'bg-gradient-to-br from-slate-800/50 to-gray-800/50 text-white border border-amber-500/20'
                     }`}>
                       <p className="text-sm leading-relaxed">{message.text}</p>
-                      <p className="text-xs opacity-70 mt-1">
-                        {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                      </p>
+                      <div className="flex items-center justify-between mt-1">
+                        <p className="text-xs opacity-70">
+                          {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                        </p>
+                        {message.provider && !message.isUser && (
+                          <p className="text-xs opacity-60 flex items-center">
+                            {message.error ? <AlertCircle className="h-3 w-3 mr-1" /> : <CheckCircle className="h-3 w-3 mr-1" />}
+                            {message.provider}
+                          </p>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -272,8 +307,110 @@ const AIChatbot: React.FC = () => {
                     <span>Future</span>
                   </div>
                 </div>
-                <span>Powered by AI</span>
+                <span className="flex items-center space-x-1">
+                  {apiKeyStatus.openai && <span className="w-2 h-2 bg-green-400 rounded-full"></span>}
+                  {apiKeyStatus.deepseek && <span className="w-2 h-2 bg-blue-400 rounded-full"></span>}
+                  <span>AI Powered</span>
+                </span>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Settings Modal */}
+      {showSettings && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <div className="bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-2xl p-8 max-w-md w-full border border-amber-500/20">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center space-x-3">
+                <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-2 rounded-xl">
+                  <Key className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white">AI Settings</h3>
+              </div>
+              <button
+                onClick={() => setShowSettings(false)}
+                className="text-gray-400 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-amber-300 text-sm font-medium mb-2">
+                  OpenAI API Key (ChatGPT)
+                </label>
+                <input
+                  type="password"
+                  value={openaiKey}
+                  onChange={(e) => setOpenaiKey(e.target.value)}
+                  placeholder="sk-..."
+                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-white placeholder-white/60"
+                />
+                <div className="flex items-center mt-1">
+                  {apiKeyStatus.openai ? (
+                    <div className="flex items-center text-green-400 text-xs">
+                      <CheckCircle className="h-3 w-3 mr-1" />
+                      <span>Connected</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center text-gray-400 text-xs">
+                      <AlertCircle className="h-3 w-3 mr-1" />
+                      <span>Not connected</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-blue-300 text-sm font-medium mb-2">
+                  DeepSeek API Key
+                </label>
+                <input
+                  type="password"
+                  value={deepseekKey}
+                  onChange={(e) => setDeepseekKey(e.target.value)}
+                  placeholder="sk-..."
+                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-500/50 focus:border-blue-400 text-white placeholder-white/60"
+                />
+                <div className="flex items-center mt-1">
+                  {apiKeyStatus.deepseek ? (
+                    <div className="flex items-center text-green-400 text-xs">
+                      <CheckCircle className="h-3 w-3 mr-1" />
+                      <span>Connected</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center text-gray-400 text-xs">
+                      <AlertCircle className="h-3 w-3 mr-1" />
+                      <span>Not connected</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-xl p-4 border border-blue-500/30">
+              <p className="text-blue-200 text-sm">
+                <strong>Note:</strong> API keys are stored locally in your browser and never sent to our servers. 
+                Get your keys from <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">OpenAI</a> or <a href="https://platform.deepseek.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">DeepSeek</a>.
+              </p>
+            </div>
+
+            <div className="flex space-x-3 mt-6">
+              <button
+                onClick={saveApiKeys}
+                className="flex-1 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white px-4 py-3 rounded-xl font-semibold transition-all duration-300"
+              >
+                Save Keys
+              </button>
+              <button
+                onClick={() => setShowSettings(false)}
+                className="px-4 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-semibold transition-all duration-300"
+              >
+                Cancel
+              </button>
             </div>
           </div>
         </div>
