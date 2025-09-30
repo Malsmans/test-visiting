@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import ScrollToTop from './components/ScrollToTop';
+import AIChatbot from './components/AIChatbot';
 import Home from './pages/Home';
 import CountryDetails from './pages/CountryDetails';
 import Search from './pages/Search';
@@ -19,6 +20,7 @@ function App() {
           <Route path="/country/:countryName" element={<CountryDetails />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
+        <AIChatbot />
       </div>
     </Router>
   );
