@@ -22,7 +22,7 @@ const AIChatbot: React.FC = () => {
       text: "Hello! I'm your AI guide to Africa, powered by ChatGPT and DeepSeek. I can answer questions about African history, current events, culture, wildlife, travel, and future predictions. What would you like to know about the beautiful continent of Africa?",
       isUser: false,
       timestamp: new Date(),
-      provider: 'AI System'
+      provider: 'System'
     }
   ]);
   const [inputText, setInputText] = useState('');
