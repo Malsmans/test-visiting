@@ -394,7 +394,7 @@ const AIChatbot: React.FC = () => {
             <div className="mt-6 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-xl p-4 border border-blue-500/30">
               <p className="text-blue-200 text-sm">
                 <strong>Note:</strong> API keys are stored locally in your browser and never sent to our servers. 
-                Get your keys from <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">OpenAI</a> or <a href="https://platform.deepseek.com/api-keys" target=\"_blank" rel="noopener noreferrer\" className="text-blue-400 underline">DeepSeek</a>.
+                Get your keys from <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">OpenAI</a> or <a href="https://platform.deepseek.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">DeepSeek</a>.
               </p>
             </div>
 
