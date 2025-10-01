@@ -386,7 +386,6 @@ const AIChatbot: React.FC = () => {
             </div>
           </div>
         </div>
-        </div>
       )}
     </>
   );
