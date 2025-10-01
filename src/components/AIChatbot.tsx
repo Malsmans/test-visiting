@@ -14,12 +14,11 @@ interface Message {
 const AIChatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [openaiKey, setOpenaiKey] = useState('');
   const [deepseekKey, setDeepseekKey] = useState('');
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hello! I'm your AI guide to Africa, powered by ChatGPT and DeepSeek. I can answer questions about African history, current events, culture, wildlife, travel, and future predictions. What would you like to know about the beautiful continent of Africa?",
+      text: "Hello! I'm your AI guide to Africa, powered by DeepSeek AI. I can answer questions about African history, current events, culture, wildlife, travel, and future predictions. What would you like to know about the beautiful continent of Africa?",
       isUser: false,
       timestamp: new Date(),
       provider: 'System'
@@ -31,7 +30,7 @@ const AIChatbot: React.FC = () => {
 
   // Check API key status on component mount
   useEffect(() => {
-    const keys = aiService.hasApiKeys();
+    const hasKey = aiService.hasApiKey();
     // Only show warning if user tries to use the chatbot without keys
     // We'll handle this in the first user message instead
   }, []);
@@ -45,20 +44,16 @@ const AIChatbot: React.FC = () => {
   }, [messages]);
 
   const saveApiKeys = () => {
-    if (openaiKey.trim()) {
-      aiService.setApiKey('OpenAI', openaiKey.trim());
-    }
     if (deepseekKey.trim()) {
-      aiService.setApiKey('DeepSeek', deepseekKey.trim());
+      aiService.setApiKey(deepseekKey.trim());
     }
     setShowSettings(false);
-    setOpenaiKey('');
     setDeepseekKey('');
     
     // Add confirmation message
     setMessages(prev => [...prev, {
       id: Date.now().toString(),
-      text: "✅ API keys saved successfully! I can now provide enhanced responses using ChatGPT and DeepSeek.",
+      text: "✅ DeepSeek API key saved successfully! I can now provide enhanced responses using DeepSeek AI.",
       isUser: false,
       timestamp: new Date(),
       provider: 'System'
@@ -69,11 +64,11 @@ const AIChatbot: React.FC = () => {
     if (!inputText.trim()) return;
 
     // Check API keys on first use
-    const keys = aiService.hasApiKeys();
-    if (!keys.openai && !keys.deepseek && messages.length === 1) {
+    const hasKey = aiService.hasApiKey();
+    if (!hasKey && messages.length === 1) {
       setMessages(prev => [...prev, {
         id: Date.now().toString(),
-        text: "💡 For the best AI experience, please add your OpenAI or DeepSeek API keys in the settings (⚙️ icon). I can still answer questions using my built-in knowledge about Africa!",
+        text: "💡 For the best AI experience, please add your DeepSeek API key in the settings (⚙️ icon). I can still answer questions using my built-in knowledge about Africa!",
         isUser: false,
         timestamp: new Date(),
         provider: 'System'
@@ -179,7 +174,7 @@ const AIChatbot: React.FC = () => {
                 <div className="flex items-center space-x-1 text-amber-400">
                   <Crown className="h-4 w-4" />
                   <span className="text-xs font-medium tracking-wider uppercase">
-                    {apiKeyStatus.openai || apiKeyStatus.deepseek ? 'Live AI' : 'Offline AI'}
+                    {apiKeyStatus.deepseek ? 'DeepSeek AI' : 'Offline AI'}
                   </span>
                 </div>
                 <button
@@ -312,7 +307,6 @@ const AIChatbot: React.FC = () => {
                   </div>
                 </div>
                 <span className="flex items-center space-x-1">
-                  {apiKeyStatus.openai && <span className="w-2 h-2 bg-green-400 rounded-full"></span>}
                   {apiKeyStatus.deepseek && <span className="w-2 h-2 bg-blue-400 rounded-full"></span>}
                   <span>AI Powered</span>
                 </span>
@@ -343,32 +337,6 @@ const AIChatbot: React.FC = () => {
 
             <div className="space-y-4">
               <div>
-                <label className="block text-amber-300 text-sm font-medium mb-2">
-                  OpenAI API Key (ChatGPT)
-                </label>
-                <input
-                  type="password"
-                  value={openaiKey}
-                  onChange={(e) => setOpenaiKey(e.target.value)}
-                  placeholder="sk-..."
-                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-white placeholder-white/60"
-                />
-                <div className="flex items-center mt-1">
-                  {apiKeyStatus.openai ? (
-                    <div className="flex items-center text-green-400 text-xs">
-                      <CheckCircle className="h-3 w-3 mr-1" />
-                      <span>Connected</span>
-                    </div>
-                  ) : (
-                    <div className="flex items-center text-gray-400 text-xs">
-                      <AlertCircle className="h-3 w-3 mr-1" />
-                      <span>Not connected</span>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              <div>
                 <label className="block text-blue-300 text-sm font-medium mb-2">
                   DeepSeek API Key
                 </label>
@@ -397,10 +365,10 @@ const AIChatbot: React.FC = () => {
 
             <div className="mt-6 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-xl p-4 border border-blue-500/30">
              <p className="text-blue-200 text-sm">
-  <strong>Note:</strong> API keys are stored locally in your browser and never sent to our servers. 
-  Get your keys from <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">OpenAI</a> 
-  or <a href="https://platform.deepseek.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">DeepSeek</a>.
-</p>
+                <strong>Note:</strong> Your API key is stored locally in your browser and never sent to our servers. 
+                Get your DeepSeek API key from <a href="https://platform.deepseek.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">DeepSeek Platform</a>.
+              </p>
+            </div>
 
             <div className="flex space-x-3 mt-6">
               <button
