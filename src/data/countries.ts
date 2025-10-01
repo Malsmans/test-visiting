@@ -7573,9 +7573,9 @@ export const allCountries: Country[] = [
   {
     name: 'Rwanda',
     description: 'The Land of a Thousand Hills offering mountain gorilla trekking, pristine national parks, and a remarkable story of recovery and conservation.',
-    image: 'https://images.pexels.com/photos/6894388/pexels-photo-6894388.jpeg', // Kigali Genocide Memorial
+    image: 'https://vanpartnerstrust.com/wp-content/uploads/2023/03/How-to-register-a-foreign-business-in-Rwanda.jpg',
     region: 'East Africa',
-    population: '13 million',
+    population: '14.26 million',
     attractions: [
       {
         name: 'Volcanoes National Park',
