@@ -8112,9 +8112,9 @@ export const allCountries: Country[] = [
   {
     name: 'Senegal',
     description: 'Vibrant West African nation offering rich cultural heritage, historic colonial architecture, diverse wildlife, and stunning Atlantic coastlines.',
-    image: 'https://images.pexels.com/photos/8828205/pexels-photo-8828205.jpeg', // African Renaissance Monument, Dakar
+    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KRIWfzidW3CgvLAPE7GJBNxnmvHif_5avEBLXERxZzsjzjNCfylQPoFtetQf6YS1zJJkbzN7qP8TOT0wJAX9pahWaKGGvTwn-ZVhGSMAmyNXj65ckFHpsE_chwzQIxkqGvOwCbS27hHTX1jRMEEXhmCr7lR4Q1kAq13o93gtpfElpEYtg=s1024',
     region: 'West Africa',
-    population: '17 million',
+    population: '18.5 million',
     attractions: [
       {
         name: 'Gorée Island',
