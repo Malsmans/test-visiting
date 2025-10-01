@@ -11355,9 +11355,9 @@ export const allCountries: Country[] = [
   {
     name: 'Eswatini',
     description: 'Formerly known as Swaziland, this small kingdom offers rich traditional culture, scenic mountain landscapes, wildlife reserves, and authentic African experiences.',
-    image: 'https://images.pexels.com/photos/5490899/pexels-photo-5490899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://commonwealthchamber.com/wp-content/uploads/2021/07/eswastini-1.jpg',
     region: 'Southern Africa',
-    population: '1.2 million',
+    population: '1.243 million',
     attractions: [
       {
         name: 'Mlilwane Wildlife Sanctuary',
