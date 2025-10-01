@@ -396,7 +396,6 @@ const AIChatbot: React.FC = () => {
                 <strong>Note:</strong> API keys are stored locally in your browser and never sent to our servers. 
                 Get your keys from <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">OpenAI</a> or <a href="https://platform.deepseek.com/api-keys" target=\"_blank" rel="noopener noreferrer\" className="text-blue-400 underline">DeepSeek</a>.
               </p>
-            </div>
 
             <div className="flex space-x-3 mt-6">
               <button
