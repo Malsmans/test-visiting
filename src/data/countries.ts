@@ -10268,9 +10268,9 @@ export const allCountries: Country[] = [
   {
     name: 'Mozambique',
     description: 'Emerging destination with pristine Indian Ocean beaches, rich Portuguese colonial heritage, vibrant culture, and exceptional marine life.',
-    image: 'https://images.pexels.com/photos/8828678/pexels-photo-8828678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KSoxUpLF8D8kh0AuC4A3AK0m_LUCD6EM8TK1YmrmKAcCOouwnNGGiQZBEZRXDT4HtIRkJBxh9UeuS1lRSUJsN4_dSXsXDbSlc9TyeuNQzi125g2N28JjSw2DMeG3secPnx6A00t1ZWLp1rFexGILJ0Fk_gTSG1q6-awM7rv86B9FMFaJA=s1024',
     region: 'Southern Africa',
-    population: '32 million',
+    population: '34.63 million',
     attractions: [
       {
         name: 'Bazaruto Archipelago',
