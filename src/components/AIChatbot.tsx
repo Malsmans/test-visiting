@@ -32,16 +32,8 @@ const AIChatbot: React.FC = () => {
   // Check API key status on component mount
   useEffect(() => {
     const keys = aiService.hasApiKeys();
-    if (!keys.openai && !keys.deepseek) {
-      setMessages(prev => [...prev, {
-        id: Date.now().toString(),
-        text: "⚠️ No API keys detected. I'll use my built-in knowledge about Africa, but for the best experience, please add your OpenAI or DeepSeek API keys in settings.",
-        isUser: false,
-        timestamp: new Date(),
-        provider: 'System',
-        error: true
-      }]);
-    }
+    // Only show warning if user tries to use the chatbot without keys
+    // We'll handle this in the first user message instead
   }, []);
 
   const scrollToBottom = () => {
@@ -76,6 +68,18 @@ const AIChatbot: React.FC = () => {
   const handleSendMessage = async () => {
     if (!inputText.trim()) return;
 
+    // Check API keys on first use
+    const keys = aiService.hasApiKeys();
+    if (!keys.openai && !keys.deepseek && messages.length === 1) {
+      setMessages(prev => [...prev, {
+        id: Date.now().toString(),
+        text: "💡 For the best AI experience, please add your OpenAI or DeepSeek API keys in the settings (⚙️ icon). I can still answer questions using my built-in knowledge about Africa!",
+        isUser: false,
+        timestamp: new Date(),
+        provider: 'System'
+      }]);
+    }
+
     const userMessage: Message = {
       id: Date.now().toString(),
       text: inputText,
@@ -105,13 +109,13 @@ const AIChatbot: React.FC = () => {
       
       // Log any errors to console for debugging
       if (aiResponse.error) {
-        console.warn('AI Service Warning:', aiResponse.error);
+        console.log('AI Service Info:', aiResponse.error);
       }
     } catch (error) {
       console.error('Chat error:', error);
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "I apologize, but I'm having trouble connecting to the AI services right now. Please try again in a moment, or check your API key settings.",
+        text: "I apologize, but I'm having trouble processing your request right now. Please try again in a moment. If the issue persists, you can add API keys in settings for enhanced responses.",
         isUser: false,
         timestamp: new Date(),
         provider: 'Error Handler',
@@ -130,11 +134,11 @@ const AIChatbot: React.FC = () => {
   };
 
   const quickQuestions = [
-    "Tell me about African wildlife",
-    "What's Africa's history?",
-    "Best places to visit in Africa",
-    "African culture and traditions",
-    "Africa's future predictions"
+    "Tell me about African wildlife and safaris",
+    "What's the history of ancient African civilizations?",
+    "Best places to visit in Africa for tourism",
+    "African culture, music, and traditions",
+    "What does Africa's future look like by 2050?"
   ];
 
   const apiKeyStatus = aiService.hasApiKeys();
