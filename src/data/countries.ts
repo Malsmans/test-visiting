@@ -8651,9 +8651,9 @@ export const allCountries: Country[] = [
   {
     name: 'Madagascar',
     description: 'The world\'s fourth-largest island offering unique wildlife found nowhere else, including lemurs and baobabs, alongside pristine beaches and diverse landscapes.',
-    image: 'https://images.pexels.com/photos/9967643/pexels-photo-9967643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://content.r9cdn.net/rimg/dimg/5f/a1/6f363d41-city-16091-16587280df5.jpg?width=1200&height=630&xhint=1772&yhint=383&crop=true',
     region: 'East Africa',
-    population: '28 million',
+    population: '31.96 million',
     attractions: [
       {
         name: 'Avenue of the Baobabs',
@@ -10807,9 +10807,9 @@ export const allCountries: Country[] = [
   {
     name: 'Malawi',
     description: 'The Warm Heart of Africa offering the crystal-clear waters of Lake Malawi, diverse landscapes, and authentic cultural experiences.',
-    image: 'https://images.pexels.com/photos/4577179/pexels-photo-4577179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KTinbtFKaUqvAOmQwmSAJhuXq47KytEy1bClSuovmWO-NGze7cfuT-k938EOVcnv-APvO6TPpajZHsYVtotaRBO-sjf53UgU1_nYhw7ufFZBFehydvgT0ehMJlPJ8EOLGw_U-RrHoTZrTyXufv6bX5ij_j8kbZcpXTcKFNr9z7HxgR_GQ=s1024',
     region: 'Southern Africa',
-    population: '19 million',
+    population: '21.66 million',
     attractions: [
       {
         name: 'Lake Malawi National Park',
