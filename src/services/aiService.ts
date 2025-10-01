@@ -12,24 +12,94 @@ interface AIResponse {
 }
 
 class AIService {
-  private provider: AIProvider = {
-    name: 'DeepSeek',
-    endpoint: 'https://api.deepseek.com/v1/chat/completions',
-    model: 'deepseek-chat'
-  };
+  private providers: AIProvider[] = [
+    {
+      name: 'OpenAI',
+      endpoint: 'https://api.openai.com/v1/chat/completions',
+      model: 'gpt-3.5-turbo'
+    },
+    {
+      name: 'DeepSeek',
+      endpoint: 'https://api.deepseek.com/v1/chat/completions',
+      model: 'deepseek-chat'
+    }
+  ];
 
-  private getApiKey(): string | null {
-    // Try to get DeepSeek API key from environment variables or localStorage
-    const envKey = 'VITE_DEEPSEEK_API_KEY';
-    const storageKey = 'deepseek_api_key';
+  private getApiKey(provider: string): string | null {
+    // Try to get API keys from environment variables or localStorage
+    const envKey = provider === 'OpenAI' ? 'VITE_OPENAI_API_KEY' : 'VITE_DEEPSEEK_API_KEY';
+    const storageKey = provider === 'OpenAI' ? 'openai_api_key' : 'deepseek_api_key';
     
     const envValue = import.meta.env[envKey];
     const storageValue = localStorage.getItem(storageKey);
     return envValue || storageValue;
   }
 
+  private async callOpenAI(message: string): Promise<AIResponse> {
+    const apiKey = this.getApiKey('OpenAI');
+    if (!apiKey) {
+      return { success: false, message: '', error: 'OpenAI API key not found', provider: 'OpenAI' };
+    }
+
+    try {
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model: 'gpt-3.5-turbo',
+          messages: [
+            {
+              role: 'system',
+              content: `You are an expert AI guide specializing in Africa with deep knowledge about all aspects of the continent. You provide detailed, accurate, and engaging responses about:
+              - African history from ancient times to present
+              - All 54 African countries and their cultures
+              - Wildlife, geography, and ecosystems
+              - Current events and developments
+              - Future predictions and trends
+              - Travel and tourism information
+              - Economic and political developments
+              - Languages, traditions, and customs
+              - Climate and environmental issues
+              - Art, music, and literature
+              
+              Always provide comprehensive, informative responses that showcase Africa's rich heritage, diversity, and bright future. Be enthusiastic and knowledgeable in your responses.`
+            },
+            {
+              role: 'user',
+              content: message
+            }
+          ],
+          max_tokens: 800,
+          temperature: 0.7
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(`OpenAI API error: ${response.status} - ${errorData.error?.message || 'Unknown error'}`);
+      }
+
+      const data = await response.json();
+      return {
+        success: true,
+        message: data.choices[0]?.message?.content || 'No response generated',
+        provider: 'OpenAI GPT-3.5'
+      };
+    } catch (error) {
+      return {
+        success: false,
+        message: '',
+        error: `OpenAI error: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        provider: 'OpenAI'
+      };
+    }
+  }
+
   private async callDeepSeek(message: string): Promise<AIResponse> {
-    const apiKey = this.getApiKey();
+    const apiKey = this.getApiKey('DeepSeek');
     if (!apiKey) {
       return { success: false, message: '', error: 'DeepSeek API key not found', provider: 'DeepSeek' };
     }
@@ -144,36 +214,43 @@ class AIService {
     if (!trimmedMessage) {
       return {
         success: true,
-        message: "I'm here to help you learn about Africa using DeepSeek AI! Please ask me anything about African countries, culture, history, wildlife, travel, or any other aspect of this amazing continent.",
+        message: "I'm here to help you learn about Africa! Please ask me anything about African countries, culture, history, wildlife, travel, or any other aspect of this amazing continent.",
         provider: 'System'
       };
     }
 
-    // Try DeepSeek
+    // Try OpenAI first
+    const openAIResponse = await this.callOpenAI(message);
+    if (openAIResponse.success) {
+      return openAIResponse;
+    }
+
+    // Try DeepSeek as fallback
     const deepSeekResponse = await this.callDeepSeek(message);
     if (deepSeekResponse.success) {
       return deepSeekResponse;
     }
 
-    // Use fallback response if DeepSeek API fails
+    // Use fallback response if both APIs fail
     return {
       success: true,
       message: this.getFallbackResponse(message),
       provider: 'Fallback System',
-      error: `DeepSeek API unavailable: ${deepSeekResponse.error || 'No key'}`
+      error: `API services unavailable. OpenAI: ${openAIResponse.error || 'No key'}, DeepSeek: ${deepSeekResponse.error || 'No key'}`
     };
   }
 
   // Method to set API keys
-  setApiKey(apiKey: string): void {
-    const storageKey = 'deepseek_api_key';
+  setApiKey(provider: 'OpenAI' | 'DeepSeek', apiKey: string): void {
+    const storageKey = provider === 'OpenAI' ? 'openai_api_key' : 'deepseek_api_key';
     localStorage.setItem(storageKey, apiKey);
   }
 
   // Method to check if API keys are available
-  hasApiKey(): boolean {
+  hasApiKeys(): { openai: boolean; deepseek: boolean } {
     return {
-      deepseek: !!this.getApiKey()
+      openai: !!this.getApiKey('OpenAI'),
+      deepseek: !!this.getApiKey('DeepSeek')
     };
   }
 }
