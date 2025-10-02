@@ -2708,89 +2708,13 @@ export const allCountries: Country[] = [
     image: 'https://2futures.com/wp-content/uploads/2020/08/port-louis.jpg',
     region: 'East Africa',
     population: '1.26 million',
-    attractions: [{
-  name: 'Le Morne Brabant',
-  description: 'UNESCO World Heritage site with breathtaking hiking trails, panoramic ocean views, and historical significance.',
-  image: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Le_Morne_Brabant_Mountain.jpg',
-  location: 'Southwest Coast',
-  link: 'https://whc.unesco.org/en/list/1259/'
-},
+    attractions: [// BEACHES
 {
-  name: 'Île aux Cerfs',
-  description: 'Famous island paradise with white sandy beaches, water sports, and a golf course surrounded by turquoise lagoons.',
-  image: 'https://www.mauritiusattractions.com/images/ile-aux-cerfs_1.jpg',
-  location: 'East Coast',
-  link: 'https://www.mauritiusattractions.com/ile-aux-cerfs-island-p-33.html'
-},
-{
-  name: 'Chamarel Seven Colored Earths',
-  description: 'Unique geological formation with sand dunes in seven distinct colors, surrounded by lush tropical forest.',
-  image: 'https://www.mauritiusinsideout.com/image-files/chamarel-coloured-earth.jpg',
-  location: 'Chamarel',
-  link: 'https://www.mauritiusattractions.com/chamarel-seven-coloured-earth-p-53.html'
-},
-{
-  name: 'Black River Gorges National Park',
-  description: 'Largest national park in Mauritius with hiking trails, waterfalls, and endemic wildlife.',
-  image: 'https://www.discoverafrica.com/wp-content/uploads/2020/11/Black-River-Gorges-National-Park-Mauritius.jpg',
-  location: 'Southwest',
-  link: 'https://www.mauritiusattractions.com/black-river-gorges-national-park-p-25.html'
-},
-{
-  name: 'Grand Bassin (Ganga Talao)',
-  description: 'Sacred Hindu lake and pilgrimage site with giant Shiva statue and temples.',
-  image: 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Ganga_Talao_Mauritius.jpg',
-  location: 'Savanne District',
-  link: 'https://www.mauritiusattractions.com/ganga-talao-grand-bassin-p-180.html'
-},
-{
-  name: 'Île aux Aigrettes Nature Reserve',
-  description: 'Protected island reserve home to rare flora and fauna including giant tortoises.',
-  image: 'https://www.mauritiusinsideout.com/image-files/ile-aux-aigrettes.jpg',
-  location: 'Southeast Coast',
-  link: 'https://www.mauritiusattractions.com/ile-aux-aigrettes-mauritius-p-90.html'
-},
-{
-  name: 'Trou aux Cerfs',
-  description: 'Dormant volcanic crater offering panoramic views of Mauritius from its rim.',
-  image: 'https://www.mauritiusattractions.com/images/trou-aux-cerfs.jpg',
-  location: 'Curepipe',
-  link: 'https://www.mauritiusattractions.com/trou-aux-cerfs-volcano-p-36.html'
-},
-{
-  name: 'Casela Nature Parks',
-  description: 'Adventure and safari park with wildlife, zip lines, quad biking, and big cats.',
-  image: 'https://www.mauritiusattractions.com/images/casela-nature-parks.jpg',
-  location: 'West Coast',
-  link: 'https://www.caselaparks.com/'
-},
-{
-  name: 'Pamplemousses Botanical Garden',
-  description: 'Famous botanical garden with giant water lilies and exotic plants.',
-  image: 'https://www.mauritiusattractions.com/images/pamplemousses-garden.jpg',
-  location: 'Pamplemousses',
-  link: 'https://www.mauritiusattractions.com/pamplemousses-botanical-garden-p-25.html'
-},
-{
-  name: 'Blue Bay Marine Park',
-  description: 'Protected marine reserve with coral reefs, snorkeling, and glass-bottom boat tours.',
-  image: 'https://www.mauritiusattractions.com/images/blue-bay-marine-park.jpg',
-  location: 'Southeast Coast',
-  link: 'https://www.mauritiusattractions.com/blue-bay-marine-park-p-39.html'
-},
-{
-  name: 'La Vanille Nature Park',
-  description: 'Famous for giant Aldabra tortoises, crocodiles, and lush tropical flora.',
-  image: 'https://www.mauritiusattractions.com/images/la-vanille-nature-park.jpg',
-  location: 'South Mauritius',
-  link: 'https://www.lavanille-reserve.com/'
-},
-{
-  name: 'Rochester Falls',
-  description: 'Scenic waterfall famous for its volcanic rock formations and lush surroundings.',
-  image: 'https://www.mauritiusinsideout.com/image-files/rochester-falls.jpg',
-  location: 'Savanne District',
-  link: 'https://www.mauritiusattractions.com/rochester-falls-p-164.html'
+  name: 'Mont Choisy Beach',
+  description: 'Longest beach in Mauritius with calm turquoise waters, perfect for swimming and family outings.',
+  image: 'https://www.mauritiusinsideout.com/image-files/mont-choisy-beach.jpg',
+  location: 'Northwest Coast',
+  link: 'https://www.mauritiusattractions.com/mont-choisy-beach-p-163.html'
 },
 {
   name: 'Grand Baie',
@@ -2800,11 +2724,34 @@ export const allCountries: Country[] = [
   link: 'https://www.mauritiusattractions.com/grand-baie-mauritius-p-84.html'
 },
 {
-  name: 'Mahébourg Waterfront & Museum',
-  description: 'Historic waterfront and naval museum showcasing Mauritius’ colonial and naval history.',
-  image: 'https://www.mauritiusinsideout.com/image-files/mahebourg-waterfront.jpg',
+  name: 'Gris Gris Beach',
+  description: 'Scenic wild beach with dramatic cliffs and powerful waves, perfect for sightseeing.',
+  image: 'https://www.mauritiusattractions.com/images/gris-gris-beach.jpg',
+  location: 'Souillac, South Coast',
+  link: 'https://www.mauritiusattractions.com/gris-gris-beach-p-171.html'
+},
+{
+  name: 'Blue Bay Marine Park',
+  description: 'Protected marine reserve with coral reefs, snorkeling, and glass-bottom boat tours.',
+  image: 'https://www.mauritiusattractions.com/images/blue-bay-marine-park.jpg',
   location: 'Southeast Coast',
-  link: 'https://www.mauritiusattractions.com/mahebourg-waterfront-museum-p-178.html'
+  link: 'https://www.mauritiusattractions.com/blue-bay-marine-park-p-39.html'
+},
+
+// NATURE PARKS & WILDLIFE
+{
+  name: 'Black River Gorges National Park',
+  description: 'Largest national park in Mauritius with hiking trails, waterfalls, and endemic wildlife.',
+  image: 'https://www.discoverafrica.com/wp-content/uploads/2020/11/Black-River-Gorges-National-Park-Mauritius.jpg',
+  location: 'Southwest',
+  link: 'https://www.mauritiusattractions.com/black-river-gorges-national-park-p-25.html'
+},
+{
+  name: 'Chamarel Seven Colored Earths',
+  description: 'Unique geological formation with sand dunes in seven distinct colors, surrounded by lush tropical forest.',
+  image: 'https://www.mauritiusinsideout.com/image-files/chamarel-coloured-earth.jpg',
+  location: 'Chamarel',
+  link: 'https://www.mauritiusattractions.com/chamarel-seven-coloured-earth-p-53.html'
 },
 {
   name: 'Chamarel Waterfall',
@@ -2814,11 +2761,55 @@ export const allCountries: Country[] = [
   link: 'https://www.mauritiusattractions.com/chamarel-waterfall-p-54.html'
 },
 {
-  name: 'Gris Gris Beach',
-  description: 'Scenic wild beach with dramatic cliffs and powerful waves, perfect for sightseeing.',
-  image: 'https://www.mauritiusattractions.com/images/gris-gris-beach.jpg',
-  location: 'Souillac, South Coast',
-  link: 'https://www.mauritiusattractions.com/gris-gris-beach-p-171.html'
+  name: 'La Vanille Nature Park',
+  description: 'Famous for giant Aldabra tortoises, crocodiles, and lush tropical flora.',
+  image: 'https://www.mauritiusattractions.com/images/la-vanille-nature-park.jpg',
+  location: 'South Mauritius',
+  link: 'https://www.lavanille-reserve.com/'
+},
+{
+  name: 'Casela Nature Parks',
+  description: 'Adventure and safari park with wildlife, zip lines, quad biking, and big cats.',
+  image: 'https://www.mauritiusattractions.com/images/casela-nature-parks.jpg',
+  location: 'West Coast',
+  link: 'https://www.caselaparks.com/'
+},
+{
+  name: 'Rochester Falls',
+  description: 'Scenic waterfall famous for its volcanic rock formations and lush surroundings.',
+  image: 'https://www.mauritiusinsideout.com/image-files/rochester-falls.jpg',
+  location: 'Savanne District',
+  link: 'https://www.mauritiusattractions.com/rochester-falls-p-164.html'
+},
+{
+  name: 'Trou aux Cerfs',
+  description: 'Dormant volcanic crater offering panoramic views of Mauritius from its rim.',
+  image: 'https://www.mauritiusattractions.com/images/trou-aux-cerfs.jpg',
+  location: 'Curepipe',
+  link: 'https://www.mauritiusattractions.com/trou-aux-cerfs-volcano-p-36.html'
+},
+
+// CULTURAL & HISTORICAL
+{
+  name: 'Le Morne Brabant',
+  description: 'UNESCO World Heritage site with breathtaking hiking trails, panoramic ocean views, and historical significance.',
+  image: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Le_Morne_Brabant_Mountain.jpg',
+  location: 'Southwest Coast',
+  link: 'https://whc.unesco.org/en/list/1259/'
+},
+{
+  name: 'Grand Bassin (Ganga Talao)',
+  description: 'Sacred Hindu lake and pilgrimage site with giant Shiva statue and temples.',
+  image: 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Ganga_Talao_Mauritius.jpg',
+  location: 'Savanne District',
+  link: 'https://www.mauritiusattractions.com/ganga-talao-grand-bassin-p-180.html'
+},
+{
+  name: 'Pamplemousses Botanical Garden',
+  description: 'Famous botanical garden with giant water lilies and exotic plants.',
+  image: 'https://www.mauritiusattractions.com/images/pamplemousses-garden.jpg',
+  location: 'Pamplemousses',
+  link: 'https://www.mauritiusattractions.com/pamplemousses-botanical-garden-p-25.html'
 },
 {
   name: 'Eureka House',
@@ -2828,25 +2819,34 @@ export const allCountries: Country[] = [
   link: 'https://www.mauritiusattractions.com/eureka-house-mauritius-p-185.html'
 },
 {
+  name: 'Mahébourg Waterfront & Museum',
+  description: 'Historic waterfront and naval museum showcasing Mauritius’ colonial and naval history.',
+  image: 'https://www.mauritiusinsideout.com/image-files/mahebourg-waterfront.jpg',
+  location: 'Southeast Coast',
+  link: 'https://www.mauritiusattractions.com/mahebourg-waterfront-museum-p-178.html'
+},
+
+// ISLANDS
+{
+  name: 'Île aux Cerfs',
+  description: 'Famous island paradise with white sandy beaches, water sports, and a golf course surrounded by turquoise lagoons.',
+  image: 'https://www.mauritiusattractions.com/images/ile-aux-cerfs_1.jpg',
+  location: 'East Coast',
+  link: 'https://www.mauritiusattractions.com/ile-aux-cerfs-island-p-33.html'
+},
+{
+  name: 'Île aux Aigrettes Nature Reserve',
+  description: 'Protected island reserve home to rare flora and fauna including giant tortoises.',
+  image: 'https://www.mauritiusinsideout.com/image-files/ile-aux-aigrettes.jpg',
+  location: 'Southeast Coast',
+  link: 'https://www.mauritiusattractions.com/ile-aux-aigrettes-mauritius-p-90.html'
+},
+{
   name: 'Gabriel Island (Île Plate & Îlot Gabriel)',
   description: 'Idyllic islands popular for catamaran cruises, snorkeling, and pristine beaches.',
   image: 'https://www.mauritiusattractions.com/images/ilot-gabriel-mauritius.jpg',
   location: 'North of Mauritius',
   link: 'https://www.mauritiusattractions.com/ilot-gabriel-island-p-35.html'
-},
-{
-  name: 'SSR Botanic Garden Museum',
-  description: 'Historic botanical museum attached to the Pamplemousses Garden, featuring plant heritage and history.',
-  image: 'https://www.mauritiusinsideout.com/image-files/ssr-botanical-museum.jpg',
-  location: 'Pamplemousses',
-  link: 'https://www.mauritiusattractions.com/pamplemousses-botanical-garden-p-25.html'
-},
-{
-  name: 'Mont Choisy Beach',
-  description: 'Longest beach in Mauritius with calm turquoise waters, perfect for swimming and family outings.',
-  image: 'https://www.mauritiusinsideout.com/image-files/mont-choisy-beach.jpg',
-  location: 'Northwest Coast',
-  link: 'https://www.mauritiusattractions.com/mont-choisy-beach-p-163.html'
 }
 ],
     transportation: [],
