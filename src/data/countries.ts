@@ -9729,7 +9729,7 @@ export const allCountries: Country[] = [
   {
     name: 'Tunisia',
     description: 'Mediterranean gem offering ancient Roman ruins, Sahara desert experiences, Mediterranean beaches, and rich cultural heritage with Arab and European influences.',
-    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KQb1hbm3N-rDnxxjYa2Y9gZV30Es5XhvH6sOzHGqIr3OUbyvaKCxgTW3NLhOimjonDgkIKTczPK5sTIomkLNZzDIZEeCOzphAQM4VtGDwvLSkRYGyhed7nIhsLzhfiK1U9c0RKabvG8GbYOQBMhnWjYGneZrC1-_2tXKWfq76D86BttKA=s1024',
+    image: 'https://shorturl.at/3xsvf',
     region: 'North Africa',
     population: '12.28 million',
     attractions: [
