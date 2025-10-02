@@ -8112,7 +8112,7 @@ export const allCountries: Country[] = [
   {
     name: 'Senegal',
     description: 'Vibrant West African nation offering rich cultural heritage, historic colonial architecture, diverse wildlife, and stunning Atlantic coastlines.',
-    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KT2mwPHFa6EBoF50VM7ytuKjA_bS8P5iHlIgF_3x91OhXdPf6ZMnnnoZdjocwJquJqSZNV4Fsy1feQzq5TWdVmyTVuWubMz-BqiRCgpR6rBYiXhg9jFA22BxjyCac7Z0DnXpeLbIGoQ9IiGWTJ_Ai88lBwoq6dwP-0nWTzyjj3djGJ9=s1024',
+    image: 'https://shorturl.at/x2hwX',
     region: 'West Africa',
     population: '18.5 million',
     attractions: [
@@ -9190,7 +9190,7 @@ export const allCountries: Country[] = [
   {
     name: 'Seychelles',
     description: 'Pristine archipelago in the Indian Ocean offering some of the world\'s most beautiful beaches, unique granite rock formations, and exclusive island resorts.',
-    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KRCRCNGBrItg-j8BCoK8v6JnAOATXn9bBOJhAaenpQ9x4--UHVZUeNCZqCfZuTkOhRivrnz7lSt5bSKU_Riiz1sY0woA4ee7CWmTg_FhM928wvpjyVJ9thAylHU-1zsZtZtjkJ7VMovFoaD9CTiM6q_5sYjEs_Z7ulJViFbj4VLxdzqwA=s1024',
+    image: 'https://shorturl.at/7asFF',
     region: 'East Africa',
     population: '121,354',
     attractions: [
@@ -9729,7 +9729,7 @@ export const allCountries: Country[] = [
   {
     name: 'Tunisia',
     description: 'Mediterranean gem offering ancient Roman ruins, Sahara desert experiences, Mediterranean beaches, and rich cultural heritage with Arab and European influences.',
-    image: 'https://shorturl.at/3xsvf',
+    image: 'https://t4.ftcdn.net/jpg/03/74/02/03/360_F_374020304_R92mYZNf83Aqph0qARlljbl33LxB2qaK.jpg',
     region: 'North Africa',
     population: '12.28 million',
     attractions: [
@@ -10268,7 +10268,7 @@ export const allCountries: Country[] = [
   {
     name: 'Mozambique',
     description: 'Emerging destination with pristine Indian Ocean beaches, rich Portuguese colonial heritage, vibrant culture, and exceptional marine life.',
-    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KR5NUXf896XK5Vts2dX-1Zhig5GAXO_i0cxdQLyHml6at8-7_Z8dJy_UyVx-Xgmy5QawulqCFddqmg8MIeGrvUnmZcL13_Mp-NL02b6AYgU0C2ZsUA0J7Hr2IW2q84GWVO4LQiWeVWz8J_rJhIWkeZ2SyTN10bY_bxfFuc5eD-JmcL4-w=s1024',
+    image: 'https://shorturl.at/EcwS5',
     region: 'Southern Africa',
     population: '34.63 million',
     attractions: [
