@@ -11291,7 +11291,7 @@ export const allCountries: Country[] = [
   {
     name: 'Malawi',
     description: 'The Warm Heart of Africa offering the crystal-clear waters of Lake Malawi, diverse landscapes, and authentic cultural experiences.',
-    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KTWTPxz5l6_9xX4wPk9tb_oHiDgeHMACFWOwg5DRYMbo68RSCLPKN-XgsUM3k2Y_vsmotkp4rARTcLK2Qgzxl8RxeZU6JWAj4wP_ZVP7WhHpDb7Q429u5F8ZRn0_Ts05AMIkN8m7JIg0kM2eboGjOEwIDBFYrLYBTYysx2d-pBJTn8HnQ=s1024',
+    image: 'https://www.pelago.com/img/products/MW-Malawi/lilongwe-city-tour-full-day/764554bf-eb72-46ae-ab79-0111d57f4b5a_lilongwe-city-tour-full-day.jpg',
     region: 'Southern Africa',
     population: '21.66 million',
     attractions: [
