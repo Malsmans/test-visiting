@@ -3013,8 +3013,7 @@ export const allCountries: Country[] = [
   bookingLink: 'https://www.mauritiusattractions.com/le-cardinal-exclusive-resort-p-99.html'
 }
 ],
-    restaurants: [[
-  {
+    restaurants: [ {
     name: 'Le Château de Bel Ombre',
     description: 'Elegant fine dining in a restored colonial mansion, offering farm-to-plate Mauritian & French cuisine in a romantic setting.',
     image: 'https://lechateaudebelombre.com/images/restaurant.jpg',  // placeholder
@@ -3193,9 +3192,7 @@ export const allCountries: Country[] = [
     price: '$40-90',
     location: 'Frangipani islet / Le Touessrok area',
     link: 'https://traveltriangle.com/blog/restaurants-in-mauritius/'
-  }
-]
-]
+  ]
   },
   {
     name: 'Sierra Leone',
