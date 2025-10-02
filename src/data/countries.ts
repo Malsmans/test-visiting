@@ -2705,7 +2705,7 @@ export const allCountries: Country[] = [
   {
     name: 'Mauritius',
     description: 'Tropical paradise in the Indian Ocean offering pristine beaches, luxury resorts, diverse cultures, and adventure activities from mountain hiking to deep-sea fishing.',
-    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KSIDHcRZg5qtKX7UNu7d-blj69oTmTFAdWPiVb8L5HSExVL_663_BreBgUcdHXhb2oD3iGrRz-JrYlp0FY6iXnza-EcsxbB0wluKsaa1BUJzp6e4AcdUUvUyN0fE__jsScsFzCmqDV-N36POTR7n5b9PMgpHsCDWKkor_Dang4z_lZWiw=s1024',
+    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KRAWqSDJWmILj1W86j0PmwI-jMFQPcyYi5B5FnpSWL2SZgTxbrWsV1msyW6vfposIUntGYB2s4GYWbaLymjS325g5iaE65SexDNm5XC0sedoCRM2hlYJlMhqZnBY4BSxZmAyOsAo4k-7iUNKD9oga8TngIKFAG314IG3ymFxxE7i4eRRw=s1024',
     region: 'East Africa',
     population: '1.26 million',
     attractions: [],
@@ -7034,9 +7034,9 @@ export const allCountries: Country[] = [
   {
     name: 'Uganda',
     description: 'The Pearl of Africa offering mountain gorilla trekking, chimpanzee encounters, and diverse landscapes from the Rwenzori Mountains to the source of the Nile.',
-    image: 'https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg', // Bwindi Impenetrable Forest
+    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KQe2SpNJ0wXrnGYJTnH7zkpN1hLh-y8P9E6m5EAbRZ8Ox2he0Fg27CeqHycqm38EvuXI6VOutMsYhHpW-zx6arcf65NgFOEzyX6sKqV2V7KdSTJEz9-biMspa-g59Ei4GFtrwR1VDCnijIJhRvPC32akEO5VAIgJmZetyad46Ax_eb58A=s1024',
     region: 'East Africa',
-    population: '45 million',
+    population: '50.02 million',
     attractions: [
       {
         name: 'Bwindi Impenetrable National Park',
@@ -8112,7 +8112,7 @@ export const allCountries: Country[] = [
   {
     name: 'Senegal',
     description: 'Vibrant West African nation offering rich cultural heritage, historic colonial architecture, diverse wildlife, and stunning Atlantic coastlines.',
-    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KRIWfzidW3CgvLAPE7GJBNxnmvHif_5avEBLXERxZzsjzjNCfylQPoFtetQf6YS1zJJkbzN7qP8TOT0wJAX9pahWaKGGvTwn-ZVhGSMAmyNXj65ckFHpsE_chwzQIxkqGvOwCbS27hHTX1jRMEEXhmCr7lR4Q1kAq13o93gtpfElpEYtg=s1024',
+    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KT2mwPHFa6EBoF50VM7ytuKjA_bS8P5iHlIgF_3x91OhXdPf6ZMnnnoZdjocwJquJqSZNV4Fsy1feQzq5TWdVmyTVuWubMz-BqiRCgpR6rBYiXhg9jFA22BxjyCac7Z0DnXpeLbIGoQ9IiGWTJ_Ai88lBwoq6dwP-0nWTzyjj3djGJ9=s1024',
     region: 'West Africa',
     population: '18.5 million',
     attractions: [
@@ -9190,9 +9190,9 @@ export const allCountries: Country[] = [
   {
     name: 'Seychelles',
     description: 'Pristine archipelago in the Indian Ocean offering some of the world\'s most beautiful beaches, unique granite rock formations, and exclusive island resorts.',
-    image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KRCRCNGBrItg-j8BCoK8v6JnAOATXn9bBOJhAaenpQ9x4--UHVZUeNCZqCfZuTkOhRivrnz7lSt5bSKU_Riiz1sY0woA4ee7CWmTg_FhM928wvpjyVJ9thAylHU-1zsZtZtjkJ7VMovFoaD9CTiM6q_5sYjEs_Z7ulJViFbj4VLxdzqwA=s1024',
     region: 'East Africa',
-    population: '98,000',
+    population: '121,354',
     attractions: [
       {
         name: 'Anse Source d\'Argent',
@@ -9729,9 +9729,9 @@ export const allCountries: Country[] = [
   {
     name: 'Tunisia',
     description: 'Mediterranean gem offering ancient Roman ruins, Sahara desert experiences, Mediterranean beaches, and rich cultural heritage with Arab and European influences.',
-    image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KQb1hbm3N-rDnxxjYa2Y9gZV30Es5XhvH6sOzHGqIr3OUbyvaKCxgTW3NLhOimjonDgkIKTczPK5sTIomkLNZzDIZEeCOzphAQM4VtGDwvLSkRYGyhed7nIhsLzhfiK1U9c0RKabvG8GbYOQBMhnWjYGneZrC1-_2tXKWfq76D86BttKA=s1024',
     region: 'North Africa',
-    population: '12 million',
+    population: '12.28 million',
     attractions: [
       {
         name: 'Carthage',
@@ -10268,7 +10268,7 @@ export const allCountries: Country[] = [
   {
     name: 'Mozambique',
     description: 'Emerging destination with pristine Indian Ocean beaches, rich Portuguese colonial heritage, vibrant culture, and exceptional marine life.',
-    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KSoxUpLF8D8kh0AuC4A3AK0m_LUCD6EM8TK1YmrmKAcCOouwnNGGiQZBEZRXDT4HtIRkJBxh9UeuS1lRSUJsN4_dSXsXDbSlc9TyeuNQzi125g2N28JjSw2DMeG3secPnx6A00t1ZWLp1rFexGILJ0Fk_gTSG1q6-awM7rv86B9FMFaJA=s1024',
+    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KR5NUXf896XK5Vts2dX-1Zhig5GAXO_i0cxdQLyHml6at8-7_Z8dJy_UyVx-Xgmy5QawulqCFddqmg8MIeGrvUnmZcL13_Mp-NL02b6AYgU0C2ZsUA0J7Hr2IW2q84GWVO4LQiWeVWz8J_rJhIWkeZ2SyTN10bY_bxfFuc5eD-JmcL4-w=s1024',
     region: 'Southern Africa',
     population: '34.63 million',
     attractions: [
@@ -10807,7 +10807,7 @@ export const allCountries: Country[] = [
   {
     name: 'Malawi',
     description: 'The Warm Heart of Africa offering the crystal-clear waters of Lake Malawi, diverse landscapes, and authentic cultural experiences.',
-    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KTinbtFKaUqvAOmQwmSAJhuXq47KytEy1bClSuovmWO-NGze7cfuT-k938EOVcnv-APvO6TPpajZHsYVtotaRBO-sjf53UgU1_nYhw7ufFZBFehydvgT0ehMJlPJ8EOLGw_U-RrHoTZrTyXufv6bX5ij_j8kbZcpXTcKFNr9z7HxgR_GQ=s1024',
+    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KTWTPxz5l6_9xX4wPk9tb_oHiDgeHMACFWOwg5DRYMbo68RSCLPKN-XgsUM3k2Y_vsmotkp4rARTcLK2Qgzxl8RxeZU6JWAj4wP_ZVP7WhHpDb7Q429u5F8ZRn0_Ts05AMIkN8m7JIg0kM2eboGjOEwIDBFYrLYBTYysx2d-pBJTn8HnQ=s1024',
     region: 'Southern Africa',
     population: '21.66 million',
     attractions: [
