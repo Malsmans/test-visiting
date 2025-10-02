@@ -2850,8 +2850,352 @@ export const allCountries: Country[] = [
 }
 ],
     transportation: [],
-    hotels: [],
-    restaurants: []
+    hotels: [{
+  name: 'One&Only Le Saint Géran',
+  description: 'Iconic 5-star resort on its own private peninsula, offering elegant suites & villas, world-class dining, and lush gardens.',
+  image: 'https://www.oneandonlyresorts.com/content/dam/one-and-only/oneandonlyle-saint-geran/oneandonly-le-saint-geran-activities-pools-aerial.jpg',
+  rating: 5,
+  price: '$600-900',
+  location: 'Pointe de Flacq / East Coast',
+  bookingLink: 'https://www.oneandonlyresorts.com/le-saint-geran'
+},
+{
+  name: 'Royal Palm Beachcomber Luxury',
+  description: 'Boutique-luxury resort with elegant suites, exquisite dining, Clarins Spa, and pristine beachfront in Grand Baie.',
+  image: 'https://www.beachcomber-hotels.com/media/hotels/Royal_Palm/royal-palm-beachcomber.jpg',
+  rating: 5,
+  price: '$500-750',
+  location: 'Grand Baie, North Coast',
+  bookingLink: 'https://www.beachcomber-hotels.com/royal-palm'
+},
+{
+  name: 'Paradis Beachcomber Golf Resort & Spa',
+  description: 'Sprawling resort on Le Morne Peninsula, with beachfront, golf course, multiple restaurants and villa options.',
+  image: 'https://cdn.beachcomber-hotels.com/v8.beachcomber-hotels/img/hotel/paradis-banner.jpg',
+  rating: 5,
+  price: '$400-650',
+  location: 'Le Morne Peninsula, Southwest Coast',
+  bookingLink: 'https://www.beachcomber.co.za/hotels/mauritius/paradis-beachcomber-golf-resort-spa'
+},
+{
+  name: 'Le Méridien Ile Maurice',
+  description: 'Beach resort with modern amenities, multiple dining venues, spa access and proximity to lively Pointe aux Piments.',
+  image: 'https://www.marriott.com/content/dam/marriott/hotels/travel/mrumd-le-meridien-ile-maurice/mrumd-le-meridien-ile-maurice-overview-gallery-01-pool-beach.jpg',
+  rating: 5,
+  price: '$350-550',
+  location: 'Pointe aux Piments, North Coast',
+  bookingLink: 'https://www.marriott.com/hotels/travel/mrumd-le-meridien-ile-maurice/'
+},
+{
+  name: 'Maritim Resort & Spa Mauritius',
+  description: '5-star resort set in expansive grounds along Turtle Bay with multiple restaurants, bars, spa & beachfront amenities.',
+  image: 'https://www.maritim.com/media/hotels/mauritius/resort-spa/maritim-resort-spa-mauritius-beach.jpg',
+  rating: 5,
+  price: '$300-500',
+  location: 'Balaclava / Turtle Bay, Northwest Coast',
+  bookingLink: 'https://www.maritim.com/en/hotels/maritim-resort-spa-mauritius'
+},
+{
+  name: 'Shangri-La’s Le Touessrok Resort & Spa, Mauritius',
+  description: 'Luxury beachfront resort on the east coast with private islets, gourmet dining, lavish spa & water sports.',
+  image: 'https://www.shangri-la.com/uploadedImages/Shangri-La/Resorts/Mauritius/Le_Touessrok/_images/le-touessrok-resort-aerial.jpg',
+  rating: 5,
+  price: '$450-800',
+  location: 'East Coast (Trou d’Eau Douce)',
+  bookingLink: 'https://www.shangri-la.com/mauritius/le-touessrokresort/'
+},
+{
+  name: 'Constance Prince Maurice',
+  description: 'Elegant all-suite/ villa resort on a private peninsula, known for its tranquil atmosphere and high service.',
+  image: 'https://www.constancehotels.com/media/mauritius/con-anahita-img02.jpg',  
+  rating: 5,
+  price: '$500-850',
+  location: 'Poste de Flacq / East Coast',
+  bookingLink: 'https://www.constancehotels.com/mauritius-hotel-resort/constance-prince-maurice/'
+},
+{
+  name: 'LUX* Belle Mare',
+  description: 'Stylish beachfront resort with modern design, lively atmosphere, multiple restaurants and beachfront experiences.',
+  image: 'https://www.luxresorts.com/media/5032/lux-belle-mare-hero.jpg',
+  rating: 5,
+  price: '$400-700',
+  location: 'Belle Mare, East Coast',
+  bookingLink: 'https://www.luxresorts.com/en/hotels-in-mauritius/lux-belle-mare'
+},
+{
+  name: 'Four Seasons Resort Mauritius at Anahita',
+  description: 'Luxury resort in a landscaped 213-ha estate with villas, golf course, spa, and private marina.',
+  image: 'https://www.fourseasons.com/content/dam/fourseasons/images/web/MRU/Anahita/FS_MRU_Anahita_exterior_pool.jpg',
+  rating: 5,
+  price: '$600-900',
+  location: 'East Coast, near Flacq',
+  bookingLink: 'https://www.fourseasons.com/mauritius/'
+},
+{
+  name: 'Heritage Le Telfair Golf & Wellness Resort',
+  description: 'Elegant resort in Bel Ombre with colonial charm, golf course, wellness spa, family & romantic offerings.',
+  image: 'https://www.heritage-resorts.mu/wp-content/uploads/2019/03/heritage-le-telfair.jpg',
+  rating: 5,
+  price: '$400-700',
+  location: 'Southwest (Bel Ombre)',
+  bookingLink: 'https://www.heritage-resorts.mu/en/resorts/le-telfair/'
+},
+{
+  name: 'The Oberoi Mauritius',
+  description: 'Luxurious private villas with garden or overwater settings, serene ambiance and bespoke service.',
+  image: 'https://www.oberoihotels.com/oberoi-mauritius/media/images/afar-gallery/room-pool-villa-2.jpg',
+  rating: 5,
+  price: '$700-1000',
+  location: 'Turtle Bay / Northwest Coast',
+  bookingLink: 'https://www.oberoihotels.com/hotels-in-mauritius/mauritius/'
+},
+{
+  name: 'Shanti Maurice Resort & Spa',
+  description: 'Boutique luxury resort with tropical gardens, private beach, holistic spa & fine dining.',
+  image: 'https://www.shantimaurice.com/media/3711/shanti-maurice.jpg',
+  rating: 5,
+  price: '$450-800',
+  location: 'St. Felix, South Coast',
+  bookingLink: 'https://www.shantimaurice.com/'
+},
+{
+  name: 'Salt of Palmar',
+  description: 'Adults-only boutique hotel with vibrant design, relaxed vibe and direct beachfront presence.',
+  image: 'https://www.luxresorts.com/media/5048/salt-palmar-hero.jpg',
+  rating: 4,
+  price: '$250-450',
+  location: 'Palmar, East Coast',
+  bookingLink: 'https://www.luxresorts.com/en/hotels-in-mauritius/salt-of-palmar'
+},
+{
+  name: 'LUX* Grand Gaube',
+  description: 'Charming resort in northern Mauritius with barefoot luxury, family friendly, lively atmosphere & sea views.',
+  image: 'https://www.luxresorts.com/media/5060/lux-grand-gaube-hero.jpg',
+  rating: 5,
+  price: '$350-600',
+  location: 'Grand Gaube, North Coast',
+  bookingLink: 'https://www.luxresorts.com/en/hotels-in-mauritius/lux-grand-gaube'
+},
+{
+  name: 'Sugar Beach Mauritius',
+  description: 'Colonial style beachfront resort with tropical grounds, family amenities and excellent cuisine.',
+  image: 'https://www.mauritiusinsideout.com/image-files/sugar-beach-mauritius.jpg',
+  rating: 5,
+  price: '$350-650',
+  location: 'Flic en Flac, West Coast',
+  bookingLink: 'https://www.mauritiusattractions.com/sugar-beach-hotel-mauritius-p-25.html'
+},
+{
+  name: 'The St. Regis Mauritius Resort',
+  description: 'Upscale all-suite resort with butler service, elegant decor, lagoon & beachfront experience.',
+  image: 'https://www.stregis.com/content/dam/stregis/hotels/MRU/mauritius/stregis_mauritius_exterior_aerial.jpg',
+  rating: 5,
+  price: '$500-850',
+  location: 'Le Morne, Southwest Coast',
+  bookingLink: 'https://www.stregis.com/mauritius'
+},
+{
+  name: 'Anahita The Resort',
+  description: 'Integrated resort offering villas, golf, spa, and access to marine and nature activities.',
+  image: 'https://www.mauritiusinsideout.com/image-files/anahita.jpg',
+  rating: 5,
+  price: '$500-800',
+  location: 'East Coast near Flacq',
+  bookingLink: 'https://www.mauritiusattractions.com/four-seasons-resort-mauritius-at-anahita-p-77.html'
+},
+{
+  name: 'Le Cardinal Exclusive Resort',
+  description: 'Adults-only boutique resort in Grand Baie, with intimate setting and contemporary design.',
+  image: 'https://www.mauritiusattractions.com/images/le-cardinal.jpg',
+  rating: 4,
+  price: '$200-400',
+  location: 'Grand Baie, North Coast',
+  bookingLink: 'https://www.mauritiusattractions.com/le-cardinal-exclusive-resort-p-99.html'
+}
+],
+    restaurants: [[
+  {
+    name: 'Le Château de Bel Ombre',
+    description: 'Elegant fine dining in a restored colonial mansion, offering farm-to-plate Mauritian & French cuisine in a romantic setting.',
+    image: 'https://lechateaudebelombre.com/images/restaurant.jpg',  // placeholder
+    rating: 5,
+    price: '$80-150',
+    location: 'Bel Ombre, Southwest Coast',
+    link: 'https://lechateaudebelombre.com/'
+  },
+  {
+    name: 'Acquapazza',
+    description: 'Italian / Mediterranean fine dining at Four Seasons Anahita, featuring wood-fired pizzas, seafood & pasta creations. :contentReference[oaicite:0]{index=0}',
+    image: 'https://www.fourseasons.com/mauritius/dining/images/acquapazza.jpg',  // placeholder
+    rating: 5,
+    price: '$70-140',
+    location: 'Anahita, East Coast',
+    link: 'https://www.fourseasons.com/mauritius/dining/'
+  },
+  {
+    name: 'Gin’Ja',
+    description: 'Pan-Asian / sushi / teppanyaki experience in a seaside pavilion at Heritage Le Telfair, with elegant and creative menus. :contentReference[oaicite:1]{index=1}',
+    image: 'https://heritageresorts.mu/wp-content/uploads/2020/10/gin-ja-restaurant.jpg',  // placeholder
+    rating: 5,
+    price: '$60-120',
+    location: 'Bel Ombre, South Coast',
+    link: 'https://heritageresorts.mu/gin-ja/'
+  },
+  {
+    name: 'Inti',
+    description: 'Peruvian / Latin fusion restaurant inside LUX* Grand Gaube — ceviche, skewers, tapas—inspired flavors. :contentReference[oaicite:2]{index=2}',
+    image: 'https://www.luxresorts.com/media/inti-restaurant.jpg',  // placeholder
+    rating: 5,
+    price: '$50-100',
+    location: 'Grand Gaube, North Coast',
+    link: 'https://www.luxresorts.com'
+  },
+  {
+    name: 'Floating Market',
+    description: 'Southeast Asian / pan-Asian dining on a floating platform at The St. Regis, evening dinners in a unique setting.',
+    image: 'https://www.stregis.com/mauritius/dining/floating-market.jpg',  // placeholder
+    rating: 5,
+    price: '$80-160',
+    location: 'Le Morne, Southwest Coast',
+    link: 'https://www.stregis.com/mauritius'
+  },
+  {
+    name: 'Wapalapam',
+    description: 'Casual beach restaurant at Le Morne, serving aromatic Indian Ocean / fusion dishes with foot-in-water seating. :contentReference[oaicite:3]{index=3}',
+    image: 'https://wapalapam.com/wp-content/uploads/2024/01/wapalapam.jpg',  // placeholder
+    rating: 4,
+    price: '$25-60',
+    location: 'Le Morne Coast, Southwest',
+    link: 'https://wapalapam.com'
+  },
+  {
+    name: 'Le Capitaine',
+    description: 'Seafood & creole dishes in a seafront location in Grand Baie; a long-standing favourite. :contentReference[oaicite:4]{index=4}',
+    image: 'https://www.lecapitaine.mu/images/restaurant.jpg',  // placeholder
+    rating: 4,
+    price: '$40-80',
+    location: 'Grand Baie, North Coast',
+    link: 'https://www.lecapitaine.mu/'
+  },
+  {
+    name: 'Safran Restaurant',
+    description: 'Indian / Mauritian flavors in an elegant open-kitchen setting overlooking Hibiscus Bay at Le Touessrok. :contentReference[oaicite:5]{index=5}',
+    image: 'https://www.shangri-la.com/mauritius/dining/safran.jpg',  // placeholder
+    rating: 5,
+    price: '$50-100',
+    location: 'East Coast (Le Touessrok)',
+    link: 'https://www.shangri-la.com/mauritius/shangrila/dining/'
+  },
+  {
+    name: 'La Table du Château',
+    description: 'Contemporary fine dining in the gardens of Domaine de Labourdonnais, highlighting Mauritian gastronomy & seasonal produce.',
+    image: 'https://www.tableduchateau.com/assets/images/restaurant.jpg',  // placeholder
+    rating: 5,
+    price: '$60-120',
+    location: 'Mapou / Labourdonnais area, North',
+    link: 'https://www.tableduchateau.com/'
+  },
+  {
+    name: 'Le Chamarel Restaurant',
+    description: 'Restaurant in the hills with panoramic views; Creole & fusion cuisine in a treetop setting. :contentReference[oaicite:6]{index=6}',
+    image: 'https://lechamarelrestaurant.com/media/restaurant.jpg',  // placeholder
+    rating: 4,
+    price: '$40-90',
+    location: 'Chamarel, Southwest',
+    link: 'https://www.lechamarelrestaurant.com/'
+  },
+  {
+    name: 'La Kaza Restaurant',
+    description: 'Ocean-front seafood restaurant in Grand Baie with an “ocean to plate” concept and fresh catches. :contentReference[oaicite:7]{index=7}',
+    image: 'https://www.lakazarestaurant.com/images/restaurant.jpg',  // placeholder
+    rating: 4,
+    price: '$35-75',
+    location: 'Grand Baie, North Coast',
+    link: 'https://travelinsighter.com/best-restaurants-in-grand-baie-mauritius/'
+  },
+  {
+    name: 'Ti Kouloir',
+    description: 'Cozy local gem in Grand Baie known for Mauritian specialties—boulettes, seafood platters etc. :contentReference[oaicite:8]{index=8}',
+    image: 'https://www.example.com/ti_kouloir.jpg',  // placeholder
+    rating: 3,
+    price: '$10-30',
+    location: 'Grand Baie, North Coast',
+    link: 'https://travelinsighter.com/best-restaurants-in-grand-baie-mauritius/'
+  },
+  {
+    name: 'Escale Creole',
+    description: 'Local Creole eatery with homestyle Mauritian dishes in a relaxed setting. :contentReference[oaicite:9]{index=9}',
+    image: 'https://www.example.com/escale_creole.jpg',  // placeholder
+    rating: 3,
+    price: '$15-40',
+    location: 'Saint Pierre / central Mauritius',
+    link: 'https://magazine.prestigevillarental.com/en/culinary-delights-in-mauritius-the-best-restaurants-on-the-island-and-the-best-tables/'
+  },
+  {
+    name: 'Le Fangourin – L’Aventure du Sucre',
+    description: 'Gastronomic restaurant located in the sugar museum complex, offering Mauritian cuisine in a historic setting. :contentReference[oaicite:10]{index=10}',
+    image: 'https://www.aventuredusucres.mu/wp-content/uploads/restaurant.jpg',  // placeholder
+    rating: 4,
+    price: '$30-70',
+    location: 'Pamplemousses / North region',
+    link: 'https://restaurants.mu/en/fine-dining-restaurants-in-mauritius'
+  },
+  {
+    name: 'Annabella’s Restaurant',
+    description: 'Vintage style dining at Heritage Le Telfair, combining classic & international flavours in elegant décor. :contentReference[oaicite:11]{index=11}',
+    image: 'https://www.heritage-resorts.mu/wp-content/uploads/annabellas-restaurant.jpg',  // placeholder
+    rating: 5,
+    price: '$60-110',
+    location: 'Bel Ombre, Southwest Coast',
+    link: 'https://www.heritage-resorts.mu/'
+  },
+  {
+    name: 'Buddha-Bar Beach',
+    description: 'Trendy seafood & sushi beach lounge, stylish ambiance and global Asian flair. :contentReference[oaicite:12]{index=12}',
+    image: 'https://www.sugar-beach-hotel-mauritius.com/media/buddha-bar.jpg',  // placeholder
+    rating: 5,
+    price: '$70-130',
+    location: 'Flic en Flac / West Coast',
+    link: 'https://www.forbes.com/sites/lelalondon/2024/06/13/what-to-eat-and-do-in-mauritius-as-a-foodie/'
+  },
+  {
+    name: 'Citronella’s Restaurant & Café',
+    description: 'Chic café-restaurant with seafood, pasta, Mauritian fusion under twinkling lights. :contentReference[oaicite:13]{index=13}',
+    image: 'https://www.example.com/citronellas.jpg',  // placeholder
+    rating: 4,
+    price: '$30-80',
+    location: 'Mauritius (coastal / resort regions)',
+    link: 'https://www.forbes.com/sites/lelalondon/2024/06/13/what-to-eat-and-do-in-mauritius-as-a-foodie/'
+  },
+  {
+    name: 'The Trojan Horse',
+    description: 'Greek & Mediterranean cuisine by the sea, mezze style dining, beachside ambiance in Grand Baie. :contentReference[oaicite:14]{index=14}',
+    image: 'https://www.example.com/trojan_horse.jpg',  // placeholder
+    rating: 4,
+    price: '$35-75',
+    location: 'Grand Baie, North Coast',
+    link: 'https://travelinsighter.com/best-restaurants-in-grand-baie-mauritius/'
+  },
+  {
+    name: 'La Plage Beach Club Restaurant',
+    description: 'Relaxed beachfront dining with seafood & local fusion dishes, great for casual meals by the sea. :contentReference[oaicite:15]{index=15}',
+    image: 'https://www.example.com/la_plage_beach_club.jpg',  // placeholder
+    rating: 3,
+    price: '$25-60',
+    location: 'Coastal Mauritius (beach club)',
+    link: 'https://traveltriangle.com/blog/restaurants-in-mauritius/'
+  },
+  {
+    name: 'Republik Beach Club & Grill',
+    description: 'Beachfront restaurant & grill with live music, international & local dishes, trendy beach club vibe. :contentReference[oaicite:16]{index=16}',
+    image: 'https://www.example.com/republik.jpg',  // placeholder
+    rating: 4,
+    price: '$40-90',
+    location: 'Frangipani islet / Le Touessrok area',
+    link: 'https://traveltriangle.com/blog/restaurants-in-mauritius/'
+  }
+]
+]
   },
   {
     name: 'Sierra Leone',
@@ -9980,2058 +10324,4 @@ export const allCountries: Country[] = [
       },
       {
         name: 'Kerkennah Islands',
-        description: 'Traditional fishing islands with authentic lifestyle, beaches, and minimal tourism.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Eastern Tunisia',
-        link: 'https://www.discovertunisia.com/en/places-to-visit/kerkennah-islands'
-      },
-      {
-        name: 'Sbeitla',
-        description: 'Ancient Roman city with well-preserved forum, temples, and Byzantine churches.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Central Tunisia',
-        link: 'https://www.discovertunisia.com/en/places-to-visit/sbeitla'
-      },
-      {
-        name: 'Tozeur',
-        description: 'Oasis town with distinctive architecture, palm groves, and desert experiences.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Southwestern Tunisia',
-        link: 'https://www.discovertunisia.com/en/places-to-visit/tozeur'
-      },
-      {
-        name: 'Bizerte',
-        description: 'Tunisia\'s northernmost city with historic medina, old port, and beaches.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Tunisia',
-        link: 'https://www.discovertunisia.com/en/places-to-visit/bizerte'
-      },
-      {
-        name: 'Ichkeul National Park',
-        description: 'UNESCO World Heritage site and important wetland for migratory birds.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Tunisia',
-        link: 'https://whc.unesco.org/en/list/8/'
-      }
-    ],
-    transportation: [
-      {
-        type: 'Private Car & Driver',
-        description: 'Luxury vehicle with professional driver for customized tours and intercity travel.',
-        price: '$100-250/day',
-        route: 'Tunis to Carthage & Sidi Bou Said'
-      },
-      {
-        type: 'Desert 4x4 Excursions',
-        description: 'Private 4x4 vehicles with experienced guides for Sahara desert exploration.',
-        price: '$150-300/day',
-        route: 'Southern Tunisia Desert Tours'
-      },
-      {
-        type: 'Luxury Yacht Charter',
-        description: 'Private yacht charters for coastal exploration and Mediterranean experiences.',
-        price: '$500-2000/day',
-        route: 'Mediterranean Coast'
-      },
-      {
-        type: 'Domestic Flights',
-        description: 'Time-saving flights between major cities and Djerba Island.',
-        price: '$100-200',
-        route: 'Tunis to Djerba'
-      }
-    ],
-    hotels: [
-      {
-        name: 'Four Seasons Hotel Tunis',
-        description: 'Luxury beachfront hotel with Mediterranean views, multiple restaurants, and comprehensive spa.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$300-600',
-        location: 'Gammarth, Tunis',
-        bookingLink: 'https://www.fourseasons.com/tunis/'
-      },
-      {
-        name: 'The Residence Tunis',
-        description: 'Elegant resort with private beach, thalassotherapy spa, and golf course.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$250-500',
-        location: 'Gammarth, Tunis',
-        bookingLink: 'https://www.cenizaro.com/theresidence/tunis/'
-      },
-      {
-        name: 'Dar El Jeld Hotel & Spa',
-        description: 'Boutique luxury hotel in a restored mansion in the heart of Tunis medina.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$200-400',
-        location: 'Tunis Medina',
-        bookingLink: 'https://www.dareljeld.com/'
-      },
-      {
-        name: 'Anantara Sahara Tozeur Resort & Villas',
-        description: 'Luxury desert resort with pool villas, spa, and desert experiences.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$300-600',
-        location: 'Tozeur',
-        bookingLink: 'https://www.anantara.com/en/sahara-tozeur'
-      },
-      {
-        name: 'La Badira',
-        description: 'Adults-only luxury resort with minimalist design and Mediterranean views.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$200-400',
-        location: 'Hammamet',
-        bookingLink: 'https://www.labadira.com/'
-      },
-      {
-        name: 'Movenpick Resort & Marine Spa Sousse',
-        description: 'Beachfront resort with multiple pools, spa, and dining options.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$150-300',
-        location: 'Sousse',
-        bookingLink: 'https://www.movenpick.com/en/africa/tunisia/sousse/resort-marine-spa-sousse/'
-      },
-      {
-        name: 'Radisson Blu Palace Resort & Thalasso',
-        description: 'Luxury resort with extensive thalassotherapy spa and beachfront location.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$150-300',
-        location: 'Djerba',
-        bookingLink: 'https://www.radissonhotels.com/en-us/hotels/radisson-blu-resort-djerba'
-      },
-      {
-        name: 'Dar Hi Life',
-        description: 'Eco-friendly design hotel in Nefta with unique architecture and desert views.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$200-400',
-        location: 'Nefta',
-        bookingLink: 'https://www.dar-hi.net/'
-      },
-      {
-        name: 'Hasdrubal Prestige Thalassa & Spa',
-        description: 'Luxury resort with the largest suite in Tunisia and extensive spa facilities.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$200-400',
-        location: 'Djerba',
-        bookingLink: 'https://www.hasdrubal-thalassa.com/'
-      },
-      {
-        name: 'The Sindbad',
-        description: 'Boutique hotel with Moorish architecture, gardens, and beachfront location.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$150-300',
-        location: 'Hammamet',
-        bookingLink: 'https://www.thesindbad.com/'
-      },
-      {
-        name: 'Dar Said',
-        description: 'Boutique hotel in a traditional mansion in Sidi Bou Said with Mediterranean views.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$150-300',
-        location: 'Sidi Bou Said',
-        bookingLink: 'https://www.darsaid.com.tn/'
-      },
-      {
-        name: 'Seabel Alhambra Beach Golf & Spa',
-        description: 'Beachfront resort with Andalusian architecture, golf course, and spa.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$100-200',
-        location: 'Port El Kantaoui',
-        bookingLink: 'https://www.seabelhotels.com/en/seabel-alhambra-beach-golf-spa/'
-      },
-      {
-        name: 'Dar El Bhar',
-        description: 'Boutique hotel in a converted fisherman\'s house with sea views in Djerba.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$100-200',
-        location: 'Djerba',
-        bookingLink: 'https://www.darelbhar.com/'
-      },
-      {
-        name: 'Palais Bayram',
-        description: 'Luxury boutique hotel in a restored 18th-century palace in the Tunis medina.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$150-300',
-        location: 'Tunis Medina',
-        bookingLink: 'https://www.palaisbayram.com/'
-      },
-      {
-        name: 'Dar Dhiafa',
-        description: 'Traditional guesthouse in Djerba with authentic architecture and intimate atmosphere.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$100-200',
-        location: 'Djerba',
-        bookingLink: 'https://www.dardhiafa.com/'
-      },
-      {
-        name: 'Mövenpick Hotel du Lac Tunis',
-        description: 'Modern luxury hotel overlooking Tunis Lake with business facilities and spa.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$150-300',
-        location: 'Tunis',
-        bookingLink: 'https://www.movenpick.com/en/africa/tunisia/tunis/hotel-du-lac-tunis/'
-      },
-      {
-        name: 'Dar Sabri',
-        description: 'Boutique hotel in a restored mansion in Nabeul with traditional architecture.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$100-200',
-        location: 'Nabeul',
-        bookingLink: 'https://www.darsabri.com/'
-      },
-      {
-        name: 'Dar Hayet',
-        description: 'Charming boutique hotel with Andalusian gardens and traditional architecture.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$80-160',
-        location: 'Hammamet',
-        bookingLink: 'https://www.darhayet.com/'
-      },
-      {
-        name: 'Hôtel Dar Saïd',
-        description: 'Elegant boutique hotel in Sidi Bou Said with traditional architecture and sea views.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$150-300',
-        location: 'Sidi Bou Said',
-        bookingLink: 'https://www.darsaid.com.tn/'
-      },
-      {
-        name: 'Iberostar Selection Diar El Andalous',
-        description: 'Beachfront resort with Andalusian architecture, multiple pools, and spa.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$150-300',
-        location: 'Sousse',
-        bookingLink: 'https://www.iberostar.com/en/hotels/sousse/iberostar-selection-diar-el-andalous/'
-      }
-    ],
-    restaurants: [
-      {
-        name: 'Dar El Jeld',
-        cuisine: 'Fine dining Tunisian cuisine in a historic mansion with traditional decor and atmosphere.',
-        image: 'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        priceRange: '$40-80',
-        location: 'Tunis Medina',
-        link: 'https://www.dareljeld.com/restaurant/'
-      },
-      {
-        name: 'Le Baroque',
-        cuisine: 'French and Mediterranean cuisine with elegant atmosphere and extensive wine list.',
-        image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$30-60',
-        location: 'Tunis',
-        link: 'https://www.lebaroque.com.tn/'
-      },
-      {
-        name: 'La Falaise',
-        cuisine: 'Seafood restaurant with Mediterranean views and fresh local catches.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Sidi Bou Said',
-        link: 'https://www.lafalaise.com.tn/'
-      },
-      {
-        name: 'Restaurant du Golfe',
-        cuisine: 'Seafood restaurant with terrace overlooking the Gulf of Tunis.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'La Marsa',
-        link: 'https://www.restaurantdugolfe.com.tn/'
-      },
-      {
-        name: 'Le Bon Vieux Temps',
-        cuisine: 'Traditional Tunisian cuisine in a historic setting with authentic atmosphere.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Tunis',
-        link: 'https://www.lebonvieuxtemps.com.tn/'
-      },
-      {
-        name: 'Dar Zarrouk',
-        cuisine: 'Upscale Tunisian cuisine with panoramic views of the Mediterranean from Sidi Bou Said.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$30-60',
-        location: 'Sidi Bou Said',
-        link: 'https://www.darzarrouk.com/'
-      },
-      {
-        name: 'Le Café des Nattes',
-        cuisine: 'Historic café in Sidi Bou Said with traditional mint tea and light meals.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$5-15',
-        location: 'Sidi Bou Said',
-        link: 'https://www.cafedesnattes.com.tn/'
-      },
-      {
-        name: 'La Victoire',
-        cuisine: 'Traditional Tunisian pastries and coffee in a historic café in the medina.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$5-15',
-        location: 'Tunis Medina',
-        link: 'https://www.lavictoire.com.tn/'
-      },
-      {
-        name: 'Le Méditerranée',
-        cuisine: 'Seafood restaurant with Mediterranean cuisine and fresh local ingredients.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Hammamet',
-        link: 'https://www.lemediterranee.com.tn/'
-      },
-      {
-        name: 'Dar Belhadj',
-        cuisine: 'Traditional Tunisian cuisine in a restored palace in the medina with cultural performances.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Tunis Medina',
-        link: 'https://www.darbelhadj.com/'
-      },
-      {
-        name: 'L\'Astragale',
-        cuisine: 'Mediterranean cuisine with French influences and elegant atmosphere.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$30-60',
-        location: 'Carthage',
-        link: 'https://www.lastragale.com.tn/'
-      },
-      {
-        name: 'Le Boeuf sur le Toit',
-        cuisine: 'French brasserie with steaks, seafood, and international cuisine.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Tunis',
-        link: 'https://www.leboeufsurleto it.com.tn/'
-      },
-      {
-        name: 'Chez Slah',
-        cuisine: 'Historic restaurant serving traditional Tunisian cuisine since 1938.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$15-30',
-        location: 'Tunis',
-        link: 'https://www.chezslah.com.tn/'
-      },
-      {
-        name: 'La Closerie',
-        cuisine: 'French and Mediterranean cuisine with elegant atmosphere and garden setting.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'La Marsa',
-        link: 'https://www.lacloserie.com.tn/'
-      },
-      {
-        name: 'El Ali',
-        cuisine: 'Tunisian cuisine in a restored mansion in the medina with rooftop terrace.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Tunis Medina',
-        link: 'https://www.elali.com.tn/'
-      },
-      {
-        name: 'Le Golfe',
-        cuisine: 'Seafood restaurant with Mediterranean views and fresh local catches.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Hammamet',
-        link: 'https://www.legolfe.com.tn/'
-      },
-      {
-        name: 'Restaurant Essaraya',
-        cuisine: 'Traditional Tunisian cuisine in a historic palace with authentic atmosphere.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Tunis Medina',
-        link: 'https://www.essaraya.com.tn/'
-      },
-      {
-        name: 'La Daurade',
-        cuisine: 'Seafood restaurant with harbor views and fresh local catches.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Bizerte',
-        link: 'https://www.ladaurade.com.tn/'
-      },
-      {
-        name: 'Le Petit Mousse',
-        cuisine: 'Seafood restaurant with Mediterranean cuisine and port views.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Tabarka',
-        link: 'https://www.lepetitmousse.com.tn/'
-      },
-      {
-        name: 'Restaurant Dar Slah',
-        cuisine: 'Traditional Tunisian cuisine in a historic setting with authentic atmosphere.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Tunis Medina',
-        link: 'https://www.darslah.com.tn/'
-      }
-    ]
-  },
-  {
-    name: 'Mozambique',
-    description: 'Emerging destination with pristine Indian Ocean beaches, rich Portuguese colonial heritage, vibrant culture, and exceptional marine life.',
-    image: 'https://shorturl.at/EcwS5',
-    region: 'Southern Africa',
-    population: '34.63 million',
-    attractions: [
-      {
-        name: 'Bazaruto Archipelago',
-        description: 'Pristine island group with white sand beaches, coral reefs, and luxury resorts in the Indian Ocean.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Inhambane Province',
-        link: 'https://www.visitmozambique.net/places-to-go/bazaruto-archipelago/'
-      },
-      {
-        name: 'Ilha de Moçambique',
-        description: 'UNESCO World Heritage site with Portuguese colonial architecture, historic forts, and cultural heritage.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Nampula Province',
-        link: 'https://whc.unesco.org/en/list/599/'
-      },
-      {
-        name: 'Gorongosa National Park',
-        description: 'Restored wildlife reserve with diverse ecosystems and conservation success story.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Central Mozambique',
-        link: 'https://www.gorongosa.org/'
-      },
-      {
-        name: 'Quirimbas Archipelago',
-        description: 'Remote island chain with pristine beaches, coral reefs, and luxury eco-lodges.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Cabo Delgado Province',
-        link: 'https://www.visitmozambique.net/places-to-go/quirimbas-archipelago/'
-      },
-      {
-        name: 'Maputo',
-        description: 'Capital city with Portuguese colonial architecture, vibrant markets, and cultural attractions.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Southern Mozambique',
-        link: 'https://www.visitmozambique.net/places-to-go/maputo/'
-      },
-      {
-        name: 'Tofo Beach',
-        description: 'Popular beach destination with whale sharks, manta rays, and laid-back atmosphere.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Inhambane Province',
-        link: 'https://www.visitmozambique.net/places-to-go/tofo-beach/'
-      },
-      {
-        name: 'Niassa Reserve',
-        description: 'One of Africa\'s largest conservation areas with diverse wildlife and remote wilderness.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Mozambique',
-        link: 'https://www.visitmozambique.net/places-to-go/niassa-reserve/'
-      },
-      {
-        name: 'Inhambane',
-        description: 'Historic coastal town with Portuguese colonial architecture and nearby beaches.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Inhambane Province',
-        link: 'https://www.visitmozambique.net/places-to-go/inhambane/'
-      },
-      {
-        name: 'Pemba',
-        description: 'Coastal city with beautiful bay, beaches, and gateway to the Quirimbas Archipelago.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Cabo Delgado Province',
-        link: 'https://www.visitmozambique.net/places-to-go/pemba/'
-      },
-      {
-        name: 'Vilanculos',
-        description: 'Coastal town and gateway to the Bazaruto Archipelago with beaches and water activities.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Inhambane Province',
-        link: 'https://www.visitmozambique.net/places-to-go/vilanculos/'
-      },
-      {
-        name: 'Maputo Elephant Reserve',
-        description: 'Wildlife reserve near the capital with elephants, antelope, and coastal landscapes.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Maputo Province',
-        link: 'https://www.visitmozambique.net/places-to-go/maputo-elephant-reserve/'
-      },
-      {
-        name: 'Ponta do Ouro',
-        description: 'Beach destination near the South African border with diving, dolphin encounters, and surfing.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Maputo Province',
-        link: 'https://www.visitmozambique.net/places-to-go/ponta-do-ouro/'
-      },
-      {
-        name: 'Ibo Island',
-        description: 'Historic island in the Quirimbas with colonial architecture, fort, and cultural heritage.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Cabo Delgado Province',
-        link: 'https://www.visitmozambique.net/places-to-go/ibo-island/'
-      },
-      {
-        name: 'Chimanimani Mountains',
-        description: 'Remote mountain range with hiking trails, waterfalls, and pristine wilderness.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Manica Province',
-        link: 'https://www.visitmozambique.net/places-to-go/chimanimani-mountains/'
-      },
-      {
-        name: 'Inhaca Island',
-        description: 'Island near Maputo with beaches, marine reserve, and day trip potential from the capital.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Maputo Province',
-        link: 'https://www.visitmozambique.net/places-to-go/inhaca-island/'
-      },
-      {
-        name: 'Beira',
-        description: 'Port city with art deco architecture, beaches, and gateway to central Mozambique.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Sofala Province',
-        link: 'https://www.visitmozambique.net/places-to-go/beira/'
-      },
-      {
-        name: 'Limpopo National Park',
-        description: 'Transfrontier park connected to Kruger National Park with developing wildlife populations.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Gaza Province',
-        link: 'https://www.visitmozambique.net/places-to-go/limpopo-national-park/'
-      },
-      {
-        name: 'Machangulo Peninsula',
-        description: 'Pristine coastal area with beaches, dunes, and luxury lodges near Maputo.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Maputo Province',
-        link: 'https://www.visitmozambique.net/places-to-go/machangulo-peninsula/'
-      },
-      {
-        name: 'Benguerra Island',
-        description: 'Second largest island in the Bazaruto Archipelago with luxury lodges and pristine beaches.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Inhambane Province',
-        link: 'https://www.visitmozambique.net/places-to-go/benguerra-island/'
-      },
-      {
-        name: 'Cahora Bassa Lake',
-        description: 'One of Africa\'s largest artificial lakes with fishing, boating, and wildlife.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Tete Province',
-        link: 'https://www.visitmozambique.net/places-to-go/cahora-bassa-lake/'
-      }
-    ],
-    transportation: [
-      {
-        type: 'Private Helicopter Transfers',
-        description: 'Luxury helicopter transfers to remote islands and coastal destinations.',
-        price: '$500-2000',
-        route: 'Vilanculos to Bazaruto Archipelago'
-      },
-      {
-        type: 'Luxury Boat Transfers',
-        description: 'Private boat transfers to islands and coastal destinations.',
-        price: '$200-500',
-        route: 'Vilanculos to Benguerra Island'
-      },
-      {
-        type: 'Private 4x4 Safari Vehicle',
-        description: 'Luxury 4x4 vehicles with experienced guides for wildlife viewing and remote areas.',
-        price: '$200-400/day',
-        route: 'Gorongosa National Park'
-      },
-      {
-        type: 'Domestic Flights',
-        description: 'Time-saving flights between major destinations and remote areas.',
-        price: '$200-500',
-        route: 'Maputo to Pemba'
-      }
-    ],
-    hotels: [
-      {
-        name: 'Anantara Bazaruto Island Resort',
-        description: 'Luxury island resort with private villas, spa, and pristine beaches in the Bazaruto Archipelago.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$600-1200',
-        location: 'Bazaruto Island',
-        bookingLink: 'https://www.anantara.com/en/bazaruto-island'
-      },
-      {
-        name: 'andBeyond Benguerra Island',
-        description: 'Exclusive luxury lodge with beachfront casitas and exceptional service in the Bazaruto Archipelago.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$1000-2000',
-        location: 'Benguerra Island',
-        bookingLink: 'https://www.andbeyond.com/our-lodges/africa/mozambique/bazaruto-archipelago/andbeyond-benguerra-island/'
-      },
-      {
-        name: 'Azura Benguerra Island',
-        description: 'Luxury eco-boutique retreat with beachfront villas and personalized service.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$1000-2000',
-        location: 'Benguerra Island',
-        bookingLink: 'https://www.azura-retreats.com/azura-benguerra/'
-      },
-      {
-        name: 'Azura Quilalea Private Island',
-        description: 'Exclusive private island resort in the Quirimbas Archipelago with just nine villas.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$1500-3000',
-        location: 'Quirimbas Archipelago',
-        bookingLink: 'https://www.azura-retreats.com/azura-quilalea/'
-      },
-      {
-        name: 'Polana Serena Hotel',
-        description: 'Historic luxury hotel in Maputo with colonial architecture and modern amenities.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$200-400',
-        location: 'Maputo',
-        bookingLink: 'https://www.serenahotels.com/serenapolana/'
-      },
-      {
-        name: 'White Pearl Resorts',
-        description: 'Luxury beach resort with private plunge pools and ocean views near the South African border.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$600-1200',
-        location: 'Ponta Mamoli',
-        bookingLink: 'https://www.whitepearlresorts.com/'
-      },
-      {
-        name: 'Coral Lodge',
-        description: 'Luxury beach and lagoon resort near Ilha de Moçambique with water villas.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$400-800',
-        location: 'Nampula Province',
-        bookingLink: 'https://www.corallodgemozambique.com/'
-      },
-      {
-        name: 'Santorini Mozambique',
-        description: 'Greek-inspired luxury villa resort with ocean views and personalized service.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$500-1000',
-        location: 'Vilanculos',
-        bookingLink: 'https://www.santorinimozambique.com/'
-      },
-      {
-        name: 'Ibo Island Lodge',
-        description: 'Historic lodge in restored colonial mansions on Ibo Island in the Quirimbas Archipelago.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$300-600',
-        location: 'Ibo Island',
-        bookingLink: 'https://www.iboisland.com/'
-      },
-      {
-        name: 'Gorongosa Safari Camp',
-        description: 'Luxury tented camp in Gorongosa National Park with wildlife viewing and conservation focus.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$300-600',
-        location: 'Gorongosa National Park',
-        bookingLink: 'https://www.gorongosa.org/stay-here/'
-      },
-      {
-        name: 'Bahia Mar Boutique Hotel',
-        description: 'Boutique hotel in Vilanculos with ocean views, pool, and access to Bazaruto Archipelago.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$200-400',
-        location: 'Vilanculos',
-        bookingLink: 'https://www.bahiamarclub.com/'
-      },
-      {
-        name: 'Anantara Medjumbe Island Resort',
-        description: 'Exclusive private island resort in the Quirimbas Archipelago with beachfront villas.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$800-1600',
-        location: 'Quirimbas Archipelago',
-        bookingLink: 'https://www.anantara.com/en/medjumbe-island'
-      },
-      {
-        name: 'Dugong Beach Lodge',
-        description: 'Luxury beach lodge in the Vilanculos Coastal Wildlife Sanctuary with marine experiences.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$300-600',
-        location: 'Vilanculos',
-        bookingLink: 'https://www.dugongbeachlodge.com/'
-      },
-      {
-        name: 'Radisson Blu Hotel & Residence, Maputo',
-        description: 'Modern luxury hotel in Maputo with ocean views, multiple restaurants, and business facilities.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$150-300',
-        location: 'Maputo',
-        bookingLink: 'https://www.radissonhotels.com/en-us/hotels/radisson-blu-maputo'
-      },
-      {
-        name: 'Machangulo Beach Lodge',
-        description: 'Luxury beach lodge on the Machangulo Peninsula with ocean and bay views.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$400-800',
-        location: 'Machangulo Peninsula',
-        bookingLink: 'https://www.machangulobeachlodge.com/'
-      },
-      {
-        name: 'Tofo Mar Hotel',
-        description: 'Beachfront hotel in Tofo with ocean views, restaurant, and diving center.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$100-200',
-        location: 'Tofo',
-        bookingLink: 'https://www.tofo-mar.com/'
-      },
-      {
-        name: 'Pemba Beach Hotel',
-        description: 'Beachfront hotel in Pemba with pool, multiple restaurants, and gateway to Quirimbas.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$150-300',
-        location: 'Pemba',
-        bookingLink: 'https://www.pembabeachhotel.com/'
-      },
-      {
-        name: 'Nuarro Lodge',
-        description: 'Eco-lodge on a remote beach in northern Mozambique with diving and whale watching.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$200-400',
-        location: 'Memba Bay',
-        bookingLink: 'https://www.nuarro.com/'
-      },
-      {
-        name: 'Barra Beach Club',
-        description: 'Beachfront resort near Inhambane with ocean views, restaurant, and water activities.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$100-200',
-        location: 'Barra',
-        bookingLink: 'https://www.barrabeachclub.com/'
-      },
-      {
-        name: 'Southern Sun Maputo',
-        description: 'Beachfront hotel in Maputo with ocean views, pool, and multiple restaurants.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$150-300',
-        location: 'Maputo',
-        bookingLink: 'https://www.tsogosun.com/southern-sun-maputo/'
-      }
-    ],
-    restaurants: [
-      {
-        name: 'Zambi',
-        cuisine: 'Fine dining restaurant in Maputo with seafood, Portuguese, and Mozambican influences.',
-        image: 'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$30-60',
-        location: 'Maputo',
-        link: 'https://www.zambi.co.mz/'
-      },
-      {
-        name: 'Restaurante Dhow',
-        cuisine: 'Seafood restaurant with ocean views and fresh local catches in Maputo.',
-        image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Maputo',
-        link: 'https://www.dhowrestaurante.co.mz/'
-      },
-      {
-        name: 'Clube Naval',
-        cuisine: 'Historic waterfront restaurant with Portuguese and Mozambican cuisine.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Maputo',
-        link: 'https://www.clubenaval.co.mz/'
-      },
-      {
-        name: 'Sagres',
-        cuisine: 'Portuguese restaurant with traditional dishes and seafood specialties.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$15-35',
-        location: 'Maputo',
-        link: 'https://www.sagres.co.mz/'
-      },
-      {
-        name: 'Mercado do Peixe',
-        cuisine: 'Seafood market where you select fresh fish and have it cooked to order.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$15-30',
-        location: 'Maputo',
-        link: 'https://www.mercadodopeixe.co.mz/'
-      },
-      {
-        name: 'Baía dos Deuses',
-        cuisine: 'Beachfront restaurant in Vilanculos with seafood and international cuisine.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Vilanculos',
-        link: 'https://www.baiadeuses.co.mz/'
-      },
-      {
-        name: 'Caravela',
-        cuisine: 'Portuguese and Mozambican cuisine with seafood specialties and ocean views.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Pemba',
-        link: 'https://www.caravela.co.mz/'
-      },
-      {
-        name: 'Restaurante Sabores',
-        cuisine: 'Traditional Mozambican cuisine with local flavors and ingredients.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$10-25',
-        location: 'Maputo',
-        link: 'https://www.sabores.co.mz/'
-      },
-      {
-        name: 'Docks',
-        cuisine: 'Upscale restaurant in Maputo with international cuisine and waterfront views.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Maputo',
-        link: 'https://www.docks.co.mz/'
-      },
-      {
-        name: 'Restaurante Piri Piri',
-        cuisine: 'Portuguese-Mozambican restaurant specializing in piri piri chicken and seafood.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$15-30',
-        location: 'Maputo',
-        link: 'https://www.piripiri.co.mz/'
-      },
-      {
-        name: 'Dolphin Dhow',
-        cuisine: 'Seafood restaurant with dhow boat dining experiences in Vilanculos.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Vilanculos',
-        link: 'https://www.dolphindhow.co.mz/'
-      },
-      {
-        name: 'Restaurante Ilha',
-        cuisine: 'Seafood restaurant on Ilha de Moçambique with historic setting and fresh catches.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$15-35',
-        location: 'Ilha de Moçambique',
-        link: 'https://www.restauranteilha.co.mz/'
-      },
-      {
-        name: 'Tofo Tofo',
-        cuisine: 'Beach restaurant in Tofo with seafood, international cuisine, and ocean views.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Tofo',
-        link: 'https://www.tofotofo.co.mz/'
-      },
-      {
-        name: 'Restaurante Escondidinho',
-        cuisine: 'Traditional Portuguese restaurant in Maputo with authentic flavors and atmosphere.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Maputo',
-        link: 'https://www.escondidinho.co.mz/'
-      },
-      {
-        name: 'Beira-Mar',
-        cuisine: 'Seafood restaurant in Beira with ocean views and fresh local catches.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Beira',
-        link: 'https://www.beiramar.co.mz/'
-      },
-      {
-        name: 'Inhambane Café',
-        cuisine: 'Historic café in Inhambane with Portuguese pastries, coffee, and light meals.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$5-15',
-        location: 'Inhambane',
-        link: 'https://www.inhambanecafe.co.mz/'
-      },
-      {
-        name: 'Pemba Dive & Bush Camp Restaurant',
-        cuisine: 'Beach restaurant with international cuisine and ocean views in Pemba.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Pemba',
-        link: 'https://www.pembadive.co.mz/restaurant/'
-      },
-      {
-        name: 'Gorongosa Café',
-        cuisine: 'Restaurant at Gorongosa National Park with international cuisine and conservation focus.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Gorongosa National Park',
-        link: 'https://www.gorongosa.org/visit/dining/'
-      },
-      {
-        name: 'Marisqueira Tropic',
-        cuisine: 'Seafood restaurant in Maputo with Portuguese influences and fresh catches.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Maputo',
-        link: 'https://www.marisqueiratropic.co.mz/'
-      },
-      {
-        name: 'Flamingo Bay Restaurant',
-        cuisine: 'Overwater restaurant at Flamingo Bay Water Lodge with seafood and international cuisine.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Inhambane',
-        link: 'https://www.flamingobay.co.mz/dining/'
-      }
-    ]
-  },
-  {
-    name: 'Malawi',
-    description: 'The Warm Heart of Africa offering the crystal-clear waters of Lake Malawi, diverse landscapes, and authentic cultural experiences.',
-    image: 'https://lh3.googleusercontent.com/gg-dl/AJfQ9KTWTPxz5l6_9xX4wPk9tb_oHiDgeHMACFWOwg5DRYMbo68RSCLPKN-XgsUM3k2Y_vsmotkp4rARTcLK2Qgzxl8RxeZU6JWAj4wP_ZVP7WhHpDb7Q429u5F8ZRn0_Ts05AMIkN8m7JIg0kM2eboGjOEwIDBFYrLYBTYysx2d-pBJTn8HnQ=s1024',
-    region: 'Southern Africa',
-    population: '21.66 million',
-    attractions: [
-      {
-        name: 'Lake Malawi National Park',
-        description: 'UNESCO World Heritage site with crystal-clear waters, colorful cichlid fish, and pristine beaches.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Southern Malawi',
-        link: 'https://whc.unesco.org/en/list/289/'
-      },
-      {
-        name: 'Liwonde National Park',
-        description: 'Premier wildlife sanctuary known for walking safaris, leopard sightings, and diverse ecosystems along the Shire River.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Southern Malawi',
-        link: 'https://www.malawitourism.com/regions/south-malawi/liwonde-national-park/'
-      },
-      {
-        name: 'Mulanje Mountain',
-        description: 'Highest peaks in Central Africa with hiking trails and mountain villages.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Southern Malawi',
-        link: 'https://www.malawitourism.com/regions/south-malawi/mulanje-mountain/'
-      },
-      {
-        name: 'Likoma Island',
-        description: 'Remote island in Lake Malawi with pristine beaches, historic cathedral, and traditional villages.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Lake Malawi',
-        link: 'https://www.malawitourism.com/regions/north-malawi/likoma-island/'
-      },
-      {
-        name: 'Nyika National Park',
-        description: 'High altitude plateau with rolling hills, wildlife, and unique flora in northern Malawi.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Malawi',
-        link: 'https://www.malawitourism.com/regions/north-malawi/nyika-national-park/'
-      },
-      {
-        name: 'Cape Maclear',
-        description: 'Popular beach destination on Lake Malawi with snorkeling, diving, and lakeside lodges.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Southern Lake Malawi',
-        link: 'https://www.malawitourism.com/regions/south-malawi/cape-maclear/'
-      },
-      {
-        name: 'Zomba Plateau',
-        description: 'Mountain plateau with forests, waterfalls, and panoramic views of the surrounding landscapes.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Southern Malawi',
-        link: 'https://www.malawitourism.com/regions/south-malawi/zomba-plateau/'
-      },
-      {
-        name: 'Majete Wildlife Reserve',
-        description: 'Restored Big Five reserve with successful conservation story and diverse wildlife.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Southern Malawi',
-        link: 'https://www.africanparks.org/the-parks/majete'
-      },
-      {
-        name: 'Nkhotakota Wildlife Reserve',
-        description: 'Vast wilderness area with ongoing wildlife reintroduction and pristine miombo woodland.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Central Malawi',
-        link: 'https://www.africanparks.org/the-parks/nkhotakota'
-      },
-      {
-        name: 'Chongoni Rock Art Area',
-        description: 'UNESCO World Heritage site with ancient rock paintings and cultural significance.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Central Malawi',
-        link: 'https://whc.unesco.org/en/list/476/'
-      },
-      {
-        name: 'Livingstonia',
-        description: 'Historic mission station with colonial architecture and spectacular views from the escarpment.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Malawi',
-        link: 'https://www.malawitourism.com/regions/north-malawi/livingstonia/'
-      },
-      {
-        name: 'Lilongwe Wildlife Centre',
-        description: 'Wildlife sanctuary and rescue center in the capital city with conservation programs.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Lilongwe',
-        link: 'https://www.lilongwewildlife.org/'
-      },
-      {
-        name: 'Viphya Plateau',
-        description: 'Forested highland area with hiking, fishing, and outdoor activities in northern Malawi.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Malawi',
-        link: 'https://www.malawitourism.com/regions/north-malawi/viphya-plateau/'
-      },
-      {
-        name: 'Mangochi',
-        description: 'Lake Malawi beach town with resorts, water activities, and cultural experiences.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Southern Lake Malawi',
-        link: 'https://www.malawitourism.com/regions/south-malawi/mangochi/'
-      },
-      {
-        name: 'Blantyre',
-        description: 'Malawi\'s commercial center with colonial architecture, museums, and cultural attractions.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Southern Malawi',
-        link: 'https://www.malawitourism.com/regions/south-malawi/blantyre/'
-      },
-      {
-        name: 'Mua Mission',
-        description: 'Cultural center with Malawi\'s best museum of indigenous culture and woodcarving school.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Central Malawi',
-        link: 'https://www.malawitourism.com/regions/central-malawi/mua-mission/'
-      },
-      {
-        name: 'Nkhata Bay',
-        description: 'Laid-back lakeside town with clear waters, diving, and backpacker atmosphere.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Lake Malawi',
-        link: 'https://www.malawitourism.com/regions/north-malawi/nkhata-bay/'
-      },
-      {
-        name: 'Kasungu National Park',
-        description: 'Off-the-beaten-path wildlife reserve with elephants, antelope, and diverse birdlife.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Central Malawi',
-        link: 'https://www.malawitourism.com/regions/central-malawi/kasungu-national-park/'
-      },
-      {
-        name: 'Senga Bay',
-        description: 'Popular beach destination on Lake Malawi with resorts, water sports, and relaxed atmosphere.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Central Lake Malawi',
-        link: 'https://www.malawitourism.com/regions/central-malawi/senga-bay/'
-      },
-      {
-        name: 'Dedza',
-        description: 'Highland town known for pottery, rock art, and cooler climate in central Malawi.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Central Malawi',
-        link: 'https://www.malawitourism.com/regions/central-malawi/dedza/'
-      }
-    ],
-    transportation: [
-      {
-        type: 'Private 4x4 Vehicle',
-        description: 'Luxury 4x4 vehicles with experienced drivers for exploring national parks and remote areas.',
-        price: '$150-300/day',
-        route: 'Cross-Country Exploration'
-      },
-      {
-        type: 'Lake Cruises',
-        description: 'Private boat trips on Lake Malawi with experienced captains and guides.',
-        price: '$100-300/day',
-        route: 'Lake Malawi Excursions'
-      },
-      {
-        type: 'Domestic Flights',
-        description: 'Time-saving flights between major destinations and remote areas.',
-        price: '$150-300',
-        route: 'Lilongwe to Likoma Island'
-      },
-      {
-        type: 'Luxury Transfers',
-        description: 'Private vehicle transfers between major destinations with professional drivers.',
-        price: '$100-250',
-        route: 'Airport & Hotel Transfers'
-      }
-    ],
-    hotels: [
-      {
-        name: 'Kaya Mawa',
-        description: 'Luxury lodge on Likoma Island with unique stone and thatch cottages built into the rocks overlooking Lake Malawi.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$400-800',
-        location: 'Likoma Island',
-        bookingLink: 'https://www.kayamawa.com/'
-      },
-      {
-        name: 'Pumulani',
-        description: 'Robin Pope Safaris luxury beach lodge on Lake Malawi with hillside villas and private beach.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$400-800',
-        location: 'Lake Malawi National Park',
-        bookingLink: 'https://www.robinpopesafaris.net/camps/pumulani/'
-      },
-      {
-        name: 'Mvuu Lodge',
-        description: 'Luxury safari lodge in Liwonde National Park overlooking the Shire River with wildlife viewing.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$300-600',
-        location: 'Liwonde National Park',
-        bookingLink: 'https://www.cawsmw.com/lodges/mvuu-lodge/'
-      },
-      {
-        name: 'Mkulumadzi',
-        description: 'Luxury lodge in Majete Wildlife Reserve with private chalets and wildlife viewing.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$400-800',
-        location: 'Majete Wildlife Reserve',
-        bookingLink: 'https://www.robinpopesafaris.net/camps/mkulumadzi/'
-      },
-      {
-        name: 'Chelinda Lodge',
-        description: 'Highland lodge in Nyika National Park with log cabins, fireplaces, and unique plateau landscapes.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$300-600',
-        location: 'Nyika National Park',
-        bookingLink: 'https://www.cawsmw.com/lodges/chelinda-lodge/'
-      },
-      {
-        name: 'The Makokola Retreat',
-        description: 'Luxury beach resort on Lake Malawi with spa, golf course, and water activities.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$200-400',
-        location: 'Mangochi',
-        bookingLink: 'https://www.theclub-makokola.com/'
-      },
-      {
-        name: 'Mumbo Island Camp',
-        description: 'Eco-friendly island camp in Lake Malawi National Park with rustic luxury and pristine environment.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$300-600',
-        location: 'Lake Malawi National Park',
-        bookingLink: 'https://www.mumboisland.com/'
-      },
-      {
-        name: 'Huntingdon House',
-        description: 'Colonial-era plantation house on the Satemwa Tea Estate with elegant accommodations and gardens.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$200-400',
-        location: 'Thyolo',
-        bookingLink: 'https://www.satemwa.com/accommodation/huntingdon-house/'
-      },
-      {
-        name: 'Tongole Wilderness Lodge',
-        description: 'Luxury eco-lodge in Nkhotakota Wildlife Reserve with river views and conservation focus.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$300-600',
-        location: 'Nkhotakota Wildlife Reserve',
-        bookingLink: 'https://www.tongole.com/'
-      },
-      {
-        name: 'Danforth Yachting',
-        description: 'Luxury lodge and yacht charter on Lake Malawi with sailing, diving, and water activities.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$200-400',
-        location: 'Cape Maclear',
-        bookingLink: 'https://www.danforthyachting.com/'
-      },
-      {
-        name: 'Kumbali Country Lodge',
-        description: 'Boutique lodge in a forest setting near Lilongwe with comfortable accommodations and restaurant.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$150-300',
-        location: 'Lilongwe',
-        bookingLink: 'https://www.kumbalilodge.com/'
-      },
-      {
-        name: 'Blue Zebra Island Lodge',
-        description: 'Island lodge in Lake Malawi National Park with tented chalets and water activities.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$200-400',
-        location: 'Lake Malawi National Park',
-        bookingLink: 'https://www.bluezebra.mw/'
-      },
-      {
-        name: 'Sunbird Mount Soche',
-        description: 'Modern hotel in Blantyre with city views, multiple restaurants, and business facilities.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$150-300',
-        location: 'Blantyre',
-        bookingLink: 'https://www.sunbirdmalawi.com/hotels/mount-soche/'
-      },
-      {
-        name: 'Sunbird Capital Hotel',
-        description: 'Business hotel in Lilongwe with modern amenities, restaurant, and central location.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$150-300',
-        location: 'Lilongwe',
-        bookingLink: 'https://www.sunbirdmalawi.com/hotels/capital/'
-      },
-      {
-        name: 'Chawani Bungalow',
-        description: 'Historic colonial bungalow on Zomba Plateau with mountain views and traditional atmosphere.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$100-200',
-        location: 'Zomba Plateau',
-        bookingLink: 'https://www.chawanibungalow.com/'
-      },
-      {
-        name: 'Nkwichi Lodge',
-        description: 'Remote eco-lodge on the Mozambican shore of Lake Malawi with pristine beach and wilderness.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$300-600',
-        location: 'Lake Malawi',
-        bookingLink: 'https://www.nkwichi.com/'
-      },
-      {
-        name: 'Luwawa Forest Lodge',
-        description: 'Mountain lodge in the Viphya Plateau with hiking, fishing, and outdoor activities.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$100-200',
-        location: 'Viphya Plateau',
-        bookingLink: 'https://www.luwawaforestlodge.com/'
-      },
-      {
-        name: 'Makuzi Beach Lodge',
-        description: 'Intimate beach lodge on Lake Malawi with private beach and comfortable chalets.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$150-300',
-        location: 'Chintheche',
-        bookingLink: 'https://www.makuzibeachlodge.com/'
-      },
-      {
-        name: 'Sunbird Ku Chawe',
-        description: 'Mountain resort on Zomba Plateau with panoramic views and colonial atmosphere.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$100-200',
-        location: 'Zomba Plateau',
-        bookingLink: 'https://www.sunbirdmalawi.com/hotels/ku-chawe/'
-      },
-      {
-        name: 'Njaya Lodge',
-        description: 'Laid-back lodge in Nkhata Bay with lake views, restaurant, and backpacker atmosphere.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$50-100',
-        location: 'Nkhata Bay',
-        bookingLink: 'https://www.njayalodge.com/'
-      },
-      {
-        name: 'Thawale Lodge',
-        description: 'Safari lodge in Majete Wildlife Reserve with comfortable tents and wildlife viewing.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$150-300',
-        location: 'Majete Wildlife Reserve',
-        bookingLink: 'https://www.africanparks.org/the-parks/majete/visit'
-      }
-    ],
-    restaurants: [
-      {
-        name: '21 Grill',
-        cuisine: 'Fine dining restaurant at Sunbird Mount Soche Hotel with steaks, international cuisine, and elegant atmosphere.',
-        image: 'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Blantyre',
-        link: 'https://www.sunbirdmalawi.com/hotels/mount-soche/dining/'
-      },
-      {
-        name: 'Latitude 13°',
-        cuisine: 'Contemporary restaurant with international cuisine, cocktails, and stylish atmosphere.',
-        image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$15-35',
-        location: 'Lilongwe',
-        link: 'https://www.latitude13.com/dining/'
-      },
-      {
-        name: 'Kumbali Lodge Restaurant',
-        cuisine: 'Farm-to-table restaurant with organic ingredients and international cuisine.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$15-30',
-        location: 'Lilongwe',
-        link: 'https://www.kumbalilodge.com/restaurant/'
-      },
-      {
-        name: 'Makokola Retreat Restaurant',
-        cuisine: 'Lakeside restaurant with international cuisine and fresh seafood from Lake Malawi.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Mangochi',
-        link: 'https://www.theclub-makokola.com/dining/'
-      },
-      {
-        name: 'Pumulani Restaurant',
-        cuisine: 'Luxury lodge restaurant with international cuisine and lake views.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Lake Malawi National Park',
-        link: 'https://www.robinpopesafaris.net/camps/pumulani/dining/'
-      },
-      {
-        name: 'Mbalamanja Restaurant',
-        cuisine: 'Traditional Malawian cuisine with authentic flavors and cultural atmosphere.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$10-25',
-        location: 'Blantyre',
-        link: 'https://www.mbalamanja.com/'
-      },
-      {
-        name: 'Kaya Mawa Restaurant',
-        cuisine: 'Luxury lodge restaurant on Likoma Island with fresh ingredients and lake views.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        priceRange: '$30-60',
-        location: 'Likoma Island',
-        link: 'https://www.kayamawa.com/dining/'
-      },
-      {
-        name: 'Jungle Pepper',
-        cuisine: 'International restaurant in Lilongwe with diverse menu and casual atmosphere.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$10-25',
-        location: 'Lilongwe',
-        link: 'https://www.junglepepper.com/'
-      },
-      {
-        name: 'Tasty Bites',
-        cuisine: 'Popular restaurant in Blantyre with international menu and local favorites.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$10-25',
-        location: 'Blantyre',
-        link: 'https://www.tastybites.mw/'
-      },
-      {
-        name: 'Mvuu Lodge Restaurant',
-        cuisine: 'Safari lodge restaurant in Liwonde National Park with river views and wildlife.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Liwonde National Park',
-        link: 'https://www.cawsmw.com/lodges/mvuu-lodge/dining/'
-      },
-      {
-        name: 'Four Seasons Restaurant',
-        cuisine: 'Chinese and international cuisine in Lilongwe with diverse menu.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$10-25',
-        location: 'Lilongwe',
-        link: 'https://www.fourseasonsrestaurant.mw/'
-      },
-      {
-        name: 'Huntingdon House Restaurant',
-        cuisine: 'Colonial-style dining at historic tea plantation with traditional British and Malawian influences.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Thyolo',
-        link: 'https://www.satemwa.com/accommodation/huntingdon-house/dining/'
-      },
-      {
-        name: 'Mkulumadzi Restaurant',
-        cuisine: 'Safari lodge restaurant in Majete Wildlife Reserve with river views and international cuisine.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Majete Wildlife Reserve',
-        link: 'https://www.robinpopesafaris.net/camps/mkulumadzi/dining/'
-      },
-      {
-        name: 'Ku Chawe Inn Restaurant',
-        cuisine: 'Mountain resort restaurant on Zomba Plateau with panoramic views and international cuisine.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Zomba Plateau',
-        link: 'https://www.sunbirdmalawi.com/hotels/ku-chawe/dining/'
-      },
-      {
-        name: 'Fisherman\'s Rest',
-        cuisine: 'Riverside restaurant with fresh fish, international cuisine, and community focus.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$10-25',
-        location: 'Blantyre',
-        link: 'https://www.fishermansrest.net/'
-      },
-      {
-        name: 'Mumbo Island Camp Restaurant',
-        cuisine: 'Eco-friendly island camp restaurant with fresh ingredients and lake views.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Lake Malawi National Park',
-        link: 'https://www.mumboisland.com/dining/'
-      },
-      {
-        name: 'Tongole Wilderness Lodge Restaurant',
-        cuisine: 'Eco-lodge restaurant in Nkhotakota Wildlife Reserve with river views and international cuisine.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Nkhotakota Wildlife Reserve',
-        link: 'https://www.tongole.com/dining/'
-      },
-      {
-        name: 'Makuzi Beach Lodge Restaurant',
-        cuisine: 'Beachfront restaurant on Lake Malawi with fresh fish and international cuisine.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Chintheche',
-        link: 'https://www.makuzibeachlodge.com/dining/'
-      },
-      {
-        name: 'Chelinda Lodge Restaurant',
-        cuisine: 'Mountain lodge restaurant in Nyika National Park with international cuisine and fireside dining.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$25-50',
-        location: 'Nyika National Park',
-        link: 'https://www.cawsmw.com/lodges/chelinda-lodge/dining/'
-      },
-      {
-        name: 'Sunbird Capital Brasserie',
-        cuisine: 'Hotel restaurant in Lilongwe with international buffet and à la carte options.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Lilongwe',
-        link: 'https://www.sunbirdmalawi.com/hotels/capital/dining/'
-      }
-    ]
-  },
-  {
-    name: 'Eswatini',
-    description: 'Formerly known as Swaziland, this small kingdom offers rich traditional culture, scenic mountain landscapes, wildlife reserves, and authentic African experiences.',
-    image: 'https://commonwealthchamber.com/wp-content/uploads/2021/07/eswastini-1.jpg',
-    region: 'Southern Africa',
-    population: '1.243 million',
-    attractions: [
-      {
-        name: 'Mlilwane Wildlife Sanctuary',
-        description: 'Eswatini\'s oldest protected area with diverse wildlife, hiking trails, and traditional beehive huts for accommodation.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Ezulwini Valley',
-        link: 'https://www.biggameparks.org/mlilwane'
-      },
-      {
-        name: 'Hlane Royal National Park',
-        description: 'Eswatini\'s largest protected area with lions, elephants, rhinos, and traditional game drives.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Eastern Eswatini',
-        link: 'https://www.biggameparks.org/hlane'
-      },
-      {
-        name: 'Mkhaya Game Reserve',
-        description: 'Exclusive wildlife sanctuary known for rhino conservation and intimate safari experiences.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Eastern Eswatini',
-        link: 'https://www.biggameparks.org/mkhaya'
-      },
-      {
-        name: 'Mantenga Cultural Village',
-        description: 'Living museum showcasing traditional Swazi lifestyle, crafts, and cultural performances.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Ezulwini Valley',
-        link: 'https://www.mantengaculturalvillage.org/'
-      },
-      {
-        name: 'Malolotja Nature Reserve',
-        description: 'Mountainous reserve with Eswatini\'s highest waterfall, hiking trails, and diverse flora and fauna.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northwestern Eswatini',
-        link: 'https://www.sntc.org.sz/reserves/malolotja.html'
-      },
-      {
-        name: 'Swazi Candles Craft Market',
-        description: 'Colorful craft market featuring handmade candles, textiles, and traditional crafts.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Malkerns Valley',
-        link: 'https://www.swazicandles.com/'
-      },
-      {
-        name: 'Ngwenya Glass Factory',
-        description: 'Africa\'s oldest glass factory producing handmade glassware from recycled glass.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Ngwenya',
-        link: 'https://www.ngwenyaglass.co.sz/'
-      },
-      {
-        name: 'Sibebe Rock',
-        description: 'World\'s second-largest monolith after Uluru with hiking opportunities and panoramic views.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Near Mbabane',
-        link: 'https://www.thekingdomofeswatini.com/attractions/sibebe-rock/'
-      },
-      {
-        name: 'Ezulwini Valley',
-        description: 'Valley of Heaven with craft markets, hot springs, casinos, and cultural attractions.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Central Eswatini',
-        link: 'https://www.thekingdomofeswatini.com/regions/ezulwini-valley/'
-      },
-      {
-        name: 'Phophonyane Falls',
-        description: 'Scenic waterfall and nature reserve with hiking trails and diverse birdlife.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Eswatini',
-        link: 'https://www.phophonyane.co.sz/'
-      },
-      {
-        name: 'Shewula Mountain Camp',
-        description: 'Community-run eco-tourism project offering authentic cultural experiences and stunning views.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Lubombo Region',
-        link: 'https://www.shewulacamp.org/'
-      },
-      {
-        name: 'Lobamba Royal Village',
-        description: 'Ceremonial capital with royal residences, parliament, and national museum.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Lobamba',
-        link: 'https://www.thekingdomofeswatini.com/attractions/lobamba-royal-village/'
-      },
-      {
-        name: 'Nsangwini Rock Art',
-        description: 'Ancient San rock art site with guided tours and cultural significance.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Eswatini',
-        link: 'https://www.thekingdomofeswatini.com/attractions/nsangwini-rock-art/'
-      },
-      {
-        name: 'Mbabane',
-        description: 'Capital city with markets, restaurants, and gateway to nearby attractions.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northwestern Eswatini',
-        link: 'https://www.thekingdomofeswatini.com/regions/mbabane/'
-      },
-      {
-        name: 'Manzini',
-        description: 'Eswatini\'s largest urban center with vibrant markets and commercial activities.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Central Eswatini',
-        link: 'https://www.thekingdomofeswatini.com/regions/manzini/'
-      },
-      {
-        name: 'Umhlanga Reed Dance',
-        description: 'Annual cultural festival where thousands of young women gather to honor the Queen Mother.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Lobamba',
-        link: 'https://www.thekingdomofeswatini.com/events/umhlanga-reed-dance/'
-      },
-      {
-        name: 'Incwala Ceremony',
-        description: 'Sacred kingship ceremony and Eswatini\'s most important cultural event.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Lobamba',
-        link: 'https://www.thekingdomofeswatini.com/events/incwala-ceremony/'
-      },
-      {
-        name: 'House on Fire',
-        description: 'Unique arts and music venue hosting the famous Bushfire Festival.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Malkerns Valley',
-        link: 'https://www.house-on-fire.com/'
-      },
-      {
-        name: 'Maguga Dam',
-        description: 'Large dam with scenic views, fishing, and water activities.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Eswatini',
-        link: 'https://www.thekingdomofeswatini.com/attractions/maguga-dam/'
-      },
-      {
-        name: 'Hawane Resort',
-        description: 'Highland resort with fishing, hiking, and mountain views.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        location: 'Northern Eswatini',
-        link: 'https://www.hawane.co.sz/'
-      }
-    ],
-    transportation: [
-      {
-        type: 'Private 4x4 Vehicle',
-        description: 'Luxury 4x4 vehicles with experienced drivers for exploring wildlife reserves and remote areas.',
-        price: '$100-250/day',
-        route: 'Cross-Country Exploration'
-      },
-      {
-        type: 'Cultural Tours',
-        description: 'Guided tours to traditional villages and cultural sites with knowledgeable guides.',
-        price: '$80-200/day',
-        route: 'Cultural Circuit'
-      },
-      {
-        type: 'Safari Vehicles',
-        description: 'Specialized vehicles for game drives in national parks and wildlife reserves.',
-        price: '$150-300/day',
-        route: 'Wildlife Reserves'
-      },
-      {
-        type: 'Airport Transfers',
-        description: 'Private transfers from airports to hotels and between destinations.',
-        price: '$50-150',
-        route: 'Airport to Hotels'
-      }
-    ],
-    hotels: [
-      {
-        name: 'Royal Swazi Spa',
-        description: 'Luxury resort with golf course, casino, spa, and multiple restaurants in the Ezulwini Valley.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$150-300',
-        location: 'Ezulwini Valley',
-        bookingLink: 'https://www.suninternational.com/royal-swazi/'
-      },
-      {
-        name: 'Reilly\'s Rock Hilltop Lodge',
-        description: 'Historic lodge in Mlilwane Wildlife Sanctuary with colonial atmosphere and wildlife viewing.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$150-300',
-        location: 'Mlilwane Wildlife Sanctuary',
-        bookingLink: 'https://www.biggameparks.org/accommodation/reillys-rock'
-      },
-      {
-        name: 'Foresters Arms',
-        description: 'Historic country hotel in the highlands with English atmosphere and beautiful gardens.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$100-200',
-        location: 'Mhlambanyatsi',
-        bookingLink: 'https://www.forestersarms.co.sz/'
-      },
-      {
-        name: 'Mkhaya Stone Camp',
-        description: 'Unique safari camp in Mkhaya Game Reserve with stone cottages and exceptional rhino viewing.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$200-400',
-        location: 'Mkhaya Game Reserve',
-        bookingLink: 'https://www.biggameparks.org/accommodation/stone-camp'
-      },
-      {
-        name: 'Phophonyane Falls Ecolodge',
-        description: 'Eco-friendly lodge near waterfalls with beautiful gardens and hiking trails.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$100-200',
-        location: 'Piggs Peak',
-        bookingLink: 'https://www.phophonyane.co.sz/'
-      },
-      {
-        name: 'Mountain Inn',
-        description: 'Comfortable hotel in Mbabane with mountain views and central location.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$80-160',
-        location: 'Mbabane',
-        bookingLink: 'https://www.mountaininn.sz/'
-      },
-      {
-        name: 'Mantenga Lodge',
-        description: 'Boutique lodge in the Ezulwini Valley with mountain views and proximity to cultural attractions.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$100-200',
-        location: 'Ezulwini Valley',
-        bookingLink: 'https://www.mantengalodge.com/'
-      },
-      {
-        name: 'Hawane Resort',
-        description: 'Highland resort with fishing, hiking, and mountain views.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$80-160',
-        location: 'Northern Eswatini',
-        bookingLink: 'https://www.hawane.co.sz/'
-      },
-      {
-        name: 'Mlilwane Rest Camp',
-        description: 'Traditional beehive huts and camping in Mlilwane Wildlife Sanctuary with wildlife viewing.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$50-100',
-        location: 'Mlilwane Wildlife Sanctuary',
-        bookingLink: 'https://www.biggameparks.org/accommodation/rest-camp'
-      },
-      {
-        name: 'Shewula Mountain Camp',
-        description: 'Community-run eco-tourism project with traditional accommodations and cultural experiences.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$50-100',
-        location: 'Lubombo Region',
-        bookingLink: 'https://www.shewulacamp.org/'
-      },
-      {
-        name: 'Hlane Royal National Park Camp',
-        description: 'Safari camp in Hlane Royal National Park with wildlife viewing and traditional accommodations.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$80-160',
-        location: 'Hlane Royal National Park',
-        bookingLink: 'https://www.biggameparks.org/accommodation/ndlovu-camp'
-      },
-      {
-        name: 'Maguga Lodge',
-        description: 'Lodge overlooking Maguga Dam with water activities and mountain views.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$80-160',
-        location: 'Maguga Dam',
-        bookingLink: 'https://www.magugalodge.com/'
-      },
-      {
-        name: 'Mogi Boutique Hotel',
-        description: 'Modern boutique hotel in Ezulwini Valley with stylish design and amenities.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        price: '$100-200',
-        location: 'Ezulwini Valley',
-        bookingLink: 'https://www.mogihotel.com/'
-      },
-      {
-        name: 'Lidwala Lodge',
-        description: 'Backpacker lodge with comfortable accommodations and mountain views.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$30-80',
-        location: 'Ezulwini Valley',
-        bookingLink: 'https://www.lidwala.co.sz/'
-      },
-      {
-        name: 'Happy Valley Hotel',
-        description: 'Business hotel in Ezulwini Valley with conference facilities and restaurant.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$80-160',
-        location: 'Ezulwini Valley',
-        bookingLink: 'https://www.happyvalleyhotel.com/'
-      },
-      {
-        name: 'Sibebe Backpackers',
-        description: 'Eco-friendly backpacker lodge near Sibebe Rock with hiking access.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 2,
-        price: '$20-60',
-        location: 'Mbabane',
-        bookingLink: 'https://www.sibebebackpackers.com/'
-      },
-      {
-        name: 'Malolotja Eco Lodge',
-        description: 'Eco-friendly lodge in Malolotja Nature Reserve with hiking and wildlife viewing.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$80-160',
-        location: 'Malolotja Nature Reserve',
-        bookingLink: 'https://www.sntc.org.sz/accommodation/malolotja.html'
-      },
-      {
-        name: 'Buhleni Farm Chalets',
-        description: 'Farm stay with self-catering chalets and rural atmosphere.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$60-120',
-        location: 'Malkerns Valley',
-        bookingLink: 'https://www.buhlenifarm.com/'
-      },
-      {
-        name: 'Summerfield Botanical Garden Resort',
-        description: 'Luxury resort set in botanical gardens with spa and fine dining.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        price: '$200-400',
-        location: 'Manzini',
-        bookingLink: 'https://www.summerfieldresort.com/'
-      },
-      {
-        name: 'Piggs Peak Hotel',
-        description: 'Mountain hotel with casino, restaurant, and scenic views.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        price: '$80-160',
-        location: 'Piggs Peak',
-        bookingLink: 'https://www.piggspeakhotel.co.sz/'
-      }
-    ],
-    restaurants: [
-      {
-        name: 'Edladleni Restaurant',
-        cuisine: 'Traditional Swazi cuisine with cultural performances and authentic atmosphere.',
-        image: 'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$15-30',
-        location: 'Ezulwini Valley',
-        link: 'https://www.edladleni.co.sz/'
-      },
-      {
-        name: 'Calabash Restaurant',
-        cuisine: 'Fine dining restaurant at Royal Swazi Spa with international cuisine and elegant atmosphere.',
-        image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Ezulwini Valley',
-        link: 'https://www.suninternational.com/royal-swazi/dining/calabash/'
-      },
-      {
-        name: 'Malandela\'s Restaurant',
-        description: 'Farm-to-table restaurant at House on Fire with international cuisine and artistic atmosphere.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$15-30',
-        location: 'Malkerns Valley',
-        link: 'https://www.malandelas.com/'
-      },
-      {
-        name: 'Foresters Arms Pub & Restaurant',
-        cuisine: 'Traditional English pub food and local specialties in a historic country hotel.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$15-30',
-        location: 'Mhlambanyatsi',
-        link: 'https://www.forestersarms.co.sz/restaurant/'
-      },
-      {
-        name: 'Mantenga Lodge Restaurant',
-        cuisine: 'International cuisine with mountain views and relaxed atmosphere.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Ezulwini Valley',
-        link: 'https://www.mantengalodge.com/restaurant/'
-      },
-      {
-        name: 'Mountain Inn Restaurant',
-        cuisine: 'International cuisine with mountain views and comfortable atmosphere.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Mbabane',
-        link: 'https://www.mountaininn.sz/restaurant/'
-      },
-      {
-        name: 'Sambane Coffee Shop',
-        cuisine: 'Café with coffee, pastries, and light meals in a relaxed setting.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$5-15',
-        location: 'Mbabane',
-        link: 'https://www.sambanecoffee.co.sz/'
-      },
-      {
-        name: 'Swazi Candles Café',
-        cuisine: 'Café at the craft market with light meals, coffee, and relaxed atmosphere.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$5-15',
-        location: 'Malkerns Valley',
-        link: 'https://www.swazicandles.com/cafe/'
-      },
-      {
-        name: 'Summerfield Botanical Restaurant',
-        cuisine: 'Fine dining in botanical gardens with international cuisine and elegant atmosphere.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 5,
-        priceRange: '$25-50',
-        location: 'Manzini',
-        link: 'https://www.summerfieldresort.com/restaurant/'
-      },
-      {
-        name: 'Ngwenya Glass Restaurant',
-        cuisine: 'Restaurant at the glass factory with international menu and views of glassblowing.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$10-25',
-        location: 'Ngwenya',
-        link: 'https://www.ngwenyaglass.co.sz/restaurant/'
-      },
-      {
-        name: 'Phophonyane Falls Restaurant',
-        cuisine: 'Eco-lodge restaurant with garden setting and international cuisine.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$15-30',
-        location: 'Piggs Peak',
-        link: 'https://www.phophonyane.co.sz/restaurant/'
-      },
-      {
-        name: 'Maguga Lodge Restaurant',
-        cuisine: 'Lodge restaurant overlooking Maguga Dam with international menu.',
-        image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$10-25',
-        location: 'Maguga Dam',
-        link: 'https://www.magugalodge.com/restaurant/'
-      },
-      {
-        name: 'Mlilwane Rest Camp Restaurant',
-        cuisine: 'Safari camp restaurant with international cuisine and wildlife viewing.',
-        image: 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$10-25',
-        location: 'Mlilwane Wildlife Sanctuary',
-        link: 'https://www.biggameparks.org/accommodation/rest-camp/dining/'
-      },
-      {
-        name: 'Mkhaya Stone Camp Restaurant',
-        cuisine: 'Safari lodge restaurant with traditional cuisine and bush dining experiences.',
-        image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 4,
-        priceRange: '$20-40',
-        location: 'Mkhaya Game Reserve',
-        link: 'https://www.biggameparks.org/accommodation/stone-camp/dining/'
-      },
-      {
-        name: 'Shewula Mountain Camp Restaurant',
-        cuisine: 'Community-run restaurant with traditional Swazi cuisine and cultural experiences.',
-        image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$10-20',
-        location: 'Lubombo Region',
-        link: 'https://www.shewulacamp.org/restaurant/'
-      },
-      {
-        name: 'Hlane Royal National Park Restaurant',
-        cuisine: 'Safari camp restaurant with international cuisine and wildlife viewing.',
-        image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Hlane Royal National Park',
-        link: 'https://www.biggameparks.org/accommodation/ndlovu-camp/dining/'
-      },
-      {
-        name: 'Buhleni Farm Restaurant',
-        cuisine: 'Farm restaurant with home-style cooking and rural atmosphere.',
-        image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$10-25',
-        location: 'Malkerns Valley',
-        link: 'https://www.buhlenifarm.com/restaurant/'
-      },
-      {
-        name: 'Piggs Peak Hotel Restaurant',
-        cuisine: 'Hotel restaurant with international menu and mountain views.',
-        image: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Piggs Peak',
-        link: 'https://www.piggspeakhotel.co.sz/restaurant/'
-      },
-      {
-        name: 'Lidwala Lodge Restaurant',
-        cuisine: 'Backpacker lodge restaurant with international menu and relaxed atmosphere.',
-        image: 'https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$8-20',
-        location: 'Ezulwini Valley',
-        link: 'https://www.lidwala.co.sz/restaurant/'
-      },
-      {
-        name: 'Happy Valley Hotel Restaurant',
-        cuisine: 'Hotel restaurant with international cuisine and business atmosphere.',
-        image: 'https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        rating: 3,
-        priceRange: '$15-30',
-        location: 'Ezulwini Valley',
-        link: 'https://www.happyvalleyhotel.com/restaurant/'
-      }
-    ]
-  }
-];
-
-// Export featured countries for the homepage
-export const featuredCountries = allCountries.slice(0, 6);
+        description: 'Traditional fishing islands with authentic lifestyle, beach
