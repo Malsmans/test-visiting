@@ -3192,6 +3192,7 @@ export const allCountries: Country[] = [
     price: '$40-90',
     location: 'Frangipani islet / Le Touessrok area',
     link: 'https://traveltriangle.com/blog/restaurants-in-mauritius/'
+  }
   ]
   },
   {
