@@ -4,6 +4,7 @@ import { Search, Filter, Crown, Sparkles, Star, MapPin } from 'lucide-react';
 import CountryCard from '../components/CountryCard';
 import InteractiveMap from '../components/InteractiveMap';
 import { allCountries } from '../data/countries';
+import { GreetingAnimations } from '../components/GreetingAnimations';
 
 const SearchPage = () => {
   const [searchParams] = useSearchParams();
@@ -67,6 +68,7 @@ const SearchPage = () => {
 
   return (
     <div className="min-h-screen relative luxury-african-bg">
+      <GreetingAnimations />
       {/* Content Overlay */}
       <div className="relative z-10 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
