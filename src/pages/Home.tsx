@@ -4,7 +4,6 @@ import { MapPin, Compass, Hotel, Car, Star, Crown, Sparkles, Award, Variable as 
 import CountryCard from '../components/CountryCard';
 import { featuredCountries } from '../data/countries';
 import { useAnalytics } from '../hooks/useAnalytics';
-import { GreetingAnimations } from '../components/GreetingAnimations';
 
 const Home = () => {
   const { trackEvent } = useAnalytics();
@@ -15,7 +14,6 @@ const Home = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden luxury-african-bg">
-      <GreetingAnimations />
       {/* Content Overlay */}
       <div className="relative z-20">
         {/* Hero Section */}

@@ -17,7 +17,6 @@ import LocalEvents from '../components/LocalEvents';
 import TravelBudget from '../components/TravelBudget';
 import TransportationGuide from '../components/TransportationGuide';
 import { useAnalytics } from '../hooks/useAnalytics';
-import { GreetingAnimations } from '../components/GreetingAnimations';
 
 const CountryDetails = () => {
   const { countryName } = useParams();
@@ -64,7 +63,6 @@ const CountryDetails = () => {
 
   return (
     <div className="min-h-screen relative luxury-african-bg">
-      <GreetingAnimations />
       {/* Content Overlay */}
       <div className="relative z-10">
         {/* Luxury Hero Section */}
