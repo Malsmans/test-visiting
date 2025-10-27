@@ -36,7 +36,7 @@ export const trackPageView = async (pagePath: string, pageTitle: string) => {
       .from('visitor_sessions')
       .select('*')
       .eq('session_id', sessionId)
-      .single();
+      .maybeSingle();
 
     if (existingSession) {
       await supabase
@@ -47,10 +47,16 @@ export const trackPageView = async (pagePath: string, pageTitle: string) => {
         })
         .eq('session_id', sessionId);
     } else {
-      await supabase.from('visitor_sessions').insert({
+      // Use upsert to handle race conditions
+      await supabase.from('visitor_sessions').upsert({
         session_id: sessionId,
         device_type: getDeviceType(),
         page_count: 1,
+        first_visit: new Date().toISOString(),
+        last_visit: new Date().toISOString(),
+      }, {
+        onConflict: 'session_id',
+        ignoreDuplicates: true
       });
     }
   } catch (error) {
@@ -94,7 +100,7 @@ export const updateCountryDuration = async (countryName: string) => {
       .eq('country_name', countryName)
       .order('created_at', { ascending: false })
       .limit(1)
-      .single();
+      .maybeSingle();
 
     if (recentView) {
       await supabase
