@@ -151,6 +151,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Luxury Airport Transfer',
         description: 'Private chauffeur service with premium vehicles for seamless airport transfers and city transportation.',
@@ -695,6 +710,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Luxury Safari Vehicle',
         description: 'Premium 4WD vehicles with professional guides for game drives.',
@@ -1237,6 +1267,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Safari Game Drive',
         description: 'Professional guided game drives in luxury safari vehicles.',
@@ -1781,6 +1826,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Desert 4WD Tour',
         description: 'Luxury desert expeditions with professional guides and premium camping.',
@@ -2324,6 +2384,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Safari Circuit',
         description: 'Luxury safari vehicles for the Northern Circuit game drives.',
@@ -2866,6 +2941,21 @@ export const allCountries: Country[] = [
 }
 ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Airport Transfer',
         description: 'Luxury airport transfer service to hotels and resorts.',
@@ -3396,6 +3486,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Coastal Boat Transfer',
         description: 'Luxury boat transfers to pristine islands and coastal destinations.',
@@ -3939,6 +4044,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Luxury Airport Transfer',
         description: 'Premium chauffeur service with luxury vehicles for airport transfers.',
@@ -4482,6 +4602,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Luxury Airport Transfer',
         description: 'Premium chauffeur service with air-conditioned vehicles.',
@@ -5025,6 +5160,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Domestic Flights',
         description: 'Ethiopian Airlines domestic flights connecting major destinations.',
@@ -5568,6 +5718,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Charter Flights',
         description: 'Small aircraft transfers between safari camps and destinations.',
@@ -6111,6 +6276,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Safari 4x4 Vehicle',
         description: 'Specialized desert-equipped 4WD vehicles with experienced guides for exploring remote areas.',
@@ -6654,6 +6834,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Safari Vehicle',
         description: 'Open-sided 4x4 vehicles with experienced guides for game drives in national parks.',
@@ -7196,6 +7391,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Safari Vehicle',
         description: 'Open-sided 4x4 vehicles with experienced guides for game drives in national parks.',
@@ -7739,6 +7949,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Safari Vehicle',
         description: 'Specialized 4x4 vehicles with pop-up roofs for game viewing in national parks.',
@@ -8282,6 +8507,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Gorilla Trekking Transfers',
         description: 'Luxury 4x4 vehicles with experienced drivers for transfers to gorilla trekking locations.',
@@ -8825,6 +9065,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Private Car & Driver',
         description: 'Luxury vehicle with professional driver for customized tours and intercity travel.',
@@ -9368,6 +9623,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Private 4x4 Vehicle',
         description: 'Essential for navigating Madagascar\'s challenging roads with experienced drivers.',
@@ -9911,6 +10181,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Private Helicopter Transfers',
         description: 'Luxury helicopter transfers between islands with spectacular aerial views.',
@@ -10454,6 +10739,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Private Car & Driver',
         description: 'Luxury vehicle with professional driver for customized tours and intercity travel.',
@@ -10997,6 +11297,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Private Helicopter Transfers',
         description: 'Luxury helicopter transfers to remote islands and coastal destinations.',
@@ -11540,6 +11855,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Private 4x4 Vehicle',
         description: 'Luxury 4x4 vehicles with experienced drivers for exploring national parks and remote areas.',
@@ -12092,6 +12422,21 @@ export const allCountries: Country[] = [
       }
     ],
     transportation: [
+
+      {
+        type: 'Verified Airport Transfer',
+        description: 'Professional airport transfer service with verified, licensed drivers and premium vehicles for safe and comfortable journeys.',
+        price: '$30-100',
+        route: 'Airport to City Center',
+        link: 'https://www.welcomepickups.com/'
+      },
+      {
+        type: 'Registered Transport Company',
+        description: 'Licensed and insured transportation company providing reliable intercity and intracity travel with professional drivers.',
+        price: '$50-200/day',
+        route: 'City-wide & Regional',
+        link: 'https://www.viator.com/transport'
+      },
       {
         type: 'Private 4x4 Vehicle',
         description: 'Luxury 4x4 vehicles with experienced drivers for exploring wildlife reserves and remote areas.',
