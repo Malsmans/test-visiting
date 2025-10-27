@@ -699,25 +699,29 @@ export const allCountries: Country[] = [
         type: 'Luxury Safari Vehicle',
         description: 'Premium 4WD vehicles with professional guides for game drives.',
         price: '$200-400/day',
-        route: 'Kruger National Park'
+        route: 'Kruger National Park',
+        link: 'https://www.sanparks.org/parks/kruger/'
       },
       {
         type: 'Wine Tour Transport',
         description: 'Private chauffeur service for wine estate visits.',
         price: '$150-300/day',
-        route: 'Cape Winelands'
+        route: 'Cape Winelands',
+        link: 'https://www.winetourscapetown.com/'
       },
       {
         type: 'Blue Train',
         description: 'Luxury train journey between Cape Town and Pretoria.',
         price: '$1500-3000',
-        route: 'Cape Town to Pretoria'
+        route: 'Cape Town to Pretoria',
+        link: 'https://www.bluetrain.co.za/'
       },
       {
         type: 'Helicopter Tours',
         description: 'Scenic helicopter flights over Cape Town and surroundings.',
         price: '$300-800/hour',
-        route: 'Cape Town Peninsula'
+        route: 'Cape Town Peninsula',
+        link: 'https://www.sporthelicopters.co.za/'
       }
     ],
     hotels: [
@@ -1237,25 +1241,29 @@ export const allCountries: Country[] = [
         type: 'Safari Game Drive',
         description: 'Professional guided game drives in luxury safari vehicles.',
         price: '$300-600/day',
-        route: 'Maasai Mara'
+        route: 'Maasai Mara',
+        link: 'https://www.maasaimara.com/'
       },
       {
         type: 'Domestic Flights',
         description: 'Charter flights between safari destinations and coastal areas.',
         price: '$200-500',
-        route: 'Nairobi to Maasai Mara'
+        route: 'Nairobi to Maasai Mara',
+        link: 'https://www.kenyaairways.com/'
       },
       {
         type: 'Coastal Transfers',
         description: 'Luxury transfers between Mombasa airport and beach resorts.',
         price: '$50-150',
-        route: 'Mombasa to Diani Beach'
+        route: 'Mombasa to Diani Beach',
+        link: 'https://www.safarilink.co.ke/'
       },
       {
         type: 'Hot Air Balloon',
         description: 'Scenic balloon flights over the Maasai Mara.',
         price: '$400-600',
-        route: 'Maasai Mara'
+        route: 'Maasai Mara',
+        link: 'https://www.balloon-safaris.com/'
       }
     ],
     hotels: [
@@ -1777,25 +1785,29 @@ export const allCountries: Country[] = [
         type: 'Desert 4WD Tour',
         description: 'Luxury desert expeditions with professional guides and premium camping.',
         price: '$200-500/day',
-        route: 'Marrakech to Sahara'
+        route: 'Marrakech to Sahara',
+        link: 'https://www.morocco-desert-tours.com/'
       },
       {
         type: 'Atlas Mountains Trek',
         description: 'Guided mountain treks with mule support and luxury mountain lodges.',
         price: '$150-300/day',
-        route: 'High Atlas Mountains'
+        route: 'High Atlas Mountains',
+        link: 'https://www.atlasmountainguide.com/'
       },
       {
         type: 'Royal Train',
         description: 'Luxury train service connecting major cities.',
         price: '$50-150',
-        route: 'Casablanca to Marrakech'
+        route: 'Casablanca to Marrakech',
+        link: 'https://www.oncf.ma/en'
       },
       {
         type: 'Private Driver',
         description: 'Chauffeur service with luxury vehicles for city and intercity travel.',
         price: '$100-250/day',
-        route: 'Imperial Cities Circuit'
+        route: 'Imperial Cities Circuit',
+        link: 'https://www.moroccotravelink.com/'
       }
     ],
     hotels: [
@@ -2316,25 +2328,29 @@ export const allCountries: Country[] = [
         type: 'Safari Circuit',
         description: 'Luxury safari vehicles for the Northern Circuit game drives.',
         price: '$400-800/day',
-        route: 'Serengeti-Ngorongoro Circuit'
+        route: 'Serengeti-Ngorongoro Circuit',
+        link: 'https://www.tanzaniaparks.go.tz/'
       },
       {
         type: 'Kilimanjaro Climbing',
         description: 'Guided mountain climbing with porters and luxury camping.',
         price: '$2000-5000',
-        route: 'Machame or Lemosho Route'
+        route: 'Machame or Lemosho Route',
+        link: 'https://www.climbkilimanjaroguide.com/'
       },
       {
         type: 'Island Hopping',
         description: 'Luxury boat transfers between Zanzibar islands.',
         price: '$200-500',
-        route: 'Zanzibar to Pemba'
+        route: 'Zanzibar to Pemba',
+        link: 'https://www.zanzibarferries.com/'
       },
       {
         type: 'Flying Safari',
         description: 'Charter flights between safari destinations.',
         price: '$300-800',
-        route: 'Arusha to Serengeti'
+        route: 'Arusha to Serengeti',
+        link: 'https://www.coastal.co.tz/'
       }
     ],
     hotels: [
@@ -2849,7 +2865,36 @@ export const allCountries: Country[] = [
   link: 'https://www.mauritiusattractions.com/ilot-gabriel-island-p-35.html'
 }
 ],
-    transportation: [],
+    transportation: [
+      {
+        type: 'Airport Transfer',
+        description: 'Luxury airport transfer service to hotels and resorts.',
+        price: '$50-100',
+        route: 'SSR International Airport to resorts',
+        link: 'https://www.mauritiusattractions.com/'
+      },
+      {
+        type: 'Catamaran Cruise',
+        description: 'Full-day catamaran cruises to nearby islands.',
+        price: '$100-200',
+        route: 'Coastal islands tour',
+        link: 'https://www.mauritiuscatamarans.com/'
+      },
+      {
+        type: 'Private Car Rental',
+        description: 'Self-drive or chauffeur-driven car rental.',
+        price: '$60-150/day',
+        route: 'Island-wide',
+        link: 'https://www.mauritiuscarrental.com/'
+      },
+      {
+        type: 'Helicopter Tours',
+        description: 'Scenic helicopter flights over the island.',
+        price: '$400-800',
+        route: 'Island aerial tour',
+        link: 'https://www.airshuttle.mu/'
+      }
+    ],
     hotels: [{
   name: 'One&Only Le Saint Géran',
   description: 'Iconic 5-star resort on its own private peninsula, offering elegant suites & villas, world-class dining, and lush gardens.',
@@ -3355,25 +3400,29 @@ export const allCountries: Country[] = [
         type: 'Coastal Boat Transfer',
         description: 'Luxury boat transfers to pristine islands and coastal destinations.',
         price: '$100-200/day',
-        route: 'Freetown to Banana Islands'
+        route: 'Freetown to Banana Islands',
+        link: 'https://www.visitsierraleone.org/'
       },
       {
         type: 'Rainforest 4WD',
         description: 'Premium 4WD vehicles for rainforest exploration and wildlife viewing.',
         price: '$150-300/day',
-        route: 'Interior Rainforest Regions'
+        route: 'Interior Rainforest Regions',
+        link: 'https://www.visitsierraleone.org/'
       },
       {
         type: 'Helicopter Tours',
         description: 'Scenic helicopter flights over beaches and rainforest.',
         price: '$300-600/hour',
-        route: 'Freetown Peninsula'
+        route: 'Freetown Peninsula',
+        link: 'https://www.visitsierraleone.org/'
       },
       {
         type: 'Luxury Beach Transfer',
         description: 'Private transfers to exclusive beach destinations.',
         price: '$80-150',
-        route: 'Freetown to Peninsula Beaches'
+        route: 'Freetown to Peninsula Beaches',
+        link: 'https://www.visitsierraleone.org/'
       }
     ],
     hotels: [
@@ -3894,25 +3943,29 @@ export const allCountries: Country[] = [
         type: 'Luxury Airport Transfer',
         description: 'Premium chauffeur service with luxury vehicles for airport transfers.',
         price: '$30-80',
-        route: 'Lagos/Abuja Airports to City Center'
+        route: 'Lagos/Abuja Airports to City Center',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Private City Tours',
         description: 'Customized city tours with professional guides and air-conditioned vehicles.',
         price: '$100-250/day',
-        route: 'Lagos/Abuja City Tours'
+        route: 'Lagos/Abuja City Tours',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Domestic Flights',
         description: 'Regular flights connecting major Nigerian cities.',
         price: '$80-200',
-        route: 'Lagos to Abuja/Port Harcourt'
+        route: 'Lagos to Abuja/Port Harcourt',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Safari Vehicles',
         description: '4WD vehicles for national park visits and wildlife viewing.',
         price: '$150-300/day',
-        route: 'Yankari/Kainji National Parks'
+        route: 'Yankari/Kainji National Parks',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -4433,25 +4486,29 @@ export const allCountries: Country[] = [
         type: 'Luxury Airport Transfer',
         description: 'Premium chauffeur service with air-conditioned vehicles.',
         price: '$25-60',
-        route: 'Kotoka International Airport to Accra'
+        route: 'Kotoka International Airport to Accra',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Cultural Heritage Tours',
         description: 'Guided tours to historical sites and cultural attractions.',
         price: '$80-200/day',
-        route: 'Cape Coast Castle Circuit'
+        route: 'Cape Coast Castle Circuit',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Safari Vehicles',
         description: '4WD vehicles for wildlife viewing in national parks.',
         price: '$120-250/day',
-        route: 'Mole National Park'
+        route: 'Mole National Park',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Lake Volta Cruise',
         description: 'Boat cruises on Lake Volta with fishing and sightseeing.',
         price: '$50-150',
-        route: 'Lake Volta'
+        route: 'Lake Volta',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -4972,25 +5029,29 @@ export const allCountries: Country[] = [
         type: 'Domestic Flights',
         description: 'Ethiopian Airlines domestic flights connecting major destinations.',
         price: '$100-300',
-        route: 'Addis Ababa to Lalibela/Axum'
+        route: 'Addis Ababa to Lalibela/Axum',
+        link: 'https://www.ethiopianairlines.com/'
       },
       {
         type: 'Highland Tours',
         description: '4WD vehicles for mountain and highland region exploration.',
         price: '$150-350/day',
-        route: 'Simien Mountains Circuit'
+        route: 'Simien Mountains Circuit',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Danakil Expeditions',
         description: 'Specialized desert expeditions with camping and guides.',
         price: '$200-500/day',
-        route: 'Danakil Depression'
+        route: 'Danakil Depression',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Cultural Tours',
         description: 'Guided tours to historical and cultural sites.',
         price: '$100-250/day',
-        route: 'Historical Circuit'
+        route: 'Historical Circuit',
+        link: 'https://www.ethiopia.travel/'
       }
     ],
     hotels: [
@@ -5511,25 +5572,29 @@ export const allCountries: Country[] = [
         type: 'Charter Flights',
         description: 'Small aircraft transfers between safari camps and destinations.',
         price: '$200-600',
-        route: 'Maun to Delta Camps'
+        route: 'Maun to Delta Camps',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Mokoro Excursions',
         description: 'Traditional dugout canoe trips through Okavango Delta waterways.',
         price: '$50-150/day',
-        route: 'Okavango Delta Channels'
+        route: 'Okavango Delta Channels',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Safari Vehicles',
         description: 'Luxury 4WD vehicles for game drives and park transfers.',
         price: '$200-500/day',
-        route: 'Chobe and Moremi'
+        route: 'Chobe and Moremi',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Boat Safaris',
         description: 'River cruises on Chobe River and Delta waterways.',
         price: '$100-300',
-        route: 'Chobe River'
+        route: 'Chobe River',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -6050,25 +6115,29 @@ export const allCountries: Country[] = [
         type: 'Safari 4x4 Vehicle',
         description: 'Specialized desert-equipped 4WD vehicles with experienced guides for exploring remote areas.',
         price: '$200-500/day',
-        route: 'Namib Desert & Etosha'
+        route: 'Namib Desert & Etosha',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Scenic Flights',
         description: 'Light aircraft flights over the Namib Desert, Skeleton Coast, and other scenic landscapes.',
         price: '$300-800',
-        route: 'Sossusvlei & Skeleton Coast'
+        route: 'Sossusvlei & Skeleton Coast',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Private Transfers',
         description: 'Luxury vehicle transfers between destinations with professional drivers.',
         price: '$150-400',
-        route: 'Windhoek to Swakopmund'
+        route: 'Windhoek to Swakopmund',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Self-Drive 4x4',
         description: 'Premium 4x4 rental vehicles for independent exploration of Namibia\'s landscapes.',
         price: '$100-250/day',
-        route: 'Namibia Classic Circuit'
+        route: 'Namibia Classic Circuit',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -6589,25 +6658,29 @@ export const allCountries: Country[] = [
         type: 'Safari Vehicle',
         description: 'Open-sided 4x4 vehicles with experienced guides for game drives in national parks.',
         price: '$150-350/day',
-        route: 'South Luangwa & Lower Zambezi'
+        route: 'South Luangwa & Lower Zambezi',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Canoe Safari',
         description: 'Multi-day guided canoe trips along the Zambezi River with camping.',
         price: '$200-400/day',
-        route: 'Lower Zambezi'
+        route: 'Lower Zambezi',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Charter Flights',
         description: 'Light aircraft flights between remote safari destinations and major cities.',
         price: '$300-800',
-        route: 'Lusaka to South Luangwa'
+        route: 'Lusaka to South Luangwa',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Private Transfers',
         description: 'Luxury vehicle transfers with professional drivers between major destinations.',
         price: '$100-300',
-        route: 'Livingstone to Victoria Falls'
+        route: 'Livingstone to Victoria Falls',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -7127,25 +7200,29 @@ export const allCountries: Country[] = [
         type: 'Safari Vehicle',
         description: 'Open-sided 4x4 vehicles with experienced guides for game drives in national parks.',
         price: '$150-350/day',
-        route: 'Hwange & Mana Pools'
+        route: 'Hwange & Mana Pools',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Charter Flights',
         description: 'Light aircraft flights between remote safari destinations and major cities.',
         price: '$300-800',
-        route: 'Harare to Mana Pools'
+        route: 'Harare to Mana Pools',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Luxury Transfers',
         description: 'Private vehicle transfers with professional drivers between major tourist destinations.',
         price: '$100-300',
-        route: 'Victoria Falls to Hwange'
+        route: 'Victoria Falls to Hwange',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Houseboat Cruises',
         description: 'Multi-day luxury houseboat experiences on Lake Kariba with wildlife viewing.',
         price: '$200-500/day',
-        route: 'Lake Kariba'
+        route: 'Lake Kariba',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -7666,25 +7743,29 @@ export const allCountries: Country[] = [
         type: 'Safari Vehicle',
         description: 'Specialized 4x4 vehicles with pop-up roofs for game viewing in national parks.',
         price: '$150-300/day',
-        route: 'Queen Elizabeth & Murchison Falls'
+        route: 'Queen Elizabeth & Murchison Falls',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Gorilla Trekking Transfer',
         description: 'Private transfers to gorilla trekking locations with experienced drivers.',
         price: '$200-400',
-        route: 'Kampala to Bwindi'
+        route: 'Kampala to Bwindi',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Domestic Flights',
         description: 'Light aircraft flights between major tourist destinations saving travel time.',
         price: '$200-500',
-        route: 'Entebbe to Kihihi (Bwindi)'
+        route: 'Entebbe to Kihihi (Bwindi)',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Boat Cruises',
         description: 'Wildlife and scenic boat trips on the Nile, Lake Victoria, and other waterways.',
         price: '$50-150',
-        route: 'Murchison Falls Boat Safari'
+        route: 'Murchison Falls Boat Safari',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -8205,25 +8286,29 @@ export const allCountries: Country[] = [
         type: 'Gorilla Trekking Transfers',
         description: 'Luxury 4x4 vehicles with experienced drivers for transfers to gorilla trekking locations.',
         price: '$150-300',
-        route: 'Kigali to Volcanoes National Park'
+        route: 'Kigali to Volcanoes National Park',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Helicopter Tours',
         description: 'Scenic helicopter flights over Rwanda\'s landscapes and national parks.',
         price: '$400-1000',
-        route: 'Kigali to Volcanoes National Park'
+        route: 'Kigali to Volcanoes National Park',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Safari Vehicles',
         description: 'Specialized 4x4 vehicles for game drives in Akagera National Park.',
         price: '$150-300/day',
-        route: 'Akagera National Park'
+        route: 'Akagera National Park',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Boat Cruises',
         description: 'Scenic boat trips on Lake Kivu with stops at islands and beaches.',
         price: '$50-150',
-        route: 'Lake Kivu'
+        route: 'Lake Kivu',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -8744,25 +8829,29 @@ export const allCountries: Country[] = [
         type: 'Private Car & Driver',
         description: 'Luxury vehicle with professional driver for customized tours and intercity travel.',
         price: '$100-250/day',
-        route: 'Dakar City Tour & Beyond'
+        route: 'Dakar City Tour & Beyond',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Boat Excursions',
         description: 'Private boat trips to islands, delta regions, and coastal attractions.',
         price: '$80-200',
-        route: 'Dakar to Gorée Island'
+        route: 'Dakar to Gorée Island',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Desert Excursions',
         description: '4x4 vehicles for desert experiences in Lompoul with experienced guides.',
         price: '$150-300/day',
-        route: 'Lompoul Desert'
+        route: 'Lompoul Desert',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Domestic Flights',
         description: 'Time-saving flights between major destinations and remote areas.',
         price: '$150-300',
-        route: 'Dakar to Ziguinchor (Casamance)'
+        route: 'Dakar to Ziguinchor (Casamance)',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -9283,25 +9372,29 @@ export const allCountries: Country[] = [
         type: 'Private 4x4 Vehicle',
         description: 'Essential for navigating Madagascar\'s challenging roads with experienced drivers.',
         price: '$100-250/day',
-        route: 'Cross-Country Exploration'
+        route: 'Cross-Country Exploration',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Domestic Flights',
         description: 'Time-saving flights between major destinations and remote areas.',
         price: '$200-400',
-        route: 'Antananarivo to Nosy Be'
+        route: 'Antananarivo to Nosy Be',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Boat Transfers',
         description: 'Private boat trips to islands and coastal attractions with experienced captains.',
         price: '$50-200',
-        route: 'Nosy Be to Nosy Iranja'
+        route: 'Nosy Be to Nosy Iranja',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Guided Trekking',
         description: 'Expert guides for hiking in national parks with wildlife spotting.',
         price: '$50-150/day',
-        route: 'National Park Treks'
+        route: 'National Park Treks',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -9822,25 +9915,29 @@ export const allCountries: Country[] = [
         type: 'Private Helicopter Transfers',
         description: 'Luxury helicopter transfers between islands with spectacular aerial views.',
         price: '$500-1500',
-        route: 'Inter-Island Transfers'
+        route: 'Inter-Island Transfers',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Luxury Yacht Charter',
         description: 'Private yacht charters for island hopping and exclusive experiences.',
         price: '$1000-5000/day',
-        route: 'Island Hopping'
+        route: 'Island Hopping',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Private Car & Driver',
         description: 'Luxury vehicle with professional driver for island tours on the main islands.',
         price: '$150-300/day',
-        route: 'Island Tours'
+        route: 'Island Tours',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Fast Ferry',
         description: 'High-speed catamaran services between the main islands.',
         price: '$60-120',
-        route: 'Mahé to Praslin/La Digue'
+        route: 'Mahé to Praslin/La Digue',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -10361,25 +10458,29 @@ export const allCountries: Country[] = [
         type: 'Private Car & Driver',
         description: 'Luxury vehicle with professional driver for customized tours and intercity travel.',
         price: '$100-250/day',
-        route: 'Tunis to Carthage & Sidi Bou Said'
+        route: 'Tunis to Carthage & Sidi Bou Said',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Desert 4x4 Excursions',
         description: 'Private 4x4 vehicles with experienced guides for Sahara desert exploration.',
         price: '$150-300/day',
-        route: 'Southern Tunisia Desert Tours'
+        route: 'Southern Tunisia Desert Tours',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Luxury Yacht Charter',
         description: 'Private yacht charters for coastal exploration and Mediterranean experiences.',
         price: '$500-2000/day',
-        route: 'Mediterranean Coast'
+        route: 'Mediterranean Coast',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Domestic Flights',
         description: 'Time-saving flights between major cities and Djerba Island.',
         price: '$100-200',
-        route: 'Tunis to Djerba'
+        route: 'Tunis to Djerba',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -10900,25 +11001,29 @@ export const allCountries: Country[] = [
         type: 'Private Helicopter Transfers',
         description: 'Luxury helicopter transfers to remote islands and coastal destinations.',
         price: '$500-2000',
-        route: 'Vilanculos to Bazaruto Archipelago'
+        route: 'Vilanculos to Bazaruto Archipelago',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Luxury Boat Transfers',
         description: 'Private boat transfers to islands and coastal destinations.',
         price: '$200-500',
-        route: 'Vilanculos to Benguerra Island'
+        route: 'Vilanculos to Benguerra Island',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Private 4x4 Safari Vehicle',
         description: 'Luxury 4x4 vehicles with experienced guides for wildlife viewing and remote areas.',
         price: '$200-400/day',
-        route: 'Gorongosa National Park'
+        route: 'Gorongosa National Park',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Domestic Flights',
         description: 'Time-saving flights between major destinations and remote areas.',
         price: '$200-500',
-        route: 'Maputo to Pemba'
+        route: 'Maputo to Pemba',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -11439,25 +11544,29 @@ export const allCountries: Country[] = [
         type: 'Private 4x4 Vehicle',
         description: 'Luxury 4x4 vehicles with experienced drivers for exploring national parks and remote areas.',
         price: '$150-300/day',
-        route: 'Cross-Country Exploration'
+        route: 'Cross-Country Exploration',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Lake Cruises',
         description: 'Private boat trips on Lake Malawi with experienced captains and guides.',
         price: '$100-300/day',
-        route: 'Lake Malawi Excursions'
+        route: 'Lake Malawi Excursions',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Domestic Flights',
         description: 'Time-saving flights between major destinations and remote areas.',
         price: '$150-300',
-        route: 'Lilongwe to Likoma Island'
+        route: 'Lilongwe to Likoma Island',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Luxury Transfers',
         description: 'Private vehicle transfers between major destinations with professional drivers.',
         price: '$100-250',
-        route: 'Airport & Hotel Transfers'
+        route: 'Airport & Hotel Transfers',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [
@@ -11987,25 +12096,29 @@ export const allCountries: Country[] = [
         type: 'Private 4x4 Vehicle',
         description: 'Luxury 4x4 vehicles with experienced drivers for exploring wildlife reserves and remote areas.',
         price: '$100-250/day',
-        route: 'Cross-Country Exploration'
+        route: 'Cross-Country Exploration',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Cultural Tours',
         description: 'Guided tours to traditional villages and cultural sites with knowledgeable guides.',
         price: '$80-200/day',
-        route: 'Cultural Circuit'
+        route: 'Cultural Circuit',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Safari Vehicles',
         description: 'Specialized vehicles for game drives in national parks and wildlife reserves.',
         price: '$150-300/day',
-        route: 'Wildlife Reserves'
+        route: 'Wildlife Reserves',
+        link: 'https://www.booking.com/'
       },
       {
         type: 'Airport Transfers',
         description: 'Private transfers from airports to hotels and between destinations.',
         price: '$50-150',
-        route: 'Airport to Hotels'
+        route: 'Airport to Hotels',
+        link: 'https://www.booking.com/'
       }
     ],
     hotels: [

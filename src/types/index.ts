@@ -10,6 +10,7 @@ export interface Transportation {
   description: string;
   price: string;
   route: string;
+  link?: string;
 }
 
 export interface Hotel {
