@@ -353,33 +353,62 @@ const CountryDetails = () => {
               {/* Transportation Tab */}
               {activeTab === 'transport' && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {country.transportation.map((transport, index) => (
-                    <div key={index} className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-2xl shadow-xl border border-amber-500/10 hover:border-amber-500/30 transition-all duration-500 p-6">
-                      <div className="flex items-center space-x-3 mb-4">
-                        <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-3 rounded-xl">
-                          <Car className="h-5 w-5 text-white" />
-                        </div>
-                        <h3 className="text-xl font-bold text-white line-clamp-1">{transport.type}</h3>
-                      </div>
-                      <p className="text-gray-300 mb-4 leading-relaxed text-sm line-clamp-3">{transport.description}</p>
-                      <div className="grid grid-cols-1 gap-3">
-                        <div className="bg-emerald-500/20 rounded-xl p-3 border border-emerald-500/30">
-                          <div className="flex items-center text-emerald-400 font-bold">
-                            <DollarSign className="h-4 w-4 mr-1" />
-                            <span className="text-sm">{transport.price}</span>
+                  {country.transportation.map((transport, index) => {
+                    const TransportCard = transport.link ? 'a' : 'div';
+                    const cardProps = transport.link
+                      ? {
+                          href: transport.link,
+                          target: '_blank',
+                          rel: 'noopener noreferrer',
+                          className: 'group bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-2xl shadow-xl border border-amber-500/10 hover:border-amber-500/50 transition-all duration-500 p-6 cursor-pointer block hover:scale-105'
+                        }
+                      : {
+                          className: 'bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-2xl shadow-xl border border-amber-500/10 hover:border-amber-500/30 transition-all duration-500 p-6'
+                        };
+
+                    return (
+                      <TransportCard key={index} {...cardProps}>
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="flex items-center space-x-3">
+                            <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-3 rounded-xl">
+                              <Car className="h-5 w-5 text-white" />
+                            </div>
+                            <h3 className="text-xl font-bold text-white line-clamp-1 group-hover:text-amber-400 transition-colors">{transport.type}</h3>
                           </div>
-                          <div className="text-emerald-300 text-xs mt-1">Premium Rate</div>
+                          {transport.link && (
+                            <div className="bg-amber-500/20 p-2 rounded-full border border-amber-500/30 group-hover:border-amber-400/50 transition-all flex-shrink-0">
+                              <ExternalLink className="h-4 w-4 text-amber-400 group-hover:text-amber-300" />
+                            </div>
+                          )}
                         </div>
-                        <div className="bg-blue-500/20 rounded-xl p-3 border border-blue-500/30">
-                          <div className="flex items-center text-blue-400 font-medium">
-                            <Navigation className="h-3 w-3 mr-2" />
-                            <span className="text-sm truncate">{transport.route}</span>
+                        <p className="text-gray-300 mb-4 leading-relaxed text-sm line-clamp-3">{transport.description}</p>
+                        <div className="grid grid-cols-1 gap-3">
+                          <div className="bg-emerald-500/20 rounded-xl p-3 border border-emerald-500/30">
+                            <div className="flex items-center text-emerald-400 font-bold">
+                              <DollarSign className="h-4 w-4 mr-1" />
+                              <span className="text-sm">{transport.price}</span>
+                            </div>
+                            <div className="text-emerald-300 text-xs mt-1">Premium Rate</div>
                           </div>
-                          <div className="text-blue-300 text-xs mt-1">Route</div>
+                          <div className="bg-blue-500/20 rounded-xl p-3 border border-blue-500/30">
+                            <div className="flex items-center text-blue-400 font-medium">
+                              <Navigation className="h-3 w-3 mr-2" />
+                              <span className="text-sm truncate">{transport.route}</span>
+                            </div>
+                            <div className="text-blue-300 text-xs mt-1">Route</div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  ))}
+                        {transport.link && (
+                          <div className="mt-4 pt-4 border-t border-white/10">
+                            <div className="flex items-center text-amber-400 text-sm font-medium group-hover:text-amber-300 transition-colors">
+                              <span>Click to book or learn more</span>
+                              <ExternalLink className="h-3 w-3 ml-2" />
+                            </div>
+                          </div>
+                        )}
+                      </TransportCard>
+                    );
+                  })}
                 </div>
               )}
 
