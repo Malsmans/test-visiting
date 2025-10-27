@@ -21,7 +21,7 @@ import { useAnalytics } from '../hooks/useAnalytics';
 const CountryDetails = () => {
   const { countryName } = useParams();
   const [activeTab, setActiveTab] = useState('attractions');
-  const { trackCountryView, trackBooking, updateCountryDuration } = useAnalytics();
+  const { trackCountryView, trackEvent } = useAnalytics();
   
   const country = allCountries.find(
     (c) => c.name.toLowerCase().replace(/\s+/g, '-') === countryName?.toLowerCase()
@@ -31,21 +31,7 @@ const CountryDetails = () => {
     if (country) {
       trackCountryView(country.name);
     }
-
-    // Cleanup: update duration when leaving page
-    return () => {
-      if (country) {
-        updateCountryDuration(country.name);
-      }
-    };
-  }, [country, trackCountryView, updateCountryDuration]);
-
-  // Handle transport booking clicks
-  const handleTransportClick = (transport: any) => {
-    if (transport.link && country) {
-      trackBooking(country.name, transport.type, transport.link);
-    }
-  };
+  }, [country, trackCountryView]);
 
   if (!country) {
     return (
@@ -374,7 +360,6 @@ const CountryDetails = () => {
                           href: transport.link,
                           target: '_blank',
                           rel: 'noopener noreferrer',
-                          onClick: () => handleTransportClick(transport),
                           className: 'group bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-2xl shadow-xl border border-amber-500/10 hover:border-amber-500/50 transition-all duration-500 p-6 cursor-pointer block hover:scale-105'
                         }
                       : {
