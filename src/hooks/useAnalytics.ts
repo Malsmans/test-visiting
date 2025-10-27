@@ -3,12 +3,12 @@ import { trackPageView, trackCountryView, updateCountryDuration, trackBooking } 
 
 export const useAnalytics = () => {
   useEffect(() => {
-    // Track page view on mount - non-blocking - TEMPORARILY DISABLED
-    // setTimeout(() => {
-    //   trackPageView(window.location.pathname, document.title).catch(err => {
-    //     console.error('Analytics error:', err);
-    //   });
-    // }, 0);
+    // Track page view on mount - non-blocking
+    setTimeout(() => {
+      trackPageView(window.location.pathname, document.title).catch(err => {
+        console.error('Analytics error:', err);
+      });
+    }, 100);
   }, []);
 
   return {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Search, MapPin, Menu, X, Crown, Variable as Safari, ExternalLink, ChevronDown } from 'lucide-react';
-import AIChatbot from './AIChatbot';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -569,14 +568,11 @@ const Header = () => {
           </div>
         )}
       </div>
-      
-      {/* AI Chatbot */}
-      <AIChatbot />
-      
+
       {/* Close dropdown when clicking outside */}
       {(isAgenciesOpen || isAirlinesOpen || isAfricanToursOpen) && (
-        <div 
-          className="fixed inset-0 z-40" 
+        <div
+          className="fixed inset-0 z-40"
           onClick={() => {
             setIsAgenciesOpen(false);
             setIsAirlinesOpen(false);
