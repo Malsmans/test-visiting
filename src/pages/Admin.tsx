@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import AdminLogin from '../components/AdminLogin';
-import { RealTimeAdminDashboard } from '../components/RealTimeAdminDashboard';
+import AdminDashboard from '../components/AdminDashboard';
 
 const Admin = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loginError, setLoginError] = useState('');
 
+  // Admin credentials - in production, this should be handled securely on the backend
   const ADMIN_CREDENTIALS = {
     username: 'admin',
     password: 'wildafrica2024'
@@ -29,7 +30,7 @@ const Admin = () => {
     return <AdminLogin onLogin={handleLogin} error={loginError} />;
   }
 
-  return <RealTimeAdminDashboard onLogout={handleLogout} />;
+  return <AdminDashboard onLogout={handleLogout} />;
 };
 
 export default Admin;
