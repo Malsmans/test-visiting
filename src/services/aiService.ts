@@ -5,8 +5,34 @@ export interface AIResponse {
 }
 
 class AIService {
-  async query(message: string, openaiKey?: string, deepseekKey?: string): Promise<AIResponse> {
-    if (!openaiKey && !deepseekKey) {
+  private openaiKey: string = '';
+  private deepseekKey: string = '';
+
+  setApiKey(provider: 'OpenAI' | 'DeepSeek', key: string): void {
+    if (provider === 'OpenAI') {
+      this.openaiKey = key;
+      localStorage.setItem('openai_key', key);
+    } else if (provider === 'DeepSeek') {
+      this.deepseekKey = key;
+      localStorage.setItem('deepseek_key', key);
+    }
+  }
+
+  hasApiKeys(): { openai: boolean; deepseek: boolean } {
+    const savedOpenAI = localStorage.getItem('openai_key');
+    const savedDeepSeek = localStorage.getItem('deepseek_key');
+
+    if (savedOpenAI) this.openaiKey = savedOpenAI;
+    if (savedDeepSeek) this.deepseekKey = savedDeepSeek;
+
+    return {
+      openai: !!this.openaiKey,
+      deepseek: !!this.deepseekKey
+    };
+  }
+
+  async generateResponse(message: string): Promise<AIResponse> {
+    if (!this.openaiKey && !this.deepseekKey) {
       return {
         text: "Please configure your API keys in the settings to use the AI chatbot. You can get OpenAI API keys from https://platform.openai.com/api-keys or DeepSeek API keys from https://platform.deepseek.com/api-keys",
         provider: 'System',
@@ -15,12 +41,12 @@ class AIService {
     }
 
     try {
-      if (openaiKey) {
+      if (this.openaiKey) {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${openaiKey}`
+            'Authorization': `Bearer ${this.openaiKey}`
           },
           body: JSON.stringify({
             model: 'gpt-3.5-turbo',
@@ -49,12 +75,12 @@ class AIService {
         };
       }
 
-      if (deepseekKey) {
+      if (this.deepseekKey) {
         const response = await fetch('https://api.deepseek.com/v1/chat/completions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${deepseekKey}`
+            'Authorization': `Bearer ${this.deepseekKey}`
           },
           body: JSON.stringify({
             model: 'deepseek-chat',
