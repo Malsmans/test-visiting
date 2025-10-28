@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Compass, Hotel, Car, Star, Crown, Sparkles, Award, Variable as Compass2, Mountain, Waves } from 'lucide-react';
+import { MapPin, Compass, Hotel, Car, Star, Crown, Sparkles, Award, Globe, Mountain, Waves } from 'lucide-react';
 import CountryCard from '../components/CountryCard';
 import { featuredCountries } from '../data/countries';
 import { useAnalytics } from '../hooks/useAnalytics';
@@ -25,7 +25,7 @@ const Home = () => {
           <div className="relative z-30 text-center max-w-7xl mx-auto px-4">
             {/* Modern African Badge */}
             <div className="inline-flex items-center space-x-3 african-glass px-8 py-3 mb-12 african-glow">
-              <Compass2 className="h-6 w-6 text-amber-400 african-pulse" />
+              <Globe className="h-6 w-6 text-amber-400 african-pulse" />
               <span className="african-gradient-text font-bold tracking-wider text-lg uppercase font-montserrat">Premium African Experience</span>
               <Crown className="h-6 w-6 text-amber-400 african-pulse" />
             </div>
@@ -56,7 +56,7 @@ const Home = () => {
                 className="african-button group african-glow"
               >
                 <div className="relative flex items-center space-x-3">
-                  <Compass2 className="h-7 w-7" />
+                  <Globe className="h-7 w-7" />
                   <span className="tracking-wide text-lg">BEGIN AFRICAN ADVENTURE</span>
                 </div>
               </Link>
@@ -97,7 +97,7 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center mb-24">
               <div className="inline-flex items-center space-x-3 african-glass px-8 py-3 mb-8 african-glow">
-                <Compass2 className="h-5 w-5 text-amber-400" />
+                <Globe className="h-5 w-5 text-amber-400" />
                 <span className="african-gradient-text font-bold tracking-wider text-lg uppercase">Premium African Services</span>
               </div>
               <h2 className="text-6xl md:text-7xl font-black text-white mb-8 african-float">
@@ -116,7 +116,7 @@ const Home = () => {
               <div className="luxury-card p-8 text-center group luxury-glow universal-edge-glow button-edge-glow breathing-edge">
                 <div className="relative mb-6">
                   <div className="relative bg-gradient-to-br from-amber-500 via-orange-600 to-amber-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl">
-                    <Compass2 className="h-12 w-12 text-white" />
+                    <Globe className="h-12 w-12 text-white" />
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 gradient-text">Wild African Adventures</h3>
@@ -223,7 +223,7 @@ const Home = () => {
               </blockquote>
               <div className="flex items-center justify-center space-x-6">
                 <div className="w-20 h-20 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full flex items-center justify-center african-glow universal-edge-glow rotating-border">
-                  <Compass2 className="h-10 w-10 text-white" />
+                  <Globe className="h-10 w-10 text-white" />
                 </div>
                 <div className="text-left">
                   <div className="text-white font-bold text-xl">Alexandra & James Morrison</div>
