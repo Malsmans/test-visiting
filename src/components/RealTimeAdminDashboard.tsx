@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import {
   Users, Eye, MousePointer, CreditCard, TrendingUp, TrendingDown,
   Globe, Calendar, RefreshCw, LogOut, Activity, DollarSign,
-  Clock, Filter, Download, Moon, Sun, MapPin, ExternalLink
+  Clock, Filter, Download, Moon, Sun, MapPin, ExternalLink, Mail,
+  MessageSquare, CheckCircle, XCircle, AlertCircle
 } from 'lucide-react';
 import { analyticsService } from '../services/analyticsService';
 import { LineChart } from './charts/LineChart';
@@ -36,17 +37,21 @@ export const RealTimeAdminDashboard: React.FC<RealTimeAdminDashboardProps> = ({ 
   const [dailyTrends, setDailyTrends] = useState<any[]>([]);
   const [recentBookings, setRecentBookings] = useState<any[]>([]);
   const [activePages, setActivePages] = useState<any[]>([]);
+  const [newsletterSubscribers, setNewsletterSubscribers] = useState<any[]>([]);
+  const [contactMessages, setContactMessages] = useState<any[]>([]);
 
   const fetchData = async () => {
     try {
-      const [summary, locations, pages, sources, trends, bookings, active] = await Promise.all([
+      const [summary, locations, pages, sources, trends, bookings, active, newsletter, contacts] = await Promise.all([
         analyticsService.getAnalyticsSummary(timeRange),
         analyticsService.getVisitorLocations(timeRange),
         analyticsService.getTopPages(timeRange),
         analyticsService.getTrafficSources(timeRange),
         analyticsService.getDailyTrends(timeRange),
         analyticsService.getRecentBookings(10),
-        analyticsService.getActivePages()
+        analyticsService.getActivePages(),
+        analyticsService.getNewsletterSubscribers(),
+        analyticsService.getContactMessages(50)
       ]);
 
       setAnalyticsData(summary);
@@ -56,6 +61,8 @@ export const RealTimeAdminDashboard: React.FC<RealTimeAdminDashboardProps> = ({ 
       setDailyTrends(trends);
       setRecentBookings(bookings);
       setActivePages(active);
+      setNewsletterSubscribers(newsletter);
+      setContactMessages(contacts);
       setLastUpdate(new Date());
     } catch (error) {
       console.error('Error fetching analytics data:', error);
@@ -151,6 +158,8 @@ export const RealTimeAdminDashboard: React.FC<RealTimeAdminDashboardProps> = ({ 
                 { id: 'locations', label: 'Locations' },
                 { id: 'pages', label: 'Top Pages' },
                 { id: 'bookings', label: 'Bookings' },
+                { id: 'newsletter', label: 'Newsletter' },
+                { id: 'contacts', label: 'Messages' },
                 { id: 'realtime', label: 'Real-time' }
               ].map(tab => (
                 <button
@@ -520,6 +529,220 @@ export const RealTimeAdminDashboard: React.FC<RealTimeAdminDashboardProps> = ({ 
                 ) : (
                   <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                     No active visitors at the moment
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'newsletter' && (
+          <div className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <StatCard
+                title="Total Subscribers"
+                value={newsletterSubscribers.length.toLocaleString()}
+                icon={Mail}
+                subtitle="All time"
+              />
+              <StatCard
+                title="Active Subscribers"
+                value={newsletterSubscribers.filter(s => s.is_active).length.toLocaleString()}
+                icon={CheckCircle}
+                subtitle="Currently subscribed"
+              />
+              <StatCard
+                title="This Month"
+                value={newsletterSubscribers.filter(s => {
+                  const subDate = new Date(s.subscribed_at);
+                  const now = new Date();
+                  return subDate.getMonth() === now.getMonth() && subDate.getFullYear() === now.getFullYear();
+                }).length.toLocaleString()}
+                icon={TrendingUp}
+                subtitle="New subscribers"
+              />
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
+                  <Mail className="h-5 w-5 mr-2 text-blue-600" />
+                  Newsletter Subscribers
+                </h3>
+                <button
+                  onClick={() => {
+                    const csv = ['Email,Subscribed Date,Status,Source\n'];
+                    newsletterSubscribers.forEach(sub => {
+                      csv.push(`${sub.email},${new Date(sub.subscribed_at).toLocaleDateString()},${sub.is_active ? 'Active' : 'Unsubscribed'},${sub.source}\n`);
+                    });
+                    const blob = new Blob(csv, { type: 'text/csv' });
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'newsletter-subscribers.csv';
+                    a.click();
+                  }}
+                  className="flex items-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-all text-sm"
+                >
+                  <Download className="h-4 w-4" />
+                  <span>Export CSV</span>
+                </button>
+              </div>
+
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-gray-200 dark:border-gray-700">
+                      <th className="text-left py-3 px-4 text-sm font-semibold text-gray-600 dark:text-gray-400">Email</th>
+                      <th className="text-left py-3 px-4 text-sm font-semibold text-gray-600 dark:text-gray-400">Subscribed</th>
+                      <th className="text-left py-3 px-4 text-sm font-semibold text-gray-600 dark:text-gray-400">Status</th>
+                      <th className="text-left py-3 px-4 text-sm font-semibold text-gray-600 dark:text-gray-400">Source</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {newsletterSubscribers.map((subscriber, index) => (
+                      <tr key={index} className="border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors">
+                        <td className="py-3 px-4">
+                          <div className="flex items-center space-x-2">
+                            <Mail className="h-4 w-4 text-gray-400" />
+                            <span className="text-gray-900 dark:text-white font-medium">{subscriber.email}</span>
+                          </div>
+                        </td>
+                        <td className="py-3 px-4 text-gray-600 dark:text-gray-400">
+                          {new Date(subscriber.subscribed_at).toLocaleDateString()}
+                        </td>
+                        <td className="py-3 px-4">
+                          {subscriber.is_active ? (
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400">
+                              <CheckCircle className="h-3 w-3 mr-1" />
+                              Active
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-400">
+                              <XCircle className="h-3 w-3 mr-1" />
+                              Unsubscribed
+                            </span>
+                          )}
+                        </td>
+                        <td className="py-3 px-4 text-gray-600 dark:text-gray-400 capitalize">
+                          {subscriber.source.replace('_', ' ')}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'contacts' && (
+          <div className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <StatCard
+                title="Total Messages"
+                value={contactMessages.length.toLocaleString()}
+                icon={MessageSquare}
+                subtitle="All time"
+              />
+              <StatCard
+                title="New Messages"
+                value={contactMessages.filter(m => m.status === 'new').length.toLocaleString()}
+                icon={AlertCircle}
+                subtitle="Awaiting response"
+              />
+              <StatCard
+                title="Replied"
+                value={contactMessages.filter(m => m.status === 'replied').length.toLocaleString()}
+                icon={CheckCircle}
+                subtitle="Responded to"
+              />
+              <StatCard
+                title="This Week"
+                value={contactMessages.filter(m => {
+                  const msgDate = new Date(m.created_at);
+                  const weekAgo = new Date();
+                  weekAgo.setDate(weekAgo.getDate() - 7);
+                  return msgDate >= weekAgo;
+                }).length.toLocaleString()}
+                icon={Calendar}
+                subtitle="Recent messages"
+              />
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
+                <MessageSquare className="h-5 w-5 mr-2 text-blue-600" />
+                Contact Messages
+              </h3>
+
+              <div className="space-y-4">
+                {contactMessages.map((message, index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-5 border border-gray-200 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500 transition-all"
+                  >
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-3 mb-2">
+                          <h4 className="font-semibold text-gray-900 dark:text-white">{message.name}</h4>
+                          {message.status === 'new' && (
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-400">
+                              <AlertCircle className="h-3 w-3 mr-1" />
+                              New
+                            </span>
+                          )}
+                          {message.status === 'replied' && (
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400">
+                              <CheckCircle className="h-3 w-3 mr-1" />
+                              Replied
+                            </span>
+                          )}
+                        </div>
+                        <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-400">
+                          <div className="flex items-center space-x-1">
+                            <Mail className="h-4 w-4" />
+                            <a href={`mailto:${message.email}`} className="hover:text-blue-600 dark:hover:text-blue-400">
+                              {message.email}
+                            </a>
+                          </div>
+                          <div className="flex items-center space-x-1">
+                            <Clock className="h-4 w-4" />
+                            <span>{new Date(message.created_at).toLocaleString()}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        onClick={async () => {
+                          const newStatus = message.status === 'new' ? 'replied' : 'new';
+                          const success = await analyticsService.updateContactMessageStatus(message.id, newStatus);
+                          if (success) {
+                            await fetchData();
+                          }
+                        }}
+                        className="ml-4 px-3 py-1.5 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all"
+                      >
+                        Mark as {message.status === 'new' ? 'Replied' : 'New'}
+                      </button>
+                    </div>
+
+                    {message.subject && (
+                      <div className="mb-2">
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Subject: </span>
+                        <span className="text-sm text-gray-900 dark:text-white">{message.subject}</span>
+                      </div>
+                    )}
+
+                    <div className="mt-3 p-3 bg-white dark:bg-gray-800 rounded-lg">
+                      <p className="text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{message.message}</p>
+                    </div>
+                  </div>
+                ))}
+
+                {contactMessages.length === 0 && (
+                  <div className="text-center py-12 text-gray-500 dark:text-gray-400">
+                    <MessageSquare className="h-12 w-12 mx-auto mb-3 opacity-50" />
+                    <p>No contact messages yet</p>
                   </div>
                 )}
               </div>

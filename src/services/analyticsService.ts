@@ -59,6 +59,24 @@ export interface ActivePage {
   visitors: number;
 }
 
+export interface NewsletterSubscriber {
+  id: string;
+  email: string;
+  subscribed_at: string;
+  is_active: boolean;
+  source: string;
+}
+
+export interface ContactMessage {
+  id: string;
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  status: string;
+  created_at: string;
+}
+
 class AnalyticsService {
   private sessionId: string;
   private userId: string;
@@ -539,6 +557,67 @@ class AnalyticsService {
     } catch (error) {
       console.error('Error getting active pages:', error);
       return [];
+    }
+  }
+
+  async getNewsletterSubscribers(): Promise<NewsletterSubscriber[]> {
+    try {
+      const { data, error } = await supabase
+        .from('newsletter_subscribers')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+      return data || [];
+    } catch (error) {
+      console.error('Error getting newsletter subscribers:', error);
+      return [];
+    }
+  }
+
+  async getContactMessages(limit: number = 50): Promise<ContactMessage[]> {
+    try {
+      const { data, error } = await supabase
+        .from('contact_messages')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .limit(limit);
+
+      if (error) throw error;
+      return data || [];
+    } catch (error) {
+      console.error('Error getting contact messages:', error);
+      return [];
+    }
+  }
+
+  async updateContactMessageStatus(id: string, status: string): Promise<boolean> {
+    try {
+      const { error } = await supabase
+        .from('contact_messages')
+        .update({ status, replied_at: status === 'replied' ? new Date().toISOString() : null })
+        .eq('id', id);
+
+      if (error) throw error;
+      return true;
+    } catch (error) {
+      console.error('Error updating contact message status:', error);
+      return false;
+    }
+  }
+
+  async unsubscribeNewsletter(id: string): Promise<boolean> {
+    try {
+      const { error } = await supabase
+        .from('newsletter_subscribers')
+        .update({ is_active: false })
+        .eq('id', id);
+
+      if (error) throw error;
+      return true;
+    } catch (error) {
+      console.error('Error unsubscribing newsletter:', error);
+      return false;
     }
   }
 
