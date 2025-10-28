@@ -4,6 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
 import ScrollToTop from './components/ScrollToTop';
 import AIChatbot from './components/AIChatbot';
+import GreetingAnimations from './components/GreetingAnimations';
 import Home from './pages/Home';
 import CountryDetails from './pages/CountryDetails';
 import Search from './pages/Search';
@@ -14,6 +15,7 @@ function App() {
     <ThemeProvider>
       <Router>
         <div className="min-h-screen luxury-african-bg">
+          <GreetingAnimations />
           <Header />
           <ScrollToTop />
           <Routes>

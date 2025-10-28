@@ -1,25 +1,25 @@
-/* Modern Luxury Safari Font Imports */
+/* Modern Luxury African Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Luxury African Safari Color Palette */
+/* Luxury African Color Palette */
 :root {
-  --safari-gold: #D4AF37;
-  --safari-bronze: #CD7F32;
-  --safari-copper: #B87333;
-  --safari-earth: #8B4513;
-  --safari-green: #228B22;
-  --safari-black: #1C1C1C;
-  --safari-cream: #F5F5DC;
-  --safari-orange: #FF8C00;
-  --safari-red: #DC143C;
+  --african-gold: #D4AF37;
+  --african-bronze: #CD7F32;
+  --african-copper: #B87333;
+  --african-earth: #8B4513;
+  --african-green: #228B22;
+  --african-black: #1C1C1C;
+  --african-cream: #F5F5DC;
+  --african-orange: #FF8C00;
+  --african-red: #DC143C;
   --luxury-gradient: linear-gradient(135deg, #D4AF37 0%, #CD7F32 25%, #B87333 50%, #8B4513 75%, #D4AF37 100%);
   --african-sunset: linear-gradient(135deg, #FF6B35 0%, #F7931E 25%, #FFD700 50%, #FF8C00 75%, #DC143C 100%);
   --savanna-gradient: linear-gradient(180deg, #8B4513 0%, #CD853F 25%, #DEB887 50%, #F4A460 75%, #D2691E 100%);
-  --luxury-african: linear-gradient(45deg, #1C1C1C 0%, #2F1B14 25%, #8B4513 50%, #CD7F32 75%, #D4AF37 100%);
+  --luxury-african: linear-gradient(135deg, #0F4C5C 0%, #1B5E6F 25%, #2A7A8C 50%, #1B5E6F 75%, #0F4C5C 100%);
 }
 
 /* Ensure all pages have proper background */
@@ -46,7 +46,7 @@
   z-index: -1;
 }
 
-/* Base Styles with Safari Theme */
+/* Base Styles with African Theme */
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +55,7 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #1C1C1C 0%, #2F1B14 25%, #8B4513 50%, #CD7F32 75%, #D4AF37 100%);
+  background: linear-gradient(135deg, #0F4C5C 0%, #1B5E6F 25%, #2A7A8C 50%, #1B5E6F 75%, #0F4C5C 100%);
   min-height: 100vh;
   color: #F5F5DC;
   line-height: 1.7;
@@ -65,7 +65,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Safari Typography */
+/* African Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Modern Safari Scrollbar */
+/* Modern African Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -94,8 +94,8 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, #FFD700, #FFA500);
 }
 
-/* Modern Safari Animations */
-@keyframes safariFloat {
+/* Modern African Animations */
+@keyframes africanFloat {
   0%, 100% {
     transform: translateY(0px);
   }
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@keyframes safariShimmer {
+@keyframes africanShimmer {
   0% {
   }
   0%, 100% {
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@keyframes safariPulse {
+@keyframes africanPulse {
   0%, 100% {
     opacity: 0.8;
   }
@@ -125,19 +125,44 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
   }
 }
-/* Safari Utility Classes */
 
-.safari-float {
-  animation: safariFloat 8s ease-in-out infinite;
+/* Greeting Animation */
+@keyframes greeting {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(50px);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-50px);
+  }
+}
+
+.animate-greeting {
+  animation: greeting 8s ease-in-out forwards;
+}
+
+/* African Utility Classes */
+
+.african-float {
+  animation: africanFloat 8s ease-in-out infinite;
 }
 
 
-.safari-pulse {
-  animation: safariPulse 4s ease-in-out infinite;
+.african-pulse {
+  animation: africanPulse 4s ease-in-out infinite;
 }
 
-/* Safari Gradient Text */
-.safari-gradient-text {
+/* African Gradient Text */
+.african-gradient-text {
   background: linear-gradient(135deg, #FFD700 0%, #FF8C00 25%, #DC143C 50%, #8B0000 75%, #FFD700 100%);
   background-size: 300% 300%;
   -webkit-background-clip: text;
@@ -266,7 +291,7 @@ h1, h2, h3, h4, h5, h6 {
 .country-card-entrance:nth-child(4) { animation-delay: 0.4s; }
 .country-card-entrance:nth-child(5) { animation-delay: 0.5s; }
 .country-card-entrance:nth-child(6) { animation-delay: 0.6s; }
-/* Safari Card Effects */
+/* African Card Effects */
 /* Animated Banner Edges */
 .banner-edge-glow {
   position: relative;
@@ -425,7 +450,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 100%;
   }
 }
-.safari-card {
+.african-card {
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, rgba(28, 28, 28, 0.9), rgba(44, 24, 16, 0.9));
@@ -436,14 +461,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.safari-card:hover {
+.african-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
 }
 
 
-/* Safari Button Styles */
-.safari-button {
+/* African Button Styles */
+.african-button {
   position: relative;
   overflow: hidden;
   background: var(--luxury-gradient);
@@ -462,14 +487,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.safari-button:hover {
+.african-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
 }
 
 
-/* Safari Glass Effect */
-.safari-glass {
+/* African Glass Effect */
+.african-glass {
   background: rgba(28, 28, 28, 0.85);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(212, 175, 55, 0.3);
@@ -477,8 +502,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 20px;
 }
 
-/* Safari Video Background */
-.safari-video-container {
+/* African Video Background */
+.african-video-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -489,14 +514,14 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, #1C1C1C 0%, #2C1810 25%, #3C2415 50%, #2C1810 75%, #1C1C1C 100%);
 }
 
-.safari-video {
+.african-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.4) contrast(1.2) saturate(1.3);
 }
 
-.safari-video-overlay {
+.african-video-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -513,7 +538,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Animal-Themed Particles */
-.safari-particles {
+.african-particles {
   position: fixed;
   top: 0;
   left: 0;
@@ -524,23 +549,23 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-.safari-particle {
+.african-particle {
   position: absolute;
   border-radius: 50%;
   opacity: 0.4;
   box-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
 }
 
-/* Safari Navigation */
-.safari-nav {
+/* African Navigation */
+.african-nav {
   background: rgba(28, 28, 28, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(212, 175, 55, 0.2);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Safari Hero Section */
-.safari-hero {
+/* African Hero Section */
+.african-hero {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -554,8 +579,8 @@ h1, h2, h3, h4, h5, h6 {
   );
 }
 
-/* Safari Content Sections */
-.safari-section {
+/* African Content Sections */
+.african-section {
   background: linear-gradient(
     135deg,
     rgba(28, 28, 28, 0.9) 0%,
@@ -604,21 +629,21 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
   }
   
-  .safari-button {
+  .african-button {
     padding: 12px 24px;
     font-size: 14px;
     letter-spacing: 1px;
   }
   
-  .safari-glass {
+  .african-glass {
     backdrop-filter: blur(5px);
   }
   
-  .safari-nav {
+  .african-nav {
     backdrop-filter: blur(5px);
   }
   
-  .safari-section {
+  .african-section {
     backdrop-filter: blur(3px);
   }
 }
@@ -626,9 +651,9 @@ h1, h2, h3, h4, h5, h6 {
 /* High Contrast Mode Support */
 @media (prefers-contrast: high) {
   :root {
-    --safari-gold: #FFD700;
-    --safari-black: #000000;
-    --safari-cream: #FFFFFF;
+    --african-gold: #FFD700;
+    --african-black: #000000;
+    --african-cream: #FFFFFF;
   }
 }
 
@@ -642,9 +667,9 @@ h1, h2, h3, h4, h5, h6 {
     transition-duration: 0.01ms !important;
   }
   
-  .safari-float,
-  .safari-shimmer,
-  .safari-pulse {
+  .african-float,
+  .african-shimmer,
+  .african-pulse {
     animation: none !important;
   }
 }
@@ -660,23 +685,23 @@ h1, h2, h3, h4, h5, h6 {
     animation-duration: 60s;
   }
   
-  .safari-hero {
+  .african-hero {
     animation-duration: 45s;
   }
   
   .luxury-african-bg::before,
-  .safari-section::before,
-  .safari-hero::before {
+  .african-section::before,
+  .african-hero::before {
     animation-duration: 35s;
   }
   
   /* Reduce pattern complexity on mobile */
-  .safari-glass::before {
+  .african-glass::before {
     opacity: 0.5;
     animation-duration: 20s;
   }
   
-  .safari-card::before {
+  .african-card::before {
     opacity: 0.3;
   }
 }
@@ -684,19 +709,19 @@ h1, h2, h3, h4, h5, h6 {
 /* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
   /* Optimize for touch devices */
-  .safari-card:hover,
-  .safari-button:hover,
-  .safari-glow:hover {
+  .african-card:hover,
+  .african-button:hover,
+  .african-glow:hover {
     transform: none;
     box-shadow: inherit;
   }
   
   /* Reduce animation intensity */
-  .safari-float {
+  .african-float {
     animation-duration: 8s;
   }
   
-  .safari-pulse {
+  .african-pulse {
     animation-duration: 6s;
   }
 }
