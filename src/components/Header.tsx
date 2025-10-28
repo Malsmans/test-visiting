@@ -366,18 +366,25 @@ const Header = () => {
               )}
             </div>
             
-            <Link 
-              to="/search" 
+            <Link
+              to="/search"
               className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
             >
               Countries
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
             </Link>
-            <Link 
-              to="/admin" 
+            <Link
+              to="/about"
               className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
             >
-              Admin
+              About
+              <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
+            </Link>
+            <Link
+              to="/contact"
+              className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+            >
+              Contact
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
             </Link>
             <div className="safari-button px-8 py-3 text-sm safari-glow">
@@ -560,7 +567,21 @@ const Header = () => {
                 className="block px-4 py-3 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-base"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Safari
+                Countries
+              </Link>
+              <Link
+                to="/about"
+                className="block px-4 py-3 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-base"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
+              </Link>
+              <Link
+                to="/contact"
+                className="block px-4 py-3 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-base"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
               </Link>
               <div className="px-4 py-3 safari-button rounded-xl text-center">
                 <span className="text-white font-bold tracking-wider">PREMIUM SAFARI</span>
