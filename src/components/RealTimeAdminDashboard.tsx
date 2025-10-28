@@ -6,9 +6,6 @@ import {
   MessageSquare, CheckCircle, XCircle, AlertCircle
 } from 'lucide-react';
 import { analyticsService } from '../services/analyticsService';
-import { LineChart } from './charts/LineChart';
-import { BarChart } from './charts/BarChart';
-import { DonutChart } from './charts/DonutChart';
 import { useTheme } from '../context/ThemeContext';
 
 interface RealTimeAdminDashboardProps {
