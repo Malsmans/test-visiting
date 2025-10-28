@@ -14,7 +14,10 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="min-h-screen luxury-african-bg">
+        <div className="min-h-screen luxury-african-bg" style={{
+          background: 'linear-gradient(135deg, #0F4C5C 0%, #1B5E6F 25%, #2A7A8C 50%, #1B5E6F 75%, #0F4C5C 100%)',
+          minHeight: '100vh'
+        }}>
           <GreetingAnimations />
           <Header />
           <ScrollToTop />
