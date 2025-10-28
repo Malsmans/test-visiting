@@ -53,7 +53,7 @@ const GreetingAnimations: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-50">
       {floatingGreetings.map((greeting) => (
         <div
           key={greeting.id}
