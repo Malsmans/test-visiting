@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AdminLogin from '../components/AdminLogin';
 import { RealTimeAdminDashboard } from '../components/RealTimeAdminDashboard';
 
@@ -11,10 +11,18 @@ const Admin = () => {
     password: 'wildafrica2024'
   };
 
+  useEffect(() => {
+    const savedAuth = sessionStorage.getItem('admin_authenticated');
+    if (savedAuth === 'true') {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
   const handleLogin = (username: string, password: string) => {
     if (username === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password) {
       setIsAuthenticated(true);
       setLoginError('');
+      sessionStorage.setItem('admin_authenticated', 'true');
     } else {
       setLoginError('Invalid username or password. Please try again.');
     }
@@ -23,13 +31,22 @@ const Admin = () => {
   const handleLogout = () => {
     setIsAuthenticated(false);
     setLoginError('');
+    sessionStorage.removeItem('admin_authenticated');
   };
 
   if (!isAuthenticated) {
-    return <AdminLogin onLogin={handleLogin} error={loginError} />;
+    return (
+      <div className="min-h-screen">
+        <AdminLogin onLogin={handleLogin} error={loginError} />
+      </div>
+    );
   }
 
-  return <RealTimeAdminDashboard onLogout={handleLogout} />;
+  return (
+    <div className="min-h-screen">
+      <RealTimeAdminDashboard onLogout={handleLogout} />
+    </div>
+  );
 };
 
 export default Admin;
