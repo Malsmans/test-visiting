@@ -120,7 +120,7 @@ const embassyWebsites: { [key: string]: { [key: string]: string } } = {
   'Sierra Leone': {
     us: 'https://www.slembassy-usa.org/',
     uk: 'https://www.slhc-uk.org.uk/',
-    general: 'https://www.foreign.gov.sl/'
+    general: 'https://www.evisa.sl/#/home'
   }
 };
 
