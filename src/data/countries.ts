@@ -3509,18 +3509,18 @@ export const allCountries: Country[] = [
         link: 'https://www.visitsierraleone.org/'
      },
      {
-        type: 'Coastal Boat Transfer',
-        description: 'Luxury boat transfers to pristine islands and coastal destinations.',
-        price: '$100-200/day',
-        route: 'Freetown to Banana Islands',
-        link: 'https://www.visitsierraleone.org/'
+        type: 'Seacoach Express Water Taxi',
+        description: 'Luxury boat transfers to and frome Lungai and Conakry destinations.',
+        price: '$45-100',
+        route: 'Freetown to Lungai/Conakry',
+        link: 'https://seacoachexpress.com/home'
       },
       {
-        type: 'Coastal Boat Transfer',
-        description: 'Luxury boat transfers to pristine islands and coastal destinations.',
-        price: '$100-200/day',
-        route: 'Freetown to Banana Islands',
-        link: 'https://www.visitsierraleone.org/'
+        type: 'Seabird Water Taxi',
+        description: 'Luxury boat transfers travel between Freetown and Lungi Airport in Speed and Comfort.',
+        price: '$45-100',
+        route: 'Freetown to Lungi',
+        link: 'https://lungiexpress.com/index.php'
       },
       {
         type: 'Rainforest 4WD',
