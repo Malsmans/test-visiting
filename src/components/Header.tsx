@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Search, MapPin, Menu, X, Crown, Variable as Safari, ExternalLink, ChevronDown } from 'lucide-react';
+import { Search, MapPin, Menu, X, Crown, Variable as Safari, ExternalLink, ChevronDown, BarChart3 } from 'lucide-react';
 import AIChatbot from './AIChatbot';
 
 const Header = () => {
@@ -208,11 +208,20 @@ const Header = () => {
 
           {/* Modern Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
             >
               Home
+              <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
+            </Link>
+
+            <Link
+              to="/admin"
+              className="flex items-center space-x-2 text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+            >
+              <BarChart3 className="h-5 w-5" />
+              <span>Dashboard</span>
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
             </Link>
             
@@ -428,6 +437,15 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
+              </Link>
+
+              <Link
+                to="/admin"
+                className="flex items-center space-x-2 px-4 py-3 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-base"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <BarChart3 className="h-5 w-5" />
+                <span>Dashboard</span>
               </Link>
               
               {/* Mobile Travel Agencies */}

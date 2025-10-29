@@ -145,10 +145,10 @@ const AIChatbot: React.FC = () => {
 
   return (
     <>
-      {/* Chat Toggle Button */}
+      {/* Chat Toggle Button - Left Side */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 group"
+        className="fixed bottom-6 left-6 z-50 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 group"
         title="Ask AI about Africa"
       >
         <MessageCircle className="h-6 w-6 group-hover:animate-bounce" />
@@ -157,9 +157,9 @@ const AIChatbot: React.FC = () => {
         </div>
       </button>
 
-      {/* Chat Window */}
+      {/* Chat Window - Left Side */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-end justify-end p-4">
+        <div className="fixed inset-0 z-50 flex items-end justify-start p-4">
           <div className="bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-amber-500/20 w-full max-w-md h-[600px] flex flex-col">
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-amber-500/20 bg-gradient-to-r from-slate-900/50 to-gray-900/50 rounded-t-2xl">
