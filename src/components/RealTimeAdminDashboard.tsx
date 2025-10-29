@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { analyticsService } from '../services/analyticsService';
 import { useTheme } from '../context/ThemeContext';
+import { LineChart, BarChart, DonutChart } from './Charts';
 
 interface RealTimeAdminDashboardProps {
   onLogout: () => void;
