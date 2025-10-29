@@ -3507,6 +3507,20 @@ export const allCountries: Country[] = [
         price: '$100-200/day',
         route: 'Freetown to Banana Islands',
         link: 'https://www.visitsierraleone.org/'
+     },
+     {
+        type: 'Coastal Boat Transfer',
+        description: 'Luxury boat transfers to pristine islands and coastal destinations.',
+        price: '$100-200/day',
+        route: 'Freetown to Banana Islands',
+        link: 'https://www.visitsierraleone.org/'
+      },
+      {
+        type: 'Coastal Boat Transfer',
+        description: 'Luxury boat transfers to pristine islands and coastal destinations.',
+        price: '$100-200/day',
+        route: 'Freetown to Banana Islands',
+        link: 'https://www.visitsierraleone.org/'
       },
       {
         type: 'Rainforest 4WD',
