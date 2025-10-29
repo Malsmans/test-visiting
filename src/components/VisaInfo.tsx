@@ -28,9 +28,9 @@ const embassyWebsites: { [key: string]: { [key: string]: string } } = {
     general: 'https://www.consulat.ma/'
   },
   'Egypt': {
-    us: 'https://www.egyptembassy.net/',
-    uk: 'https://www.egyptianconsulate.co.uk/',
-    general: 'https://www.mfa.gov.eg/'
+    us: 'https://egyptembassy.net/consular-services/visas-travel/visa-requirements/#tourist-visa-American',
+    uk: 'https://egyptembassy.net/consular-services/visas-travel/visa-requirements/#off-visa',
+    general: 'https://egyptembassy.net/consular-services/visas-travel/visa-requirements/'
   },
   'Ghana': {
     us: 'https://www.ghanaembassy.org/',
