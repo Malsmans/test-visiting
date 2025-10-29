@@ -3554,6 +3554,15 @@ export const allCountries: Country[] = [
         location: 'Tokeh Beach',
         bookingLink: 'https://expedia.com/affiliate/faFfTfZ'
       },
+     {
+        name: 'Hotels In Lungi',
+        description: 'Many flights arrive in Freetown after dark, making an overnight stay at Lungi a practical choice before continuing to Freetown the next day. Check our list of hotels in Lungi if this suits your schedule.',
+        image: 'https://www.visitsierraleone.org/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-28-at-8.22.05-PM.jpeg',
+        rating: 4,
+        price: '$150-200',
+        location: 'Lungi',
+        bookingLink: 'https://www.visitsierraleone.org/hotel-search-popup-map/?location_id=247875&location_name=Lungi'
+      },
       {
         name: 'Radisson Blu Mammy Yoko Hotel',
         description: 'Premium hotel with panoramic views of Aberdeen Beach and luxury facilities.',
