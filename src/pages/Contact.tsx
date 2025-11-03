@@ -37,34 +37,30 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-      const response = await fetch(`${supabaseUrl}/functions/v1/send-contact-email`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${supabaseAnonKey}`
-        },
-        body: JSON.stringify(formData)
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setStatus({
-          type: 'success',
-          message: 'Thank you for your message! We will get back to you soon.'
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert({
+          name: formData.name,
+          email: formData.email.toLowerCase(),
+          subject: formData.subject || 'General Inquiry',
+          message: formData.message,
+          status: 'new'
         });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        throw new Error(data.error || 'Failed to send message');
+
+      if (error) {
+        throw error;
       }
+
+      setStatus({
+        type: 'success',
+        message: 'Thank you for your message! We will get back to you soon.'
+      });
+      setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       console.error('Contact form error:', error);
       setStatus({
         type: 'error',
-        message: 'An error occurred. Please try again or email us directly.'
+        message: 'An error occurred. Please try again or email us directly at Himamaafrica@gmail.com'
       });
     } finally {
       setLoading(false);
