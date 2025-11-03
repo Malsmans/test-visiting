@@ -37,7 +37,7 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const { error } = await supabase
+      const { data, error } = await supabase
         .from('contact_messages')
         .insert({
           name: formData.name,
@@ -45,22 +45,31 @@ const Contact = () => {
           subject: formData.subject || 'General Inquiry',
           message: formData.message,
           status: 'new'
-        });
+        })
+        .select();
 
       if (error) {
+        console.error('Supabase error details:', {
+          message: error.message,
+          details: error.details,
+          hint: error.hint,
+          code: error.code
+        });
         throw error;
       }
 
+      console.log('Contact form submitted successfully:', data);
       setStatus({
         type: 'success',
         message: 'Thank you for your message! We will get back to you soon.'
       });
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
+    } catch (error: any) {
       console.error('Contact form error:', error);
+      const errorMessage = error?.message || 'An error occurred';
       setStatus({
         type: 'error',
-        message: 'An error occurred. Please try again or email us directly at Himamaafrica@gmail.com'
+        message: `${errorMessage}. Please try again or email us directly at Himamaafrica@gmail.com`
       });
     } finally {
       setLoading(false);

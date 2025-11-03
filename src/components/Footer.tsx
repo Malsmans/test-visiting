@@ -20,27 +20,36 @@ const Footer = () => {
     setMessage('');
 
     try {
-      const { error } = await supabase
+      const { data, error } = await supabase
         .from('newsletter_subscribers')
         .insert({
           email: email.toLowerCase(),
           source: 'footer_form',
           is_active: true
-        });
+        })
+        .select();
 
       if (error) {
+        console.error('Newsletter error details:', {
+          message: error.message,
+          details: error.details,
+          hint: error.hint,
+          code: error.code
+        });
+
         if (error.code === '23505') {
           setMessage('You are already subscribed to our newsletter!');
         } else {
-          throw error;
+          setMessage(`Error: ${error.message}. Please try again.`);
         }
       } else {
+        console.log('Newsletter subscription successful:', data);
         setMessage('Thank you for subscribing!');
         setEmail('');
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('Newsletter subscription error:', error);
-      setMessage('An error occurred. Please try again.');
+      setMessage(`An error occurred: ${error?.message || 'Unknown error'}. Please try again.`);
     } finally {
       setLoading(false);
       setTimeout(() => setMessage(''), 5000);
