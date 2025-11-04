@@ -16,6 +16,15 @@ const Footer = () => {
       return;
     }
 
+    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+    const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+    if (!supabaseUrl || !supabaseKey) {
+      setMessage('Configuration error: Please contact support at Himamaafrica@gmail.com');
+      console.error('Missing environment variables:', { supabaseUrl: !!supabaseUrl, supabaseKey: !!supabaseKey });
+      return;
+    }
+
     setLoading(true);
     setMessage('');
 
