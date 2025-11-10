@@ -14,28 +14,28 @@ export const allCountries: Country[] = [
         description: 'The last surviving wonder of the ancient world, these magnificent pyramids have stood for over 4,500 years as testament to ancient Egyptian engineering prowess.',
         image: 'https://cdn-imgix.headout.com/mircobrands-content/image/0232524d20a8623f06be8c46ff07cd74-Pyramids%20Sphinx%20Entrance.jpg?auto=format&w=1069.6000000000001&h=687.6&q=90&fit=crop&ar=14%3A9&crop=faces',
         location: 'Giza, Egypt',
-        link: 'https://www.egypt.travel/en/attractions/giza-pyramid-complex'
+        link: 'https://www.pyramid-of-giza.com/'
       },
       {
         name: 'Valley of the Kings',
         description: 'The royal burial ground of pharaohs, containing over 60 tombs including that of Tutankhamun, adorned with intricate hieroglyphs and ancient treasures.',
         image: 'https://d3rr2gvhjw0wwy.cloudfront.net/uploads/mandators/75428/cms/579135/940x500-1-50-908600808d8bb99f0302b662a3ddcda0.jpg',
         location: 'Luxor, Egypt',
-        link: 'https://www.egypt.travel/en/attractions/valley-of-the-kings'
+        link: 'https://egymonuments.com/locations/details/ValleyOfKings'
       },
       {
         name: 'Abu Simbel Temples',
         description: 'Colossal rock temples built by Ramesses II, relocated stone by stone to save them from flooding, representing the pinnacle of ancient Egyptian architecture.',
         image: 'https://deih43ym53wif.cloudfront.net/temple-pharaoh-rameses-abu-simbel-egypt-aswan-shutterstock_1681467283.jpg_5722520688.jpg',
         location: 'Aswan, Egypt',
-        link: 'https://www.egypt.travel/en/attractions/abu-simbel-temples'
+        link: 'https://www.emotoursegypt.com/en/activity/322304/abu-simbel-temple-entry-tickets?gttd_lang=en-NL&gttd_currency=EUR&gttd_surface=search&gttd_funnel=nav&gttd_product_id=act_62ab59f0-cdb0-4e1a-8d91-8162d28bb647&gttd_option_id=opt_02b28f00-e708-4de2-bb97-558b0b112c39&gttd_click_source='
       },
       {
         name: 'Karnak Temple Complex',
         description: 'The largest religious building ever constructed, a vast complex of temples, chapels, and pylons dedicated to the Theban gods and pharaohs.',
         image: 'https://d3rr2gvhjw0wwy.cloudfront.net/uploads/mandators/49581/file-manager/karnak-temple.jpg',
         location: 'Luxor, Egypt',
-        link: 'https://www.egypt.travel/en/attractions/karnak-temple'
+        link: 'https://www.getyourguide.com/-t601680?locale=en-NL&currency=EUR&surface=search&funnel=nav&google_ads_click_source=&product_id=601680&option_id=1010806&partner_id=CD951'
       },
       {
         name: 'Red Sea Coral Reefs',
@@ -49,21 +49,21 @@ export const allCountries: Country[] = [
         description: 'Sail the legendary Nile River aboard luxury vessels, witnessing ancient temples and monuments while enjoying world-class amenities and service.',
         image: 'https://specials-images.forbesimg.com/imageserve/64eed8a7b0e47ddfc4d8ae1f/0x0.jpg',
         location: 'Nile River, Egypt',
-        link: 'https://www.egypt.travel/en/things-to-do/nile-cruises'
+        link: 'https://www.getyourguide.com/-l35186/?cmp=ga&campaign_id=22737082497&adgroup_id=185641278364&target_id=kwd-149678756&loc_physical_ms=1010483&match_type=e&ad_id=770040254051&keyword=nile%20river%20cruise&ad_position=&feed_item_id=&placement=&device=c&assetgroup_id=&partner_id=CD951&gad_source=1&gad_campaignid=22737082497&gbraid=0AAAAADmzJCM0foLpp5_ozYHbuHx2vEaPj&gclid=CjwKCAiAt8bIBhBpEiwAzH1w6cFxBpk3BznylScbuBW7jDIWhxFkO6EP6ITO74lMZQB3TaAo90sSURoCZt8QAvD_BwE'
       },
       {
         name: 'Egyptian Museum',
         description: 'Home to the world\'s most extensive collection of ancient Egyptian artifacts, including treasures from Tutankhamun\'s tomb and royal mummies.',
         image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/0b/ae/20/img-20170420-220949-228.jpg?w=900&h=500&s=1',
         location: 'Cairo, Egypt',
-        link: 'https://www.egypt.travel/en/attractions/egyptian-museum'
+        link: 'https://egyptianmuseumcairo.eg/'
       },
       {
         name: 'White Desert National Park',
         description: 'Surreal landscape of chalk rock formations sculpted by wind and sand, creating an otherworldly desert experience under starlit skies.',
         image: 'https://lp-cms-production.imgix.net/2023-06/shutterstockRF89650903.jpg?w=1920&h=640&fit=crop&crop=faces%2Cedges&auto=format&q=75',
         location: 'Western Desert, Egypt',
-        link: 'https://www.egypt.travel/en/attractions/white-desert'
+        link: 'https://www.getyourguide.com/-l181961/?cmp=ga&campaign_id=22737082308&adgroup_id=185601169167&target_id=kwd-298626438175&loc_physical_ms=1010483&match_type=b&ad_id=761901967339&keyword=white%20desert&ad_position=&feed_item_id=&placement=&device=c&assetgroup_id=&partner_id=CD951&gad_source=1&gad_campaignid=22737082308&gbraid=0AAAAADmzJCNpe9AbxC7gt4zeBXC8NJzNn&gclid=CjwKCAiAt8bIBhBpEiwAzH1w6WSNeHNCWq3qqxzTIqLwFXL-wu38JD4yMXKAdn5Yeww1kCSb51ngihoCAXYQAvD_BwE'
       },
       {
         name: 'Philae Temple',
