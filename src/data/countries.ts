@@ -70,42 +70,42 @@ export const allCountries: Country[] = [
         description: 'Beautiful temple complex dedicated to the goddess Isis, relocated to Agilkia Island and illuminated by spectacular sound and light shows.',
         image: 'https://literarytoursegypt.com/wp-content/uploads/2022/08/Temple-of-Philae-Sunset-1024x683.jpg',
         location: 'Aswan, Egypt',
-        link: 'https://www.egypt.travel/en/attractions/philae-temple'
+        link: 'https://egymonuments.com/details/PhilaeTemple'
       },
       {
         name: 'Alexandria Library',
         description: 'Modern revival of the ancient Library of Alexandria, featuring cutting-edge architecture and serving as a center for learning and cultural exchange.',
         image: 'https://www.egypttoursportal.com/images/2017/11/Alexandria-Library-Egypt-Tours-Portal.jpg',
         location: 'Alexandria, Egypt',
-        link: 'https://www.bibalex.org/en/default'
+        link: 'https://www.bibalex.org/en/page/visits'
       },
       {
         name: 'Siwa Oasis',
         description: 'Remote desert oasis with natural springs, ancient ruins, and traditional Berber culture, offering an authentic escape from modern life.',
         image: 'https://www.quitandgotravel.com/wp-content/uploads/sites/8/2022/04/Siwa-Oasis-Shali-Fortress-Banner.jpg',
         location: 'Western Desert, Egypt',
-        link: 'https://www.egypt.travel/en/attractions/siwa-oasis'
+        link: 'https://www.tripadvisor.com/Attraction_Review-g303857-d23699374-Reviews-Siwa_Oasis_Tour-Siwa_Matrouh_Governorate.html'
       },
       {
         name: 'Dendera Temple',
         description: 'Exceptionally well-preserved temple complex dedicated to Hathor, featuring stunning astronomical ceiling paintings and intricate hieroglyphs.',
         image: 'https://d3rr2gvhjw0wwy.cloudfront.net/uploads/activity_headers/324692/2000x2000-0-70-2d0387950eb608e6d5669b3aaae13134.jpg',
         location: 'Qena, Egypt',
-        link: 'https://www.egypt.travel/en/attractions/dendera-temple'
+        link: 'https://www.tripadvisor.com/Attraction_Review-g1597319-d472016-Reviews-Dendera_Temple_Complex-Dendera_Qena_Governorate_Nile_River_Valley.html'
       },
       {
         name: 'Edfu Temple',
         description: 'Best-preserved temple in Egypt, dedicated to the falcon god Horus, showcasing magnificent Ptolemaic architecture and detailed reliefs.',
         image: 'https://upload.wikimedia.org/wikipedia/commons/7/7f/Temple_Edfou_Egypte.jpg',
         location: 'Edfu, Egypt',
-        link: 'https://www.egypt.travel/en/attractions/edfu-temple'
+        link: 'https://evendo.com/product/from-luxor-private-day-trip-to-edfu-and-kom-ombo/7237379?utm_source=google&utm_medium=gttd&utm_campaign=nav&language=en-NL&currency=EUR&surface=search&funnel=nav'
       },
       {
         name: 'Saint Catherine\'s Monastery',
         description: 'Ancient Christian monastery at the foot of Mount Sinai, housing priceless manuscripts and icons in one of the world\'s oldest working monasteries.',
         image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/09/e2/62/caption.jpg?w=1200&h=-1&s=1',
         location: 'South Sinai, Egypt',
-        link: 'https://www.egypt.travel/en/attractions/saint-catherines-monastery'
+        link: 'https://www.hellotickets.com/en-en/egypt/sharm-el-sheikh/mount-sinai-day-trip/a/pa-6370?htgooglettd=true&surface=search&funnel=nav&ads-source&language=en-NL&currency=EUR&exp=expxan25'
       },
       {
         name: 'Ras Mohammed National Park',
@@ -117,37 +117,37 @@ export const allCountries: Country[] = [
       {
         name: 'Temple of Kom Ombo',
         description: 'Unique double temple dedicated to both Sobek the crocodile god and Horus the falcon god, featuring ancient medical instruments reliefs.',
-        image: 'https://h1.nu/17Wus',
+        image: 'https://egymonuments.com/storage/events/May2024/6ilSf7pIgNVESwWGkJvw.jpg',
         location: 'Kom Ombo, Egypt',
-        link: 'https://h1.nu/1cpMS'
+        link: 'https://egymonuments.com/details/KomOmboTemple'
       },
       {
         name: 'Dahshur Pyramids',
         description: 'Home to the Bent Pyramid and Red Pyramid, showcasing the evolution of pyramid construction techniques in a less crowded setting.',
-        image: 'https://h1.nu/17Wvg',
+        image: 'https://egymonuments.com/storage/events/May2024/RM0iPcSbhIpg3uYaBnYz.jpg',
         location: 'Dahshur, Egypt',
-        link: 'https://h1.nu/17Wv9'
+        link: 'https://egymonuments.com/details/Dahshur'
       },
       {
         name: 'Luxor Temple',
         description: 'Magnificent temple complex in the heart of Luxor, beautifully illuminated at night and connected to Karnak Temple by the Avenue of Sphinxes.',
-        image: 'https://h1.nu/17Wv-',
+        image: 'https://egymonuments.com/storage/events/May2024/b7LjSMxi1wDiDPpznoa0.jpg',
         location: 'Luxor, Egypt',
-        link: 'https://h1.nu/1cpOr'
+        link: 'https://egymonuments.com/details/LuxorTemple'
       },
       {
         name: 'Bahariya Oasis',
         description: 'Desert oasis featuring hot springs, ancient tombs, and the famous Golden Mummies, perfect for luxury desert camping experiences.',
-        image: 'https://h1.nu/17Wxl',
+        image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/44/f4/63/bahariya-oasis.jpg?w=1000&h=-1&s=1',
         location: 'Western Desert, Egypt',
-        link: 'https://www.memphistours.com/egypt/egypt-wikis/oases-and-the-western-desert/wiki/baharia-oasis'
+        link: 'https://www.tripadvisor.com/Attraction_Review-g303850-d460052-Reviews-Bahariya_Oasis_Guide-Bawiti_Giza_Governorate.html'
       },
       {
         name: 'Coptic Cairo',
         description: 'Historic Christian quarter featuring ancient churches, the Coptic Museum, and the Hanging Church, showcasing Egypt\'s Christian heritage.',
         image: 'https://ucarecdn.com/6fd78d6e-80f0-43a8-a3ec-e459843b528d/-/crop/678x381/0,31/-/preview/',
         location: 'Cairo, Egypt',
-        link: 'https://www.memphistours.com/egypt/egypt-wikis/cairo-attractions/wiki/old-cairo'
+        link: 'https://www.tripadvisor.com/Attraction_Review-g294201-d459916-Reviews-Coptic_Cairo-Cairo_Cairo_Governorate.html'
       }
     ],
     transportation: [
