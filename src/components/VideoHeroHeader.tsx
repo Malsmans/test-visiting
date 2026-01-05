@@ -15,13 +15,13 @@ const VideoHeroHeader = () => {
 
   const slides: VideoSlide[] = [
     {
-      url: '<iframe width="1128" height="635" src="https://www.youtube.com/embed/dCGHkJlF2Gg" title="African Savanna | Drone Footage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+      url: 'https://media.gettyimages.com/id/540464346/nl/video/het-achtervolgen-van-het-beslag-over-de-vlakte.mp4?s=mp4-640x640-gi&k=20&c=2MzEgSRV0afepphJdBtJyC8VTMrx8ISF3x-lHy2z904=',
       title: 'African Savanna Safari',
       description: 'Witness the majesty of wild animals in their natural habitat',
       fallbackColor: 'from-amber-900 to-orange-800'
     },
     {
-      url: '<a href="https://www.vecteezy.com/video/74292994-breathtaking-aerial-view-of-a-coastal-landscape-at-sunset-with-ocean-waves-and-mountains">breathtaking-aerial-view-of-a-coastal-landscape-at-sunset-with-ocean-waves-and-mountains Stock Videos by Vecteezy</a>',
+      url: 'https://media.gettyimages.com/id/2198666647/nl/video/pungume-islands-white-sand-beach-with-sunbathing-tourists-near-turquoise-waters-surrounded-by.mp4?s=mp4-640x640-gi&k=20&c=BffYwT2ah2vLaQXasxLC5w-FE1T5don4_JVlUgdQEm0=',
       title: 'Pristine African Beaches',
       description: 'Discover tropical paradises with crystal-clear waters',
       fallbackColor: 'from-blue-900 to-cyan-800'
@@ -33,13 +33,13 @@ const VideoHeroHeader = () => {
       fallbackColor: 'from-teal-900 to-green-800'
     },
     {
-      url: 'https://youtu.be/jtDpV2bTh1k',
+      url: 'https://media.gettyimages.com/id/1304256172/nl/video/toneel-mening-van-piramides-in-gizeh-bij-zonsondergang.mp4?s=mp4-640x640-gi&k=20&c=oxeT4H8bJN-M4gdExI6SseAu6nDCXe_uBTI5AU2lHE4=',
       title: 'Modern African Cities',
       description: 'Explore vibrant urban centers and contemporary culture',
       fallbackColor: 'from-gray-900 to-slate-800'
     },
     {
-      url: 'https://videos.pexels.com/video-files/3373028/3373028-hd_1920_1080_30fps.mp4',
+      url: 'https://media.gettyimages.com/id/1480847686/nl/video/samburu-men-in-local-dresses-performs-tribal-songs.mp4?s=mp4-640x640-gi&k=20&c=blMR31YAfEIg9fU_e-uQUXkCog2-udmAfHC2KpxWDt4=',
       title: 'Traditional African Culture',
       description: 'Connect with heritage, communities, and time-honored traditions',
       fallbackColor: 'from-amber-800 to-yellow-900'
