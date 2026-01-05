@@ -15,25 +15,25 @@ const VideoHeroHeader = () => {
 
   const slides: VideoSlide[] = [
     {
-      url: 'https://videos.pexels.com/video-files/5728288/5728288-hd_1920_1080_25fps.mp4',
+      url: '<iframe width="1128" height="635" src="https://www.youtube.com/embed/dCGHkJlF2Gg" title="African Savanna | Drone Footage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
       title: 'African Savanna Safari',
       description: 'Witness the majesty of wild animals in their natural habitat',
       fallbackColor: 'from-amber-900 to-orange-800'
     },
     {
-      url: 'https://videos.pexels.com/video-files/3209835/3209835-hd_1920_1080_30fps.mp4',
+      url: '<a href="https://www.vecteezy.com/video/74292994-breathtaking-aerial-view-of-a-coastal-landscape-at-sunset-with-ocean-waves-and-mountains">breathtaking-aerial-view-of-a-coastal-landscape-at-sunset-with-ocean-waves-and-mountains Stock Videos by Vecteezy</a>',
       title: 'Pristine African Beaches',
       description: 'Discover tropical paradises with crystal-clear waters',
       fallbackColor: 'from-blue-900 to-cyan-800'
     },
     {
-      url: 'https://videos.pexels.com/video-files/3931603/3931603-hd_1920_1080_30fps.mp4',
+      url: 'https://media.gettyimages.com/id/1324794570/nl/video/aerial-view-of-victoria-falls-zimbabwe-drone-4k.mp4?s=mp4-640x640-gi&k=20&c=Dq_mfZNl6KIFuCKgOTg8RR3rIJn277JQYDweGeH_vTc=',
       title: 'Majestic Waterfalls',
       description: 'Experience the raw power and beauty of nature',
       fallbackColor: 'from-teal-900 to-green-800'
     },
     {
-      url: 'https://videos.pexels.com/video-files/3408505/3408505-hd_1920_1080_30fps.mp4',
+      url: 'https://youtu.be/jtDpV2bTh1k',
       title: 'Modern African Cities',
       description: 'Explore vibrant urban centers and contemporary culture',
       fallbackColor: 'from-gray-900 to-slate-800'
