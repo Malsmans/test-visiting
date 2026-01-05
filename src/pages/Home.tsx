@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Compass, Hotel, Car, Star, Crown, Sparkles, Award, Globe, Mountain, Waves } from 'lucide-react';
 import CountryCard from '../components/CountryCard';
+import VideoHeroHeader from '../components/VideoHeroHeader';
 import { featuredCountries } from '../data/countries';
 import { useAnalytics } from '../hooks/useAnalytics';
 
@@ -14,10 +15,13 @@ const Home = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden luxury-african-bg">
+      {/* Video Hero Header */}
+      <VideoHeroHeader />
+
       {/* Content Overlay */}
       <div className="relative z-20">
         {/* Hero Section */}
-        <section className="luxury-hero min-h-screen flex items-center justify-center relative">
+        <section className="min-h-screen flex items-center justify-center relative">
           {/* Modern African Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
           <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 via-transparent to-orange-900/20" />
