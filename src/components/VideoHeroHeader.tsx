@@ -5,6 +5,7 @@ interface VideoSlide {
   url: string;
   title: string;
   description: string;
+  fallbackColor: string;
 }
 
 const VideoHeroHeader = () => {
@@ -14,29 +15,34 @@ const VideoHeroHeader = () => {
 
   const slides: VideoSlide[] = [
     {
-      url: 'https://videos.pexels.com/video-files/17220099/17220099-hd_1920_1080_30fps.mp4',
+      url: 'https://videos.pexels.com/video-files/5728288/5728288-hd_1920_1080_25fps.mp4',
       title: 'African Savanna Safari',
-      description: 'Witness the majesty of wild animals in their natural habitat'
+      description: 'Witness the majesty of wild animals in their natural habitat',
+      fallbackColor: 'from-amber-900 to-orange-800'
     },
     {
-      url: 'https://videos.pexels.com/video-files/2795325/2795325-hd_1920_1080_30fps.mp4',
+      url: 'https://videos.pexels.com/video-files/3209835/3209835-hd_1920_1080_30fps.mp4',
       title: 'Pristine African Beaches',
-      description: 'Discover tropical paradises with crystal-clear waters'
+      description: 'Discover tropical paradises with crystal-clear waters',
+      fallbackColor: 'from-blue-900 to-cyan-800'
     },
     {
-      url: 'https://videos.pexels.com/video-files/8934425/8934425-hd_1920_1080_30fps.mp4',
+      url: 'https://videos.pexels.com/video-files/3931603/3931603-hd_1920_1080_30fps.mp4',
       title: 'Majestic Waterfalls',
-      description: 'Experience the raw power and beauty of nature'
+      description: 'Experience the raw power and beauty of nature',
+      fallbackColor: 'from-teal-900 to-green-800'
     },
     {
-      url: 'https://videos.pexels.com/video-files/3993809/3993809-hd_1920_1080_30fps.mp4',
+      url: 'https://videos.pexels.com/video-files/3408505/3408505-hd_1920_1080_30fps.mp4',
       title: 'Modern African Cities',
-      description: 'Explore vibrant urban centers and contemporary culture'
+      description: 'Explore vibrant urban centers and contemporary culture',
+      fallbackColor: 'from-gray-900 to-slate-800'
     },
     {
-      url: 'https://videos.pexels.com/video-files/4622685/4622685-hd_1920_1080_30fps.mp4',
+      url: 'https://videos.pexels.com/video-files/3373028/3373028-hd_1920_1080_30fps.mp4',
       title: 'Traditional African Culture',
-      description: 'Connect with heritage, communities, and time-honored traditions'
+      description: 'Connect with heritage, communities, and time-honored traditions',
+      fallbackColor: 'from-amber-800 to-yellow-900'
     }
   ];
 
@@ -72,17 +78,19 @@ const VideoHeroHeader = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={`absolute inset-0 transition-opacity duration-1000 bg-gradient-to-br ${slide.fallbackColor} ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
             <video
+              key={`${index}-${slide.url}`}
               src={slide.url}
               className="w-full h-full object-cover"
               autoPlay={index === currentSlide}
               muted={isMuted}
               loop
               playsInline
+              crossOrigin="anonymous"
             />
           </div>
         ))}
