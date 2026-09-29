@@ -6,18 +6,18 @@ const About = () => {
   useAnalytics();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black">
+    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
       {/* Hero Section */}
       <div className="relative h-[500px] overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
         </div>
         <div className="relative h-full flex items-center justify-center text-center px-4">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight drop-shadow-2xl">
               About <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Mother Africa</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white leading-relaxed drop-shadow-lg">
               Your Gateway to Authentic African Experiences
             </p>
           </div>
@@ -30,8 +30,8 @@ const About = () => {
         <div className="mb-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Our Story</h2>
-              <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+              <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
                   Mother Africa was born from a passion to showcase the incredible diversity, beauty, and richness of the African continent. We believe that Africa is not just a destination—it's an experience that transforms lives.
                 </p>
@@ -55,14 +55,14 @@ const About = () => {
 
         {/* Values Section */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">Our Core Values</h2>
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Our Core Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-8 hover:border-amber-500/40 transition-all duration-300">
               <div className="bg-gradient-to-br from-amber-500 to-orange-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <Heart className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Authenticity</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Authenticity</h3>
+              <p className="text-gray-600 leading-relaxed">
                 We showcase the real Africa, celebrating its diverse cultures, traditions, and natural beauty without filters or stereotypes.
               </p>
             </div>
@@ -71,8 +71,8 @@ const About = () => {
               <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <Globe className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Sustainability</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Sustainability</h3>
+              <p className="text-gray-600 leading-relaxed">
                 We promote responsible tourism that protects the environment and supports local communities across the continent.
               </p>
             </div>
@@ -81,8 +81,8 @@ const About = () => {
               <div className="bg-gradient-to-br from-blue-500 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <Award className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Excellence</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Excellence</h3>
+              <p className="text-gray-600 leading-relaxed">
                 We partner with the best travel agencies, tour operators, and airlines to ensure exceptional experiences for every traveler.
               </p>
             </div>
@@ -91,58 +91,58 @@ const About = () => {
 
         {/* What We Offer */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">What We Offer</h2>
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">What We Offer</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 hover:bg-gray-100 transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <div className="bg-gradient-to-br from-amber-500 to-orange-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Target className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">Comprehensive Destination Guides</h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Comprehensive Destination Guides</h3>
+                  <p className="text-gray-600 leading-relaxed">
                     Detailed information about 54 African countries including attractions, culture, weather, visa requirements, and travel tips.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 hover:bg-gray-100 transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Users className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">Trusted Partner Network</h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Trusted Partner Network</h3>
+                  <p className="text-gray-600 leading-relaxed">
                     Connections to reputable travel agencies, airlines, and tour operators worldwide for seamless booking experiences.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 hover:bg-gray-100 transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Sparkles className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">Personalized Recommendations</h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Personalized Recommendations</h3>
+                  <p className="text-gray-600 leading-relaxed">
                     AI-powered travel assistant to help you discover destinations that match your interests and travel style.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 hover:bg-gray-100 transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <div className="bg-gradient-to-br from-purple-500 to-pink-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Globe className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">Real-Time Information</h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Real-Time Information</h3>
+                  <p className="text-gray-600 leading-relaxed">
                     Up-to-date travel advisories, weather forecasts, local events, and safety information for informed travel decisions.
                   </p>
                 </div>
@@ -154,7 +154,7 @@ const About = () => {
         {/* Call to Action */}
         <div className="bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl p-12 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore Africa?</h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto drop-shadow">
             Join thousands of travelers who have discovered the magic of Africa through Mother Africa. Start your journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -166,7 +166,7 @@ const About = () => {
             </a>
             <a
               href="/contact"
-              className="px-8 py-4 bg-black/30 text-white font-bold rounded-lg hover:bg-black/40 transition-all duration-300 border-2 border-white/30"
+              className="px-8 py-4 bg-white/20 text-white font-bold rounded-lg hover:bg-white/30 transition-all duration-300 border-2 border-white/40 backdrop-blur-sm"
             >
               Contact Us
             </a>

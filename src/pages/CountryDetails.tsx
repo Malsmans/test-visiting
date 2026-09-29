@@ -36,12 +36,12 @@ const CountryDetails = () => {
   if (!country) {
     return (
       <div className="min-h-screen flex items-center justify-center relative">
-        <div className="text-center relative z-10 bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-amber-500/20">
+        <div className="text-center relative z-10 bg-white border border-amber-600/20 shadow-lg rounded-3xl p-12">
           <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-4 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6">
             <Crown className="h-10 w-10 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-white mb-6">Destination Not Found</h1>
-          <p className="text-gray-400 mb-8">This luxury destination is not available in our collection.</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">Destination Not Found</h1>
+          <p className="text-gray-500 mb-8">This luxury destination is not available in our collection.</p>
           <Link 
             to="/search" 
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-500 hover:to-yellow-500 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
@@ -79,7 +79,7 @@ const CountryDetails = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
               <Link
                 to="/search"
-                className="inline-flex items-center text-white hover:text-amber-300 transition-colors mb-8 bg-black/40 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20 hover:border-amber-400/40"
+                className="inline-flex items-center text-white hover:text-amber-300 transition-colors mb-8 bg-white/80 backdrop-blur-sm text-gray-900 hover:text-amber-600 px-6 py-3 rounded-full border border-gray-200 hover:border-amber-600/40"
               >
                 <ArrowLeft className="h-5 w-5 mr-2" />
                 <span className="font-medium">Back to Collection</span>
@@ -92,26 +92,26 @@ const CountryDetails = () => {
                 </div>
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-amber-400 fill-current" />
+                    <Star key={i} className="h-5 w-5 text-amber-400 fill-current drop-shadow" />
                   ))}
                 </div>
               </div>
               
               <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 drop-shadow-2xl">
-                <span className="bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent drop-shadow">
                   {country.name}
                 </span>
               </h1>
-              <p className="text-2xl text-gray-200 max-w-4xl leading-relaxed font-light drop-shadow-lg">
+              <p className="text-2xl text-white max-w-4xl leading-relaxed font-light drop-shadow-lg">
                 {country.description}
               </p>
               
               <div className="flex items-center space-x-6 mt-8">
-                <div className="flex items-center space-x-2 text-amber-300">
+                <div className="flex items-center space-x-2 text-amber-300 drop-shadow">
                   <Award className="h-5 w-5" />
-                  <span className="font-medium">{country.attractions.length} Exclusive Experiences</span>
+                  <span className="font-medium drop-shadow">{country.attractions.length} Exclusive Experiences</span>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-300">
+                <div className="flex items-center space-x-2 text-white drop-shadow">
                   <Sparkles className="h-5 w-5" />
                   <span>{country.region}</span>
                 </div>
@@ -122,13 +122,13 @@ const CountryDetails = () => {
 
         {/* Quick Access Navigation */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
-          <div className="bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-amber-500/20 p-6">
+          <div className="bg-white border border-amber-600/20 shadow-lg rounded-2xl p-6">
             <div className="flex items-center space-x-3 mb-6">
               <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-2 rounded-xl">
                 <MapPin className="h-5 w-5 text-white" />
               </div>
-              <h2 className="text-xl font-bold text-white">Essential Travel Tools</h2>
-              <div className="flex items-center space-x-1 text-amber-400">
+              <h2 className="text-xl font-bold text-gray-900">Essential Travel Tools</h2>
+              <div className="flex items-center space-x-1 text-amber-600">
                 <Crown className="h-4 w-4" />
                 <span className="text-xs font-medium tracking-wider uppercase">Quick Access</span>
               </div>

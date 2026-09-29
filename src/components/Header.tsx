@@ -184,7 +184,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="safari-nav sticky top-0 z-50 border-b border-amber-500/30">
+    <header className="safari-nav sticky top-0 z-50 border-b border-amber-600/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           {/* Modern Safari Logo */}
@@ -199,7 +199,7 @@ const Header = () => {
               <span className="text-3xl font-black safari-gradient-text">
                 MOTHER AFRICA
               </span>
-              <span className="text-xs text-amber-300/90 font-semibold tracking-[0.25em] uppercase">
+              <span className="text-xs text-amber-700 font-semibold tracking-[0.25em] uppercase">
                 Premium African Experiences
               </span>
             </div>
@@ -210,7 +210,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
             >
               Home
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
@@ -218,7 +218,7 @@ const Header = () => {
 
             <Link
               to="/admin"
-              className="flex items-center space-x-2 text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+              className="flex items-center space-x-2 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
             >
               <BarChart3 className="h-5 w-5" />
               <span>Dashboard</span>
@@ -229,7 +229,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsAgenciesOpen(!isAgenciesOpen)}
-                className="flex items-center space-x-1 text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+                className="flex items-center space-x-1 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
               >
                 <span>Travel Agencies</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAgenciesOpen ? 'rotate-180' : ''}`} />
@@ -237,12 +237,12 @@ const Header = () => {
               </button>
               
               {isAgenciesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 safari-glass border border-amber-500/30 rounded-2xl shadow-2xl overflow-hidden z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 safari-glass border border-amber-600/30 rounded-2xl shadow-2xl overflow-hidden z-50">
                   <div className="max-h-96 overflow-y-auto">
                     {travelAgencies.map((continent, continentIndex) => (
-                      <div key={continentIndex} className="border-b border-amber-500/20 last:border-b-0">
+                      <div key={continentIndex} className="border-b border-amber-600/20 last:border-b-0">
                         <div className="px-4 py-3 bg-gradient-to-r from-amber-500/20 to-orange-500/20">
-                          <h4 className="font-bold text-amber-300 text-sm tracking-wider uppercase">
+                          <h4 className="font-bold text-amber-700 text-sm tracking-wider uppercase">
                             {continent.continent}
                           </h4>
                         </div>
@@ -257,14 +257,14 @@ const Header = () => {
                               onClick={() => setIsAgenciesOpen(false)}
                             >
                               <div>
-                                <div className="text-white font-medium group-hover:text-amber-400 transition-colors">
+                                <div className="text-gray-900 font-medium group-hover:text-amber-600 transition-colors">
                                   {agency.name}
                                 </div>
-                                <div className="text-gray-400 text-xs">
+                                <div className="text-gray-500 text-xs">
                                   {agency.country}
                                 </div>
                               </div>
-                              <ExternalLink className="h-4 w-4 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                              <ExternalLink className="h-4 w-4 text-amber-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </a>
                           ))}
                         </div>
@@ -279,7 +279,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsAirlinesOpen(!isAirlinesOpen)}
-                className="flex items-center space-x-1 text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+                className="flex items-center space-x-1 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
               >
                 <span>Airlines</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAirlinesOpen ? 'rotate-180' : ''}`} />
@@ -287,12 +287,12 @@ const Header = () => {
               </button>
               
               {isAirlinesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 safari-glass border border-amber-500/30 rounded-2xl shadow-2xl overflow-hidden z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 safari-glass border border-amber-600/30 rounded-2xl shadow-2xl overflow-hidden z-50">
                   <div className="max-h-96 overflow-y-auto">
                     {airlines.map((continent, continentIndex) => (
-                      <div key={continentIndex} className="border-b border-amber-500/20 last:border-b-0">
+                      <div key={continentIndex} className="border-b border-amber-600/20 last:border-b-0">
                         <div className="px-4 py-3 bg-gradient-to-r from-blue-500/20 to-cyan-500/20">
-                          <h4 className="font-bold text-blue-300 text-sm tracking-wider uppercase">
+                          <h4 className="font-bold text-blue-700 text-sm tracking-wider uppercase">
                             {continent.continent}
                           </h4>
                         </div>
@@ -307,14 +307,14 @@ const Header = () => {
                               onClick={() => setIsAirlinesOpen(false)}
                             >
                               <div>
-                                <div className="text-white font-medium group-hover:text-blue-400 transition-colors">
+                                <div className="text-gray-900 font-medium group-hover:text-blue-600 transition-colors">
                                   {airline.name}
                                 </div>
-                                <div className="text-gray-400 text-xs">
+                                <div className="text-gray-500 text-xs">
                                   {airline.country}
                                 </div>
                               </div>
-                              <ExternalLink className="h-4 w-4 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                              <ExternalLink className="h-4 w-4 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </a>
                           ))}
                         </div>
@@ -329,7 +329,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsAfricanToursOpen(!isAfricanToursOpen)}
-                className="flex items-center space-x-1 text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+                className="flex items-center space-x-1 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
               >
                 <span>African Tours</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAfricanToursOpen ? 'rotate-180' : ''}`} />
@@ -337,12 +337,12 @@ const Header = () => {
               </button>
               
               {isAfricanToursOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 safari-glass border border-amber-500/30 rounded-2xl shadow-2xl overflow-hidden z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 safari-glass border border-amber-600/30 rounded-2xl shadow-2xl overflow-hidden z-50">
                   <div className="max-h-96 overflow-y-auto">
                     {africanTourAgencies.map((continent, continentIndex) => (
-                      <div key={continentIndex} className="border-b border-amber-500/20 last:border-b-0">
+                      <div key={continentIndex} className="border-b border-amber-600/20 last:border-b-0">
                         <div className="px-4 py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20">
-                          <h4 className="font-bold text-green-300 text-sm tracking-wider uppercase">
+                          <h4 className="font-bold text-green-700 text-sm tracking-wider uppercase">
                             {continent.continent}
                           </h4>
                         </div>
@@ -357,14 +357,14 @@ const Header = () => {
                               onClick={() => setIsAfricanToursOpen(false)}
                             >
                               <div>
-                                <div className="text-white font-medium group-hover:text-green-400 transition-colors">
+                                <div className="text-gray-900 font-medium group-hover:text-green-600 transition-colors">
                                   {agency.name}
                                 </div>
-                                <div className="text-gray-400 text-xs">
+                                <div className="text-gray-500 text-xs">
                                   {agency.country}
                                 </div>
                               </div>
-                              <ExternalLink className="h-4 w-4 text-green-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                              <ExternalLink className="h-4 w-4 text-green-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </a>
                           ))}
                         </div>
@@ -377,21 +377,21 @@ const Header = () => {
             
             <Link
               to="/search"
-              className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
             >
               Countries
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
             </Link>
             <Link
               to="/about"
-              className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
             >
               About
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
             </Link>
             <Link
               to="/contact"
-              className="text-white/90 hover:text-amber-400 transition-colors font-semibold tracking-wide relative group text-lg"
+              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
             >
               Contact
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
@@ -404,7 +404,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-3 rounded-full text-white/80 hover:text-amber-400 safari-glass hover:bg-white/20 transition-all duration-300"
+            className="md:hidden p-3 rounded-full text-gray-600 hover:text-amber-600 safari-glass hover:bg-gray-200 transition-all duration-300"
           >
             {isMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
           </button>
@@ -413,7 +413,7 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-4 pb-8 space-y-6 border-t border-amber-500/20 safari-glass">
+            <div className="px-2 pt-4 pb-8 space-y-6 border-t border-amber-600/20 safari-glass">
               <form onSubmit={handleSearch} className="mb-6">
                 <div className="relative">
                   <input
@@ -421,11 +421,11 @@ const Header = () => {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search safari destinations..."
-                    className="w-full pl-6 pr-12 py-4 safari-glass border border-amber-500/30 rounded-full focus:ring-2 focus:ring-amber-500/70 focus:border-amber-400 text-white placeholder-white/70 font-medium"
+                    className="w-full pl-6 pr-12 py-4 safari-glass border border-amber-600/30 rounded-full focus:ring-2 focus:ring-amber-500/70 focus:border-amber-400 text-gray-900 placeholder-gray-500 font-medium"
                   />
                   <button
                     type="submit"
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-amber-400 hover:text-amber-300"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-amber-600 hover:text-amber-700"
                   >
                     <Search className="h-6 w-6" />
                   </button>
@@ -433,7 +433,7 @@ const Header = () => {
               </form>
               <Link
                 to="/"
-                className="block px-4 py-3 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-base"
+                className="block px-4 py-3 text-gray-700 hover:text-amber-600 hover:bg-gray-100 rounded-xl transition-all duration-300 font-semibold text-base"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
@@ -441,7 +441,7 @@ const Header = () => {
 
               <Link
                 to="/admin"
-                className="flex items-center space-x-2 px-4 py-3 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-base"
+                className="flex items-center space-x-2 px-4 py-3 text-gray-700 hover:text-amber-600 hover:bg-gray-100 rounded-xl transition-all duration-300 font-semibold text-base"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <BarChart3 className="h-5 w-5" />
@@ -452,7 +452,7 @@ const Header = () => {
               <div className="px-4 py-3">
                 <button
                   onClick={() => setIsAgenciesOpen(!isAgenciesOpen)}
-                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-base"
+                  className="flex items-center justify-between w-full text-gray-700 hover:text-amber-600 transition-colors font-semibold text-base"
                 >
                   <span>Travel Agencies</span>
                   <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAgenciesOpen ? 'rotate-180' : ''}`} />
@@ -462,7 +462,7 @@ const Header = () => {
                   <div className="mt-4 space-y-4 max-h-64 overflow-y-auto">
                     {travelAgencies.map((continent, continentIndex) => (
                       <div key={continentIndex}>
-                        <h4 className="font-bold text-amber-300 text-sm tracking-wider uppercase mb-2">
+                        <h4 className="font-bold text-amber-700 text-sm tracking-wider uppercase mb-2">
                           {continent.continent}
                         </h4>
                         <div className="space-y-2 ml-4">
@@ -472,7 +472,7 @@ const Header = () => {
                               href={agency.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-center justify-between text-white/80 hover:text-amber-400 transition-colors text-sm"
+                              className="flex items-center justify-between text-gray-600 hover:text-amber-600 transition-colors text-sm"
                               onClick={() => {
                                 setIsAgenciesOpen(false);
                                 setIsMenuOpen(false);
@@ -480,7 +480,7 @@ const Header = () => {
                             >
                               <div>
                                 <div className="font-medium">{agency.name}</div>
-                                <div className="text-gray-400 text-xs">{agency.country}</div>
+                                <div className="text-gray-500 text-xs">{agency.country}</div>
                               </div>
                               <ExternalLink className="h-3 w-3" />
                             </a>
@@ -496,7 +496,7 @@ const Header = () => {
               <div className="px-4 py-3">
                 <button
                   onClick={() => setIsAirlinesOpen(!isAirlinesOpen)}
-                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-base"
+                  className="flex items-center justify-between w-full text-gray-700 hover:text-amber-600 transition-colors font-semibold text-base"
                 >
                   <span>Airlines</span>
                   <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAirlinesOpen ? 'rotate-180' : ''}`} />
@@ -506,7 +506,7 @@ const Header = () => {
                   <div className="mt-4 space-y-4 max-h-64 overflow-y-auto">
                     {airlines.map((continent, continentIndex) => (
                       <div key={continentIndex}>
-                        <h4 className="font-bold text-blue-300 text-sm tracking-wider uppercase mb-2">
+                        <h4 className="font-bold text-blue-700 text-sm tracking-wider uppercase mb-2">
                           {continent.continent}
                         </h4>
                         <div className="space-y-2 ml-4">
@@ -516,7 +516,7 @@ const Header = () => {
                               href={airline.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-center justify-between text-white/80 hover:text-blue-400 transition-colors text-sm"
+                              className="flex items-center justify-between text-gray-600 hover:text-blue-600 transition-colors text-sm"
                               onClick={() => {
                                 setIsAirlinesOpen(false);
                                 setIsMenuOpen(false);
@@ -524,7 +524,7 @@ const Header = () => {
                             >
                               <div>
                                 <div className="font-medium">{airline.name}</div>
-                                <div className="text-gray-400 text-xs">{airline.country}</div>
+                                <div className="text-gray-500 text-xs">{airline.country}</div>
                               </div>
                               <ExternalLink className="h-3 w-3" />
                             </a>
@@ -540,7 +540,7 @@ const Header = () => {
               <div className="px-4 py-3">
                 <button
                   onClick={() => setIsAfricanToursOpen(!isAfricanToursOpen)}
-                  className="flex items-center justify-between w-full text-white/90 hover:text-amber-400 transition-colors font-semibold text-base"
+                  className="flex items-center justify-between w-full text-gray-700 hover:text-amber-600 transition-colors font-semibold text-base"
                 >
                   <span>African Tours</span>
                   <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAfricanToursOpen ? 'rotate-180' : ''}`} />
@@ -550,7 +550,7 @@ const Header = () => {
                   <div className="mt-4 space-y-4 max-h-64 overflow-y-auto">
                     {africanTourAgencies.map((continent, continentIndex) => (
                       <div key={continentIndex}>
-                        <h4 className="font-bold text-green-300 text-sm tracking-wider uppercase mb-2">
+                        <h4 className="font-bold text-green-700 text-sm tracking-wider uppercase mb-2">
                           {continent.continent}
                         </h4>
                         <div className="space-y-2 ml-4">
@@ -560,7 +560,7 @@ const Header = () => {
                               href={agency.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-center justify-between text-white/80 hover:text-green-400 transition-colors text-sm"
+                              className="flex items-center justify-between text-gray-600 hover:text-green-600 transition-colors text-sm"
                               onClick={() => {
                                 setIsAfricanToursOpen(false);
                                 setIsMenuOpen(false);
@@ -568,7 +568,7 @@ const Header = () => {
                             >
                               <div>
                                 <div className="font-medium">{agency.name}</div>
-                                <div className="text-gray-400 text-xs">{agency.country}</div>
+                                <div className="text-gray-500 text-xs">{agency.country}</div>
                               </div>
                               <ExternalLink className="h-3 w-3" />
                             </a>
@@ -582,21 +582,21 @@ const Header = () => {
               
               <Link
                 to="/search"
-                className="block px-4 py-3 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-base"
+                className="block px-4 py-3 text-gray-700 hover:text-amber-600 hover:bg-gray-100 rounded-xl transition-all duration-300 font-semibold text-base"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Countries
               </Link>
               <Link
                 to="/about"
-                className="block px-4 py-3 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-base"
+                className="block px-4 py-3 text-gray-700 hover:text-amber-600 hover:bg-gray-100 rounded-xl transition-all duration-300 font-semibold text-base"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </Link>
               <Link
                 to="/contact"
-                className="block px-4 py-3 text-white/90 hover:text-amber-400 hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold text-base"
+                className="block px-4 py-3 text-gray-700 hover:text-amber-600 hover:bg-gray-100 rounded-xl transition-all duration-300 font-semibold text-base"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

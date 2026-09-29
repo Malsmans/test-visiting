@@ -90,18 +90,18 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black">
+    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
       {/* Hero Section */}
       <div className="relative h-[400px] overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1118877/pexels-photo-1118877.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
         </div>
         <div className="relative h-full flex items-center justify-center text-center px-4">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight drop-shadow-2xl">
               Get In <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Touch</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white leading-relaxed drop-shadow-lg">
               Have questions? We're here to help you plan your perfect African adventure
             </p>
           </div>
@@ -114,54 +114,54 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-8">Contact Information</h2>
-              <p className="text-gray-300 leading-relaxed mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
+              <p className="text-gray-600 leading-relaxed mb-8">
                 We're excited to hear from you! Whether you have questions about destinations, need travel advice, or want to share your experience, we're here to help.
               </p>
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all">
+              <div className="flex items-start space-x-4 p-4 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition-all">
                 <div className="bg-gradient-to-br from-amber-500 to-orange-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Mail className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                  <a href="mailto:Himamaafrica@gmail.com" className="text-amber-400 hover:text-amber-300 transition-colors">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                  <a href="mailto:Himamaafrica@gmail.com" className="text-amber-600 hover:text-amber-700 transition-colors">
                     Himamaafrica@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all">
+              <div className="flex items-start space-x-4 p-4 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition-all">
                 <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Location</h3>
-                  <p className="text-gray-300">Serving travelers across Africa</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Location</h3>
+                  <p className="text-gray-600">Serving travelers across Africa</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all">
+              <div className="flex items-start space-x-4 p-4 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition-all">
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Clock className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Support Hours</h3>
-                  <p className="text-gray-300">Available 24/7</p>
-                  <p className="text-gray-400 text-sm mt-1">We respond within 24 hours</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Support Hours</h3>
+                  <p className="text-gray-600">Available 24/7</p>
+                  <p className="text-gray-500 text-sm mt-1">We respond within 24 hours</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all">
+              <div className="flex items-start space-x-4 p-4 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition-all">
                 <div className="bg-gradient-to-br from-purple-500 to-pink-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MessageSquare className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Live Chat</h3>
-                  <p className="text-gray-300">AI assistant available on every page</p>
-                  <p className="text-gray-400 text-sm mt-1">Click the chat icon for instant help</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Live Chat</h3>
+                  <p className="text-gray-600">AI assistant available on every page</p>
+                  <p className="text-gray-500 text-sm mt-1">Click the chat icon for instant help</p>
                 </div>
               </div>
             </div>
@@ -169,13 +169,13 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-white mb-8">Send Us a Message</h2>
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-white font-medium mb-2">
+                    <label htmlFor="name" className="block text-gray-900 font-medium mb-2">
                       Your Name <span className="text-red-400">*</span>
                     </label>
                     <input
@@ -184,14 +184,14 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-900 placeholder-gray-500 transition-all"
                       placeholder="John Doe"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-white font-medium mb-2">
+                    <label htmlFor="email" className="block text-gray-900 font-medium mb-2">
                       Your Email <span className="text-red-400">*</span>
                     </label>
                     <input
@@ -200,7 +200,7 @@ const Contact = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-900 placeholder-gray-500 transition-all"
                       placeholder="john@example.com"
                       required
                     />
@@ -208,7 +208,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-white font-medium mb-2">
+                  <label htmlFor="subject" className="block text-gray-900 font-medium mb-2">
                     Subject
                   </label>
                   <input
@@ -217,13 +217,13 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-900 placeholder-gray-500 transition-all"
                     placeholder="What would you like to discuss?"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white font-medium mb-2">
+                  <label htmlFor="message" className="block text-gray-900 font-medium mb-2">
                     Your Message <span className="text-red-400">*</span>
                   </label>
                   <textarea
@@ -232,7 +232,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-gray-400 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-900 placeholder-gray-500 transition-all resize-none"
                     placeholder="Tell us how we can help you..."
                     required
                   ></textarea>
@@ -257,7 +257,7 @@ const Contact = () => {
                   <Send className="h-5 w-5" />
                 </button>
 
-                <p className="text-gray-400 text-sm text-center">
+                <p className="text-gray-500 text-sm text-center">
                   By submitting this form, you agree to our privacy policy. We'll only use your information to respond to your inquiry.
                 </p>
               </form>
@@ -267,32 +267,32 @@ const Contact = () => {
 
         {/* FAQ Section */}
         <div className="mt-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all">
-              <h3 className="text-xl font-bold text-white mb-3">How do I book a trip?</h3>
-              <p className="text-gray-300 leading-relaxed">
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:bg-gray-100 transition-all">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">How do I book a trip?</h3>
+              <p className="text-gray-600 leading-relaxed">
                 We connect you with trusted travel agencies and tour operators. Browse destinations, click "Book Now" on any country page, and you'll be directed to our partner booking platforms.
               </p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all">
-              <h3 className="text-xl font-bold text-white mb-3">Do you offer custom itineraries?</h3>
-              <p className="text-gray-300 leading-relaxed">
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:bg-gray-100 transition-all">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Do you offer custom itineraries?</h3>
+              <p className="text-gray-600 leading-relaxed">
                 Yes! Contact us with your preferences, and we'll help you connect with tour operators who can create personalized African adventure packages.
               </p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all">
-              <h3 className="text-xl font-bold text-white mb-3">What's the best time to visit Africa?</h3>
-              <p className="text-gray-300 leading-relaxed">
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:bg-gray-100 transition-all">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">What's the best time to visit Africa?</h3>
+              <p className="text-gray-600 leading-relaxed">
                 It depends on the region and your interests! Check our destination pages for detailed weather information and "Best Time to Visit" recommendations for each country.
               </p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all">
-              <h3 className="text-xl font-bold text-white mb-3">How quickly will you respond?</h3>
-              <p className="text-gray-300 leading-relaxed">
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:bg-gray-100 transition-all">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">How quickly will you respond?</h3>
+              <p className="text-gray-600 leading-relaxed">
                 We aim to respond to all inquiries within 24 hours. For urgent matters, you can also use our AI chatbot for instant assistance.
               </p>
             </div>

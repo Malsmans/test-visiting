@@ -71,18 +71,18 @@ const SearchPage = () => {
       <div className="relative z-10 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Luxury Header */}
-          <div className="text-center mb-16 bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-amber-500/20 universal-edge-glow card-container-glow breathing-edge">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 backdrop-blur-sm border border-amber-400/30 rounded-full px-6 py-2 mb-6">
-              <Crown className="h-5 w-5 text-amber-400" />
-              <span className="text-amber-300 font-medium tracking-wider text-sm uppercase">Exclusive Collection</span>
-              <Sparkles className="h-5 w-5 text-amber-400" />
+          <div className="text-center mb-16 bg-white border border-amber-600/20 shadow-lg rounded-3xl p-12 universal-edge-glow card-container-glow breathing-edge">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 backdrop-blur-sm border border-amber-600/30 rounded-full px-6 py-2 mb-6">
+              <Crown className="h-5 w-5 text-amber-600" />
+              <span className="text-amber-700 font-medium tracking-wider text-sm uppercase">Exclusive Collection</span>
+              <Sparkles className="h-5 w-5 text-amber-600" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               <span className="bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 bg-clip-text text-transparent">
                 Luxury African Destinations
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
               Discover extraordinary destinations across the African continent, 
               curated for the most discerning travelers seeking authentic luxury experiences.
             </p>
@@ -91,19 +91,19 @@ const SearchPage = () => {
           {/* Interactive Map Section */}
           {showMap && (
             <div className="mb-12">
-              <div className="flex items-center justify-between mb-6 bg-gradient-to-r from-slate-900/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-amber-500/20 universal-edge-glow section-edge-glow">
+              <div className="flex items-center justify-between mb-6 bg-white border border-amber-600/20 shadow-lg rounded-2xl p-6 universal-edge-glow section-edge-glow">
                 <div className="flex items-center space-x-3">
                   <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-2 rounded-xl">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-white">Interactive Luxury Map</h2>
-                    <p className="text-amber-300 text-sm">Explore premium destinations across Africa</p>
+                    <h2 className="text-2xl font-bold text-gray-900">Interactive Luxury Map</h2>
+                    <p className="text-amber-700 text-sm">Explore premium destinations across Africa</p>
                   </div>
                 </div>
                 <button
                   onClick={() => setShowMap(false)}
-                  className="text-gray-400 hover:text-amber-400 text-sm bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all duration-300 border border-white/20"
+                  className="text-gray-500 hover:text-amber-600 text-sm bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-all duration-300 border border-gray-200"
                 >
                   Hide Map
                 </button>
@@ -137,7 +137,7 @@ const SearchPage = () => {
           )}
 
           {/* Luxury Search and Filter Controls */}
-          <div className="bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-2xl shadow-2xl p-8 mb-12 border border-amber-500/20 universal-edge-glow card-container-glow section-edge-glow">
+          <div className="bg-white border border-amber-600/20 shadow-lg rounded-2xl p-8 mb-12 universal-edge-glow card-container-glow section-edge-glow">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
               {/* Search Input */}
               <div className="relative">
@@ -149,7 +149,7 @@ const SearchPage = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search luxury destinations..."
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-white placeholder-white/60 transition-all duration-300 hover:bg-white/15"
+                  className="w-full pl-12 pr-4 py-4 bg-gray-100 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-gray-900 placeholder-gray-500 transition-all duration-300 hover:bg-gray-150"
                 />
               </div>
 
@@ -157,10 +157,10 @@ const SearchPage = () => {
               <select
                 value={selectedRegion}
                 onChange={(e) => setSelectedRegion(e.target.value)}
-                className="w-full px-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-white transition-all duration-300 hover:bg-white/15"
+                className="w-full px-4 py-4 bg-gray-100 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-gray-900 transition-all duration-300 hover:bg-gray-150"
               >
                 {regions.map((region) => (
-                  <option key={region} value={region} className="bg-gray-900 text-white">
+                  <option key={region} value={region} className="bg-white text-gray-900">
                     {region === 'all' ? 'All Regions' : region}
                   </option>
                 ))}
@@ -170,65 +170,65 @@ const SearchPage = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-white transition-all duration-300 hover:bg-white/15"
+                className="w-full px-4 py-4 bg-gray-100 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-gray-900 transition-all duration-300 hover:bg-gray-150"
               >
-                <option value="name" className="bg-gray-900 text-white">Sort by Name</option>
-                <option value="attractions" className="bg-gray-900 text-white">Sort by Attractions</option>
-                <option value="budget" className="bg-gray-900 text-white">Sort by Budget</option>
+                <option value="name" className="bg-white text-gray-900">Sort by Name</option>
+                <option value="attractions" className="bg-white text-gray-900">Sort by Attractions</option>
+                <option value="budget" className="bg-white text-gray-900">Sort by Budget</option>
               </select>
 
               {/* Activity Filter */}
               <select
                 value={selectedActivity}
                 onChange={(e) => setSelectedActivity(e.target.value)}
-                className="w-full px-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-white transition-all duration-300 hover:bg-white/15"
+                className="w-full px-4 py-4 bg-gray-100 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-gray-900 transition-all duration-300 hover:bg-gray-150"
               >
-                <option value="all" className="bg-gray-900 text-white">All Activities</option>
-                <option value="Safari" className="bg-gray-900 text-white">Safari</option>
-                <option value="Cultural Tours" className="bg-gray-900 text-white">Cultural Tours</option>
-                <option value="Beach Relaxation" className="bg-gray-900 text-white">Beach Relaxation</option>
-                <option value="Mountain Trekking" className="bg-gray-900 text-white">Mountain Trekking</option>
-                <option value="Photography" className="bg-gray-900 text-white">Photography</option>
+                <option value="all" className="bg-white text-gray-900">All Activities</option>
+                <option value="Safari" className="bg-white text-gray-900">Safari</option>
+                <option value="Cultural Tours" className="bg-white text-gray-900">Cultural Tours</option>
+                <option value="Beach Relaxation" className="bg-white text-gray-900">Beach Relaxation</option>
+                <option value="Mountain Trekking" className="bg-white text-gray-900">Mountain Trekking</option>
+                <option value="Photography" className="bg-white text-gray-900">Photography</option>
               </select>
 
               {/* Travel Style Filter */}
               <select
                 value={selectedTravelStyle}
                 onChange={(e) => setSelectedTravelStyle(e.target.value)}
-                className="w-full px-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-white transition-all duration-300 hover:bg-white/15"
+                className="w-full px-4 py-4 bg-gray-100 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-gray-900 transition-all duration-300 hover:bg-gray-150"
               >
-                <option value="all" className="bg-gray-900 text-white">All Travel Styles</option>
-                <option value="Family Safari" className="bg-gray-900 text-white">Family Safari</option>
-                <option value="Luxury Travel" className="bg-gray-900 text-white">Luxury Travel</option>
-                <option value="Adventure" className="bg-gray-900 text-white">Adventure</option>
-                <option value="Honeymoon" className="bg-gray-900 text-white">Honeymoon</option>
-                <option value="Solo Travel" className="bg-gray-900 text-white">Solo Travel</option>
+                <option value="all" className="bg-white text-gray-900">All Travel Styles</option>
+                <option value="Family Safari" className="bg-white text-gray-900">Family Safari</option>
+                <option value="Luxury Travel" className="bg-white text-gray-900">Luxury Travel</option>
+                <option value="Adventure" className="bg-white text-gray-900">Adventure</option>
+                <option value="Honeymoon" className="bg-white text-gray-900">Honeymoon</option>
+                <option value="Solo Travel" className="bg-white text-gray-900">Solo Travel</option>
               </select>
 
               {/* Budget Range Filter */}
               <select
                 value={selectedBudgetRange}
                 onChange={(e) => setSelectedBudgetRange(e.target.value)}
-                className="w-full px-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-white transition-all duration-300 hover:bg-white/15"
+                className="w-full px-4 py-4 bg-gray-100 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500/50 focus:border-amber-400 text-gray-900 transition-all duration-300 hover:bg-gray-150"
               >
-                <option value="all" className="bg-gray-900 text-white">All Budgets</option>
-                <option value="budget" className="bg-gray-900 text-white">Budget</option>
-                <option value="mid-range" className="bg-gray-900 text-white">Mid-range</option>
-                <option value="luxury" className="bg-gray-900 text-white">Luxury</option>
+                <option value="all" className="bg-white text-gray-900">All Budgets</option>
+                <option value="budget" className="bg-white text-gray-900">Budget</option>
+                <option value="mid-range" className="bg-white text-gray-900">Mid-range</option>
+                <option value="luxury" className="bg-white text-gray-900">Luxury</option>
               </select>
             </div>
           </div>
 
           {/* Results */}
-          <div className="mb-8 bg-gradient-to-r from-slate-900/90 to-gray-900/90 backdrop-blur-xl rounded-xl p-6 shadow-xl border border-amber-500/20 universal-edge-glow breathing-edge">
+          <div className="mb-8 bg-white border border-amber-600/20 shadow-lg rounded-xl p-6 universal-edge-glow breathing-edge">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-amber-400 fill-current" />
+                    <Star key={i} className="h-4 w-4 text-amber-600 fill-current" />
                   ))}
                 </div>
-                <p className="text-white font-medium">
+                <p className="text-gray-900 font-medium">
                   {filteredAndSortedCountries.length} premium destinations
                   {searchQuery && ` matching "${searchQuery}"`}
                   {selectedRegion !== 'all' && ` in ${selectedRegion}`}
@@ -237,7 +237,7 @@ const SearchPage = () => {
                   {selectedBudgetRange !== 'all' && ` - ${selectedBudgetRange} range`}
                 </p>
               </div>
-              <div className="flex items-center space-x-2 text-amber-400">
+              <div className="flex items-center space-x-2 text-amber-600">
                 <Crown className="h-4 w-4" />
                 <span className="text-sm font-medium tracking-wider uppercase">Luxury Collection</span>
               </div>
@@ -245,26 +245,26 @@ const SearchPage = () => {
             
             {/* Active Filters Display */}
             {(selectedRegion !== 'all' || selectedActivity !== 'all' || selectedTravelStyle !== 'all' || selectedBudgetRange !== 'all') && (
-              <div className="mt-4 pt-4 border-t border-amber-500/20">
+              <div className="mt-4 pt-4 border-t border-amber-600/20">
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-amber-300 text-sm font-medium">Active Filters:</span>
+                  <span className="text-amber-700 text-sm font-medium">Active Filters:</span>
                   {selectedRegion !== 'all' && (
-                    <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs border border-blue-500/30">
+                    <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs border border-blue-500/30">
                       {selectedRegion}
                     </span>
                   )}
                   {selectedActivity !== 'all' && (
-                    <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs border border-green-500/30">
+                    <span className="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs border border-green-500/30">
                       {selectedActivity}
                     </span>
                   )}
                   {selectedTravelStyle !== 'all' && (
-                    <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs border border-purple-500/30">
+                    <span className="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs border border-purple-500/30">
                       {selectedTravelStyle}
                     </span>
                   )}
                   {selectedBudgetRange !== 'all' && (
-                    <span className="bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-xs border border-emerald-500/30">
+                    <span className="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs border border-emerald-500/30">
                       {selectedBudgetRange.charAt(0).toUpperCase() + selectedBudgetRange.slice(1).replace('-', ' ')}
                     </span>
                   )}
@@ -275,7 +275,7 @@ const SearchPage = () => {
                       setSelectedTravelStyle('all');
                       setSelectedBudgetRange('all');
                     }}
-                    className="text-amber-400 hover:text-amber-300 text-xs underline ml-2"
+                    className="text-amber-600 hover:text-amber-700 text-xs underline ml-2"
                   >
                     Clear All Filters
                   </button>
@@ -299,14 +299,14 @@ const SearchPage = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-20 bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-amber-500/20 universal-edge-glow breathing-edge">
+            <div className="text-center py-20 bg-white border border-amber-600/20 shadow-lg rounded-3xl universal-edge-glow breathing-edge">
               <div className="mb-6">
                 <div className="bg-gradient-to-r from-amber-500 to-yellow-600 p-4 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-4 universal-edge-glow rotating-border">
                   <Filter className="h-10 w-10 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">No destinations found</h3>
-              <p className="text-gray-400 max-w-md mx-auto">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">No destinations found</h3>
+              <p className="text-gray-500 max-w-md mx-auto">
                 Try adjusting your search criteria or filters to discover more luxury destinations
               </p>
             </div>
