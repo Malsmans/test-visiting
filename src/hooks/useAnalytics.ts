@@ -3,7 +3,10 @@ import { analyticsService } from '../services/analyticsService';
 
 export const useAnalytics = () => {
   useEffect(() => {
-    analyticsService.trackPageView();
+    const timer = setTimeout(() => {
+      analyticsService.trackPageView();
+    }, 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   return {

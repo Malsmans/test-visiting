@@ -81,10 +81,15 @@ class AnalyticsService {
   private sessionId: string;
   private userId: string;
 
+  private cachedLocation: { country: string; city: string; region: string; ip: string } | null = null;
+  private sessionInitialized = false;
+
   constructor() {
     this.sessionId = this.getOrCreateSessionId();
     this.userId = this.getOrCreateUserId();
-    this.initializeSession();
+    if (typeof window !== 'undefined') {
+      setTimeout(() => this.initializeSession(), 2000);
+    }
   }
 
   private getOrCreateSessionId(): string {
@@ -110,23 +115,26 @@ class AnalyticsService {
   }
 
   private async getLocationData() {
+    if (this.cachedLocation) return this.cachedLocation;
     try {
       const response = await fetch('https://ipapi.co/json/');
       const data = await response.json();
-      return {
+      this.cachedLocation = {
         country: data.country_name || 'Unknown',
         city: data.city || 'Unknown',
         region: data.region || 'Unknown',
         ip: data.ip || 'Unknown'
       };
+      return this.cachedLocation;
     } catch (error) {
       console.error('Error fetching location:', error);
-      return {
+      this.cachedLocation = {
         country: 'Unknown',
         city: 'Unknown',
         region: 'Unknown',
         ip: 'Unknown'
       };
+      return this.cachedLocation;
     }
   }
 
@@ -194,6 +202,8 @@ class AnalyticsService {
   }
 
   private async initializeSession() {
+    if (this.sessionInitialized) return;
+    this.sessionInitialized = true;
     try {
       const location = await this.getLocationData();
       const device = this.getDeviceInfo();
@@ -257,7 +267,7 @@ class AnalyticsService {
 
   async trackPageView(pagePath?: string, pageTitle?: string) {
     try {
-      const location = await this.getLocationData();
+      const location = this.cachedLocation || await this.getLocationData();
 
       const { error } = await supabase
         .from('page_views')

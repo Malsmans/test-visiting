@@ -32,6 +32,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
         <img
           src={country.image}
           alt={country.name}
+          loading="lazy"
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
         

@@ -47,7 +47,13 @@ const GreetingAnimations: React.FC = () => {
     };
 
     createGreeting();
-    const interval = setInterval(createGreeting, 3000);
+    const interval = setInterval(() => {
+      setFloatingGreetings((prev) => {
+        if (prev.length >= 2) return prev;
+        createGreeting();
+        return prev;
+      });
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
