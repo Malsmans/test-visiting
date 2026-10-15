@@ -8942,7 +8942,7 @@ export const allCountries: Country[] = [
   {
     name: 'Senegal',
     description: 'Vibrant West African nation offering rich cultural heritage, historic colonial architecture, diverse wildlife, and stunning Atlantic coastlines.',
-    image: 'https://shorturl.at/x2hwX',
+    image: 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/15/73/a6/14.jpg',
     region: 'West Africa',
     population: '18.5 million',
     attractions: [
