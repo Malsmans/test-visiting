@@ -187,25 +187,6 @@ const Header = () => {
     <header className="safari-nav sticky top-0 z-50 border-b border-amber-600/30">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 font-[Montserrat] antialiased tracking-tight">
         <div className="flex items-center justify-between h-24">
-          {/* Modern Safari Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full blur-sm opacity-80 group-hover:opacity-100 transition-opacity safari-glow"></div>
-              <div className="relative bg-gradient-to-r from-amber-500 to-orange-600 p-3 rounded-full">
-                <Safari className="h-10 w-10 text-white" />
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-3xl font-black safari-gradient-text">
-                MOTHER AFRICA
-              </span>
-              <span className="text-xs text-amber-700 font-semibold tracking-[0.25em] uppercase">
-                Premium African Experiences
-              </span>
-            </div>
-          </Link>
-
-
           {/* Modern Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
@@ -396,9 +377,6 @@ const Header = () => {
               Contact
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
             </Link>
-            <div className="safari-button px-8 py-3 text-sm safari-glow">
-              <span className="text-white font-bold tracking-wider">PREMIUM SAFARI</span>
-            </div>
           </nav>
 
           {/* Mobile menu button */}
