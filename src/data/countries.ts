@@ -11174,7 +11174,7 @@ export const allCountries: Country[] = [
   {
     name: 'Mozambique',
     description: 'Emerging destination with pristine Indian Ocean beaches, rich Portuguese colonial heritage, vibrant culture, and exceptional marine life.',
-    image: 'https://shorturl.at/EcwS5',
+    image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/4e/a9/1d/ricordo-del-presidente.jpg?w=1200&h=-1&s=1',
     region: 'Southern Africa',
     population: '34.63 million',
     attractions: [
