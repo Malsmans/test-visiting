@@ -2796,7 +2796,7 @@ export const allCountries: Country[] = [
   {
     name: 'Mauritius',
     description: 'Tropical paradise in the Indian Ocean offering pristine beaches, luxury resorts, diverse cultures, and adventure activities from mountain hiking to deep-sea fishing.',
-    image: 'https://2futures.com/wp-content/uploads/2020/08/port-louis.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/8/86/Grand_Port_Battle_Memorial_in_Mah%C3%A9bourg%2C_Mauritius.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original',
     region: 'East Africa',
     population: '1.26 million',
     attractions: [// BEACHES
