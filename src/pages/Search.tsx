@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Search, Filter, Crown, Sparkles, Star, MapPin } from 'lucide-react';
+import { Search, Filter, Crown, Sparkles, Star, MapPin, LayoutGrid, List } from 'lucide-react';
 import CountryCard from '../components/CountryCard';
 import InteractiveMap from '../components/InteractiveMap';
 import { allCountries } from '../data/countries';
@@ -16,6 +16,7 @@ const SearchPage = () => {
   const [selectedActivity, setSelectedActivity] = useState('all');
   const [selectedTravelStyle, setSelectedTravelStyle] = useState('all');
   const [selectedBudgetRange, setSelectedBudgetRange] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const regions = ['all', 'North Africa', 'West Africa', 'East Africa', 'Central Africa', 'Southern Africa'];
 
@@ -69,7 +70,7 @@ const SearchPage = () => {
     <div className="min-h-screen relative luxury-african-bg">
       {/* Content Overlay */}
       <div className="relative z-10 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Luxury Header */}
           <div className="text-center mb-16 bg-white border border-amber-600/20 shadow-lg rounded-3xl p-12 universal-edge-glow card-container-glow breathing-edge">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 backdrop-blur-sm border border-amber-600/30 rounded-full px-6 py-2 mb-6">
@@ -221,7 +222,7 @@ const SearchPage = () => {
 
           {/* Results */}
           <div className="mb-8 bg-white border border-amber-600/20 shadow-lg rounded-xl p-6 universal-edge-glow breathing-edge">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center space-x-3">
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
@@ -237,9 +238,31 @@ const SearchPage = () => {
                   {selectedBudgetRange !== 'all' && ` - ${selectedBudgetRange} range`}
                 </p>
               </div>
-              <div className="flex items-center space-x-2 text-amber-600">
-                <Crown className="h-4 w-4" />
-                <span className="text-sm font-medium tracking-wider uppercase">Luxury Collection</span>
+              <div className="flex items-center gap-4">
+                <div className="flex items-center space-x-2 text-amber-600">
+                  <Crown className="h-4 w-4" />
+                  <span className="text-sm font-medium tracking-wider uppercase">Luxury Collection</span>
+                </div>
+                <div className="flex items-center gap-1 rounded-xl border border-gray-200 bg-gray-50 p-1" aria-label="Choose results view">
+                  <button
+                    type="button"
+                    onClick={() => setViewMode('grid')}
+                    aria-label="Grid view"
+                    aria-pressed={viewMode === 'grid'}
+                    className={`rounded-lg p-2 transition-colors ${viewMode === 'grid' ? 'bg-amber-600 text-white shadow-sm' : 'text-gray-500 hover:bg-white hover:text-amber-600'}`}
+                  >
+                    <LayoutGrid className="h-4 w-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setViewMode('list')}
+                    aria-label="List view"
+                    aria-pressed={viewMode === 'list'}
+                    className={`rounded-lg p-2 transition-colors ${viewMode === 'list' ? 'bg-amber-600 text-white shadow-sm' : 'text-gray-500 hover:bg-white hover:text-amber-600'}`}
+                  >
+                    <List className="h-4 w-4" />
+                  </button>
+                </div>
               </div>
             </div>
             
@@ -286,7 +309,7 @@ const SearchPage = () => {
 
           {/* Countries Grid */}
           {filteredAndSortedCountries.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'grid grid-cols-1 gap-6 max-w-4xl mx-auto'}>
               {filteredAndSortedCountries.map((country, index) => (
                 <div key={country.name} className="group transform hover:scale-105 transition-all duration-500 country-card-entrance card-container-glow" style={{ animationDelay: `${index * 0.1}s` }}>
                   <div className="relative">
