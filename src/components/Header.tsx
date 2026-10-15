@@ -185,7 +185,7 @@ const Header = () => {
 
   return (
     <header className="safari-nav sticky top-0 z-50 border-b border-amber-600/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 font-[Montserrat] antialiased tracking-tight">
         <div className="flex items-center justify-between h-24">
           {/* Modern Safari Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
