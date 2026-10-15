@@ -10058,7 +10058,7 @@ export const allCountries: Country[] = [
   {
     name: 'Seychelles',
     description: 'Pristine archipelago in the Indian Ocean offering some of the world\'s most beautiful beaches, unique granite rock formations, and exclusive island resorts.',
-    image: 'https://shorturl.at/7asFF',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Big_Ben_Clock_Tower_-_Victoria_-_Mahe_-_Seychelles_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original',
     region: 'East Africa',
     population: '121,354',
     attractions: [
