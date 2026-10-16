@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Users, ExternalLink, Star, Crown, Sparkles } from 'lucide-react';
+import { MapPin, Users, Star, Crown, Sparkles } from 'lucide-react';
 import { Country } from '../types';
 
 interface CountryCardProps {
@@ -13,27 +13,27 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
   return (
     <Link
       to={`/country/${countrySlug}`}
-      className="group relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-amber-500/20 hover:border-amber-400/40 banner-edge-glow banner-corner-sparkles banner-flowing-edge universal-edge-glow rotating-border breathing-edge"
+      className="group relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-[1.01] border border-amber-500/20 hover:border-amber-400/40"
     >
       {/* Luxury Badge */}
-      <div className="absolute top-4 left-4 z-20 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1">
+      <div className="absolute top-3 left-3 z-20 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center space-x-1">
         <Crown className="h-3 w-3 text-white" />
         <span className="text-white text-xs font-semibold tracking-wider uppercase">Premium</span>
       </div>
 
       {/* Region Badge */}
-      <div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
+      <div className="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur-sm px-2 py-1 rounded-full border border-white/20">
         <span className="text-amber-300 text-xs font-medium tracking-wide">{country.region}</span>
       </div>
 
       {/* Image Container */}
-      <div className="relative h-64 overflow-hidden banner-flowing-edge">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+      <div className="relative mx-auto mt-5 h-36 w-36 overflow-hidden rounded-full border-4 border-amber-400/30 shadow-lg shadow-amber-950/30">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent z-10"></div>
         <img
           src={country.image}
           alt={country.name}
           loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
         
         {/* Luxury Overlay Pattern */}
@@ -41,10 +41,10 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
       </div>
       
       {/* Content */}
-      <div className="relative p-6 bg-gradient-to-b from-slate-900/95 to-gray-900/95 backdrop-blur-sm">
+      <div className="relative p-4 bg-gradient-to-b from-slate-900/95 to-gray-900/95 backdrop-blur-sm">
         {/* Title */}
-        <div className="flex items-center justify-between mb-3">
-          <h3 className="text-2xl font-bold country-name-glow transition-all duration-300">
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-xl font-bold country-name-glow transition-all duration-300">
             {country.name}
           </h3>
           <div className="flex items-center space-x-1">
@@ -55,13 +55,13 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
         </div>
 
         {/* Description */}
-        <p className="text-gray-300 text-sm mb-4 line-clamp-2 leading-relaxed font-light">
+        <p className="text-gray-300 text-xs mb-3 line-clamp-2 leading-relaxed font-light">
           {country.description}
         </p>
         
         {/* Stats */}
-        <div className="flex items-center justify-between text-sm">
-          <div className="flex items-center space-x-4">
+        <div className="flex items-center justify-between text-xs">
+          <div className="flex items-center space-x-3">
             <div className="flex items-center text-amber-400">
               <MapPin className="h-4 w-4 mr-1" />
               <span className="font-medium">{country.attractions.length} destinations</span>
