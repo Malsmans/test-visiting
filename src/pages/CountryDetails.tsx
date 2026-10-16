@@ -633,98 +633,51 @@ const CountryDetails = () => {
             </div>
           </div>
 
-          {/* Travel Information Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12" id="currency-converter">
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-2xl blur"></div>
-              <div className="relative">
-                <CurrencyConverter country={country.name} />
-              </div>
-            </div>
-            <div className="relative" id="visa-info">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-2xl blur"></div>
-              <div className="relative">
-                <VisaInfo country={country.name} />
-              </div>
-            </div>
-          </div>
-
-          {/* Best Time to Visit */}
-          <div className="mb-12" id="best-time-to-visit">
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/20 to-amber-500/20 rounded-2xl blur"></div>
-              <div className="relative">
-                <BestTimeToVisit country={country.name} />
-              </div>
-            </div>
-          </div>
-
-          {/* Travel Tips and Language Guide */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12" id="travel-tips">
-            <div className="relative" id="travel-tips-section">
-              <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 rounded-2xl blur"></div>
-              <div className="relative">
-                <TravelTips country={country.name} />
-              </div>
-            </div>
-            <div className="relative" id="language-guide">
-              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl blur"></div>
-              <div className="relative">
-                <LanguageGuide country={country.name} />
-              </div>
-            </div>
-          </div>
-
-          {/* Packing Checklist and Safety Alerts */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12" id="packing-checklist">
-            <div className="relative" id="packing-checklist-section">
-              <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 rounded-2xl blur"></div>
-              <div className="relative">
-                <PackingChecklist country={country.name} />
-              </div>
-            </div>
-            <div className="relative" id="safety-alerts">
-              <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-2xl blur"></div>
-              <div className="relative">
-                <SafetyAlerts country={country.name} />
-              </div>
-            </div>
-          </div>
-
-          {/* Local Events and Travel Budget */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12" id="local-events">
-            <div className="relative" id="local-events-section">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-2xl blur"></div>
-              <div className="relative">
-                <LocalEvents country={country.name} />
-              </div>
-            </div>
-            <div className="relative" id="travel-budget">
-              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-2xl blur"></div>
-              <div className="relative">
-                <TravelBudget country={country.name} />
-              </div>
-            </div>
-          </div>
-
-          {/* Transportation Guide */}
-          <div className="mb-12" id="transportation-guide">
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl blur"></div>
-              <div className="relative">
-                <TransportationGuide country={country.name} />
-              </div>
-            </div>
-          </div>
-
-          {/* Emergency Contacts */}
-          <div className="mb-12" id="emergency-contacts">
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-2xl blur"></div>
-              <div className="relative">
-                <EmergencyContacts country={country.name} />
-              </div>
-            </div>
+          <div className="space-y-6 mb-12">
+            <details id="currency-converter" className="group rounded-2xl border border-emerald-500/30 bg-slate-900/80 p-5 shadow-xl">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-emerald-300 marker:hidden">Currency Converter <span className="float-right text-emerald-400 transition-transform group-open:rotate-180">⌄</span></summary>
+              <div className="relative mt-5"><CurrencyConverter country={country.name} /></div>
+            </details>
+            <details id="visa-info" className="group rounded-2xl border border-blue-500/30 bg-slate-900/80 p-5 shadow-xl">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-blue-300 marker:hidden">Visa Information <span className="float-right text-blue-400 transition-transform group-open:rotate-180">⌄</span></summary>
+              <div className="relative mt-5"><VisaInfo country={country.name} /></div>
+            </details>
+            <details id="best-time-to-visit" className="group rounded-2xl border border-orange-500/30 bg-slate-900/80 p-5 shadow-xl">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-orange-300 marker:hidden">Best Time to Visit <span className="float-right text-orange-400 transition-transform group-open:rotate-180">⌄</span></summary>
+              <div className="relative mt-5"><BestTimeToVisit country={country.name} /></div>
+            </details>
+            <details id="travel-tips" className="group rounded-2xl border border-amber-500/30 bg-slate-900/80 p-5 shadow-xl">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-amber-300 marker:hidden">Travel Tips <span className="float-right text-amber-400 transition-transform group-open:rotate-180">⌄</span></summary>
+              <div className="relative mt-5"><TravelTips country={country.name} /></div>
+            </details>
+            <details id="language-guide" className="group rounded-2xl border border-indigo-500/30 bg-slate-900/80 p-5 shadow-xl">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-indigo-300 marker:hidden">Language Guide <span className="float-right text-indigo-400 transition-transform group-open:rotate-180">⌄</span></summary>
+              <div className="relative mt-5"><LanguageGuide country={country.name} /></div>
+            </details>
+            <details id="packing-checklist" className="group rounded-2xl border border-amber-500/30 bg-slate-900/80 p-5 shadow-xl">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-amber-300 marker:hidden">Packing Checklist <span className="float-right text-amber-400 transition-transform group-open:rotate-180">⌄</span></summary>
+              <div className="relative mt-5"><PackingChecklist country={country.name} /></div>
+            </details>
+            <details id="safety-alerts" className="group rounded-2xl border border-red-500/30 bg-slate-900/80 p-5 shadow-xl">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-red-300 marker:hidden">Safety Alerts <span className="float-right text-red-400 transition-transform group-open:rotate-180">⌄</span></summary>
+              <div className="relative mt-5"><SafetyAlerts country={country.name} /></div>
+            </details>
+            <details id="local-events" className="group rounded-2xl border border-purple-500/30 bg-slate-900/80 p-5 shadow-xl">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-purple-300 marker:hidden">Local Events <span className="float-right text-purple-400 transition-transform group-open:rotate-180">⌄</span></summary>
+              <div className="relative mt-5"><LocalEvents country={country.name} /></div>
+            </details>
+            <details id="travel-budget" className="group rounded-2xl border border-emerald-500/30 bg-slate-900/80 p-5 shadow-xl">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-emerald-300 marker:hidden">Travel Budget <span className="float-right text-emerald-400 transition-transform group-open:rotate-180">⌄</span></summary>
+              <div className="relative mt-5"><TravelBudget country={country.name} /></div>
+            </details>
+            <details id="transportation-guide" className="group rounded-2xl border border-cyan-500/30 bg-slate-900/80 p-5 shadow-xl">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-cyan-300 marker:hidden">Transportation <span className="float-right text-cyan-400 transition-transform group-open:rotate-180">⌄</span></summary>
+              <div className="relative mt-5"><TransportationGuide country={country.name} /></div>
+            </details>
+            <details id="emergency-contacts" className="group rounded-2xl border border-red-500/30 bg-slate-900/80 p-5 shadow-xl">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-red-300 marker:hidden">Emergency Contacts <span className="float-right text-red-400 transition-transform group-open:rotate-180">⌄</span></summary>
+              <div className="relative mt-5"><EmergencyContacts country={country.name} /></div>
+            </details>
           </div>
         </div>
       </div>
