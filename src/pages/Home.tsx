@@ -24,7 +24,7 @@ const Home = () => {
         <section className="min-h-screen flex items-center justify-center relative">
           {/* Modern African Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
-          <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] bg-gradient-to-r from-amber-900/20 via-transparent to-orange-900/20" />
+          <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-full max-w-[900px] bg-gradient-to-r from-white/10 via-transparent to-amber-500/20" />
           
           <div className="relative z-30 text-center max-w-7xl mx-auto px-4">
             {/* Modern African Badge */}
