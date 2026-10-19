@@ -1,18 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Compass, Hotel, Car, Star, Crown, Sparkles, Award, Globe, Mountain, Waves } from 'lucide-react';
+import { Star, Crown, Globe } from 'lucide-react';
 import CountryCard from '../components/CountryCard';
 import VideoHeroHeader from '../components/VideoHeroHeader';
 import { featuredCountries } from '../data/countries';
-import { useAnalytics } from '../hooks/useAnalytics';
 
 const Home = () => {
-  const { trackEvent } = useAnalytics();
-
-  const handleAfricanClick = () => {
-    trackEvent('african_button_click', { location: 'hero_section' });
-  };
-
   return (
     <div className="min-h-screen relative overflow-hidden luxury-african-bg">
       {/* Video Hero Header */}
@@ -20,144 +13,10 @@ const Home = () => {
 
       {/* Content Overlay */}
       <div className="relative z-20">
-        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center relative">
-          {/* Modern African Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/55" />
-          <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-full max-w-[900px] bg-gradient-to-r from-white/10 via-transparent to-amber-500/20" />
-          
-          <div className="relative z-30 text-center max-w-6xl mx-auto px-4">
-            {/* Modern African Badge */}
-            <div className="inline-flex items-center space-x-3 african-glass px-5 py-2 mb-8">
-              <Globe className="h-6 w-6 text-amber-600 african-pulse" />
-              <span className="african-gradient-text font-bold tracking-wider text-lg uppercase font-montserrat">Premium African Experience</span>
-              <Crown className="h-6 w-6 text-amber-600 african-pulse" />
-            </div>
-
-            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-none">
-              <span className="block african-title-enhanced drop-shadow-2xl mb-4">
-                EXPLORE
-              </span>
-              <span className="block text-white drop-shadow-2xl mb-4">
-                THE MOTHER
-              </span>
-              <span className="block african-title-enhanced drop-shadow-2xl">
-                AFRICA
-              </span>
-            </h1>
-            
-            <p className="text-lg md:text-xl mb-10 text-gray-100 max-w-3xl mx-auto leading-relaxed font-light">
-              Experience the ultimate luxury journey through Africa's diverse landscapes, rich cultures, and breathtaking destinations. 
-              <span className="block mt-4 african-gradient-text font-semibold text-xl md:text-2xl">
-                Where authentic African heritage meets unparalleled luxury.
-              </span>
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link
-                to="/search"
-                onClick={handleAfricanClick}
-                className="african-button group african-glow"
-              >
-                <div className="relative flex items-center space-x-3">
-                  <Globe className="h-7 w-7" />
-                  <span className="tracking-wide text-lg">BEGIN AFRICAN ADVENTURE</span>
-                </div>
-              </Link>
-              
-              <div className="flex items-center space-x-3 african-glass px-6 py-3 rounded-full">
-                <Award className="h-6 w-6 text-amber-600" />
-                <span className="text-amber-700 font-semibold tracking-wider uppercase">World-Class Safari</span>
-              </div>
-            </div>
-
-            {/* Modern African Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-              <div className="african-glass p-5 rounded-2xl text-center african-card">
-                <div className="text-4xl font-black african-gradient-text mb-3">50+</div>
-                <div className="text-amber-700 font-semibold uppercase tracking-wider">African Destinations</div>
-              </div>
-              <div className="african-glass p-5 rounded-2xl text-center african-card">
-                <div className="text-4xl font-black african-gradient-text mb-3">5★</div>
-                <div className="text-amber-700 font-semibold uppercase tracking-wider">Luxury African Lodges</div>
-              </div>
-              <div className="african-glass p-5 rounded-2xl text-center african-card">
-                <div className="text-4xl font-black african-gradient-text mb-3">24/7</div>
-                <div className="text-amber-700 font-semibold uppercase tracking-wider">African Concierge</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Floating safari elements */}
-          <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-amber-400/50 rounded-full african-pulse" />
-          <div className="absolute top-1/3 right-1/4 w-5 h-5 bg-orange-400/40 rounded-full african-float" style={{ animationDelay: '1s' }} />
-          <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-yellow-500/60 rounded-full african-wave" style={{ animationDelay: '2s' }} />
-        </section>
-
         {/* Modern African Features Section */}
         <section className="african-section py-20 relative">
           <div className="absolute inset-0 bg-white text-amber-600 opacity-60"></div>
           
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div className="text-center mb-24">
-              <div className="inline-flex items-center space-x-3 african-glass px-8 py-3 mb-8 african-glow">
-                <Globe className="h-5 w-5 text-amber-600" />
-                <span className="african-gradient-text font-bold tracking-wider text-lg uppercase">Premium African Services</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-5">
-                <span className="african-gradient-text">
-                  Ultimate Safari
-                </span>
-                <span className="block text-gray-900 mt-2">Experience</span>
-              </h2>
-              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-                Immerse yourself in Africa's untamed wilderness through our exclusive safari experiences, 
-                luxury bush lodges, and personalized wildlife adventures that redefine luxury travel.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-              <div className="luxury-card p-8 text-center group luxury-glow universal-edge-glow button-edge-glow breathing-edge">
-                <div className="relative mb-6">
-                  <div className="relative bg-gradient-to-br from-amber-500 via-orange-600 to-amber-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl">
-                    <Globe className="h-12 w-12 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 gradient-text">Wild African Adventures</h3>
-                <p className="text-gray-600 leading-relaxed">Exclusive access to Africa's most pristine game reserves and private conservancies for authentic wildlife encounters.</p>
-              </div>
-
-              <div className="african-card p-8 text-center group african-glow universal-edge-glow button-edge-glow breathing-edge">
-                <div className="relative mb-6">
-                  <div className="relative bg-gradient-to-br from-emerald-500 via-teal-600 to-emerald-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl african-float">
-                    <Car className="h-12 w-12 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 african-gradient-text">Luxury African Vehicles</h3>
-                <p className="text-gray-600 leading-relaxed">Custom 4WD safari vehicles, private aircraft, and helicopter transfers for the ultimate bush experience.</p>
-              </div>
-
-              <div className="african-card p-8 text-center group african-glow universal-edge-glow button-edge-glow breathing-edge">
-                <div className="relative mb-6">
-                  <div className="relative bg-gradient-to-br from-blue-500 via-indigo-600 to-blue-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl african-float">
-                    <Hotel className="h-12 w-12 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 african-gradient-text">Luxury Bush Lodges</h3>
-                <p className="text-gray-600 leading-relaxed">Exclusive safari lodges, luxury tented camps, and private conservancy accommodations in pristine wilderness.</p>
-              </div>
-
-              <div className="african-card p-8 text-center group african-glow universal-edge-glow button-edge-glow breathing-edge">
-                <div className="relative mb-6">
-                  <div className="relative bg-gradient-to-br from-purple-500 via-pink-600 to-purple-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl african-float">
-                    <Crown className="h-12 w-12 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 african-gradient-text">African Concierge</h3>
-                <p className="text-gray-600 leading-relaxed">Dedicated safari specialists and expert guides available 24/7 to craft your perfect African adventure.</p>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Featured Destinations */}
@@ -165,23 +24,6 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-amber-900/10 via-transparent to-orange-900/10"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div className="text-center mb-24">
-              <div className="inline-flex items-center space-x-3 african-glass px-8 py-3 mb-8 african-glow">
-                <Mountain className="h-5 w-5 text-amber-600" />
-                <span className="african-gradient-text font-bold tracking-wider text-lg uppercase">African Destinations</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-5">
-                <span className="african-gradient-text">
-                  Wild Africa
-                </span>
-                <span className="block text-gray-900 mt-2">Awaits</span>
-              </h2>
-              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-                Explore our carefully curated collection of Africa's most spectacular safari destinations, 
-                where pristine wilderness meets world-class luxury and unforgettable wildlife encounters.
-              </p>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredCountries.slice(0, 6).map((country) => (
                 <div key={country.name} className="group african-card country-card-entrance card-container-glow">
