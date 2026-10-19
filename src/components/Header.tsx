@@ -185,13 +185,13 @@ const Header = () => {
 
   return (
     <header className="safari-nav sticky top-0 z-50 border-b border-amber-600/30">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 font-[Montserrat] antialiased tracking-tight">
-        <div className="flex items-center justify-between h-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 antialiased tracking-tight">
+        <div className="flex items-center justify-between h-20">
           {/* Modern Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
+              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-sm"
             >
               Home
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
@@ -199,7 +199,7 @@ const Header = () => {
 
             <Link
               to="/admin"
-              className="flex items-center space-x-2 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
+              className="flex items-center space-x-2 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-sm"
             >
               <BarChart3 className="h-5 w-5" />
               <span>Dashboard</span>
@@ -210,7 +210,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsAgenciesOpen(!isAgenciesOpen)}
-                className="flex items-center space-x-1 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
+                className="flex items-center space-x-1 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-sm"
               >
                 <span>Travel Agencies</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAgenciesOpen ? 'rotate-180' : ''}`} />
@@ -260,7 +260,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsAirlinesOpen(!isAirlinesOpen)}
-                className="flex items-center space-x-1 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
+                className="flex items-center space-x-1 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-sm"
               >
                 <span>Airlines</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAirlinesOpen ? 'rotate-180' : ''}`} />
@@ -310,7 +310,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsAfricanToursOpen(!isAfricanToursOpen)}
-                className="flex items-center space-x-1 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
+                className="flex items-center space-x-1 text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-sm"
               >
                 <span>African Tours</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isAfricanToursOpen ? 'rotate-180' : ''}`} />
@@ -358,21 +358,21 @@ const Header = () => {
             
             <Link
               to="/search"
-              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
+              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-sm"
             >
               Countries
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
             </Link>
             <Link
               to="/about"
-              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
+              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-sm"
             >
               About
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
             </Link>
             <Link
               to="/contact"
-              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-lg"
+              className="text-gray-700 hover:text-amber-600 transition-colors font-semibold tracking-wide relative group text-sm"
             >
               Contact
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300 rounded-full"></span>

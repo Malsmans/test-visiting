@@ -26,15 +26,15 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
           <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-full max-w-[900px] bg-gradient-to-r from-white/10 via-transparent to-amber-500/20" />
           
-          <div className="relative z-30 text-center max-w-7xl mx-auto px-4">
+          <div className="relative z-30 text-center max-w-6xl mx-auto px-4">
             {/* Modern African Badge */}
-            <div className="inline-flex items-center space-x-3 african-glass px-8 py-3 mb-12 african-glow">
+            <div className="inline-flex items-center space-x-3 african-glass px-5 py-2 mb-8">
               <Globe className="h-6 w-6 text-amber-600 african-pulse" />
               <span className="african-gradient-text font-bold tracking-wider text-lg uppercase font-montserrat">Premium African Experience</span>
               <Crown className="h-6 w-6 text-amber-600 african-pulse" />
             </div>
 
-            <h1 className="text-7xl md:text-9xl font-black mb-12 leading-none african-float">
+            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-none">
               <span className="block african-title-enhanced drop-shadow-2xl mb-4">
                 EXPLORE
               </span>
@@ -46,14 +46,14 @@ const Home = () => {
               </span>
             </h1>
             
-            <p className="text-2xl md:text-3xl mb-16 text-gray-100 max-w-5xl mx-auto leading-relaxed font-light">
+            <p className="text-lg md:text-xl mb-10 text-gray-100 max-w-3xl mx-auto leading-relaxed font-light">
               Experience the ultimate luxury journey through Africa's diverse landscapes, rich cultures, and breathtaking destinations. 
               <span className="block mt-4 african-gradient-text font-semibold text-xl md:text-2xl">
                 Where authentic African heritage meets unparalleled luxury.
               </span>
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link
                 to="/search"
                 onClick={handleAfricanClick}
@@ -72,16 +72,16 @@ const Home = () => {
             </div>
 
             {/* Modern African Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="african-glass p-8 rounded-2xl text-center african-card">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+              <div className="african-glass p-5 rounded-2xl text-center african-card">
                 <div className="text-4xl font-black african-gradient-text mb-3">50+</div>
                 <div className="text-amber-700 font-semibold uppercase tracking-wider">African Destinations</div>
               </div>
-              <div className="african-glass p-8 rounded-2xl text-center african-card">
+              <div className="african-glass p-5 rounded-2xl text-center african-card">
                 <div className="text-4xl font-black african-gradient-text mb-3">5★</div>
                 <div className="text-amber-700 font-semibold uppercase tracking-wider">Luxury African Lodges</div>
               </div>
-              <div className="african-glass p-8 rounded-2xl text-center african-card">
+              <div className="african-glass p-5 rounded-2xl text-center african-card">
                 <div className="text-4xl font-black african-gradient-text mb-3">24/7</div>
                 <div className="text-amber-700 font-semibold uppercase tracking-wider">African Concierge</div>
               </div>
@@ -95,7 +95,7 @@ const Home = () => {
         </section>
 
         {/* Modern African Features Section */}
-        <section className="african-section py-32 relative">
+        <section className="african-section py-20 relative">
           <div className="absolute inset-0 bg-white text-amber-600 opacity-60"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -104,19 +104,19 @@ const Home = () => {
                 <Globe className="h-5 w-5 text-amber-600" />
                 <span className="african-gradient-text font-bold tracking-wider text-lg uppercase">Premium African Services</span>
               </div>
-              <h2 className="text-6xl md:text-7xl font-black text-gray-900 mb-8 african-float">
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-5">
                 <span className="african-gradient-text">
                   Ultimate Safari
                 </span>
                 <span className="block text-gray-900 mt-2">Experience</span>
               </h2>
-              <p className="text-2xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
+              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
                 Immerse yourself in Africa's untamed wilderness through our exclusive safari experiences, 
                 luxury bush lodges, and personalized wildlife adventures that redefine luxury travel.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               <div className="luxury-card p-8 text-center group luxury-glow universal-edge-glow button-edge-glow breathing-edge">
                 <div className="relative mb-6">
                   <div className="relative bg-gradient-to-br from-amber-500 via-orange-600 to-amber-700 rounded-3xl w-24 h-24 flex items-center justify-center mx-auto shadow-2xl">
@@ -161,7 +161,7 @@ const Home = () => {
         </section>
 
         {/* Featured Destinations */}
-        <section className="african-section py-32 relative section-edge-glow">
+        <section className="african-section py-20 relative section-edge-glow">
           <div className="absolute inset-0 bg-gradient-to-r from-amber-900/10 via-transparent to-orange-900/10"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -170,19 +170,19 @@ const Home = () => {
                 <Mountain className="h-5 w-5 text-amber-600" />
                 <span className="african-gradient-text font-bold tracking-wider text-lg uppercase">African Destinations</span>
               </div>
-              <h2 className="text-6xl md:text-7xl font-black text-gray-900 mb-8 african-float">
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-5">
                 <span className="african-gradient-text">
                   Wild Africa
                 </span>
                 <span className="block text-gray-900 mt-2">Awaits</span>
               </h2>
-              <p className="text-2xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
+              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
                 Explore our carefully curated collection of Africa's most spectacular safari destinations, 
                 where pristine wilderness meets world-class luxury and unforgettable wildlife encounters.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredCountries.slice(0, 6).map((country) => (
                 <div key={country.name} className="group african-card country-card-entrance card-container-glow">
                   <div className="relative">
@@ -210,15 +210,15 @@ const Home = () => {
         </section>
 
         {/* African Testimonial Section */}
-        <section className="african-section py-32 relative overflow-hidden section-edge-glow">
+        <section className="african-section py-20 relative overflow-hidden section-edge-glow">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
-            <div className="african-glass p-16 rounded-3xl african-glow universal-edge-glow card-container-glow breathing-edge">
+            <div className="african-glass p-8 md:p-10 rounded-3xl">
               <div className="flex justify-center mb-8">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-10 w-10 text-amber-600 fill-current african-pulse" style={{ animationDelay: `${i * 0.2}s` }} />
                 ))}
               </div>
-              <blockquote className="text-4xl md:text-5xl font-light text-gray-900 leading-relaxed mb-10 african-float">
+              <blockquote className="text-2xl md:text-3xl font-light text-gray-900 leading-relaxed mb-8">
                 "The most incredible safari adventure of our lives. From witnessing the Great Migration 
                 to luxury bush dinners under the stars - absolutely magical. 
                 <span className="block mt-6 african-gradient-text font-semibold text-3xl md:text-4xl">
