@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Users, Star, Crown, Sparkles } from 'lucide-react';
+import { ArrowUpRight, MapPin } from 'lucide-react';
 import { Country } from '../types';
 
 interface CountryCardProps {
@@ -13,77 +13,29 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
   return (
     <Link
       to={`/country/${countrySlug}`}
-      className="group relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-[1.01] border border-amber-500/20 hover:border-amber-400/40"
+      className="group block overflow-hidden rounded-2xl bg-white border border-[#e8e5dc] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/10"
     >
-      {/* Luxury Badge */}
-      <div className="absolute top-3 left-3 z-20 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center space-x-1">
-        <Crown className="h-3 w-3 text-white" />
-        <span className="text-white text-xs font-semibold tracking-wider uppercase">Premium</span>
-      </div>
-
-      {/* Region Badge */}
-      <div className="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur-sm px-2 py-1 rounded-full border border-white/20">
-        <span className="text-amber-300 text-xs font-medium tracking-wide">{country.region}</span>
-      </div>
-
-      {/* Image Container */}
-      <div className="relative mx-auto mt-5 h-36 w-36 overflow-hidden rounded-full border-4 border-amber-400/30 shadow-lg shadow-amber-950/30">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent z-10"></div>
+      <div className="relative h-60 overflow-hidden bg-gray-200">
         <img
           src={country.image}
           alt={country.name}
           loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        
-        {/* Luxury Overlay Pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-transparent" />
+        <div className="absolute left-5 right-5 bottom-4 flex items-end justify-between gap-4">
+          <span className="text-xs font-bold uppercase tracking-[0.16em] text-amber-200">{country.region}</span>
+          <span className="h-9 w-9 rounded-full bg-white/90 text-gray-900 flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
+            <ArrowUpRight className="h-4 w-4" />
+          </span>
+        </div>
       </div>
-      
-      {/* Content */}
-      <div className="relative p-4 bg-gradient-to-b from-slate-900/95 to-gray-900/95 backdrop-blur-sm">
-        {/* Title */}
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="text-xl font-bold country-name-glow transition-all duration-300">
-            {country.name}
-          </h3>
-          <div className="flex items-center space-x-1">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="h-3 w-3 text-amber-400 fill-current" />
-            ))}
-          </div>
-        </div>
-
-        {/* Description */}
-        <p className="text-gray-300 text-xs mb-3 line-clamp-2 leading-relaxed font-light">
-          {country.description}
-        </p>
-        
-        {/* Stats */}
-        <div className="flex items-center justify-between text-xs">
-          <div className="flex items-center space-x-3">
-            <div className="flex items-center text-amber-400">
-              <MapPin className="h-4 w-4 mr-1" />
-              <span className="font-medium">{country.attractions.length} destinations</span>
-            </div>
-            <div className="flex items-center text-gray-400">
-              <Users className="h-4 w-4 mr-1" />
-              <span>{country.population}</span>
-            </div>
-          </div>
-          
-          {/* Luxury Indicator */}
-          <div className="flex items-center space-x-1 text-amber-400">
-            <Sparkles className="h-4 w-4" />
-            <span className="text-xs font-medium tracking-wider uppercase">Luxury</span>
-          </div>
-        </div>
-
-        {/* Hover Effect Border */}
-        <div className="absolute inset-0 border-2 border-transparent group-hover:border-amber-400/30 rounded-2xl transition-all duration-300 pointer-events-none"></div>
-        
-        {/* Luxury Glow Effect */}
-        <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 via-yellow-500/20 to-amber-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+      <div className="px-5 py-4 flex items-center justify-between gap-4">
+        <h3 className="text-xl font-extrabold text-gray-900 group-hover:text-amber-700 transition-colors">{country.name}</h3>
+        <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-500 whitespace-nowrap">
+          <MapPin className="h-3.5 w-3.5 text-amber-700" />
+          {country.attractions.length} destinations
+        </span>
       </div>
     </Link>
   );

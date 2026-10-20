@@ -4,48 +4,10 @@ import { ArrowRight, BookOpen, CalendarDays, Crown, Globe, MapPinned, Star } fro
 import CountryCard from '../components/CountryCard';
 import VideoHeroHeader from '../components/VideoHeroHeader';
 import { featuredCountries } from '../data/countries';
+import { africaStories } from '../data/stories';
 
-const storyCards = [
-  {
-    title: 'The African journeys worth taking once',
-    category: 'Places to visit',
-    description: 'From the Atlas Mountains to the Okavango Delta, these are the landscapes that stay with you long after the journey home.',
-    image: 'https://images.pexels.com/photos/25254928/pexels-photo-25254928.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-  },
-  {
-    title: 'The coastlines made for slow travel',
-    category: 'Beaches',
-    description: 'Trade busy itineraries for white sand, warm water, and the easy rhythm of Zanzibar, Cape Town, and the Indian Ocean.',
-    image: 'https://images.pexels.com/photos/36468248/pexels-photo-36468248.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-  },
-  {
-    title: 'Where the wild still sets the schedule',
-    category: 'Safaris',
-    description: 'Follow the herds across the Serengeti and Maasai Mara for a front-row seat to one of nature’s greatest migrations.',
-    image: 'https://images.pexels.com/photos/33498304/pexels-photo-33498304.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-  },
-];
-
-const blogPosts = [
-  {
-    title: 'A first-timer’s guide to planning an African safari',
-    category: 'Travel notes',
-    readTime: '6 min read',
-    image: 'https://images.pexels.com/photos/4404524/pexels-photo-4404524.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-  },
-  {
-    title: 'Victoria Falls: the thunder that connects two countries',
-    category: 'Iconic places',
-    readTime: '4 min read',
-    image: 'https://images.pexels.com/photos/17435022/pexels-photo-17435022.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-  },
-  {
-    title: 'A weekend of food, colour, and craft in Morocco',
-    category: 'Culture',
-    readTime: '5 min read',
-    image: 'https://images.pexels.com/photos/1161927/pexels-photo-1161927.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-  },
-];
+const storyCards = africaStories.slice(0, 3);
+const blogPosts = africaStories.slice(3);
 
 const Home = () => {
   return (
@@ -111,7 +73,7 @@ const Home = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {storyCards.map((story, index) => (
-                <Link to="/search" key={story.title} className={`group african-card overflow-hidden ${index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''}`}>
+                <Link to={`/stories/${story.slug}`} key={story.title} className={`group african-card overflow-hidden ${index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''}`}>
                   <div className={`${index === 0 ? 'h-72 md:h-[27rem]' : 'h-60'} relative overflow-hidden`}>
                     <img src={story.image} alt={story.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
@@ -142,7 +104,7 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {blogPosts.map((post) => (
-                <Link to="/search" key={post.title} className="group african-card overflow-hidden">
+                <Link to={`/stories/${post.slug}`} key={post.title} className="group african-card overflow-hidden">
                   <div className="h-52 overflow-hidden">
                     <img src={post.image} alt={post.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
