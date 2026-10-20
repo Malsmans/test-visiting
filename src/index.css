@@ -776,3 +776,58 @@ body {
   .african-button { padding: 11px 18px; }
 }
 
+.africa-story-aura {
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 28%, rgba(222, 170, 54, 0.26), transparent 24%),
+    radial-gradient(circle at 82% 72%, rgba(158, 106, 20, 0.22), transparent 28%),
+    linear-gradient(115deg, rgba(3, 5, 4, 0.96), rgba(17, 14, 8, 0.78) 48%, rgba(3, 5, 4, 0.94));
+  background-size: 160% 160%, 150% 150%, 100% 100%;
+  animation: africa-aura-drift 18s ease-in-out infinite alternate;
+}
+
+.africa-story-aura::before,
+.africa-story-aura::after {
+  content: '';
+  position: absolute;
+  inset: -18%;
+  pointer-events: none;
+}
+
+.africa-story-aura::before {
+  background: repeating-linear-gradient(118deg, transparent 0 72px, rgba(214, 166, 53, 0.08) 74px, transparent 76px 148px);
+  mix-blend-mode: screen;
+  transform: translateX(-12%) rotate(-6deg);
+  animation: africa-lines-slide 22s linear infinite;
+}
+
+.africa-story-aura::after {
+  background: radial-gradient(ellipse at 50% 115%, rgba(221, 174, 64, 0.32), transparent 42%);
+  filter: blur(26px);
+  opacity: 0.65;
+  animation: africa-gold-breathe 7s ease-in-out infinite;
+}
+
+@keyframes africa-aura-drift {
+  0% { background-position: 0% 40%, 100% 60%, 0 0; }
+  100% { background-position: 82% 58%, 18% 42%, 0 0; }
+}
+
+@keyframes africa-lines-slide {
+  from { transform: translate3d(-12%, 0, 0) rotate(-6deg); }
+  to { transform: translate3d(12%, 2%, 0) rotate(-6deg); }
+}
+
+@keyframes africa-gold-breathe {
+  0%, 100% { opacity: 0.38; transform: scale(0.96); }
+  50% { opacity: 0.82; transform: scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .africa-story-aura,
+  .africa-story-aura::before,
+  .africa-story-aura::after {
+    animation: none;
+  }
+}

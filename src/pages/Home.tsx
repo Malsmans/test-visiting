@@ -63,7 +63,7 @@ const Home = () => {
 
         {/* Featured Destinations */}
         <section className="african-section py-20 relative section-edge-glow">
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-900/10 via-transparent to-orange-900/10"></div>
+          <div className="absolute inset-0 africa-story-aura" aria-hidden="true"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
